@@ -1,0 +1,42 @@
+{
+  "name": "hotel-rooms-finder",
+  "version": "1.0.0",
+  "description": "site layout",
+  "main": "./src/js/index.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "watch": "webpack --mode development --watch",
+    "start": "webpack-dev-server --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guipure/hotel-rooms-finder.git"
+  },
+  "keywords": [
+    "pug",
+    "sass",
+    "js",
+    "webpack",
+    "npm"
+  ],
+  "author": "Igor Zilberg <igor778868@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guipure/hotel-rooms-finder/issues"
+  },
+  "homepage": "https://github.com/guipure/hotel-rooms-finder#readme",
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.4.2",
+    "html-webpack-plugin": "^4.0.4",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.1",
+    "pug": "^2.0.4",
+    "pug-loader": "^2.4.0",
+    "sass-loader": "^8.0.2",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}
