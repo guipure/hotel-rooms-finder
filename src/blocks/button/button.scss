@@ -1,0 +1,38 @@
+$gradient: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+$border: 2px;
+
+.button-wrap {
+    display: inline-block;
+    min-height: 44px - $border;
+    min-width: 99px - $border;
+    background: $gradient;
+    padding: $border;
+    border-radius: 25px;
+
+    &:hover{
+        opacity: 0.5;
+    }
+}
+
+.button {
+    border: none;
+    border-radius: 22px;
+    min-height: inherit;
+    min-width: inherit;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.button_white {
+    @extend .button;
+    background: white;
+    color: #BC9CFF;
+}
+
+.button_blue {
+    @extend .button;
+    color: white;
+    background: $gradient;
+}

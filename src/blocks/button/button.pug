@@ -1,0 +1,4 @@
+mixin button(options)
+    - var colorClassName = options.isWhite ? 'button_white' : 'button_blue'
+    .button-wrap
+        button(class = colorClassName)= options.value
