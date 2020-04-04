@@ -1,3 +1,14 @@
+@import 'blocks/button/button';
+@import 'fonts/fonts';
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Quicksand;
+}
+
 h1 {
-    color: royalblue;
+    color: #BC9CFF;
+    font-family: Quicksand;
+    font-weight: bold;
 }
