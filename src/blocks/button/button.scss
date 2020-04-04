@@ -3,8 +3,6 @@ $border: 2px;
 
 .button-wrap {
     display: inline-block;
-    min-height: 44px - $border;
-    min-width: 99px - $border;
     background: $gradient;
     padding: $border;
     border-radius: 25px;
@@ -16,9 +14,8 @@ $border: 2px;
 
 .button {
     border: none;
+    background: none;
     border-radius: 22px;
-    min-height: inherit;
-    min-width: inherit;
     font-family: Montserrat;
     font-style: normal;
     font-weight: bold;
@@ -27,13 +24,40 @@ $border: 2px;
 }
 
 .button_white {
-    @extend .button;
+    min-height: 44px - $border;
+    min-width: 99px - $border;
     background: white;
     color: #BC9CFF;
 }
 
 .button_blue {
-    @extend .button;
+    min-height: 44px - $border;
+    min-width: 99px - $border;
     color: white;
     background: $gradient;
+}
+
+.button_long {
+    position: relative;
+    min-height: 44px - $border;
+    min-width: 320px - $border;
+    color: white;
+    background: $gradient;
+}
+
+.material-icons_right {
+    position: absolute;
+    width: 44px;
+    right: 0;
+    top: 0;
+    margin-top: 10px;
+}
+
+.button_min {
+    color: #BC9CFF;
+    line-height: 15px;
+
+    &:hover {
+        color: rgba(31, 32, 65, 0.5);
+    }
 }

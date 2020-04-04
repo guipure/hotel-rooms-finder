@@ -1,4 +1,18 @@
 mixin button(options)
-    - var colorClassName = options.isWhite ? 'button_white' : 'button_blue'
-    .button-wrap
-        button(class = colorClassName)= options.value
+    - var buttonClassName = 'button'
+    case options.theme
+        when 'white'
+            - buttonClassName += ' button_white'
+        when 'long'
+            - buttonClassName += ' button_long'
+        when 'min'
+            - buttonClassName += ' button_min'
+        default
+            - buttonClassName += ' button_blue'
+    if options.theme == 'min'
+        button(class = buttonClassName)= options.value
+    else
+        .button-wrap
+            button(class = buttonClassName)= options.value
+                if options.theme == 'long'
+                    i(class='material-icons material-icons_right') arrow_forward
