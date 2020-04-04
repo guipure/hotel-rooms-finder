@@ -6,10 +6,10 @@ $border: 2px;
     background: $gradient;
     padding: $border;
     border-radius: 25px;
+}
 
-    &:hover{
-        opacity: 0.5;
-    }
+.button-wrap:hover {
+    opacity: 0.5;
 }
 
 .button {
@@ -21,6 +21,14 @@ $border: 2px;
     font-weight: bold;
     font-size: 12px;
     text-transform: uppercase;
+}
+
+.button__icon {
+    position: absolute;
+    width: 44px;
+    right: 0;
+    top: 0;
+    margin-top: 10px;
 }
 
 .button_white {
@@ -45,19 +53,11 @@ $border: 2px;
     background: $gradient;
 }
 
-.material-icons_right {
-    position: absolute;
-    width: 44px;
-    right: 0;
-    top: 0;
-    margin-top: 10px;
-}
-
 .button_min {
     color: #BC9CFF;
     line-height: 15px;
+}
 
-    &:hover {
-        color: rgba(31, 32, 65, 0.5);
-    }
+.button_min:hover {
+    color: rgba(31, 32, 65, 0.5);
 }
