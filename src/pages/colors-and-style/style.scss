@@ -1,0 +1,28 @@
+@import 'blocks/button/button';
+@import 'blocks/color/color';
+@import 'blocks/typography/typography';
+
+.wrapper {
+    display: flex;
+    max-width: 1440px;
+    margin: auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.colors-wrap {
+    padding-top: 97px;
+    padding-left: 150px;
+}
+
+.typography-wrap {
+    padding-top: 97px;
+    padding-right: 204px;
+}
+
+.logo {
+    top: 30px;
+    left: 30px;
+    position: relative;
+    align-self: flex-start;
+}
