@@ -1,0 +1,36 @@
+mixin color(theme)
+    - var colorSquareName = 'color__square color__square_'
+    case theme
+        when 'Dark Shade 100%'
+            -
+                var color = '#1F2041'
+                colorSquareName += 'dark-shade-100'
+        when 'Dark Shade 75%'
+            -
+                var color = '#1F2041'
+                colorSquareName += 'dark-shade-75'
+        when 'Dark Shade 50%'
+            -
+                var color = '#1F2041'
+                colorSquareName += 'dark-shade-50'
+        when 'Dark Shade 25%'
+            -
+                var color = '#1F2041'
+                colorSquareName += 'dark-shade-25'
+        when 'Dark Shade 5%'
+            -
+                var color = '#1F2041'
+                colorSquareName += 'dark-shade-5'
+        when 'Purple'
+            -
+                var color = '#BC9CFF'
+                colorSquareName += 'purple'
+        when 'Green'
+            -
+                var color = '#6FCF97'
+                colorSquareName += 'green'
+    .color
+        .div(class = colorSquareName)
+        .color__label
+            h2= theme
+            h2(style = 'font-weight: normal; line-height: 28px;')= color

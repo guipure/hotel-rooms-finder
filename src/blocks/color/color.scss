@@ -1,0 +1,51 @@
+.color {
+    margin-bottom: 20px;
+    height: 70px;
+    display: flex;
+}
+
+.color__square {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+}
+
+.color__square_dark-shade-100 {
+    background: #1F2041;
+}
+
+.color__square_dark-shade-75 {
+    background: #1F2041;
+    opacity: 0.75;
+}
+
+.color__square_dark-shade-50 {
+    background: #1F2041;
+    opacity: 0.5;
+}
+
+.color__square_dark-shade-25 {
+    background: #1F2041;
+    opacity: 0.25;
+}
+
+.color__square_dark-shade-5 {
+    background: #1F2041;
+    opacity: 0.05;
+}
+
+.color__square_purple {
+    background: #BC9CFF;
+}
+
+.color__square_green {
+    background: #6FCF97;
+}
+
+.color__label {
+    display: inline-block;
+    padding: 10px 0 10px 40px;
+    width: 200px;
+    height: 70px;
+}
