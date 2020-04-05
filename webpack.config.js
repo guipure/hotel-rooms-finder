@@ -29,15 +29,31 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg|svg|gif)$/,
-                use: ['file-loader']
+                loader: 'file-loader',
+                exclude: [
+                    path.resolve(__dirname, 'src/fonts/')
+                ],
+                options: {
+                    outputPath: 'img/'
+                }
             },
             {
-                test: /\.(ttf|woff)$/,
-                use: ['file-loader']
+                test: /\.(ttf|woff|svg)$/,
+                include: [
+                    path.resolve(__dirname, 'src/fonts/')
+                ],
+                loader: 'file-loader',
+                options: {
+                    outputPath: 'fonts/'
+                }
             }
         ]
     },
     plugins: [
+        new HTMLWebpackPlugin({
+            filename: 'colors-and-style.html',
+            template: './src/pages/colors-and-style/colors-and-style.pug'
+        }),
         new HTMLWebpackPlugin({
             filename: 'index.html',
             template: './src/index.pug'
