@@ -1,0 +1,26 @@
+.input {
+    margin-bottom: 10px;
+}
+
+.input__box {
+    font-family: inherit;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 3px;
+    padding: 13px 15px;
+    outline: none;
+}
+
+.input__box::placeholder {
+    color: rgba(31, 32, 65, 0.25);
+}
+
+.input__box:focus,
+.input__box:hover {
+    border: 1px solid rgba(31, 32, 65, 0.5);
+}
+
+.input__box_normal {
+    width: 320px;
+    height: 44px;
+    
+}

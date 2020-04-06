@@ -1,0 +1,7 @@
+mixin input(options)
+    - var fieldClassName = 'input__box'
+    case options.type
+        when 'normal'
+            - fieldClassName += ' input__box_normal'
+    .input
+        input(type="text", placeholder=options.placeholder, class=fieldClassName)
