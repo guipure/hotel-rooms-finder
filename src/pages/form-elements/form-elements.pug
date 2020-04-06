@@ -1,0 +1,20 @@
+include ../../blocks/field/field
+include ../../blocks/input/input
+include ../../blocks/button/button
+
+doctype html
+html
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Hotel Rooms
+    body
+        .form-elements-wrapper
+            +field({name: 'text field', annotation: 'default'})
+                +input({type: 'normal', placeholder: 'Email'})
+        //- .form-elements-wrapper
+        //-     .buttons-wrapper
+        //-         +button({theme: 'white', value: 'click me'})
+        //-         +button({theme: 'blue', value: 'click me'})
+        //-         +button({theme: 'min', value: 'click me'})
+        //-         +button({theme: 'long', value: 'перейти к оплате'})
