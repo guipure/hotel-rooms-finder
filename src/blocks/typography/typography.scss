@@ -1,5 +1,5 @@
 .typography {
-    width: 403px;
+    width: 415px;
 }
 
 .typography__row {
@@ -9,13 +9,13 @@
 
 .typography__right {
     padding-left: 30px;
-    width: 35vw;
+    max-width: 366px;
 }
 
 .typography__left {
     font-family: Montserrat;
     color: rgba(31, 32, 65, 0.25);
-    width: 5vw;
+    min-width: 40px;
     text-align: right;
 }
 
