@@ -51,8 +51,8 @@ module.exports = {
     },
     plugins: [
         new HTMLWebpackPlugin({
-            filename: 'colors-and-style.html',
-            template: './src/pages/colors-and-style/colors-and-style.pug'
+            filename: 'colors-and-type.html',
+            template: './src/pages/colors-and-type/colors-and-type.pug'
         }),
         new HTMLWebpackPlugin({
             filename: 'index.html',
