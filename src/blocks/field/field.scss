@@ -1,0 +1,21 @@
+.field {
+    margin-bottom: 20px;
+}
+
+.field__label {
+    margin-bottom: 20px;
+}
+
+.field__name {
+    float: left;
+}
+
+.field__annotation {
+    float: right;
+    font-family: Montserrat;
+    color: rgba(31, 32, 65, 0.5);
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+}
