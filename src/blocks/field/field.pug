@@ -1,5 +1,5 @@
 mixin field(options)
-    .field
+    .field(class= options.size ? 'field_' + options.size : '')
         .field__label
             .field__name
                 h3= options.name
