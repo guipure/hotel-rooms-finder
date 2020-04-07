@@ -1,7 +1,8 @@
 mixin input(options)
-    - var fieldClassName = 'input__box'
-    case options.type
-        when 'normal'
-            - fieldClassName += ' input__box_normal'
+    -
+        var inputClassName = 'input__box' + ' input__box_' + options.size
+        inputClassName += options.isSub ? ' input__box_sub' : ''
     .input
-        input(type="text", placeholder=options.placeholder, class=fieldClassName)
+        input(type="text", placeholder=options.placeholder, class=inputClassName)
+        if options.isSub
+            i(class='input__icon material-icons') arrow_forward
