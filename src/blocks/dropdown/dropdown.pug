@@ -1,0 +1,26 @@
+include ../button/button
+
+mixin dropdown__item(name)
+    .dropdown__item
+        .dropdown__label= name
+        .dropdown__count
+            .dropdown__operator.dropdown__operator_minus.dropdown__operator_disabled
+            .dropdown__value 0
+            .dropdown__operator.dropdown__operator_plus
+
+mixin dropdown(options)
+    -
+        var dropdownClassName = 'dropdown__box' + ' dropdown__box_' + options.size
+        dropdownClassName += options.isSub ? ' dropdown__box_sub' : ''
+    .dropdown
+        div(class=dropdownClassName)
+            .dropdown__result= options.placeholder
+            i.dropdown__icon.material-icons expand_more
+        .dropdown__content.dropdown__content_hidden
+            +dropdown__item('взрослые')
+            +dropdown__item('дети')
+            +dropdown__item('младенцы')
+            .dropdown__submit
+                +button({theme: 'purple', value: 'применить'})
+            .dropdown__clear
+                +button({theme: 'grey', value: 'очистить'})
