@@ -1,14 +1,13 @@
 @import 'blocks/button/button';
 @import 'blocks/input/input';
+@import 'blocks/dropdown/dropdown';
 @import 'blocks/field/field';
 
 .form-elements-wrapper {
-    display: flex;
+    position: relative;
     padding: 0 15px;
     max-width: 1470px;
     margin: auto;
-    justify-content: left;
-    flex-wrap: wrap;
 }
 
 .buttons-wrapper {
