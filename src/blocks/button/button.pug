@@ -5,11 +5,13 @@ mixin button(options)
             - buttonClassName += ' button_white'
         when 'long'
             - buttonClassName += ' button_long'
-        when 'min'
-            - buttonClassName += ' button_min'
+        when 'purple'
+            - buttonClassName += ' button_purple'
+        when 'grey'
+            - buttonClassName += ' button_grey'
         default
             - buttonClassName += ' button_blue'
-    if options.theme == 'min'
+    if options.theme == 'purple' || options.theme == 'grey'
         button(class = buttonClassName)= options.value
     else
         .button-wrap
