@@ -14,12 +14,11 @@ mixin dropdown(options)
         dropdownClassName += options.isSub ? ' dropdown__box_sub' : ''
     .dropdown
         div(class=dropdownClassName)
-            .dropdown__result= options.placeholder
+            div(class='dropdown__result ' + options.sum)= options.placeholder
             i.dropdown__icon.material-icons expand_more
-        .dropdown__content.dropdown__content_hidden
-            +dropdown__item('взрослые')
-            +dropdown__item('дети')
-            +dropdown__item('младенцы')
+        .dropdown__menu.dropdown__menu_hidden
+            each item in options.items
+                +dropdown__item(item)
             .dropdown__submit
                 +button({theme: 'purple', value: 'применить'})
             .dropdown__clear
