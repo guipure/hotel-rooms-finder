@@ -14,7 +14,7 @@ mixin dropdown(options)
         dropdownClassName += options.isSub ? ' dropdown__box_sub' : ''
     .dropdown
         div(class=dropdownClassName)
-            div(class='dropdown__result ' + options.sum)= options.placeholder
+            div(class='dropdown__result ' + options.type)= options.placeholder
             i.dropdown__icon.material-icons expand_more
         .dropdown__menu.dropdown__menu_hidden
             each item in options.items

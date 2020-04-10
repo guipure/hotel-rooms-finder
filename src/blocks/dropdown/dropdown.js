@@ -5,27 +5,15 @@ const clearBtns = document.querySelectorAll('.dropdown__clear');
 const submitBtns = document.querySelectorAll('.dropdown__submit');
 
 window.addEventListener('click', hide);
-
-for (let box of boxes) {
-    box.addEventListener('click', show);
-}
-
-for (let plus of pluses) {
-    plus.addEventListener('click', () => operator('plus'));
-}
-
-for (let minus of minuses) {
-    minus.addEventListener('click', () => operator('minus'));
-}
+Array.from(boxes).forEach(box => box.addEventListener('click', show));
+Array.from(pluses).forEach(plus => plus.addEventListener('click', () => operator('plus')));
+Array.from(minuses).forEach(minus => minus.addEventListener('click', () => operator('minus')));
+Array.from(submitBtns).forEach(btn => btn.addEventListener('click', submit));
 
 for (let btn of clearBtns) {
     const dropdown = btn.closest('.dropdown');
     const result = dropdown.querySelector('.dropdown__result');
     btn.firstElementChild.addEventListener('click', () => clear(dropdown, result));
-}
-
-for (let btn of submitBtns) {
-    btn.addEventListener('click', submit);
 }
 
 
@@ -86,7 +74,7 @@ function sum(dropdown) {
     const values = Array.from(dropdown.querySelectorAll('.dropdown__value')).map((value) => Number(value.innerHTML));
     const result = dropdown.querySelector('.dropdown__result');
     const labels = Array.from(dropdown.querySelectorAll('.dropdown__label')).map(label => label.innerHTML);
-    if (result.classList.contains('all')) {
+    if (result.classList.contains('guests')) {
         let sum = values.reduce((a, b) => a + b, 0)
         result.innerHTML = sum.toString() + ending(sum, 'гость');
     } else {
@@ -140,7 +128,7 @@ function clear(dropdown, result) {
         value.previousElementSibling.classList.add('dropdown__operator_disabled');
     }
 
-    if (result.classList.contains('all')) {
+    if (result.classList.contains('guests')) {
         result.innerHTML = 'Сколько гостей';
     } else {
         result.innerHTML = 'Сколько кроватей';
