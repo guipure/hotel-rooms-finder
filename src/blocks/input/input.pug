@@ -2,6 +2,7 @@ mixin input(options)
     -
         var inputClassName = 'input__box' + ' input__box_' + options.size
         inputClassName += options.isSub ? ' input__box_sub' : ''
+        inputClassName += options.isMasked ? ' input__box_masked' : ''
     .input
         input(type="text", placeholder=options.placeholder, class=inputClassName)
         if options.isSub

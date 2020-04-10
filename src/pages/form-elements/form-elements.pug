@@ -17,13 +17,13 @@ html
             +field({name: 'text field', annotation: 'hover/focus', size: 'size-m'})
                 +input({placeholder: 'This is pretty awesome', size: 'size-m'})
             +field({name: 'dropdown', annotation: 'default', size: 'size-m'})
-                +dropdown({placeholder: 'Сколько гостей', size: 'size-m', items: ['взрослые', 'дети', 'младенцы'], sum: 'all'})
+                +dropdown({placeholder: 'Сколько гостей', size: 'size-m', items: ['взрослые', 'дети', 'младенцы'], type: 'guests'})
             +field({name: 'masked text field', annotation: 'default', size: 'size-m'})
-                +input({placeholder: 'ДД.ММ.ГГГГ', size: 'size-m'})
+                +input({placeholder: 'ДД.ММ.ГГГГ', size: 'size-m', isMasked: true})
             +field({name: 'subscription text field'})
                 +input({placeholder: 'Email', size: 'size-s', isSub: true})
             +field({name: 'dropdown', annotation: 'default', size: 'size-s'})
-                +dropdown({placeholder: 'Сколько кроватей', size: 'size-s', items: ['спальни', 'кровати', 'ванные комнаты'], sum: 'each'})
+                +dropdown({placeholder: 'Сколько кроватей', size: 'size-s', items: ['спальни', 'кровати', 'ванные комнаты'], type: 'beds'})
         //- .form-elements-wrapper
         //-     .buttons-wrapper
         //-         +button({theme: 'white', value: 'click me'})
