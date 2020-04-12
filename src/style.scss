@@ -1,5 +1,6 @@
 @import 'fonts/fonts';
 @import 'pages/colors-and-type/style';
+@import 'pages/form-elements/style';
 
 * {
     box-sizing: border-box;
@@ -15,7 +16,7 @@ body {
 }
 
 h1 {
-    font-family: Quicksand;
+    font-family: Quicksand, 'Open Sans';
     color: #1F2041;
     font-weight: bold;
     font-size: 24px;
@@ -23,7 +24,7 @@ h1 {
 }
 
 h2 {
-    font-family: Quicksand;
+    font-family: Quicksand, 'Open Sans';
     color: #1F2041;
     font-weight: bold;
     font-size: 19px;
@@ -31,11 +32,10 @@ h2 {
 }
 
 h3 {
-    font-family: Quicksand;
+    font-family: Montserrat;
     color: #1F2041;
     font-weight: bold;
     font-size: 12px;
     line-height: 15px;
     text-transform: uppercase;
-    letter-spacing: 0.6px;
 }
