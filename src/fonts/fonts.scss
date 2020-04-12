@@ -41,7 +41,17 @@
     src: url('fonts/material-icons/MaterialIcons-Regular.woff') format('woff'),
     url('fonts/material-icons/MaterialIcons-Regular.ttf') format('truetype'),
     url('fonts/material-icons/MaterialIcons-Regular.svg') format('svg');
-  }
+}
+
+@font-face {
+	font-family: 'Open Sans';
+    src: url('fonts/open-sans/OpenSans-Regular.woff') format('woff'),
+    url('fonts/open-sans/OpenSans-Regular.ttf') format('truetype'),
+    url('fonts/open-sans/OpenSans-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
 
   .material-icons {
     font-family: 'Material Icons';
