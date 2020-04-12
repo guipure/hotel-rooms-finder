@@ -1,3 +1,11 @@
+$dark-shade-100: #1F2041;
+$dark-shade-75: rgba(31, 32, 65, 0.75);
+$dark-shade-50: rgba(31, 32, 65, 0.5);
+$dark-shade-25: rgba(31, 32, 65, 0.25);
+$dark-shade-5: rgba(31, 32, 65, 0.05);
+$purple: #BC9CFF;
+$green: #6FCF97;
+
 .color {
     margin-bottom: 20px;
     height: 70px;
@@ -12,35 +20,31 @@
 }
 
 .color__square_dark-shade-100 {
-    background: #1F2041;
+    background: $dark-shade-100;
 }
 
 .color__square_dark-shade-75 {
-    background: #1F2041;
-    opacity: 0.75;
+    background: $dark-shade-75;
 }
 
 .color__square_dark-shade-50 {
-    background: #1F2041;
-    opacity: 0.5;
+    background: $dark-shade-50;
 }
 
 .color__square_dark-shade-25 {
-    background: #1F2041;
-    opacity: 0.25;
+    background: $dark-shade-25;
 }
 
 .color__square_dark-shade-5 {
-    background: #1F2041;
-    opacity: 0.05;
+    background: $dark-shade-5;
 }
 
 .color__square_purple {
-    background: #BC9CFF;
+    background: $purple;
 }
 
 .color__square_green {
-    background: #6FCF97;
+    background: $green;
 }
 
 .color__label {
