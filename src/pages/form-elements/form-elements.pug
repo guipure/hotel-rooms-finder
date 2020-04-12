@@ -1,6 +1,7 @@
 include ../../blocks/field/field
 include ../../blocks/input/input
 include ../../blocks/dropdown/dropdown
+include ../../blocks/date-dropdown/date-dropdown
 include ../../blocks/button/button
 
 doctype html
@@ -12,18 +13,21 @@ html
         script(src='main.js')
     body
         .form-elements-wrapper
-            +field({name: 'text field', annotation: 'default', size: 'size-m'})
-                +input({placeholder: 'Email', size: 'size-m'})
-            +field({name: 'text field', annotation: 'hover/focus', size: 'size-m'})
-                +input({placeholder: 'This is pretty awesome', size: 'size-m'})
-            +field({name: 'dropdown', annotation: 'default', size: 'size-m'})
-                +dropdown({placeholder: 'Сколько гостей', size: 'size-m', items: ['взрослые', 'дети', 'младенцы'], type: 'guests'})
-            +field({name: 'masked text field', annotation: 'default', size: 'size-m'})
-                +input({placeholder: 'ДД.ММ.ГГГГ', size: 'size-m', isMasked: true})
+            +field({name: 'text field', annotation: 'default', size: 'large'})
+                +input({placeholder: 'Email', size: 'large'})
+            +field({name: 'text field', annotation: 'hover/focus', size: 'large'})
+                +input({placeholder: 'This is pretty awesome', size: 'large'})
+            +field({name: 'dropdown', annotation: 'default', size: 'large'})
+                +dropdown({placeholder: 'Сколько гостей', size: 'large', items: ['взрослые', 'дети', 'младенцы'], type: 'guests'})
+            +field({name: 'masked text field', annotation: 'default', size: 'large'})
+                +input({placeholder: 'ДД.ММ.ГГГГ', size: 'large', isMasked: true})
+            +field({name: 'date dropdown', size: 'small'})
+                +date-dropdown({placeholder: 'ДД.ММ.ГГГГ', size: 'small'})
             +field({name: 'subscription text field'})
-                +input({placeholder: 'Email', size: 'size-s', isSub: true})
-            +field({name: 'dropdown', annotation: 'default', size: 'size-s'})
-                +dropdown({placeholder: 'Сколько кроватей', size: 'size-s', items: ['спальни', 'кровати', 'ванные комнаты'], type: 'beds'})
+                +input({placeholder: 'Email', size: 'medium', isSub: true})
+            +field({name: 'dropdown', annotation: 'default', size: 'medium'})
+                +dropdown({placeholder: 'Сколько кроватей', size: 'medium', items: ['спальни', 'кровати', 'ванные комнаты'], type: 'beds'})
+            
         //- .form-elements-wrapper
         //-     .buttons-wrapper
         //-         +button({theme: 'white', value: 'click me'})
