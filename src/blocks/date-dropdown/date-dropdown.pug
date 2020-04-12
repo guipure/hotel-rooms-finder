@@ -1,0 +1,7 @@
+mixin date-dropdown(options)
+    -
+        var dateDropdownClassName = 'datepicker-here' + ' date-dropdown__box' + ' date-dropdown__box_' + options.size
+        dateDropdownClassName += options.isSub ? ' date-dropdown__box_sub' : ''
+    .date-dropdown
+        input(type="text" placeholder=options.placeholder class=dateDropdownClassName)
+        i.date-dropdown__icon.material-icons expand_more
