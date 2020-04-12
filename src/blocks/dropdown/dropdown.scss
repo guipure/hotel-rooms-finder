@@ -19,13 +19,18 @@
     border: 1px solid rgba(31, 32, 65, 0.5);
 }
 
-.dropdown__box_size-m {
-    width: 320px;
+.dropdown__box_small {
+    width: 150px;
     height: 44px;
 }
 
-.dropdown__box_size-s {
+.dropdown__box_medium {
     width: 267px;
+    height: 44px;
+}
+
+.dropdown__box_large {
+    width: 320px;
     height: 44px;
 }
 

@@ -1,31 +1,38 @@
+@import '../color/color.scss';
+
 .input {
     margin-bottom: 10px;
 }
 
 .input__box {
     font-family: inherit;
-    border: 1px solid rgba(31, 32, 65, 0.25);
+    border: 1px solid $dark-shade-25;
     border-radius: 3px;
     padding: 13px 15px;
     outline: none;
 }
 
 .input__box::placeholder {
-    color: rgba(31, 32, 65, 0.25);
+    color: $dark-shade-25;
 }
 
 .input__box:focus,
 .input__box:hover {
-    border: 1px solid rgba(31, 32, 65, 0.5);
+    border: 1px solid $dark-shade-50;
 }
 
-.input__box_size-m {
+.input__box_large {
     width: 320px;
     height: 44px;
 }
 
-.input__box_size-s {
+.input__box_medium {
     width: 267px;
+    height: 44px;
+}
+
+.input__box_small {
+    width: 150px;
     height: 44px;
 }
 
@@ -33,7 +40,7 @@
     position: relative;
     left: -34px;
     top: 6px;
-    color: #BC9CFF;
+    color: $purple;
     user-select: none;
     cursor: pointer;
 }
