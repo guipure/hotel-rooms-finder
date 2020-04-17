@@ -18,6 +18,7 @@ $datepickerTextColor: (
   otherMonthInRange: #ccc,
   disabled: #aeaeae,
   currentDate: #fff,
+  clearBtn: $dark-shade-50,
   common: $dark-shade-50,
   title: $dark-shade-100,
   dayNames: $purple,
@@ -26,13 +27,14 @@ $datepickerTextColor: (
 
 $currentGradient: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 $selectedGradient: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+$rangeGradient: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
 
 $datepickerBG: (
   selected: $selectedGradient,
   selectedHover: $selectedGradient,
   currentDate: $currentGradient,
-  inRange: rgba(#5cc4ef, .1),
-  hover: #f0f0f0
+  inRange: $rangeGradient,
+  hover: $rangeGradient,
 ) !default;
 
 $datepickerBorderColor: (
@@ -121,7 +123,7 @@ $datepickerTransitionOffset: 8px !default;
     }
 
     &.-in-range- {
-      color: map_get($datepickerTextColor, currentDate);
+      color: map_get($datepickerTextColor, common);
     }
   }
 
@@ -157,12 +159,30 @@ $datepickerTransitionOffset: 8px !default;
   &.-range-from- {
     border: 1px solid map_get($datepickerBG, selected);
     background-color: map_get($datepickerBG, inRange);
-    border-radius: $datepickerBorderRadius 0 0 $datepickerBorderRadius;
+    border-radius: 50%;
+    &:after {
+      content: '';
+      background: map_get($datepickerBG, inRange);
+      position: absolute;
+      left: 50%;
+      width: 50%;
+      height: 100%;
+      z-index: -1;
+    }
   }
   &.-range-to- {
     border: 1px solid map_get($datepickerBG, selected);
     background-color: map_get($datepickerBG, inRange);
-    border-radius:  0 $datepickerBorderRadius $datepickerBorderRadius 0;
+    border-radius: 50%;
+    &:before {
+      content: '';
+      background: map_get($datepickerBG, inRange);
+      position: absolute;
+      right: 50%;
+      width: 50%;
+      height: 100%;
+      z-index: -1;
+    }
   }
 
   &.-range-from-.-range-to- {
@@ -174,6 +194,7 @@ $datepickerTransitionOffset: 8px !default;
     color: #fff;
     border: none;
     background: map_get($datepickerBG, selected);
+    font-weight: bold;
 
     &.-current- {
       color: #fff;
@@ -237,6 +258,7 @@ $datepickerTransitionOffset: 8px !default;
 .datepicker--cell-month {
   width: 33.33%;
   height: 25%;
+  border-radius: $datepickerBorderRadius;
 }
 
 //  Years
@@ -255,7 +277,8 @@ $datepickerTransitionOffset: 8px !default;
 .datepicker--cell-year {
   width: 100% / $datepickerYearsPerRow;
   height: 33.33%;
-
+  border-radius: $datepickerBorderRadius;
+  
   &.-other-decade- {
     @extend %otherMonth;
   }
@@ -332,6 +355,7 @@ $datepickerTransitionOffset: 8px !default;
   box-sizing: border-box;
   padding: $datepickerPadding;
   padding-top: 0;
+  padding-bottom: 13px;
 
   .-only-timepicker- & {
     display: none;
@@ -418,10 +442,9 @@ $pointerHalfSize: $datepickerPointerSize / 2 - 1;
 .datepicker--nav {
   display: flex;
   justify-content: space-between;
-  border-bottom: none;
   min-height: $datepickerNavigationHeight;
   padding: $datepickerPadding;
-  padding-bottom: 30px;
+  padding-bottom: 21px;
 
   .-only-timepicker- & {
     display: none;
@@ -443,8 +466,10 @@ $pointerHalfSize: $datepickerPointerSize / 2 - 1;
 
 .datepicker--nav-action {
   width: $datepickerDayCellSize;
+  color: map_get($datepickerTextColor, navArrows);
   border-radius: $datepickerBorderRadius;
   user-select: none;
+  margin: 0 -9px;
 
   &:hover {
     background: map_get($datepickerBG, hover);
@@ -452,17 +477,6 @@ $pointerHalfSize: $datepickerPointerSize / 2 - 1;
 
   &.-disabled- {
     visibility: hidden;
-  }
-
-  svg {
-    width: 32px;
-    height: 32px;
-  }
-
-  path {
-    fill: none;
-    stroke: map_get($datepickerTextColor, navArrows);
-    stroke-width: 2px;
   }
 }
 
@@ -492,11 +506,13 @@ $pointerHalfSize: $datepickerPointerSize / 2 - 1;
 .datepicker--buttons {
   display: flex;
   padding: $datepickerPadding;
-  border-top: 1px solid map_get($datepickerBorderColor, nav);
+  padding-top: 0;
+  padding-bottom: 14px;
+  justify-content: space-between;
 }
 
 .datepicker--button {
-  color: map_get($datepickerTextColor, currentDate);
+  color: map_get($datepickerTextColor, clearBtn);
   cursor: pointer;
   border-radius: $datepickerBorderRadius;
   flex: 1;

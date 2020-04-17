@@ -1,12 +1,16 @@
 @import '../color/color.scss';
 @import './date-dropdown__calendar.scss';
 
-.date-dropdown {
+.js-date-dropdown {
     margin-bottom: 10px;
-    position: relative;
+    display: flex;
 }
 
-.date-dropdown__box {
+.js-date-dropdown__input:first-child {
+    margin-right: 20px;
+}
+
+.js-date-dropdown__box {
     font-family: inherit;
     border: 1px solid $dark-shade-25;
     border-radius: 3px;
@@ -14,12 +18,12 @@
     outline: none;
 }
 
-.date-dropdown__box::placeholder {
+.js-date-dropdown__box::placeholder {
     color: $dark-shade-25;
 }
 
-.date-dropdown__box:focus,
-.date-dropdown__box:hover {
+.js-date-dropdown__box:focus,
+.js-date-dropdown__box:hover {
     border: 1px solid $dark-shade-50;
 }
 
@@ -39,97 +43,14 @@
 }
 
 .date-dropdown__icon {
-    position: absolute;
+    color: $dark-shade-50;
+    position: relative;
     left: 118px;
-    top: 10px;
+    top: -33px;
     user-select: none;
     cursor: pointer;
 }
 
-
-// .date-dropdown {
-//     margin-bottom: 10px;
-//     max-width: 320px;
-//     user-select: none;
-//     position: relative;
-// }
-
-// .date-dropdown__box {
-//     font-family: inherit;
-//     border: 1px solid $dark-shade-25;
-//     border-radius: 3px;
-//     padding: 10px 10px 0 15px;
-//     outline: none;
-//     cursor: pointer;
-// }
-
-// .date-dropdown__box:focus,
-// .date-dropdown__box:hover {
-//     border: 1px solid rgba(31, 32, 65, 0.5);
-// }
-
-// .date-dropdown__box_small {
-//     width: 150px;
-//     height: 44px;
-// }
-
-// .date-dropdown__box_medium {
-//     width: 267px;
-//     height: 44px;
-// }
-
-// .date-dropdown__box_large {
-//     width: 320px;
-//     height: 44px;
-// }
-
-
-// .date-dropdown__result {
-//     display: inline-block;
-// }
-
-// .date-dropdown__icon {
-//     float: right;
-//     color: rgba(31, 32, 65, 0.5);
-//     transition: transform 0.25s;
-// }
-
-// .date-dropdown__icon_rotated {
-//     transform: rotate(180deg);
-// }
-
-// .date-dropdown__menu {
-//     position: absolute;
-//     width: 100%;
-//     background: white;
-//     z-index: 1;
-//     border: 1px solid rgba(31, 32, 65, 0.5);
-//     border-top: none;
-//     border-radius: 0 0 3px 3px;
-//     padding: 15px 5px 15px 15px;
-//     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-// }
-
-// .date-dropdown__menu_hidden {
-//     display: none;
-// }
-
-// .date-dropdown__label {
-//     display: inline-block;
-//     font-family: Montserrat;
-//     color: #1F2041;
-//     font-weight: bold;
-//     font-size: 12px;
-//     line-height: 40px;
-//     text-transform: uppercase;
-// }
-
-// .date-dropdown__value {
-//     @extend .date-dropdown__label;
-//     min-width: 32px;
-//     text-align: center;
-// }
-
-// .date-dropdown__submit {
-//     float: right;
-// }
+.js-date-dropdown__submit {
+    float: right;
+}
