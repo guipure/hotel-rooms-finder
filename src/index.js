@@ -1,5 +1,6 @@
 import './style.scss'
 import './blocks/dropdown/dropdown'
 import './blocks/input/input'
+import './blocks/date-dropdown/date-dropdown'
 import 'jquery'
 import 'air-datepicker'
