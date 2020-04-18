@@ -2,13 +2,27 @@ include ../button/button
 include ../../blocks/field/field
 
 mixin date-dropdown(options)
+    - var firstName = options.labels[0]
+    - var hasSecondField = options.labels.length > 1
+    if (hasSecondField)
+        - var secondName = options.labels[1]
+        - var size = 'small'
+    else
+        - var size = 'medium'
     -
-        var dateDropdownClassName = 'js-date-dropdown__box' + ' date-dropdown__box_' + options.size
-        dateDropdownClassName += options.isSub ? ' date-dropdown__box_sub' : ''
-    .js-date-dropdown
-        .js-date-dropdown__input
-            input(type="text" placeholder=options.placeholder class=dateDropdownClassName)
-            i.date-dropdown__icon.material-icons expand_more
+        var inputClassName = 'js-date-dropdown__box' + ' date-dropdown__box_' + size
+        inputClassName += options.isSub ? ' date-dropdown__box_sub' : ''
+        var dateDropdownClassName = 'js-date-dropdown'
+        dateDropdownClassName += hasSecondField ? ' js-date-dropdown_doubleField' : ''
+
+    
+    div(class=dateDropdownClassName)
+        +field({name: firstName, size: size})
+            .js-date-dropdown__input
+                input(type="text" placeholder=options.placeholder class=inputClassName)
+                i.date-dropdown__icon.material-icons expand_more
+        if (hasSecondField)
+            +field({name: secondName, size: size})
         .js-date-dropdown__submit
                 +button({theme: 'purple', value: 'применить'})
         .js-date-dropdown__clear

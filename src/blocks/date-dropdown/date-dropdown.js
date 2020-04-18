@@ -2,7 +2,7 @@ import 'air-datepicker'
 
 
 class DateDropdown {
-    constructor(element, hasTwoInputs, isRange, isInline) {
+    constructor(element, isRange, isInline) {
         this.box = element.children('.js-date-dropdown__box');
         this.calendar = this.box.datepicker({
             prevHtml: '<span class="material-icons">arrow_back</span>',
@@ -23,7 +23,8 @@ class DateDropdown {
         this.buttons.empty();
         this.addClearBtn();
         this.addSubmitBtn();
-        if (hasTwoInputs) {
+        this.hasTwoInputs = /doubleField/.test(this.dropdown.attr('class'));
+        if (this.hasTwoInputs) {
             this.secondInput = this.addTheSecondInput(element);
         }
        
@@ -31,7 +32,7 @@ class DateDropdown {
 
 
     clearInputs() {
-        if (this.secondInput) this.secondInput.val('');
+        if (this.hasTwoInputs) this.secondInput.val('');
         this.calendar.clear();
     }
 
@@ -53,38 +54,55 @@ class DateDropdown {
 
 
     addTheSecondInput(input) {
+        const secondField = this.dropdown.children('.field:last-child');
         const secondInputDiv = input.clone();
         const secondInput = secondInputDiv.children('input');
         secondInputDiv.on('click', () => this.calendar.show());
-        this.dropdown.append(secondInputDiv);
+        secondField.append(secondInputDiv);
         return secondInput;
     }
 
 
     onSelect() {
         const dates = this.calendar.selectedDates;
-        this.input.val(this.formatDate(dates[0]));
-        if (dates.length == 2) this.secondInput.val(this.formatDate(dates[1]));
-        else this.secondInput.val('');
+        if (this.hasTwoInputs) {
+            this.input.val(this.formatDate(dates[0], 'dotted'));
+            if (dates.length == 2) this.secondInput.val(this.formatDate(dates[1], 'dotted'));
+            else this.secondInput.val('');
+        }
+        else {
+            this.input.val(this.formatDate(dates[0], 'dayAndMonth'));
+            if (dates.length == 2) this.input.val(this.formatDate(dates[0], 'dayAndMonth') + ' - ' + this.formatDate(dates[1], 'dayAndMonth'));
+        }
+        
     }
 
 
-    formatDate(date) {
+    formatDate(date, format) {
         let day = date.getDate().toString();
         let month = (date.getMonth() + 1).toString();
-        const year = date.getFullYear().toString();
+        let year = date.getFullYear().toString();
 
-        if (Number(day) < 10) {
-            day = '0' + day;
+        switch (format) {
+            case 'dotted':
+                if (Number(day) < 10) {
+                    day = '0' + day;
+                }
+        
+                if (Number(month) < 10) {
+                    month = '0' + month;
+                }
+        
+                return day + '.' + month + '.' + year;
+            case 'dayAndMonth':
+                const monthNumber = date.getMonth();
+                const monthsArray = ['янв', 'фев', 'мар', 'апр', 'май', 'июн', 'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'];
+                const monthName = monthsArray[monthNumber];
+                return day + ' ' + monthName;
         }
-
-        if (Number(month) < 10) {
-            month = '0' + month;
-        }
-
-        return day + '.' + month + '.' + year;
+        
     }
 }
 
 const dropdowns = $('.js-date-dropdown__input');
-dropdowns.each((index, element) => new DateDropdown($(element), true, true));
+dropdowns.each((index, element) => new DateDropdown($(element), true));
