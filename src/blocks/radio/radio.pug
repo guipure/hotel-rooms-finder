@@ -1,0 +1,15 @@
+mixin radio(labels)
+    - var randomName = '_' + Math.floor(Math.random() * 1000000).toString()
+    .radio
+        each label in labels
+            +radioBtn(label, randomName)
+
+
+mixin radioBtn(label, randomName)
+    .radio__btn
+        label(class='radio__label')
+            .radio__container
+                input(type='radio' class='radio__input_default' name=randomName)
+                span(class='radio__input_styled')
+            p(class='label__text')=label
+
