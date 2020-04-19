@@ -1,0 +1,47 @@
+@import '../color/color.scss';
+
+.js-like {
+    display: inline-block;
+    position: relative;
+    height: 20px;
+    width: 40px;
+    margin-right: 6px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.like__btn {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid $dark-shade-25;
+}
+
+.js-like__number {
+    position: absolute;
+    left: 55%;
+    top: 15%;
+    color: $dark-shade-25;
+    font-size: 10px;
+    line-height: 12px;
+}
+
+.js-like__icon {
+    position: absolute;
+    left: 10%;
+    top: 16%;
+    color: $dark-shade-25;
+    font-size: 10px;
+    line-height: 12px;
+}
+
+
+.js-like_liked .like__btn {
+    border-color: $purple;
+}
+
+.js-like_liked .js-like__number,
+.js-like_liked .js-like__icon {
+    color: $purple;
+}
