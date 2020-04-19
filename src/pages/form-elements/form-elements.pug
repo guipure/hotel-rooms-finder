@@ -3,6 +3,7 @@ include ../../blocks/input/input
 include ../../blocks/dropdown/dropdown
 include ../../blocks/date-dropdown/date-dropdown
 include ../../blocks/button/button
+include ../../blocks/checkbox/checkbox
 
 doctype html
 html
@@ -27,6 +28,10 @@ html
                 +input({placeholder: 'Email', size: 'medium', isSub: true})
             +field({name: 'dropdown', annotation: 'default', size: 'medium'})
                 +dropdown({placeholder: 'Сколько кроватей', size: 'medium', items: ['спальни', 'кровати', 'ванные комнаты'], type: 'beds'})
+            +field({name: 'checkbox buttons', size: 'medium'})
+                +checkbox('Можно курить')
+                +checkbox('Можно с питомцами')
+                +checkbox('Можно пригласить гостей (до 10 человек)')
             
         //- .form-elements-wrapper
         //-     .buttons-wrapper
