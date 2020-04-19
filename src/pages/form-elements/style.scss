@@ -5,12 +5,16 @@
 @import 'blocks/field/field';
 @import 'blocks/checkbox/checkbox';
 @import 'blocks/radio/radio';
+@import 'blocks/toggle/toggle';
 
 .form-elements-wrapper {
     position: relative;
     padding: 0 15px;
     max-width: 1470px;
-    margin: auto;
+    margin: 100px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 72px;
 }
 
 .buttons-wrapper {

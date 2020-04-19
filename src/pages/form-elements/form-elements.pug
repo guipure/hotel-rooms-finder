@@ -5,6 +5,7 @@ include ../../blocks/date-dropdown/date-dropdown
 include ../../blocks/button/button
 include ../../blocks/checkbox/checkbox
 include ../../blocks/radio/radio
+include ../../blocks/toggle/toggle
 
 doctype html
 html
@@ -35,6 +36,9 @@ html
                 +checkbox('Можно пригласить гостей (до 10 человек)')
             +field({name: 'radio buttons', size: 'medium'})
                 +radio(['Мужчина', 'Женщина'])
+            +field({name: 'toggle', size: 'medium'})
+                +toggle('Получать спецпредложения')
+                +toggle('Получать спецпредложения')
             
         //- .form-elements-wrapper
         //-     .buttons-wrapper
