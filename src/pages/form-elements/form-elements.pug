@@ -8,6 +8,7 @@ include ../../blocks/radio/radio
 include ../../blocks/toggle/toggle
 include ../../blocks/like/like
 include ../../blocks/rate/rate
+include ../../blocks/range-slider/range-slider
 
 doctype html
 html
@@ -47,6 +48,8 @@ html
             +field({name: 'rate button', size: 'medium'})
                 +rate(4)
                 +rate(5)
+            +range-slider('0', '15000')
+            +range-slider('15000', '150000')
             
         //- .form-elements-wrapper
         //-     .buttons-wrapper

@@ -1,0 +1,8 @@
+include ../../blocks/field/field
+
+
+mixin range-slider(from, to)
+    +field({name: 'range slider', size: 'medium'})
+        .range-slider__wrapper
+            span(class="js-range-slider__result")
+            input(type="text" class="js-range-slider" name="my_range" value="" data-min=from data-max=to)
