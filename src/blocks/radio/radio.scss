@@ -21,6 +21,7 @@
     position: absolute;
     height: 0;
     width: 0;
+    display: none;
 }
 
 .radio__input_default:checked ~ .radio__input_styled {
