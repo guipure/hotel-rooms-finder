@@ -1,11 +1,16 @@
-$gradient: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+@import '../color/color.scss';
+
 $border: 2px;
 
 .button-wrap {
     display: inline-block;
-    background: $gradient;
-    padding: $border;
     border-radius: 25px;
+    margin: 12px 16px 18px 0;
+}
+
+.button-wrap_purple-border {
+    background: $purple-gradient;
+    padding: $border;
 }
 
 .button-wrap:hover {
@@ -33,38 +38,34 @@ $border: 2px;
     margin-top: 10px;
 }
 
-.button_white {
-    min-height: 44px - $border;
-    min-width: 99px - $border;
+.button_purple-border {
+    min-height: 44px - 2*$border;
+    min-width: 99px - 2*$border;
     background: white;
-    color: #BC9CFF;
+    color: $purple;
 }
 
-.button_blue {
-    min-height: 44px - $border;
-    min-width: 99px - $border;
+.button_purple {
+    min-height: 44px;
+    min-width: 99px;
     color: white;
-    background: $gradient;
+    background: $purple-gradient;
 }
 
 .button_long {
     position: relative;
-    min-height: 44px - $border;
-    min-width: 320px - $border;
+    min-height: 44px;
+    min-width: 320px;
     color: white;
-    background: $gradient;
+    background: $purple-gradient;
 }
 
-.button_purple {
-    color: #BC9CFF;
+.button_purple-link {
+    color: $purple;
     line-height: 15px;
 }
 
-.button_grey {
-    color: rgba(31, 32, 65, 0.5);
+.button_grey-link {
+    color: $dark-shade-50;
     line-height: 15px;
-}
-
-.button_min:hover {
-    color: rgba(31, 32, 65, 0.5);
 }

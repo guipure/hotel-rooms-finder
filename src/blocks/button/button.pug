@@ -1,20 +1,20 @@
 mixin button(options)
     - var buttonClassName = 'button'
+    - var wrapperClassName = 'button-wrap'
     case options.theme
-        when 'white'
-            - buttonClassName += ' button_white'
+        when 'purple-border'
+            - buttonClassName += ' button_purple-border'
+            - wrapperClassName += ' button-wrap_purple-border'
         when 'long'
             - buttonClassName += ' button_long'
-        when 'purple'
-            - buttonClassName += ' button_purple'
-        when 'grey'
-            - buttonClassName += ' button_grey'
+        when 'purple-link'
+            - buttonClassName += ' button_purple-link'
+        when 'grey-link'
+            - buttonClassName += ' button_grey-link'
         default
-            - buttonClassName += ' button_blue'
-    if options.theme == 'purple' || options.theme == 'grey'
-        button(class = buttonClassName)= options.value
-    else
-        .button-wrap
-            button(class = buttonClassName)= options.value
-                if options.theme == 'long'
-                    i(class='button__icon material-icons') arrow_forward
+            - buttonClassName += ' button_purple'
+
+    div(class=wrapperClassName)
+        button(class=buttonClassName)= options.value
+            if options.theme == 'long'
+                i(class='button__icon material-icons') arrow_forward
