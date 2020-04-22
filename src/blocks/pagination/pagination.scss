@@ -1,0 +1,53 @@
+@import 'blocks/color/color.scss';
+
+.js-pagination {
+    margin-top: 11px;
+}
+
+.js-pagination__ul {
+    display: flex;
+    user-select: none;
+}
+
+.paginationjs-pages {
+    margin-bottom: 10px;
+}
+
+.paginationjs-page,
+.paginationjs-prev,
+.paginationjs-next,
+.paginationjs-ellipsis {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+}
+
+.paginationjs-prev,
+.paginationjs-next {
+    background: $green-gradient;
+}
+
+.active {
+    background: $purple-gradient;
+}
+
+.active a {
+    font-weight: bold;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: $dark-shade-50;
+    font-size: 12px;
+    line-height: 40px;
+}
+
+.pagination__icon {
+    font-size: 24px;
+    line-height: 40px;
+    color: white;
+}
