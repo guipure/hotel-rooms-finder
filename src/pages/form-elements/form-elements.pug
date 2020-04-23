@@ -11,6 +11,7 @@ include ../../blocks/rate/rate
 include ../../blocks/range-slider/range-slider
 include ../../blocks/pagination/pagination
 include ../../blocks/checkbox-list/checkbox-list
+include ../../blocks/icon/icon
 
 doctype html
 html
@@ -66,3 +67,8 @@ html
                 +field({name: 'dropdown', annotation: 'default', size: 'medium'})
                     +dropdown({placeholder: 'Сколько кроватей', size: 'medium', items: ['спальни', 'кровати', 'ванные комнаты'], type: 'beds'})
                 +checkbox-list('expandable checkbox list', ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор', 'Шампунь'])
+                +checkbox-list('expandable checkbox list', ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор', 'Шампунь'])
+                +icon({icon: 'insert_emoticon', header: 'Комфорт', content: 'Шумопоглощающие стены'})
+                +icon({icon: 'location_city', header: 'Удобство', content: 'Окно в каждой из спален'})
+            .form-elements__cell
+            .form-elements__cell
