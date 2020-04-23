@@ -12,6 +12,7 @@ include ../../blocks/range-slider/range-slider
 include ../../blocks/pagination/pagination
 include ../../blocks/checkbox-list/checkbox-list
 include ../../blocks/icon/icon
+include ../../blocks/bullet-list/bullet-list
 
 doctype html
 html
@@ -72,3 +73,5 @@ html
                 +icon({icon: 'location_city', header: 'Удобство', content: 'Окно в каждой из спален'})
             .form-elements__cell
             .form-elements__cell
+                +field({name: 'bullet list', size: 'medium'})
+                    +bullet-list(['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
