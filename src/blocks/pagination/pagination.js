@@ -13,7 +13,8 @@ class Pagination {
             footer: this.footer.bind(this),
             nextText: '<i class="pagination__icon material-icons">arrow_forward</i>',
             prevText: '<i class="pagination__icon material-icons">arrow_back</i>',
-            ulClassName: 'js-pagination__ul'
+            ulClassName: 'js-pagination__ul',
+            activeClassName: 'js-pagination_active'
         })
     }
 
