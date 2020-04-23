@@ -10,6 +10,7 @@ include ../../blocks/like/like
 include ../../blocks/rate/rate
 include ../../blocks/range-slider/range-slider
 include ../../blocks/pagination/pagination
+include ../../blocks/checkbox-list/checkbox-list
 
 doctype html
 html
@@ -64,3 +65,4 @@ html
             .form-elements__cell
                 +field({name: 'dropdown', annotation: 'default', size: 'medium'})
                     +dropdown({placeholder: 'Сколько кроватей', size: 'medium', items: ['спальни', 'кровати', 'ванные комнаты'], type: 'beds'})
+                +checkbox-list('expandable checkbox list', ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор', 'Шампунь'])
