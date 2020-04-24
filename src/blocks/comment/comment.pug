@@ -1,0 +1,28 @@
+include ../like/like
+
+mixin comment(options)
+    - 
+        const date = new Date(options.date)
+        let period = Math.floor((Date.now() - date) / 86400000)
+        const isPublishedToday = period < 1
+        const dayForms = ['день', 'дня', 'дней']
+        let dayForm
+        if (period > 4 && period < 21)
+            dayForm = dayForms[2]
+        else if (period % 10 == 1)
+            dayForm = dayForms[0]
+        else if (period % 10 > 1 && period % 10 < 5)
+            dayForm = dayForms[1]
+        else
+            dayForm = dayForms[2]
+        relDate = isPublishedToday ? 'сегодня' : `${period} ${dayForm} назад`
+        
+    .comment
+        .comment__info
+            img(class = 'comment__photo', src = require('../../assets/comment/' + options.photo).default)
+            .comment__name=options.name
+            .comment__date=relDate
+        .comment__body
+            .comment__like
+                +like(options.likes)
+            .comment__text=options.comment

@@ -1,0 +1,30 @@
+.comment__photo {
+    float: left;
+    border-radius: 50%;
+    border: 2px solid white;
+    max-width: 48px;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    box-shadow: 0px 10px 20px $dark-shade-10;
+}
+
+.comment__like {
+    float: left;
+    padding-top: 2px;
+    padding-left: 4px;
+}
+
+.comment__body {
+    padding-top: 10px;
+    max-width: 711px;
+}
+
+.comment__name {
+    font-weight: bold;
+}
+
+.comment__name,
+.comment__date,
+.comment__text {
+    padding-left: 58px;
+}

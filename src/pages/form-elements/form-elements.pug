@@ -14,6 +14,7 @@ include ../../blocks/pagination/pagination
 include ../../blocks/checkbox-list/checkbox-list
 include ../../blocks/icon/icon
 include ../../blocks/bullet-list/bullet-list
+include ../../blocks/comment/comment
 
 doctype html
 html
@@ -68,10 +69,17 @@ html
             .form-elements__cell
                 +field({name: 'dropdown', annotation: 'default', size: 'medium'})
                     +dropdown({placeholder: 'Сколько кроватей', size: 'medium', items: ['спальни', 'кровати', 'ванные комнаты'], type: 'beds'})
+                +field({name: 'dropdown', annotation: 'default', size: 'medium'})
+                    +dropdown({placeholder: 'Сколько кроватей', size: 'medium', items: ['спальни', 'кровати', 'ванные комнаты'], type: 'beds'})
+            .form-elements__cell
+                +field({name: 'dropdown', size: 'large'})
+                    +dropdown({placeholder: 'Сколько гостей', size: 'large', items: ['взрослые', 'дети', 'младенцы'], type: 'guests'})
+            .form-elements__cell
+                +field({name: 'dropdown', size: 'large'})
+                    +dropdown({placeholder: 'Сколько гостей', size: 'large', items: ['взрослые', 'дети', 'младенцы'], type: 'guests'})
+            .form-elements__cell
                 +checkbox-list('expandable checkbox list', ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор', 'Шампунь'])
                 +checkbox-list('expandable checkbox list', ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор', 'Шампунь'])
-                +icon({icon: 'insert_emoticon', header: 'Комфорт', content: 'Шумопоглощающие стены'})
-                +icon({icon: 'location_city', header: 'Удобство', content: 'Окно в каждой из спален'})
             .form-elements__cell
                 +field({name: 'rich checkbox buttons', size: 'medium'})
                     +checkbox-rich('Широкий коридор', 'Ширина коридоров в номере не менее 91 см.')
@@ -79,3 +87,8 @@ html
             .form-elements__cell
                 +field({name: 'bullet list', size: 'medium'})
                     +bullet-list(['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
+            .form-elements__cell
+                +icon({icon: 'insert_emoticon', header: 'Комфорт', content: 'Шумопоглощающие стены'})
+                +icon({icon: 'location_city', header: 'Удобство', content: 'Окно в каждой из спален'})
+            .form-elements__cell-for-comment
+                +comment({photo: 'murad.png', name: 'Мурад Сарафанов', date: '2020-04-19', likes: '11', comment: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'})
