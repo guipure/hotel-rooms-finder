@@ -59,6 +59,10 @@ module.exports = {
             filename: 'form-elements.html',
             template: './src/pages/form-elements/form-elements.pug'
         }),
+        new HTMLWebpackPlugin({
+            filename: 'cards.html',
+            template: './src/pages/cards/cards.pug'
+        }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: '[name].css'

@@ -1,6 +1,7 @@
 @import 'fonts/fonts';
 @import 'pages/colors-and-type/style';
 @import 'pages/form-elements/style';
+@import 'pages/cards/cards';
 
 * {
     box-sizing: border-box;
@@ -13,6 +14,7 @@ body {
     color: rgba(31, 32, 65, 0.75);
     font-size: 14px;
     line-height: 24px;
+    background-color: white;
 }
 
 h1 {
