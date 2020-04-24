@@ -4,6 +4,7 @@ include ../../blocks/dropdown/dropdown
 include ../../blocks/date-dropdown/date-dropdown
 include ../../blocks/button/button
 include ../../blocks/checkbox/checkbox
+include ../../blocks/checkbox-rich/checkbox-rich
 include ../../blocks/radio/radio
 include ../../blocks/toggle/toggle
 include ../../blocks/like/like
@@ -72,6 +73,9 @@ html
                 +icon({icon: 'insert_emoticon', header: 'Комфорт', content: 'Шумопоглощающие стены'})
                 +icon({icon: 'location_city', header: 'Удобство', content: 'Окно в каждой из спален'})
             .form-elements__cell
+                +field({name: 'rich checkbox buttons', size: 'medium'})
+                    +checkbox-rich('Широкий коридор', 'Ширина коридоров в номере не менее 91 см.')
+                    +checkbox-rich('Помощник для инвалидов', 'На 1 этаже вас встретит специалист  и проводит до номера.')
             .form-elements__cell
                 +field({name: 'bullet list', size: 'medium'})
                     +bullet-list(['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
