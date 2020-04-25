@@ -8,7 +8,7 @@ class Carousel {
         let dots = Array.from(this.carousel.querySelectorAll('.js-carousel__dot'));
         prev.addEventListener('click', () => this.plusSlides(-1))
         next.addEventListener('click', () => this.plusSlides(1))
-        dots.map((dot, i) => dot.addEventListener('click', () => this.currentSlide(i)));
+        dots.map((dot, i) => dot.addEventListener('click', () => this.currentSlide(i + 1)));
     }
 
 

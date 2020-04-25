@@ -5,6 +5,11 @@
     max-width: 270px;
 }
 
+.js-carousel__image {
+    max-width: inherit;
+    border-radius: 4px 4px 0 0;
+}
+
 .js-carousel__prev,
 .js-carousel__next {
     position: absolute;
@@ -29,8 +34,8 @@
 
 .carousel__dots {
     position: absolute;
-    bottom: 10px;
-    right: 10px;
+    bottom: 6px;
+    right: 13px;
 }
 
 .js-carousel__dot {
