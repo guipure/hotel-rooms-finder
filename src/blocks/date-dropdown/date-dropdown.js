@@ -2,7 +2,7 @@ import 'air-datepicker'
 
 
 class DateDropdown {
-    constructor(element, isRange, isInline) {
+    constructor(element) {
         this.box = element.children('.js-date-dropdown__box');
         this.calendar = this.box.datepicker({
             prevHtml: '<span class="material-icons">arrow_back</span>',
@@ -11,9 +11,8 @@ class DateDropdown {
                 days: 'MM <i>yyyy</i>'
             },
             clearButton: true,
-            inline: isInline ? true : false,
             selectOtherYears: false,
-            range: isRange ? true : false,
+            range: true,
             onSelect: this.onSelect.bind(this),
         }).data('datepicker');
         this.datepicker = this.calendar.$datepicker;
@@ -39,7 +38,7 @@ class DateDropdown {
 
     addClearBtn() {
         const clear = this.dropdown.find('.js-date-dropdown__clear');
-        const clearBtn = clear.children('button');
+        const clearBtn = clear.find('button');
         clearBtn.on('click', () => this.clearInputs());
         this.buttons.append(clear);
     }
@@ -47,7 +46,7 @@ class DateDropdown {
 
     addSubmitBtn() {
         const submit = this.dropdown.find('.js-date-dropdown__submit');
-        const submitBtn = submit.children('button');
+        const submitBtn = submit.find('button');
         submitBtn.on('click', () => this.calendar.hide());
         this.buttons.append(submit);
     }
@@ -105,4 +104,4 @@ class DateDropdown {
 }
 
 const dropdowns = $('.js-date-dropdown__input');
-dropdowns.each((index, element) => new DateDropdown($(element), true));
+dropdowns.each((index, element) => new DateDropdown($(element)));

@@ -27,6 +27,18 @@
     border: 1px solid $dark-shade-50;
 }
 
+.js-date-dropdown__box_inline {
+    border: none;
+    min-width: 320px;
+    padding: 0;
+    box-shadow: 0px 10px 20px $dark-shade-5;
+}
+
+.js-date-dropdown__box_inline:focus,
+.js-date-dropdown__box_inline:hover {
+    border: none;
+}
+
 .date-dropdown__box_large {
     width: 320px;
     height: 44px;
