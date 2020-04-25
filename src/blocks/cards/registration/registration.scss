@@ -21,27 +21,24 @@
 }
 
 .registration__name {
-    margin-bottom: 10px;
+    padding-bottom: 10px;
 }
 
 .registration__sex {
-    margin: 10px 0 16px;
+    padding: 10px 0 16px;
 }
 
 .registration__email {
-    margin: 20px 0 10px;
+    padding: 20px 0 10px;
 }
 
 .registration__specials {
-    margin: 10px 0 23px;
-}
-
-.registration__sign-in {
-    margin-top: 30px;
+    padding: 10px 0 23px;
 }
 
 .registration__sign-in {
     position: relative;
+    padding-top: 30px;
 }
 
 .registration__sign-in-btn {
