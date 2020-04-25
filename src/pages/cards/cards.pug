@@ -1,6 +1,8 @@
 include ../../blocks/cards/selection/selection
 include ../../blocks/cards/registration/registration
 include ../../blocks/cards/booking/booking
+include ../../blocks/cards/sign-in/sign-in
+include ../../blocks/date-dropdown/date-dropdown
 
 doctype html
 html
@@ -19,3 +21,8 @@ html
                 .cards__column
                     .cards__card
                         +booking({number: '888', price: '9 900', isLux: true})
+                    .cards__card
+                        +sign-in
+                .cards__column
+                    .cards__card
+                        +date-dropdown({labels: [], isInline: true})
