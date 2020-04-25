@@ -1,0 +1,93 @@
+@import 'blocks/color/color';
+
+.booking {
+    background-color: white;
+    display: inline-block;
+    padding: 39px 29px 29px;
+    max-width: 380px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+}
+
+.booking__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    line-height: 30px;
+}
+
+.booking_num {
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Quicksand';
+    color: $dark-shade-100;
+}
+
+.booking_number {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Quicksand';
+    color: $dark-shade-100;
+    padding: 0 5px 0 4px;
+}
+
+.booking_lux {
+    color: $purple;
+    font-weight: bold;
+    font-family: Montserrat;
+    font-size: 12px;
+}
+
+.booking__day-price {
+    color: $dark-shade-50;
+}
+
+.booking__per-day {
+    font-size: 12px;
+}
+
+.booking__dates {
+    padding: 15px 0 10px;
+}
+
+.booking__price {
+    position: relative;
+    padding: 21px 0 15px;
+}
+
+.booking__fee {
+    display: flex;
+    justify-content: space-between;
+    line-height: 18px;
+    padding-bottom: 16px;
+}
+
+.booking__left-col {
+    max-width: 214px;
+}
+
+.booking__info {
+    position: absolute;
+    left: 220px;
+    color: $dark-shade-25;
+    font-weight: bold;
+    border: 1px solid $dark-shade-25;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.booking__total-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 14px 0 5px;
+}
+
+.booking__dotted-line {
+    width: 55%;
+    border-bottom: 1px dotted $dark-shade-25;
+}
