@@ -12,6 +12,10 @@
     color: $dark-shade-25;
 }
 
+.input__box:hover.input__box::placeholder {
+    color: $dark-shade-75;
+}
+
 .input__box:focus,
 .input__box:hover {
     border: 1px solid $dark-shade-50;
