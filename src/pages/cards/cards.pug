@@ -2,6 +2,7 @@ include ../../blocks/cards/selection/selection
 include ../../blocks/cards/registration/registration
 include ../../blocks/cards/booking/booking
 include ../../blocks/cards/sign-in/sign-in
+include ../../blocks/cards/room/room
 include ../../blocks/date-dropdown/date-dropdown
 
 doctype html
@@ -26,3 +27,7 @@ html
                 .cards__column
                     .cards__card
                         +date-dropdown({labels: [], isInline: true})
+                    .cards__card
+                        +room({images: ['888', '856', '740', '982'], number: '888', isLux: true, price: '9 900', rate: 5, responses: '145'})
+                    .cards__card
+                        +room({images: ['840', '678', '450', '350'], number: '840', isLux: false, price: '9 900', rate: 4, responses: '65'})

@@ -3,9 +3,11 @@
 @import 'blocks/cards/registration/registration';
 @import 'blocks/cards/booking/booking';
 @import 'blocks/cards/sign-in/sign-in';
+@import 'blocks/cards/room/room';
+@import 'blocks/carousel/carousel';
 
 .cards__card {
-    margin: 20px;
+    margin: 40px 20px;
 }
 
 .cards__background {
