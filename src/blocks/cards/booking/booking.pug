@@ -2,16 +2,16 @@ include ../../button/button
 include ../../dropdown/dropdown
 include ../../date-dropdown/date-dropdown
 
-mixin booking(isLux)
+mixin booking(options)
     .booking
         .booking__title
             .booking__room
                 span.booking_num №
-                span.booking_number 888
-                if isLux
+                span.booking_number=options.number
+                if options.isLux
                     span.booking_lux ЛЮКС
             .booking__day-price
-                strong 9 990₽ 
+                strong= options.price + '₽ '
                 span.booking__per-day в сутки
         .booking__dates
             +date-dropdown({placeholder: 'ДД.ММ.ГГГГ', labels: ['прибытие', 'выезд']})
