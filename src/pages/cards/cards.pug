@@ -1,5 +1,6 @@
 include ../../blocks/cards/selection/selection
 include ../../blocks/cards/registration/registration
+include ../../blocks/cards/booking/booking
 
 doctype html
 html
@@ -9,7 +10,12 @@ html
         title Hotel Rooms
     body
         .cards__background
-            .cards__card
-                +selection()
-            .cards__card
-                +registration()
+            .cards__wrapper
+                .cards__column
+                    .cards__card
+                        +selection
+                    .cards__card
+                        +registration
+                .cards__column
+                    .cards__card
+                        +booking(true)

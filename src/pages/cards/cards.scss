@@ -1,6 +1,7 @@
 @import 'blocks/color/color';
 @import 'blocks/cards/selection/selection';
 @import 'blocks/cards/registration/registration';
+@import 'blocks/cards/booking/booking';
 
 .cards__card {
     margin: 20px;
@@ -10,4 +11,12 @@
     position: absolute;
     background-color: #E5E5E5;
     width: 100%;
+}
+
+.cards__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1440px;
+    padding: 140px 150px;
+    margin: auto;
 }
