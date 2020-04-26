@@ -1,7 +1,10 @@
 @import 'blocks/color/color';
+@import 'blocks/header/header';
+@import 'blocks/footer-large/footer-large';
+@import 'blocks/socials/socials';
 
 .h-and-f__card {
-    margin: 40px 0;
+    margin-bottom: 40px;
 }
 
 .h-and-f__background {
