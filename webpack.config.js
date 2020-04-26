@@ -63,6 +63,10 @@ module.exports = {
             filename: 'cards.html',
             template: './src/pages/cards/cards.pug'
         }),
+        new HTMLWebpackPlugin({
+            filename: 'headers-and-footers.html',
+            template: './src/pages/headers-and-footers/headers-and-footers.pug'
+        }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: '[name].css'
