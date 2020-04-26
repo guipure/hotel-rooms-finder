@@ -38,17 +38,19 @@ $border: 2px;
 }
 
 .button_purple-border {
-    min-height: 44px - 2*$border;
-    min-width: 99px - 2*$border;
+    height: 44px - 2*$border;
+    min-width: 83px - 2*$border;
     background: white;
     color: $purple;
+    padding: 0 20px-$border;
 }
 
 .button_purple {
-    min-height: 44px;
-    min-width: 99px;
+    height: 44px;
+    min-width: 79px;
     color: white;
     background: $purple-gradient;
+    padding: 0 20px;
 }
 
 .button_long {
