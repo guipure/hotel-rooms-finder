@@ -1,3 +1,5 @@
+@import './fonts/awesome-brands/css/all.min.css';
+
 @font-face {
 	font-family: 'Quicksand';
     src: url('fonts/quicksand/Quicksand-Regular.woff') format('woff'),
@@ -60,7 +62,7 @@
 }
 
 
-  .material-icons {
+.material-icons {
     font-family: 'Material Icons';
     font-weight: normal;
     font-style: normal;
@@ -83,4 +85,4 @@
   
     /* Support for IE. */
     font-feature-settings: 'liga';
-  }
+}

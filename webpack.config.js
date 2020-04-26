@@ -39,7 +39,7 @@ module.exports = {
                 }
             },
             {
-                test: /\.(ttf|woff|svg)$/,
+                test: /\.(ttf|woff|svg|eot|woff2)$/,
                 include: [
                     path.resolve(__dirname, 'src/fonts/')
                 ],
