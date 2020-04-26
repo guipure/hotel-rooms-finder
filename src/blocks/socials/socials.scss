@@ -1,0 +1,13 @@
+.socials {
+    display: flex;
+    justify-content: space-between;
+    width: 112px;
+}
+
+.socials__link {
+    font-size: 24px;
+    background: $purple-gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
