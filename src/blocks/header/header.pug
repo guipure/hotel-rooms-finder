@@ -1,0 +1,24 @@
+include ../button/button
+
+mixin header(options)
+    .header
+        .header__container
+            img.header__logo(src = require('../../assets/logo/logo.svg').default)
+            ul.header__menu
+                each item in options.menu
+                    if item.list
+                        li.header__item.header__item_expandable
+                            a.header__link(href='#')=item.item
+                            span.header__arrow.material-icons expand_more
+                    else
+                        li.header__item
+                            a.header__link(href='#')=item.item
+            .header__login
+                if options.isLoggedIn
+                    .header__name-group
+                        .header__line
+                        .header__name=options.name
+                else
+                    .header__buttons
+                        +button({theme: 'purple-border', value: 'login'})
+                        +button({theme: 'purple', value: 'register'})
