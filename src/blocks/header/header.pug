@@ -1,18 +1,22 @@
 include ../button/button
 
 mixin header(options)
+    - let login = options.login ? options.login : 'login'
+    - let register = options.register ? options.register : 'register'
+
     .header
         .header__container
             img.header__logo(src = require('../../assets/logo/logo.svg').default)
             ul.header__menu
                 each item in options.menu
-                    if item.list
-                        li.header__item.header__item_expandable
-                            a.header__link(href='#')=item.item
+                    -
+                        let itemClass = 'header__item'
+                        itemClass += item.list ? ' header__item_expandable' : ''
+                        itemClass += item.isActive ? ' header__item_active' : ''
+                    li(class=itemClass)
+                        a.header__link(href='#')=item.item
+                        if item.list
                             span.header__arrow.material-icons expand_more
-                    else
-                        li.header__item
-                            a.header__link(href='#')=item.item
             .header__login
                 if options.isLoggedIn
                     .header__name-group
@@ -20,5 +24,7 @@ mixin header(options)
                         .header__name=options.name
                 else
                     .header__buttons
-                        +button({theme: 'purple-border', value: 'login'})
-                        +button({theme: 'purple', value: 'register'})
+                        .header__button
+                            +button({theme: 'purple-border', value: login})
+                        .header__button
+                            +button({theme: 'purple', value: register})
