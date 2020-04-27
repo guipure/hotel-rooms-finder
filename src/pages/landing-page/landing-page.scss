@@ -1,0 +1,26 @@
+.landing-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.landing-page__main {
+    background: url('assets/landing-page/main.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 830px;
+    max-width: 1440px;
+    margin: auto;
+}
+
+.landing-page__container {
+    max-width: 1200px;
+    padding: 70px 20px 20px;
+    margin: auto;
+}
+
+.landing-page__slogan {
+    max-width: 1200px;
+    text-align: right;
+    padding: 325px 0 0 850px;
+}

@@ -67,6 +67,10 @@ module.exports = {
             filename: 'headers-and-footers.html',
             template: './src/pages/headers-and-footers/headers-and-footers.pug'
         }),
+        new HTMLWebpackPlugin({
+            filename: 'landing-page.html',
+            template: './src/pages/landing-page/landing-page.pug'
+        }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: '[name].css'
