@@ -9,9 +9,14 @@
 
 .header__container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     width: 1160px;
+}
+
+@media (max-width: 1398px) {
+    .header__container {
+        width: 80%;
+    }
 }
 
 .header__menu {
@@ -19,6 +24,7 @@
     display: flex;
     justify-content: right;
     padding-right: 2px;
+    flex-wrap: wrap;
 }
 
 .header__item {
@@ -36,7 +42,7 @@
     outline: none;
 }
 
-.header__item:first-child > .header__link {
+.header__item_active > .header__link {
     font-weight: bold;
     color: $dark-shade-75;
 }
@@ -60,6 +66,10 @@
 
 .header__buttons .button_purple {
     height:34px;
+}
+
+.header__button:first-child {
+    padding-right: 20px;
 }
 
 .header__name-group {
