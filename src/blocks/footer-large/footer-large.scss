@@ -47,6 +47,7 @@
     padding-bottom: 11px;
     padding-top: 4px;
     letter-spacing: -0.3px;
+    white-space: nowrap;
 }
 
 .footer-large__menu-item {
@@ -56,6 +57,7 @@
 
 .footer-large__menu-link {
     font-size: 14px;
+    white-space: nowrap;
 }
 
 .footer-large__subscription {
@@ -78,4 +80,59 @@
 .footer-large__sub-info,
 .footer-large__copyright {
     letter-spacing: -0.1px;
+}
+
+
+@media (max-width: 1200px) {
+    .footer-large__container {
+        width: 90%;
+    }
+
+    .footer-large__menus {
+        padding: 0 5%;
+    }
+
+    .footer-large__menu {
+        padding-right: 5%;
+    }
+}
+
+
+@media (max-width: 970px) {
+    .footer-large__top {
+        flex-direction: column;
+        align-items: center;
+        padding: 5%;
+    }
+
+    .footer-large__main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-large__info {
+        text-align: center;
+    }
+
+    .footer-large__menus {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 797px) {
+    .footer-large__bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 440px) {
+    .footer-large__menus {
+        flex-direction: column;
+    }
+
+    .footer-large__menu {
+        padding: 10px;
+        text-align: center;
+    }
 }

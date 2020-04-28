@@ -13,12 +13,6 @@
     width: 1160px;
 }
 
-@media (max-width: 1398px) {
-    .header__container {
-        width: 80%;
-    }
-}
-
 .header__menu {
     flex-grow: 1;
     display: flex;
@@ -87,4 +81,36 @@
 .header__name {
     color: $dark-shade-50;
     padding-left: 30px;
+}
+
+
+@media (max-width: 1200px) {
+    .header__container {
+        width: 90%;
+    }
+}
+
+
+@media (max-width: 970px) {
+    .header__container {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .header__menu {
+        justify-content: center;
+    }
+
+    .header__name-group {
+        flex-direction: column;
+    }
+
+    .header__name {
+        padding: 0;
+    }
+
+    .header__line {
+        width: 50%;
+        height: 1px;
+    }
 }
