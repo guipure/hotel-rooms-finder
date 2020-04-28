@@ -10,17 +10,33 @@
     background-position: center;
     height: 830px;
     max-width: 1440px;
-    margin: auto;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .landing-page__container {
-    max-width: 1200px;
-    padding: 70px 20px 20px;
-    margin: auto;
+    width: 1160px;
+    display: flex;
+    padding: 70px 0 18px;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .landing-page__slogan {
-    max-width: 1200px;
     text-align: right;
-    padding: 325px 0 0 850px;
+    max-width: 300px;
+    align-self: end;
+}
+
+
+@media (max-width: 970px) {
+    .landing-page__container {
+        align-items: center;
+    }
+
+    .landing-page__slogan {
+        text-align: center;
+        align-self: center;
+    }
 }
