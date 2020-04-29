@@ -71,6 +71,10 @@ module.exports = {
             filename: 'landing-page.html',
             template: './src/pages/landing-page/landing-page.pug'
         }),
+        new HTMLWebpackPlugin({
+            filename: 'search-room.html',
+            template: './src/pages/search-room/search-room.pug'
+        }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: '[name].css'

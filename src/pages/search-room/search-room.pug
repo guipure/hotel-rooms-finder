@@ -1,0 +1,200 @@
+include ../../blocks/header/header
+include ../../blocks/footer-large/footer-large
+include ../../blocks/field/field
+include ../../blocks/dropdown/dropdown
+include ../../blocks/date-dropdown/date-dropdown
+include ../../blocks/checkbox/checkbox
+include ../../blocks/checkbox-rich/checkbox-rich
+include ../../blocks/range-slider/range-slider
+include ../../blocks/pagination/pagination
+include ../../blocks/checkbox-list/checkbox-list
+include ../../blocks/cards/room/room
+
+doctype html
+html
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Search room
+    body
+        header
+            +header({
+                menu: [
+                    {item: 'О нас'},
+                    {item: 'Услуги', list: ['Услуга 1', 'Услуга 2', 'Услуга 3']},
+                    {item: 'Вакансии'},
+                    {item: 'Новости'},
+                    {item: 'Соглашения', list: ['Соглашение 1', 'Соглашение 2', 'Соглашение 3']}
+                ],
+                isLoggedIn: false,
+                login: 'войти',
+                register: 'зарегистрироваться'
+            })
+        .search-room__container
+            aside.search-filter
+                .search-filter__element
+                    +date-dropdown({placeholder: 'Выберите даты', labels: ['даты пребывания в отеле']})
+                .search-filter__element
+                    +field({name: 'гости', size: 'medium'})
+                        +dropdown({
+                            placeholder: 'Сколько гостей',
+                            size: 'medium',
+                            items: ['взрослые', 'дети', 'младенцы'],
+                            type: 'guests'
+                        })
+                .search-filter__element
+                    +range-slider('диапазон цены', '0', '15000')
+                .search-filter__element
+                    +field({name: 'checkbox buttons', size: 'medium'})
+                        +checkbox('Можно курить')
+                        +checkbox('Можно с питомцами')
+                        +checkbox('Можно пригласить гостей (до 10 человек)')
+                .search-filter__element
+                    +field({name: 'доступность', size: 'medium'})
+                        +checkbox-rich('Широкий коридор', 'Ширина коридоров в номере не менее 91 см.')
+                        +checkbox-rich('Помощник для инвалидов', 'На 1 этаже вас встретит специалист  и проводит до номера.')
+                .search-filter__element
+                    +field({name: 'удобство номера', size: 'medium'})
+                        +dropdown({placeholder: 'Сколько кроватей', size: 'medium', items: ['спальни', 'кровати', 'ванные комнаты'], type: 'beds'})
+                .search-filter__element
+                    +checkbox-list('дополнительные удобства', ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор', 'Шампунь'])
+            section.search-result
+                h1.search-result__title Номера, которые мы для вас подобрали
+                .search-result__cards
+                    .search-result__card
+                        +room({
+                            images: ['888', '856', '740', '982'],
+                            number: '888',
+                            isLux: true,
+                            price: '9 900',
+                            rate: 5,
+                            responses: '145'
+                        })
+                    .search-result__card
+                        +room({
+                            images: ['840', '856', '740', '982'],
+                            number: '840',
+                            price: '9 900',
+                            rate: 4,
+                            responses: '65'
+                        })
+                    .search-result__card
+                        +room({
+                            images: ['980', '856', '740', '982'],
+                            number: '980',
+                            isLux: true,
+                            price: '8 500',
+                            rate: 3,
+                            responses: '35'
+                        })
+                    .search-result__card
+                        +room({
+                            images: ['856', '666', '444', '352'],
+                            number: '856',
+                            price: '7 300',
+                            rate: 5,
+                            responses: '19'
+                        })
+                    .search-result__card
+                        +room({
+                            images: ['740', '666', '444', '352'],
+                            number: '740',
+                            price: '6 000',
+                            rate: 4,
+                            responses: '44'
+                        })
+                    .search-result__card
+                        +room({
+                            images: ['982', '666', '444', '352'],
+                            number: '982',
+                            price: '5 800',
+                            rate: 3,
+                            responses: '56'
+                        })
+                    .search-result__card
+                        +room({
+                            images: ['678', '888', '840', '980'],
+                            number: '678',
+                            price: '5 500',
+                            rate: 5,
+                            responses: '45'
+                        })
+                    .search-result__card
+                        +room({
+                            images: ['450', '888', '840', '980'],
+                            number: '450',
+                            price: '5 300',
+                            rate: 4,
+                            responses: '39'
+                        })
+                    .search-result__card
+                        +room({
+                            images: ['350', '888', '840', '980'],
+                            number: '350',
+                            price: '5 000',
+                            rate: 3,
+                            responses: '77'
+                        })
+                    .search-result__card
+                        +room({
+                            images: ['666', '888', '840', '980'],
+                            number: '666',
+                            price: '5 000',
+                            rate: 5,
+                            responses: '25'
+                        })
+                    .search-result__card
+                        +room({
+                            images: ['444', '888', '840', '980'],
+                            number: '444',
+                            price: '5 000',
+                            rate: 3,
+                            responses: '15'
+                        })
+                    .search-result__card
+                        +room({
+                            images: ['352', '888', '840', '980'],
+                            number: '352',
+                            price: '5 000',
+                            rate: 3,
+                            responses: '55'
+                        })
+                .search-result__pagination
+                    +pagination({pageSize: '12', totalNumber: '175'})
+        footer
+            +footer-large({
+                info: 'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»',
+                menus: [
+                    {
+                        title: 'Навигация',
+                        items: [
+                            'О нас',
+                            'Новости',
+                            'Служба поддержки',
+                            'Услуги'
+                        ]
+                    },
+                    {
+                        title: 'О нас',
+                        items: [
+                            'О сервисе',
+                            'Наша команда',
+                            'Вакансии',
+                            'Инвесторы'
+                        ]
+                    },
+                    {
+                        title: 'Служба поддержки',
+                        items: [
+                            'Соглашения',
+                            'Сообщества',
+                            'Связь с нами'
+                        ]
+                    }
+                ],
+                subscription: {
+                    title: 'Подписка',
+                    info: 'Получайте специальные предложения и новости сервиса'
+                },
+                copyright: 'Copyright © 2018 Toxin отель. Все права зачищены.'
+            })
