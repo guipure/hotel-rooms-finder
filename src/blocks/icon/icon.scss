@@ -31,3 +31,7 @@
     background-color: $dark-shade-10;
     margin: 20px 0;
 }
+
+.icon:last-child .icon__line {
+    display: none;
+}
