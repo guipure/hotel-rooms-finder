@@ -1,0 +1,95 @@
+include ../../blocks/header/header
+include ../../blocks/footer-large/footer-large
+include ../../blocks/cards/booking/booking
+include ../../blocks/icon/icon
+include ../../blocks/comment/comment
+include ../../blocks/bullet-list/bullet-list
+
+
+doctype html
+html
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Room details
+    body
+        header
+            +header({
+                menu: [
+                    {item: 'О нас'},
+                    {item: 'Услуги', list: ['Услуга 1', 'Услуга 2', 'Услуга 3']},
+                    {item: 'Вакансии'},
+                    {item: 'Новости'},
+                    {item: 'Соглашения', list: ['Соглашение 1', 'Соглашение 2', 'Соглашение 3']}
+                ],
+                isLoggedIn: false,
+                login: 'войти',
+                register: 'зарегистрироваться'
+            })
+        .room-details__gallery
+            section.room-details__photos
+                img.room-details__photo(src = require('../../assets/room-details/888-1.png').default)
+                img.room-details__photo(src = require('../../assets/room-details/888-2.png').default)
+                img.room-details__photo(src = require('../../assets/room-details/888-3.png').default)
+        .room-details__container
+            section.room-details__info
+                .info__item
+                    h2.info__title Сведения о номере
+                    +icon({icon: 'insert_emoticon', header: 'Комфорт', content: 'Шумопоглощающие стены'})
+                    +icon({icon: 'location_city', header: 'Удобство', content: 'Окно в каждой из спален'})
+                    +icon({icon: 'whatshot', header: 'Уют', content: 'Номер оснащён камином'})
+                .info__item
+                    h2.info__title Впечатления от номера
+                    //- pie chart
+                .info__item
+                    h2.info__title Отзывы посетителей номера
+                    .info__comment
+                        +comment({photo: 'murad.png', name: 'Мурад Сарафанов', date: '2020-04-19', likes: '11', comment: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'})
+                    .info__comment
+                        +comment({photo: 'murad.png', name: 'Патрисия Стёклышкова', date: '2020-04-10', likes: '2', comment: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'})
+                .info__item
+                    h2.info__title Правила
+                    +bullet-list(['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
+                .info__item
+                    h2.info__title Отмена
+                    p.info__text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до 
+                    | прибытия вы получите полный возврат за вычетом сбора за услуги.
+            aside.room-details__booking
+                +booking({number: '888', price: '9 900', isLux: true})
+        footer
+            +footer-large({
+                info: 'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»',
+                menus: [
+                    {
+                        title: 'Навигация',
+                        items: [
+                            'О нас',
+                            'Новости',
+                            'Служба поддержки',
+                            'Услуги'
+                        ]
+                    },
+                    {
+                        title: 'О нас',
+                        items: [
+                            'О сервисе',
+                            'Наша команда',
+                            'Вакансии',
+                            'Инвесторы'
+                        ]
+                    },
+                    {
+                        title: 'Служба поддержки',
+                        items: [
+                            'Соглашения',
+                            'Сообщества',
+                            'Связь с нами'
+                        ]
+                    }
+                ],
+                subscription: {
+                    title: 'Подписка',
+                    info: 'Получайте специальные предложения и новости сервиса'
+                },
+                copyright: 'Copyright © 2018 Toxin отель. Все права зачищены.'
+            })
