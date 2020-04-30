@@ -4,6 +4,7 @@ include ../../blocks/cards/booking/booking
 include ../../blocks/icon/icon
 include ../../blocks/comment/comment
 include ../../blocks/bullet-list/bullet-list
+include ../../blocks/donut-chart/donut-chart
 
 
 doctype html
@@ -40,7 +41,7 @@ html
                     +icon({icon: 'whatshot', header: 'Уют', content: 'Номер оснащён камином'})
                 .info__item
                     h2.info__title Впечатления от номера
-                    //- pie chart
+                    +donut-chart({great: 130, good: 65, normal: 65, bad: 0})
                 .info__item
                     h2.info__title Отзывы посетителей номера
                     .info__comment

@@ -1,0 +1,62 @@
+.donut-chart {
+    display: flex;
+}
+
+.donut {
+    max-width: 120px;
+}
+
+.donut__text {
+    fill: $purple;
+    transform: translateY(0.40em);
+}
+
+.donut__number {
+    font-family: Quicksand;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    text-anchor: middle;
+    transform: translateY(-0.25em);
+}
+
+.donut__label {
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 12px;
+    text-anchor: middle;
+    transform: translateY(0.7em);
+}
+
+.donut-chart__key {
+    padding-left: 30px;
+    align-self: end;
+}
+
+.key__list {
+    list-style: none;
+}
+
+.key__circle {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.key__circle_yellow {
+    background: $yellow-gradient;
+}
+
+.key__circle_green {
+    background: $green-gradient;
+}
+
+.key__circle_purple {
+    background: $purple-gradient;
+}
+
+.key__circle_grey {
+    background: $grey-gradient;
+}
