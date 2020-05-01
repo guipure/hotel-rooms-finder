@@ -87,6 +87,10 @@ module.exports = {
             filename: 'sign-in.html',
             template: './src/pages/sign-in/sign-in.pug'
         }),
+        new HTMLWebpackPlugin({
+            filename: 'index.html',
+            template: './src/pages/index/index.pug'
+        }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: '[name].css'
