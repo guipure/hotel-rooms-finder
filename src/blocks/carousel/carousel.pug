@@ -5,7 +5,7 @@ mixin carousel(images)
         each img in images
             img(
                 class="js-carousel__image",
-                src=require('../../assets/room/' + img + '.png').default,
+                src=require('../../assets/room/' + img + '.jpg').default,
                 alt="room photo"
             )
         a(class="js-carousel__prev material-icons") chevron_left
