@@ -5,9 +5,9 @@ mixin sign-in
     form.sign-in
         .sign-in__title Войти
         .sign-in__email
-            +input({placeholder: 'Email', size: 'large'})
+            +input({placeholder: 'Email', size: 'large', type: 'email'})
         .sign-in__pass
-            +input({placeholder: 'Пароль', size: 'large'})
+            +input({placeholder: 'Пароль', size: 'large', type: 'password'})
         .sign-in__button
             +button({theme: 'long', value: 'войти'})
         .sign-in__sign-up Нет аккаунта на Toxin?

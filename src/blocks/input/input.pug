@@ -4,6 +4,6 @@ mixin input(options)
         inputClassName += options.isSub ? ' input__box_sub' : ''
         inputClassName += options.isMasked ? ' input__box_masked' : ''
     .input
-        input(type="text", placeholder=options.placeholder, class=inputClassName)
+        input(type=options.type, placeholder=options.placeholder, class=inputClassName)
         if options.isSub
             i(class="input__icon material-icons") arrow_forward

@@ -26,9 +26,9 @@ html
         .form-elements-wrapper
             .form-elements__cell
                 +field({name: 'text field', annotation: 'default', size: 'large'})
-                    +input({placeholder: 'Email', size: 'large'})
+                    +input({placeholder: 'Email', size: 'large', type: 'email'})
                 +field({name: 'text field', annotation: 'hover/focus', size: 'large'})
-                    +input({placeholder: 'This is pretty awesome', size: 'large'})
+                    +input({placeholder: 'This is pretty awesome', size: 'large', type: 'text'})
                 +field({name: 'dropdown', annotation: 'default', size: 'large'})
                     +dropdown({placeholder: 'Сколько гостей', size: 'large', items: ['взрослые', 'дети', 'младенцы'], type: 'guests'})
                 +field({name: 'masked text field', annotation: 'default', size: 'large'})
@@ -36,7 +36,7 @@ html
                 +date-dropdown({placeholder: 'ДД.ММ.ГГГГ', labels: ['date dropdown', 'date dropdown']})
                 +date-dropdown({placeholder: 'Выберите даты', labels: ['filter date dropdown']})
                 +field({name: 'subscription text field'})
-                    +input({placeholder: 'Email', size: 'medium', isSub: true})
+                    +input({placeholder: 'Email', size: 'medium', isSub: true, type: 'email'})
             .form-elements__cell
                 +field({name: 'checkbox buttons', size: 'medium'})
                     +checkbox('Можно курить')

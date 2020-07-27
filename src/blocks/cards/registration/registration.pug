@@ -7,9 +7,9 @@ mixin registration
     form.registration
         .registration__title Регистрация аккаунта
         .registration__name
-            +input({placeholder: 'Имя', size: 'large'})
+            +input({placeholder: 'Имя', size: 'large', type: 'text'})
         .registration__surname
-            +input({placeholder: 'Фамилия', size: 'large'})
+            +input({placeholder: 'Фамилия', size: 'large', type: 'text'})
         .registration__sex
             +radio(['Мужчина', 'Женщина'])
         .registration__birth
@@ -17,9 +17,9 @@ mixin registration
                 +input({placeholder: 'ДД.ММ.ГГГГ', size: 'large', isMasked: true})
         .registration__email
             +field({name: 'данные для входа в сервис', size: 'large'})
-                +input({placeholder: 'Email', size: 'large'})
+                +input({placeholder: 'Email', size: 'large', type: 'email'})
         .registration__pass
-            +input({placeholder: 'Пароль', size: 'large'})
+            +input({placeholder: 'Пароль', size: 'large', type: 'password'})
         .registration__specials
             +toggle('Получать спецпредложения')
         .registration__payBtn
