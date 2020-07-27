@@ -88,6 +88,7 @@ class DateDropdown {
         const monthsArray = ['янв', 'фев', 'мар', 'апр', 'май', 'июн', 'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'];
         const monthName = monthsArray[monthNumber];
         return `${day} ${monthName}`;
+      //no default
     }
   }
 }

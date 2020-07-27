@@ -207,7 +207,7 @@ Build date: 2019-12-19 16:51:02
 .irs--flat .irs-single:before {
   position: absolute;
   display: block;
-  content: "";
+  content: '';
   bottom: -6px;
   left: 50%;
   width: 0;
@@ -407,7 +407,7 @@ Build date: 2019-12-19 16:51:02
 .irs--modern .irs-single:before {
   position: absolute;
   display: block;
-  content: "";
+  content: '';
   bottom: -6px;
   left: 50%;
   width: 0;
@@ -505,7 +505,7 @@ Build date: 2019-12-19 16:51:02
 .irs--sharp .irs-single:before {
   position: absolute;
   display: block;
-  content: "";
+  content: '';
   bottom: -6px;
   left: 50%;
   width: 0;
@@ -589,7 +589,7 @@ Build date: 2019-12-19 16:51:02
 .irs--round .irs-single:before {
   position: absolute;
   display: block;
-  content: "";
+  content: '';
   bottom: -6px;
   left: 50%;
   width: 0;

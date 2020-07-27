@@ -12,9 +12,10 @@ mixin dropdown(options)
     -
         var dropdownClassName = 'dropdown__box' + ' dropdown__box_' + options.size
         dropdownClassName += options.isSub ? ' dropdown__box_sub' : ''
+        var resultClassName = 'dropdown__result ' + options.type
     .dropdown
         div(class=dropdownClassName)
-            div(class='dropdown__result ' + options.type)= options.placeholder
+            div(class=resultClassName)= options.placeholder
             i.dropdown__icon.material-icons expand_more
         .dropdown__menu.dropdown__menu_hidden
             each item in options.items
