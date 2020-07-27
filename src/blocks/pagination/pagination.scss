@@ -2,11 +2,20 @@
 
 .js-pagination {
     margin-top: 11px;
-}
 
-.js-pagination__ul {
-    display: flex;
-    user-select: none;
+    &__ul {
+        display: flex;
+        user-select: none;
+    }
+
+    &_active {
+        background: $purple-gradient;
+    }
+    
+    &_active a {
+        font-weight: bold;
+        color: white;
+    }
 }
 
 .paginationjs-pages {
@@ -28,15 +37,6 @@
 .paginationjs-prev,
 .paginationjs-next {
     background: $green-gradient;
-}
-
-.js-pagination_active {
-    background: $purple-gradient;
-}
-
-.js-pagination_active a {
-    font-weight: bold;
-    color: white;
 }
 
 a {

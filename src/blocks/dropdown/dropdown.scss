@@ -2,116 +2,116 @@
     max-width: 320px;
     user-select: none;
     position: relative;
-}
 
-.dropdown__box {
-    font-family: inherit;
-    border: 1px solid rgba(31, 32, 65, 0.25);
-    border-radius: 3px 3px 0 0;
-    padding: 10px 10px 0 15px;
-    outline: none;
-    cursor: pointer;
-}
-
-.dropdown__box:focus,
-.dropdown__box:hover {
-    border: 1px solid rgba(31, 32, 65, 0.5);
-}
-
-.dropdown__box_small {
-    width: 150px;
-    height: 44px;
-}
-
-.dropdown__box_medium {
-    width: 267px;
-    height: 44px;
-}
-
-.dropdown__box_large {
-    width: 320px;
-    height: 44px;
-}
-
-
-.dropdown__result {
-    display: inline-block;
-}
-
-.dropdown__icon {
-    float: right;
-    color: rgba(31, 32, 65, 0.5);
-    transition: transform 0.25s;
-}
-
-.dropdown__icon_rotated {
-    transform: rotate(180deg);
-}
-
-.dropdown__menu {
-    position: absolute;
-    width: 100%;
-    background: white;
-    z-index: 5;
-    border: 1px solid rgba(31, 32, 65, 0.5);
-    border-top: none;
-    border-radius: 0 0 3px 3px;
-    padding: 15px 5px 15px 15px;
-    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-}
-
-.dropdown__menu_hidden {
-    display: none;
-}
-
-.dropdown__label {
-    display: inline-block;
-    font-family: Montserrat;
-    color: #1F2041;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 40px;
-    text-transform: uppercase;
-}
-
-.dropdown__item {
-    height: 40px;
-}
-
-.dropdown__count {
-    float: right;
-}
-
-.dropdown__operator {
-    display: inline-block;
-    border: 1px solid rgba(31, 32, 65, 0.5);
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-.dropdown__operator_disabled {
-    border: 1px solid rgba(31, 32, 65, 0.25);
-    color: rgba(31, 32, 65, 0.25);
-}
-
-.dropdown__operator_minus::before {
-    content: "-";
-}
-
-.dropdown__operator_plus::before {
-    content: "+";
-}
-
-.dropdown__value {
-    @extend .dropdown__label;
-    min-width: 32px;
-    text-align: center;
-}
-
-.dropdown__submit {
-    float: right;
+    &__box {
+        font-family: inherit;
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        border-radius: 3px 3px 0 0;
+        padding: 10px 10px 0 15px;
+        outline: none;
+        cursor: pointer;
+    }
+    
+    &__box:focus,
+    &__box:hover {
+        border: 1px solid rgba(31, 32, 65, 0.5);
+    }
+    
+    &__box_small {
+        width: 150px;
+        height: 44px;
+    }
+    
+    &__box_medium {
+        width: 267px;
+        height: 44px;
+    }
+    
+    &__box_large {
+        width: 320px;
+        height: 44px;
+    }
+    
+    
+    &__result {
+        display: inline-block;
+    }
+    
+    &__icon {
+        float: right;
+        color: rgba(31, 32, 65, 0.5);
+        transition: transform 0.25s;
+    }
+    
+    &__icon_rotated {
+        transform: rotate(180deg);
+    }
+    
+    &__menu {
+        position: absolute;
+        width: 100%;
+        background: white;
+        z-index: 5;
+        border: 1px solid rgba(31, 32, 65, 0.5);
+        border-top: none;
+        border-radius: 0 0 3px 3px;
+        padding: 15px 5px 15px 15px;
+        box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+    }
+    
+    &__menu_hidden {
+        display: none;
+    }
+    
+    &__label {
+        display: inline-block;
+        font-family: Montserrat;
+        color: #1F2041;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 40px;
+        text-transform: uppercase;
+    }
+    
+    &__item {
+        height: 40px;
+    }
+    
+    &__count {
+        float: right;
+    }
+    
+    &__operator {
+        display: inline-block;
+        border: 1px solid rgba(31, 32, 65, 0.5);
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        font-size: 18px;
+        cursor: pointer;
+    }
+    
+    &__operator_disabled {
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        color: rgba(31, 32, 65, 0.25);
+    }
+    
+    &__operator_minus::before {
+        content: "-";
+    }
+    
+    &__operator_plus::before {
+        content: "+";
+    }
+    
+    &__value {
+        @extend .dropdown__label;
+        min-width: 32px;
+        text-align: center;
+    }
+    
+    &__submit {
+        float: right;
+    }
 }

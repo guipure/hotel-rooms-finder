@@ -3,39 +3,43 @@
 
 .js-date-dropdown {
     display: flex;
-}
 
-.js-date-dropdown__input {
-    position: relative;
-}
+    &__input {
+        position: relative;
+    }
+    
+    &__box {
+        font-family: inherit;
+        border: 1px solid $dark-shade-25;
+        border-radius: 3px;
+        padding: 13px 15px;
+        outline: none;
+    }
+    
+    &__box::placeholder {
+        color: $dark-shade-25;
+    }
+    
+    &__box:focus,
+    &__box:hover {
+        border: 1px solid $dark-shade-50;
+    }
+    
+    &__box_inline {
+        border: none;
+        min-width: 320px;
+        padding: 0;
+        box-shadow: 0px 10px 20px $dark-shade-5;
+    }
+    
+    &__box_inline:focus,
+    &__box_inline:hover {
+        border: none;
+    }
 
-.js-date-dropdown__box {
-    font-family: inherit;
-    border: 1px solid $dark-shade-25;
-    border-radius: 3px;
-    padding: 13px 15px;
-    outline: none;
-}
-
-.js-date-dropdown__box::placeholder {
-    color: $dark-shade-25;
-}
-
-.js-date-dropdown__box:focus,
-.js-date-dropdown__box:hover {
-    border: 1px solid $dark-shade-50;
-}
-
-.js-date-dropdown__box_inline {
-    border: none;
-    min-width: 320px;
-    padding: 0;
-    box-shadow: 0px 10px 20px $dark-shade-5;
-}
-
-.js-date-dropdown__box_inline:focus,
-.js-date-dropdown__box_inline:hover {
-    border: none;
+    &__submit {
+        float: right;
+    }
 }
 
 .date-dropdown__box_large {
@@ -60,10 +64,6 @@
     top: 10px;
     user-select: none;
     cursor: pointer;
-}
-
-.js-date-dropdown__submit {
-    float: right;
 }
 
 .field:first-child {

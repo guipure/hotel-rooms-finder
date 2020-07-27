@@ -15,46 +15,59 @@ $grey-gradient: linear-gradient(180deg, #919191 0%, #3D4975 100%);
     margin-bottom: 20px;
     height: 70px;
     display: flex;
-}
 
-.color__square {
-    display: inline-block;
-    width: 70px;
-    height: 70px;
-    border-radius: 6px;
-}
-
-.color__square_dark-shade-100 {
-    background: $dark-shade-100;
-}
-
-.color__square_dark-shade-75 {
-    background: $dark-shade-75;
-}
-
-.color__square_dark-shade-50 {
-    background: $dark-shade-50;
-}
-
-.color__square_dark-shade-25 {
-    background: $dark-shade-25;
-}
-
-.color__square_dark-shade-5 {
-    background: $dark-shade-5;
-}
-
-.color__square_purple {
-    background: $purple;
-}
-
-.color__square_green {
-    background: $green;
-}
-
-.color__label {
-    display: inline-block;
-    padding: 10px 0 10px 40px;
-    width: 200px;
-    height: 70px;
+    &__square {
+        display: inline-block;
+        width: 70px;
+        height: 70px;
+        border-radius: 6px;
+    }
+    
+    &__square_dark-shade-100 {
+        background: $dark-shade-100;
+    }
+    
+    &__square_dark-shade-75 {
+        background: $dark-shade-75;
+    }
+    
+    &__square_dark-shade-50 {
+        background: $dark-shade-50;
+    }
+    
+    &__square_dark-shade-25 {
+        background: $dark-shade-25;
+    }
+    
+    &__square_dark-shade-5 {
+        background: $dark-shade-5;
+    }
+    
+    &__square_purple {
+        background: $purple;
+    }
+    
+    &__square_green {
+        background: $green;
+    }
+    
+    &__label {
+        display: inline-block;
+        padding: 10px 0 10px 40px;
+        width: 200px;
+        height: 70px;
+        font-family: Quicksand, 'Open Sans';
+        color: #1F2041;
+        font-size: 19px;
+    }
+    
+    &__theme {
+        font-weight: bold;
+        line-height: 24px;
+    }
+    
+    &__number {
+        font-weight: normal;
+        line-height: 28px;
+    }
 }

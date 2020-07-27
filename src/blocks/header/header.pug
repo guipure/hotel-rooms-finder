@@ -7,16 +7,17 @@ mixin header(options)
     .header
         .header__container
             img.header__logo(src = require('../../assets/logo/logo.svg').default)
-            ul.header__menu
-                each item in options.menu
-                    -
-                        let itemClass = 'header__item'
-                        itemClass += item.list ? ' header__item_expandable' : ''
-                        itemClass += item.isActive ? ' header__item_active' : ''
-                    li(class=itemClass)
-                        a.header__link(href='#')=item.item
-                        if item.list
-                            span.header__arrow.material-icons expand_more
+            nav.header__menu
+                ul
+                    each item in options.menu
+                        -
+                            let itemClass = 'header__item'
+                            itemClass += item.list ? ' header__item_expandable' : ''
+                            itemClass += item.isActive ? ' header__item_active' : ''
+                        li(class=itemClass)
+                            a.header__link(href='#')=item.item
+                            if item.list
+                                span.header__arrow.material-icons expand_more
             .header__login
                 if options.isLoggedIn
                     .header__name-group

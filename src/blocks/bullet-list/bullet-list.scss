@@ -1,23 +1,24 @@
 @import '../color/color.scss';
 
+.bullet-list {
+    &__item {
+        margin: 7px 0 10px;
+    }
 
-.bullet-list__item {
-    margin: 7px 0 10px;
-}
+    &__bullet {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: $dark-shade-25;
+        vertical-align: top;
+        position: relative;
+        top: 7px;
+    }
 
-.bullet-list__bullet {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: $dark-shade-25;
-    vertical-align: top;
-    position: relative;
-    top: 7px;
-}
-
-.bullet-list__text {
-    display: inline-block;
-    max-width: 250px;
-    padding-left: 7px;
+    &__text {
+        display: inline-block;
+        max-width: 250px;
+        padding-left: 7px;
+    }
 }

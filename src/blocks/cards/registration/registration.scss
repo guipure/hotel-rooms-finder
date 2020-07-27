@@ -9,41 +9,41 @@
     border: 1px solid rgba(0, 0, 0, 0.12);
     border-radius: 4px;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-}
 
-.registration__title {
-    font-family: 'Open Sans';
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 30px;
-    letter-spacing: 1.1;
-    color: $dark-shade-100;
-    padding-bottom: 20px;
-}
+    &__title {
+        font-family: 'Open Sans';
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: 1.1;
+        color: $dark-shade-100;
+        padding-bottom: 20px;
+    }
 
-.registration__name {
-    padding-bottom: 10px;
-}
+    &__name {
+        padding-bottom: 10px;
+    }
 
-.registration__sex {
-    padding: 10px 0 16px;
-}
+    &__sex {
+        padding: 10px 0 16px;
+    }
 
-.registration__email {
-    padding: 20px 0 10px;
-}
+    &__email {
+        padding: 20px 0 10px;
+    }
 
-.registration__specials {
-    padding: 10px 0 23px;
-}
+    &__specials {
+        padding: 10px 0 23px;
+    }
 
-.registration__sign-in {
-    position: relative;
-    padding-top: 30px;
-}
+    &__sign-in {
+        position: relative;
+        padding-top: 30px;
+    }
 
-.registration__sign-in-btn {
-    display: inline-block;
-    position: relative;
-    right: -32px;
+    &__sign-in-btn {
+        display: inline-block;
+        position: relative;
+        right: -32px;
+    }
 }

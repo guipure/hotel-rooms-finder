@@ -1,40 +1,40 @@
 .typography {
     width: 415px;
-}
 
-.typography__row {
-    margin-bottom: 50px;
-    display: flex;
-}
-
-.typography__right {
-    padding-left: 30px;
-    max-width: 366px;
-}
-
-.typography__left {
-    font-family: Montserrat;
-    color: rgba(31, 32, 65, 0.25);
-    min-width: 40px;
-    text-align: right;
-}
-
-.typography__left_h1 {
-    font-size: 24px;
-    line-height: 29px;
-}
-
-.typography__left_h2 {
-    font-size: 19px;
-    line-height: 23px;
-}
-
-.typography__left_h3 {
-    font-size: 12px;
-    line-height: 15px;
-}
-
-.typography__left_body {
-    font-size: 14px;
-    line-height: 24px;
+    &__row {
+        margin-bottom: 50px;
+        display: flex;
+    }
+    
+    &__right {
+        padding-left: 30px;
+        max-width: 366px;
+    }
+    
+    &__left {
+        font-family: Montserrat;
+        color: rgba(31, 32, 65, 0.25);
+        min-width: 40px;
+        text-align: right;
+    }
+    
+    &__left_h1 {
+        font-size: 24px;
+        line-height: 29px;
+    }
+    
+    &__left_h2 {
+        font-size: 19px;
+        line-height: 23px;
+    }
+    
+    &__left_h3 {
+        font-size: 12px;
+        line-height: 15px;
+    }
+    
+    &__left_body {
+        font-size: 14px;
+        line-height: 24px;
+    }
 }

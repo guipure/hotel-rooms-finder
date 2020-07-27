@@ -6,6 +6,6 @@ mixin carousel(images)
             img(class='js-carousel__image', src=require('../../assets/room/' + img + '.png').default)
         a(class='js-carousel__prev material-icons') chevron_left
         a(class='js-carousel__next material-icons') chevron_right
-        .carousel__dots
+        .js-carousel__dots
             - for (let i = 0; i < sum; i++)
                 span.js-carousel__dot(onclick=`currentSlide(${i})`)

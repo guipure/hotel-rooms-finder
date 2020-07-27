@@ -10,7 +10,7 @@ mixin footer-large(options)
                     .footer-large__info=options.info
                 .footer-large__menus
                     each menu in options.menus
-                        .footer-large__menu
+                        nav.footer-large__menu
                             h3.footer-large__menu-title=menu.title
                             ul
                                 each item in menu.items
