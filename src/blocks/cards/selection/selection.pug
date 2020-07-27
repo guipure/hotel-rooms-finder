@@ -3,7 +3,7 @@ include ../../dropdown/dropdown
 include ../../date-dropdown/date-dropdown
 
 mixin selection
-    .selection
+    form.selection
         .selection__title Найдём номера под ваши пожелания
         .selection__dates
             +date-dropdown({placeholder: 'ДД.ММ.ГГГГ', labels: ['прибытие', 'выезд']})

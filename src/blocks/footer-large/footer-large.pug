@@ -6,7 +6,7 @@ mixin footer-large(options)
         .footer-large__container
             .footer-large__top
                 .footer-large__main
-                    img.footer-large__logo(src=require('../../assets/logo/logo.svg').default)
+                    img.footer-large__logo(src=require('../../assets/logo/logo.svg').default, alt="logo")
                     .footer-large__info=options.info
                 .footer-large__menus
                     each menu in options.menus
@@ -15,7 +15,7 @@ mixin footer-large(options)
                             ul
                                 each item in menu.items
                                     li.footer-large__menu-item
-                                        a.footer-large__menu-link(href="#")=item
+                                        a.footer-large__menu-link(href="/mock-address/change-me")=item
                 .footer-large__subscription
                     h3.footer-large__sub-title=options.subscription.title
                     .footer-large__sub-info=options.subscription.info

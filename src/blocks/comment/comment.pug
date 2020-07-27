@@ -19,7 +19,11 @@ mixin comment(options)
         
     .comment
         .comment__info
-            img(class="comment__photo", src=require('../../assets/comment/' + options.photo).default)
+            img(
+                class="comment__photo",
+                src=require('../../assets/comment/' + options.photo).default,
+                alt="commentator's photo"
+            )
             .comment__name=options.name
             .comment__date=relDate
         .comment__body

@@ -6,7 +6,7 @@ mixin header(options)
 
     .header
         .header__container
-            img.header__logo(src=require('../../assets/logo/logo.svg').default)
+            img.header__logo(src=require('../../assets/logo/logo.svg').default, alt="logo")
             nav.header__menu
                 ul
                     each item in options.menu
@@ -15,7 +15,7 @@ mixin header(options)
                             itemClass += item.list ? ' header__item_expandable' : ''
                             itemClass += item.isActive ? ' header__item_active' : ''
                         li(class=itemClass)
-                            a.header__link(href="#")=item.item
+                            a.header__link(href="/mock-address/change-me")=item.item
                             if item.list
                                 span.header__arrow.material-icons expand_more
             .header__login

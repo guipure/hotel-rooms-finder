@@ -2,7 +2,7 @@ include ../socials/socials
 
 mixin footer-small(info)
     .footer-small
-        img.footer-small__logo(src=require('../../assets/logo/logo.svg').default)
+        img.footer-small__logo(src=require('../../assets/logo/logo.svg').default, alt="logo")
         .footer-small__info=info
         .footer-small__socials
             +socials
