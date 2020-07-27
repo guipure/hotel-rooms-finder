@@ -1,5 +1,6 @@
 mixin toggle(label)
-    .js-toggle
-        div
-            span(class="toggle__btn")
-        p(class="toggle__text")=label
+    .toggle
+        label.toggle__container
+            input.toggle__input_default(type="checkbox")
+            span.toggle__input_styled
+            span.toggle__label=label

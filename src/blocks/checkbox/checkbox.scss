@@ -2,13 +2,8 @@
 
 
 .checkbox {
-    margin-bottom: 13px;
     width: 230px;
     user-select: none;
-    
-    &:nth-child(2) {
-        margin-top: 12px;
-    }
     
     &__container {
         position: relative;
@@ -16,18 +11,13 @@
     }
     
     &__input_default {
-        position: absolute;
-        height: 0;
-        width: 0;
         display: none;
     }
     
-    &__input_default:checked ~ &__input_styled {
-        border: 1px solid $purple;
-    }
-    
     &__input_styled {
-        position: absolute;
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
         height: 20px;
         width: 20px;
         border: 1px solid $dark-shade-25;
@@ -36,7 +26,7 @@
     
     &__input_styled:after {
         content: '';
-        position: absolute;
+        position: relative;
         left: 2px;
         top: 3px;
         height: 6px;
@@ -61,18 +51,19 @@
         display: none;
     }
     
-    &__input_default:checked ~ &__input_styled:after {
-        display: block;
+    &__input_default:checked ~ &__input_styled {
+        border: 1px solid $purple;
     }
     
+    &__input_default:checked ~ &__input_styled:after,
     &__input_default:checked ~ &__input_styled:before {
         display: block;
     }
 
-    &__label-text {
-        padding-left: 30px;
+    &__label {
+        padding-left: 10px;
         color: $dark-shade-50;
-        line-height: 18px;
+        vertical-align: middle;
         cursor: pointer;
     }
 }

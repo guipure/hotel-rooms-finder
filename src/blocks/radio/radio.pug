@@ -6,10 +6,7 @@ mixin radio(labels)
 
 
 mixin radioBtn(label, randomName)
-    .radio__btn
-        label(class="radio__label")
-            .radio__container
-                input(type="radio" class="radio__input_default" name=randomName)
-                span(class="radio__input_styled")
-            p(class="label__text")=label
-
+    label.radio__container
+        input.radio__input_default(type="radio" name=randomName)
+        span.radio__input_styled
+        span.radio__label=label

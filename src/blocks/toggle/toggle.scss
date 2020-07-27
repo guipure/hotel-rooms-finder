@@ -1,45 +1,51 @@
 @import '../color/color.scss';
 
-.js-toggle {
-    cursor: pointer;
-}
+.toggle {
+    &__container {
+        position: relative;
+        cursor: pointer;
+    }
+    
+    &__input_default {
+        display: none;
+    }
 
-.js-toggle:nth-child(2) {
-    margin-top: 11px;
-}
-
-.toggle__btn {
-    position: absolute;
-    height: 20px;
-    width: 40px;
-    border-radius: 10px;
-    border: 1px solid $dark-shade-25;
-}
-
-.toggle__btn::before {
-    content: '';
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    height: 12px;
-    width: 12px;
-    border-radius: 50%;
-    background-color: $dark-shade-25;
-    transition: left 0.25s;
-}
-
-.js-toggle__btn_on > .toggle__btn {
-    border-color: $purple;
-}
-
-.js-toggle__btn_on > .toggle__btn::before {
-    left: 23px;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-}
-
-.toggle__text {
-    padding-left: 50px;
-    line-height: 20px;
-    color: $dark-shade-75;
-    user-select: none;
+    &__input_styled {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        height: 20px;
+        width: 40px;
+        border-radius: 10px;
+        border: 1px solid $dark-shade-25;
+    }
+    
+    &__input_styled::before {
+        content: '';
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        height: 12px;
+        width: 12px;
+        border-radius: 50%;
+        background-color: $dark-shade-25;
+        transition: left 0.25s;
+    }
+    
+    &__input_default:checked ~ &__input_styled {
+        border-color: $purple;
+    }
+    
+    &__input_default:checked ~ &__input_styled::before {
+        left: 23px;
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    }
+    
+    &__label {
+        vertical-align: middle;
+        padding-left: 10px;
+        line-height: 20px;
+        color: $dark-shade-75;
+        user-select: none;
+    }
 }
