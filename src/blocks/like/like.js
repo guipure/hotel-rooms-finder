@@ -1,5 +1,5 @@
 const likes = document.querySelectorAll('.js-like');
-likes.forEach((like) => like.addEventListener('click', (e) => likeToggle(e)));
+likes.forEach((like) => like.addEventListener('click', likeToggle));
 
 function likeToggle(event) {
   const likeDiv = event.currentTarget;
@@ -11,7 +11,7 @@ function likeToggle(event) {
 }
 
 function iconToggle(iconSpan) {
-  iconSpan.innerHTML = iconSpan.innerHTML == 'favorite_border' ? 'favorite' : 'favorite_border';
+  iconSpan.innerHTML = iconSpan.innerHTML === 'favorite_border' ? 'favorite' : 'favorite_border';
 }
 
 function numberToggle(numberSpan) {
