@@ -3,6 +3,6 @@ include ../../blocks/field/field
 
 mixin range-slider(title, from, to)
     +field({name: title, size: 'medium'})
-        .range-slider__wrapper
+        .range-slider
             span(class="js-range-slider__result")
             input(type="text" class="js-range-slider" name="my_range" value="" data-min=from data-max=to)

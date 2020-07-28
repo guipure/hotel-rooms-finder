@@ -1,36 +1,39 @@
-@import 'blocks/range-slider/ion.rangeSlider.css';
 @import 'blocks/color/color.scss';
 
-.range-slider__wrapper {
+.range-slider {
   position: relative;
+  
+  .irs {
+    .irs-line {
+      background: white;
+      border: 1px solid $dark-shade-25;
+      height: 6px;
+    }
+    
+    .irs-bar {
+      background: $green-gradient;
+      height: 6px;
+    }
+    
+    .irs-handle > i:first-child {
+      background: $green-gradient;
+      height: 16px;
+      width: 16px;
+      border-radius: 50%;
+      border: 2px solid white;
+      left: 0;
+      top: -2px;
+    }
+    
+    .irs-handle {
+      width: 10px;
+    }
+  }
+  
 }
 
 .js-range-slider__result {
   position: absolute;
   right: 0;
   top: -25px;
-}
-
-.irs-line {
-  background: white !important;
-  border: 1px solid $dark-shade-25;
-  height: 6px !important;
-}
-
-.irs-bar {
-  background: $green-gradient !important;
-  height: 6px !important;
-}
-
-.irs-handle > i:first-child {
-  background: $green-gradient !important;
-  height: 12px !important;
-  width: 12px !important;
-  border-radius: 50%;
-  border: 2px solid white;
-  left: 0 !important;
-}
-
-.irs-handle {
-  width: 10px !important;
 }

@@ -1,4 +1,5 @@
 import 'ion-rangeslider';
+import 'ion-rangeslider/css/ion.rangeSlider.css';
 
 class Slider {
   constructor(element) {
