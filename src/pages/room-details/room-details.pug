@@ -15,7 +15,7 @@ block content
             img.room-details__photo(src=require('../../assets/room-details/888-1.jpg').default, alt="room photo")
             img.room-details__photo(src=require('../../assets/room-details/888-2.jpg').default, alt="room photo")
             img.room-details__photo(src=require('../../assets/room-details/888-3.jpg').default, alt="room photo")
-    .room-details__container
+    main.room-details__container
         section.room-details__info
             .info__item
                 h2.info__title Сведения о номере
@@ -28,15 +28,38 @@ block content
             .info__item
                 h2.info__title Отзывы посетителей номера
                 .info__comment
-                    +comment({photo: 'murad.jpg', name: 'Мурад Сарафанов', date: '2020-04-19', likes: '11', comment: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'})
+                    +comment({
+                        photo: 'murad.jpg',
+                        name: 'Мурад Сарафанов',
+                        date: '2020-04-19',
+                        likes: '11',
+                        comment: `Великолепный матрас на кровати в основной спальне! 
+                        А пуфик вообще потрясающий. 
+                        И стены, действительно, шумоподавляющие. 
+                        Выкрикивал комплименты повару — никто не жаловался из соседей.`
+                    })
                 .info__comment
-                    +comment({photo: 'patricia.jpg', name: 'Патрисия Стёклышкова', date: '2020-04-10', likes: '2', comment: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'})
+                    +comment({
+                        photo: 'patricia.jpg',
+                        name: 'Патрисия Стёклышкова',
+                        date: '2020-04-10',
+                        likes: '2',
+                        comment: `Обслуживание на высоте! 
+                        Всё аккуратно, чисто. 
+                        Завтраки в номер советую заказать, 
+                        каждый день новое блюдо и десерт как комплимент`
+                    })
             .info__item
                 h2.info__title Правила
-                +bullet-list(['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
+                +bullet-list([
+                    'Нельзя с питомцами',
+                    'Без вечеринок и мероприятий',
+                    'Время прибытия — после 13:00, а выезд до 12:00'
+                ])
             .info__item
                 h2.info__title Отмена
-                p.info__text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до 
+                p.info__text Бесплатная отмена в течение 48 ч. 
+                | После этого при отмене не позднее чем за 5 дн. до 
                 | прибытия вы получите полный возврат за вычетом сбора за услуги.
         aside.room-details__booking
             +booking({number: '888', price: '9 900', isLux: true})
