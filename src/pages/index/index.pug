@@ -1,19 +1,25 @@
-- const pages = ['landing-page', 'search-room', 'room-details', 'registration', 'sign-in', 'colors-and-type', 'form-elements', 'cards', 'headers-and-footers']
-
-
-doctype html
-html
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Toxin Hotel
-    body
-        nav.index
-            each page in pages
-                .index__card
-                    h3.index__title
-                        a(href=`https://guipure.github.io/hotel-rooms-finder/${page}.html`)=page
-                            img.index__image(
-                                src=require(`../../assets/index/${page}.jpg`).default,
-                                alt="page preview"
-                            )
+extends ../../layouts/ui-kit.pug
+block title
+    title Toxin Hotel
+block content
+    - 
+        const pages = [
+            'landing-page',
+            'search-room',
+            'room-details',
+            'registration',
+            'sign-in',
+            'colors-and-type',
+            'form-elements',
+            'cards',
+            'headers-and-footers'
+        ]
+    nav.index
+        each page in pages
+            .index__card
+                h3.index__title
+                    a(href=`./${page}.html`)=page
+                        img.index__image(
+                            src=require(`../../assets/index/${page}.jpg`).default,
+                            alt="page preview"
+                        )

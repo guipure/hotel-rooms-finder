@@ -1,3 +1,4 @@
+extends ../../layouts/ui-kit.pug
 include ../../blocks/cards/selection/selection
 include ../../blocks/cards/registration/registration
 include ../../blocks/cards/booking/booking
@@ -5,29 +6,39 @@ include ../../blocks/cards/sign-in/sign-in
 include ../../blocks/cards/room/room
 include ../../blocks/date-dropdown/date-dropdown
 
-doctype html
-html
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+block title
         title Hotel Rooms
-    body
-        .cards__background
-            .cards__wrapper
-                .cards__column
-                    .cards__card
-                        +selection
-                    .cards__card
-                        +registration
-                .cards__column
-                    .cards__card
-                        +booking({number: '888', price: '9 900', isLux: true})
-                    .cards__card
-                        +sign-in
-                .cards__column
-                    .cards__card
-                        +date-dropdown({labels: [], isInline: true})
-                    .cards__card
-                        +room({images: ['888', '856', '740', '982'], number: '888', isLux: true, price: '9 900', rate: 5, responses: '145'})
-                    .cards__card
-                        +room({images: ['840', '678', '450', '350'], number: '840', isLux: false, price: '9 900', rate: 4, responses: '65'})
+block content
+    .cards__background
+        .cards__wrapper
+            .cards__column
+                .cards__card
+                    +selection
+                .cards__card
+                    +registration
+            .cards__column
+                .cards__card
+                    +booking({number: '888', price: '9 900', isLux: true})
+                .cards__card
+                    +sign-in
+            .cards__column
+                .cards__card
+                    +date-dropdown({labels: [], isInline: true})
+                .cards__card
+                    +room({
+                        images: ['888', '856', '740', '982'],
+                        number: '888',
+                        isLux: true,
+                        price: '9 900',
+                        rate: 5,
+                        responses: '145'
+                    })
+                .cards__card
+                    +room({
+                        images: ['840', '678', '450', '350'],
+                        number: '840',
+                        isLux: false,
+                        price: '9 900',
+                        rate: 4,
+                        responses: '65'
+                    })

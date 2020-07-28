@@ -1,4 +1,5 @@
 import './style.scss';
+import './assets/favicons/favicons';
 import './blocks/dropdown/dropdown';
 import './blocks/input/input';
 import './blocks/date-dropdown/date-dropdown';

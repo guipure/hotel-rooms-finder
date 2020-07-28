@@ -1,65 +1,10 @@
+extends ../../layouts/base.pug
 include ../../blocks/header/header
 include ../../blocks/footer-large/footer-large
 include ../../blocks/cards/sign-in/sign-in
 
-
-
-doctype html
-html
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+block title
         title Search room
-    body
-        header
-            +header({
-                menu: [
-                    {item: 'О нас'},
-                    {item: 'Услуги', list: ['Услуга 1', 'Услуга 2', 'Услуга 3']},
-                    {item: 'Вакансии'},
-                    {item: 'Новости'},
-                    {item: 'Соглашения', list: ['Соглашение 1', 'Соглашение 2', 'Соглашение 3']}
-                ],
-                isLoggedIn: false,
-                login: 'войти',
-                register: 'зарегистрироваться'
-            })      
-        section.sign-in__main
-            +sign-in  
-        footer
-            +footer-large({
-                info: 'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»',
-                menus: [
-                    {
-                        title: 'Навигация',
-                        items: [
-                            'О нас',
-                            'Новости',
-                            'Служба поддержки',
-                            'Услуги'
-                        ]
-                    },
-                    {
-                        title: 'О нас',
-                        items: [
-                            'О сервисе',
-                            'Наша команда',
-                            'Вакансии',
-                            'Инвесторы'
-                        ]
-                    },
-                    {
-                        title: 'Служба поддержки',
-                        items: [
-                            'Соглашения',
-                            'Сообщества',
-                            'Связь с нами'
-                        ]
-                    }
-                ],
-                subscription: {
-                    title: 'Подписка',
-                    info: 'Получайте специальные предложения и новости сервиса'
-                },
-                copyright: 'Copyright © 2018 Toxin отель. Все права зачищены.'
-            })
+block content
+    section.sign-in__main
+        +sign-in
