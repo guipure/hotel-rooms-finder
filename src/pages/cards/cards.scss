@@ -7,19 +7,19 @@
 @import 'blocks/carousel/carousel';
 
 .cards__card {
-    margin: 40px 20px;
+  margin: 40px 20px;
 }
 
 .cards__background {
-    position: absolute;
-    background-color: #E5E5E5;
-    min-width: 100%;
+  position: absolute;
+  background-color: #e5e5e5;
+  min-width: 100%;
 }
 
 .cards__wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    max-width: 1440px;
-    padding: 140px 150px;
-    margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: 1440px;
+  padding: 140px 150px;
+  margin: auto;
 }

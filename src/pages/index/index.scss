@@ -1,18 +1,18 @@
 .index {
-    display: grid;
-    padding: 30px 5vw;
-    gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: grid;
+  padding: 30px 5vw;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
-    &__card {
-        max-width: 400px;
-        text-align: center;
-        border: 1px solid #ccc;
-        border-radius: 10px;
-    }
-    
-    &__image {
-        width: 100%;
-        cursor: pointer;
-    }
+  &__card {
+    max-width: 400px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+
+  &__image {
+    width: 100%;
+    cursor: pointer;
+  }
 }

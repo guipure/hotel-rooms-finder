@@ -1,13 +1,13 @@
 .socials {
-    display: flex;
-    justify-content: space-between;
-    width: 112px;
+  display: flex;
+  justify-content: space-between;
+  width: 112px;
 
-    &__link {
-        font-size: 24px;
-        background: $purple-gradient;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
+  &__link {
+    font-size: 24px;
+    background: $purple-gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }

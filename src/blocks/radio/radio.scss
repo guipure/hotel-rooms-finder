@@ -1,57 +1,57 @@
 @import '../color/color.scss';
 
 .radio {
-    width: 250px;
-    user-select: none;
-    display: flex;
-    flex-wrap: wrap;
-    
-    &__container {
-        position: relative;
-        cursor: pointer;
-    }
-    
-    &__input_default {
-        display: none;
-    }
-    
-    &__input_styled {
-        position: relative;
-        display: inline-block;
-        vertical-align: middle;
-        height: 20px;
-        width: 20px;
-        border: 1px solid $dark-shade-25;
-        border-radius: 50%;
-    }
-    
-    &__input_styled:after {
-        content: '';
-        position: absolute;
-        left: 3px;
-        top: 3px;
-        height: 12px;
-        width: 12px;
-        border-radius: 50%;
-        background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-        display: none;
-    }
+  width: 250px;
+  user-select: none;
+  display: flex;
+  flex-wrap: wrap;
 
-    &__input_default:checked ~ &__input_styled {
-        border: 1px solid $purple;
-    }
-    
-    &__input_default:checked ~ &__input_styled:after,
-    &__input_default:checked ~ &__input_styled:before {
-        display: block;
-    }
+  &__container {
+    position: relative;
+    cursor: pointer;
+  }
 
-    &__label {
-        vertical-align: middle;
-        padding-left: 10px;
-        padding-right: 20px;
-        color: $dark-shade-50;
-        line-height: 18px;
-        cursor: pointer;
-    }
+  &__input_default {
+    display: none;
+  }
+
+  &__input_styled {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    height: 20px;
+    width: 20px;
+    border: 1px solid $dark-shade-25;
+    border-radius: 50%;
+  }
+
+  &__input_styled:after {
+    content: '';
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    display: none;
+  }
+
+  &__input_default:checked ~ &__input_styled {
+    border: 1px solid $purple;
+  }
+
+  &__input_default:checked ~ &__input_styled:after,
+  &__input_default:checked ~ &__input_styled:before {
+    display: block;
+  }
+
+  &__label {
+    vertical-align: middle;
+    padding-left: 10px;
+    padding-right: 20px;
+    color: $dark-shade-50;
+    line-height: 18px;
+    cursor: pointer;
+  }
 }

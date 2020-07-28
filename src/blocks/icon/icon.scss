@@ -1,37 +1,37 @@
 @import '../color/color.scss';
 
 .icon__inner {
-    position: relative;
-    display: flex;
+  position: relative;
+  display: flex;
 }
 
 .icon__icon {
-    max-width: 48px;
-    max-height: 48px;
-    font-size: 48px;
-    line-height: 41px;
-    background: $purple-gradient;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  max-width: 48px;
+  max-height: 48px;
+  font-size: 48px;
+  line-height: 41px;
+  background: $purple-gradient;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .icon__text {
-    display: inline-block;
-    padding-left: 10px;
+  display: inline-block;
+  padding-left: 10px;
 }
 
 .icon__header {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .icon__line {
-    max-width: 280px;
-    height: 1px;
-    background-color: $dark-shade-10;
-    margin: 20px 0;
+  max-width: 280px;
+  height: 1px;
+  background-color: $dark-shade-10;
+  margin: 20px 0;
 }
 
 .icon:last-child .icon__line {
-    display: none;
+  display: none;
 }

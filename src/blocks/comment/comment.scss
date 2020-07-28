@@ -1,32 +1,32 @@
 .comment {
-    &__photo {
-        float: left;
-        border-radius: 50%;
-        border: 2px solid white;
-        max-width: 48px;
-        border: 2px solid #FFFFFF;
-        box-sizing: border-box;
-        box-shadow: 0px 10px 20px $dark-shade-10;
-    }
-    
-    &__like {
-        float: left;
-        padding-top: 2px;
-        padding-left: 4px;
-    }
-    
-    &__body {
-        padding-top: 10px;
-        max-width: 711px;
-    }
-    
-    &__name {
-        font-weight: bold;
-    }
-    
-    &__name,
-    &__date,
-    &__text {
-        padding-left: 58px;
-    }
+  &__photo {
+    float: left;
+    border-radius: 50%;
+    border: 2px solid white;
+    max-width: 48px;
+    border: 2px solid #ffffff;
+    box-sizing: border-box;
+    box-shadow: 0px 10px 20px $dark-shade-10;
+  }
+
+  &__like {
+    float: left;
+    padding-top: 2px;
+    padding-left: 4px;
+  }
+
+  &__body {
+    padding-top: 10px;
+    max-width: 711px;
+  }
+
+  &__name {
+    font-weight: bold;
+  }
+
+  &__name,
+  &__date,
+  &__text {
+    padding-left: 58px;
+  }
 }

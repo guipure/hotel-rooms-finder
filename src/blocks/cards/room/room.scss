@@ -1,71 +1,71 @@
 @import 'blocks/color/color';
 
 .room {
-    background-color: white;
-    max-width: 270px;
-    border-radius: 4px;
-    box-shadow: 0px 10px 20px $dark-shade-5;
+  background-color: white;
+  max-width: 270px;
+  border-radius: 4px;
+  box-shadow: 0px 10px 20px $dark-shade-5;
 
-    &__info {
-        padding: 20px 20px 12px;
-    }
+  &__info {
+    padding: 20px 20px 12px;
+  }
 
-    &__title {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-        line-height: 24px;
-        padding-bottom: 7px;
-    }
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    line-height: 24px;
+    padding-bottom: 7px;
+  }
 
-    &_num {
-        font-size: 14px;
-        font-weight: bold;
-        font-family: 'Quicksand';
-        color: $dark-shade-100;
-    }
+  &_num {
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Quicksand';
+    color: $dark-shade-100;
+  }
 
-    &_number {
-        font-size: 19px;
-        font-weight: bold;
-        font-family: 'Quicksand';
-        color: $dark-shade-100;
-        padding: 0 5px 0 4px;
-    }
+  &_number {
+    font-size: 19px;
+    font-weight: bold;
+    font-family: 'Quicksand';
+    color: $dark-shade-100;
+    padding: 0 5px 0 4px;
+  }
 
-    &_lux {
-        color: $purple;
-        font-weight: bold;
-        font-family: Montserrat;
-        font-size: 12px;
-    }
+  &_lux {
+    color: $purple;
+    font-weight: bold;
+    font-family: Montserrat;
+    font-size: 12px;
+  }
 
-    &__day-price {
-        color: $dark-shade-50;
-    }
+  &__day-price {
+    color: $dark-shade-50;
+  }
 
-    &__per-day {
-        font-size: 12px;
-    }
+  &__per-day {
+    font-size: 12px;
+  }
 
-    &__line {
-        width: 230px;
-        height: 1px;
-        background-color: $dark-shade-10;
-    }
+  &__line {
+    width: 230px;
+    height: 1px;
+    background-color: $dark-shade-10;
+  }
 
-    &__feedback {
-        position: relative;
-        color: $dark-shade-50;
-    }
+  &__feedback {
+    position: relative;
+    color: $dark-shade-50;
+  }
 
-    &__responses {
-        position: absolute;
-        right: 0;
-        top: 10px;
-    }
+  &__responses {
+    position: absolute;
+    right: 0;
+    top: 10px;
+  }
 
-    &__resp-sum {
-        font-weight: bold;
-    }
+  &__resp-sum {
+    font-weight: bold;
+  }
 }

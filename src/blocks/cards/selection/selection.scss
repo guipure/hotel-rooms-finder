@@ -1,29 +1,29 @@
 @import 'blocks/color/color';
 
 .selection {
-    background-color: white;
-    display: inline-block;
-    padding: 39px 29px 30px;
-    max-width: 380px;
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    border-radius: 4px;
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  display: inline-block;
+  padding: 39px 29px 30px;
+  max-width: 380px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
 
-    &__title {
-        font-family: 'Open Sans';
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 30px;
-        letter-spacing: 1.1;
-        color: $dark-shade-100;
-        padding-bottom: 20px;
-    }
+  &__title {
+    font-family: 'Open Sans';
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 1.1;
+    color: $dark-shade-100;
+    padding-bottom: 20px;
+  }
 
-    &__dates {
-        padding-bottom: 11px;
-    }
+  &__dates {
+    padding-bottom: 11px;
+  }
 
-    &__guests {
-        padding-bottom: 31px;
-    }
+  &__guests {
+    padding-bottom: 31px;
+  }
 }

@@ -1,52 +1,52 @@
 @import 'blocks/color/color';
 
 .js-carousel {
-    position: relative;
-    max-width: 270px;
+  position: relative;
+  max-width: 270px;
 
-    &__image {
-        max-width: inherit;
-        border-radius: 4px 4px 0 0;
-    }
+  &__image {
+    max-width: inherit;
+    border-radius: 4px 4px 0 0;
+  }
 
-    &__prev,
-    &__next {
-        position: absolute;
-        top: 50%;
-        width: 44px;
-        text-align: center;
-        color: white;
-        user-select: none;
-        cursor: pointer;
-        line-height: 0;
-        display: none;
-    }
+  &__prev,
+  &__next {
+    position: absolute;
+    top: 50%;
+    width: 44px;
+    text-align: center;
+    color: white;
+    user-select: none;
+    cursor: pointer;
+    line-height: 0;
+    display: none;
+  }
 
-    &__next {
-        right: 0;
-    }
+  &__next {
+    right: 0;
+  }
 
-    &:hover > &__prev,
-    &:hover > &__next {
-        display: block;
-    }
+  &:hover > &__prev,
+  &:hover > &__next {
+    display: block;
+  }
 
-    &__dots {
-        position: absolute;
-        bottom: 6px;
-        right: 13px;
-    }
-    
-    &__dot {
-        display: inline-block;
-        width: 7.5px;
-        height: 7.5px;
-        border: 1px solid white;
-        border-radius: 50%;
-        margin: 2px;
-    }
-    
-    &__dot_active {
-        background-color: white;
-    }
+  &__dots {
+    position: absolute;
+    bottom: 6px;
+    right: 13px;
+  }
+
+  &__dot {
+    display: inline-block;
+    width: 7.5px;
+    height: 7.5px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin: 2px;
+  }
+
+  &__dot_active {
+    background-color: white;
+  }
 }

@@ -1,36 +1,35 @@
 .landing-page__main {
-    background: url('assets/landing-page/main.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 830px;
-    max-width: 1440px;
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
+  background: url('assets/landing-page/main.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 830px;
+  max-width: 1440px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .landing-page__container {
-    width: 1160px;
-    display: flex;
-    padding: 70px 0 18px;
-    flex-direction: column;
-    justify-content: space-between;
+  width: 1160px;
+  display: flex;
+  padding: 70px 0 18px;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .landing-page__slogan {
-    text-align: right;
-    max-width: 300px;
-    align-self: end;
+  text-align: right;
+  max-width: 300px;
+  align-self: end;
 }
 
-
 @media (max-width: 970px) {
-    .landing-page__container {
-        align-items: center;
-    }
+  .landing-page__container {
+    align-items: center;
+  }
 
-    .landing-page__slogan {
-        text-align: center;
-        align-self: center;
-    }
+  .landing-page__slogan {
+    text-align: center;
+    align-self: center;
+  }
 }

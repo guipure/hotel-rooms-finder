@@ -2,70 +2,70 @@
 @import './date-dropdown__calendar.scss';
 
 .js-date-dropdown {
-    display: flex;
+  display: flex;
 
-    &__input {
-        position: relative;
-    }
-    
-    &__box {
-        font-family: inherit;
-        border: 1px solid $dark-shade-25;
-        border-radius: 3px;
-        padding: 13px 15px;
-        outline: none;
-    }
-    
-    &__box::placeholder {
-        color: $dark-shade-25;
-    }
-    
-    &__box:focus,
-    &__box:hover {
-        border: 1px solid $dark-shade-50;
-    }
-    
-    &__box_inline {
-        border: none;
-        min-width: 320px;
-        padding: 0;
-        box-shadow: 0px 10px 20px $dark-shade-5;
-    }
-    
-    &__box_inline:focus,
-    &__box_inline:hover {
-        border: none;
-    }
+  &__input {
+    position: relative;
+  }
 
-    &__submit {
-        float: right;
-    }
+  &__box {
+    font-family: inherit;
+    border: 1px solid $dark-shade-25;
+    border-radius: 3px;
+    padding: 13px 15px;
+    outline: none;
+  }
+
+  &__box::placeholder {
+    color: $dark-shade-25;
+  }
+
+  &__box:focus,
+  &__box:hover {
+    border: 1px solid $dark-shade-50;
+  }
+
+  &__box_inline {
+    border: none;
+    min-width: 320px;
+    padding: 0;
+    box-shadow: 0px 10px 20px $dark-shade-5;
+  }
+
+  &__box_inline:focus,
+  &__box_inline:hover {
+    border: none;
+  }
+
+  &__submit {
+    float: right;
+  }
 }
 
 .date-dropdown__box_large {
-    width: 320px;
-    height: 44px;
+  width: 320px;
+  height: 44px;
 }
 
 .date-dropdown__box_medium {
-    width: 267px;
-    height: 44px;
+  width: 267px;
+  height: 44px;
 }
 
 .date-dropdown__box_small {
-    width: 150px;
-    height: 44px;
+  width: 150px;
+  height: 44px;
 }
 
 .date-dropdown__icon {
-    color: $dark-shade-50;
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    user-select: none;
-    cursor: pointer;
+  color: $dark-shade-50;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  user-select: none;
+  cursor: pointer;
 }
 
 .field:first-child {
-    margin-right: 20px;
+  margin-right: 20px;
 }

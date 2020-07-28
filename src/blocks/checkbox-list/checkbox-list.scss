@@ -1,24 +1,24 @@
 .js-checkbox-list {
-    cursor: pointer;
-    
-    &__dropdown {
-        display: none;
-    }
-    
-    &__label {
-        position: relative;
-        max-width: 267px;
-    }
-    
-    &__icon {
-        position: absolute;
-        right: 10px;
-        top: -5px;
-        color: $dark-shade-50;
-        transition: transform 0.25s;
-    }
-    
-    &__icon_rotated {
-        transform: rotate(180deg);
-    }
+  cursor: pointer;
+
+  &__dropdown {
+    display: none;
+  }
+
+  &__label {
+    position: relative;
+    max-width: 267px;
+  }
+
+  &__icon {
+    position: absolute;
+    right: 10px;
+    top: -5px;
+    color: $dark-shade-50;
+    transition: transform 0.25s;
+  }
+
+  &__icon_rotated {
+    transform: rotate(180deg);
+  }
 }

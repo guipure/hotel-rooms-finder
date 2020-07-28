@@ -17,7 +17,12 @@ mixin booking(options)
             +date-dropdown({placeholder: 'ДД.ММ.ГГГГ', labels: ['прибытие', 'выезд']})
         .booking__guests
             +field({name: 'гости', size: 'large'})
-                +dropdown({placeholder: 'Сколько гостей', size: 'large', items: ['взрослые', 'дети', 'младенцы'], type: 'guests'})
+                +dropdown({
+                    placeholder: 'Сколько гостей',
+                    size: 'large',
+                    items: ['взрослые', 'дети', 'младенцы'],
+                    type: 'guests'
+                })
         .booking__price
             .booking__fee
                 .booking__left-col 9 990₽ х 4 суток

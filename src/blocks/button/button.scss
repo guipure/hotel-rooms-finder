@@ -3,70 +3,70 @@
 $border: 2px;
 
 .button-wrap {
-    display: inline-block;
-    border-radius: 25px;
+  display: inline-block;
+  border-radius: 25px;
 
-    &_purple-border {
-        background: $purple-gradient;
-        padding: $border;
-    }
+  &_purple-border {
+    background: $purple-gradient;
+    padding: $border;
+  }
 
-    &:hover {
-        opacity: 0.5;
-    }
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 .button {
-    border: none;
-    background: none;
-    border-radius: 22px;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 12px;
-    text-transform: uppercase;
-    cursor: pointer;
-    outline: none;
+  border: none;
+  background: none;
+  border-radius: 22px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
 
-    &__icon {
-        position: absolute;
-        width: 44px;
-        right: 0;
-        top: 0;
-        margin-top: 10px;
-    }
+  &__icon {
+    position: absolute;
+    width: 44px;
+    right: 0;
+    top: 0;
+    margin-top: 10px;
+  }
 
-    &_purple-border {
-        height: 44px - 2*$border;
-        min-width: 83px - 2*$border;
-        background: white;
-        color: $purple;
-        padding: 0 20px-$border;
-    }
+  &_purple-border {
+    height: 44px - 2 * $border;
+    min-width: 83px - 2 * $border;
+    background: white;
+    color: $purple;
+    padding: 0 20px-$border;
+  }
 
-    &_purple {
-        height: 44px;
-        min-width: 79px;
-        color: white;
-        background: $purple-gradient;
-        padding: 0 20px;
-    }
+  &_purple {
+    height: 44px;
+    min-width: 79px;
+    color: white;
+    background: $purple-gradient;
+    padding: 0 20px;
+  }
 
-    &_long {
-        position: relative;
-        min-height: 44px;
-        min-width: 320px;
-        color: white;
-        background: $purple-gradient;
-    }
+  &_long {
+    position: relative;
+    min-height: 44px;
+    min-width: 320px;
+    color: white;
+    background: $purple-gradient;
+  }
 
-    &_purple-link {
-        color: $purple;
-        line-height: 15px;
-    }
+  &_purple-link {
+    color: $purple;
+    line-height: 15px;
+  }
 
-    &_grey-link {
-        color: $dark-shade-50;
-        line-height: 15px;
-    }
+  &_grey-link {
+    color: $dark-shade-50;
+    line-height: 15px;
+  }
 }

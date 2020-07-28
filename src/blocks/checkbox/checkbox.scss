@@ -1,69 +1,68 @@
 @import '../color/color.scss';
 
-
 .checkbox {
-    width: 230px;
-    user-select: none;
-    
-    &__container {
-        position: relative;
-        cursor: pointer;
-    }
-    
-    &__input_default {
-        display: none;
-    }
-    
-    &__input_styled {
-        position: relative;
-        display: inline-block;
-        vertical-align: middle;
-        height: 20px;
-        width: 20px;
-        border: 1px solid $dark-shade-25;
-        border-radius: 4px;
-    }
-    
-    &__input_styled:after {
-        content: '';
-        position: relative;
-        left: 2px;
-        top: 3px;
-        height: 6px;
-        width: 8px;
-        background: linear-gradient(270deg, #bc9cff 0%, #8ba4f9 100%);
-        transform: rotate(-45deg);
-        transform-origin: top right;
-        display: none;
-    }
-      
-    &__input_styled:before {
-        content: '';
-        position: absolute;
-        left: 3px;
-        top: 2px;
-        height: 5px;
-        width: 7px;
-        background: white;
-        z-index: 2;
-        transform: rotate(-45deg);
-        transform-origin: top right;
-        display: none;
-    }
-    
-    &__input_default:checked ~ &__input_styled {
-        border: 1px solid $purple;
-    }
-    
-    &__input_default:checked ~ &__input_styled:after,
-    &__input_default:checked ~ &__input_styled:before {
-        display: block;
-    }
+  width: 230px;
+  user-select: none;
 
-    &__label {
-        padding-left: 10px;
-        color: $dark-shade-50;
-        vertical-align: middle;
-        cursor: pointer;
-    }
+  &__container {
+    position: relative;
+    cursor: pointer;
+  }
+
+  &__input_default {
+    display: none;
+  }
+
+  &__input_styled {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    height: 20px;
+    width: 20px;
+    border: 1px solid $dark-shade-25;
+    border-radius: 4px;
+  }
+
+  &__input_styled:after {
+    content: '';
+    position: relative;
+    left: 2px;
+    top: 3px;
+    height: 6px;
+    width: 8px;
+    background: linear-gradient(270deg, #bc9cff 0%, #8ba4f9 100%);
+    transform: rotate(-45deg);
+    transform-origin: top right;
+    display: none;
+  }
+
+  &__input_styled:before {
+    content: '';
+    position: absolute;
+    left: 3px;
+    top: 2px;
+    height: 5px;
+    width: 7px;
+    background: white;
+    z-index: 2;
+    transform: rotate(-45deg);
+    transform-origin: top right;
+    display: none;
+  }
+
+  &__input_default:checked ~ &__input_styled {
+    border: 1px solid $purple;
+  }
+
+  &__input_default:checked ~ &__input_styled:after,
+  &__input_default:checked ~ &__input_styled:before {
+    display: block;
+  }
+
+  &__label {
+    padding-left: 10px;
+    color: $dark-shade-50;
+    vertical-align: middle;
+    cursor: pointer;
+  }
 }

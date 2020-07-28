@@ -10,42 +10,41 @@
 @import 'pages/registration/registration';
 @import 'pages/sign-in/sign-in';
 
-
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: Montserrat;
-    color: rgba(31, 32, 65, 0.75);
-    font-size: 14px;
-    line-height: 24px;
-    background-color: white;
+  font-family: Montserrat;
+  color: rgba(31, 32, 65, 0.75);
+  font-size: 14px;
+  line-height: 24px;
+  background-color: white;
 }
 
 h1 {
-    font-family: Quicksand, 'Open Sans';
-    color: #1F2041;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 30px;
+  font-family: Quicksand, 'Open Sans';
+  color: #1f2041;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
 }
 
 h2 {
-    font-family: Quicksand, 'Open Sans';
-    color: #1F2041;
-    font-weight: bold;
-    font-size: 19px;
-    line-height: 24px;
+  font-family: Quicksand, 'Open Sans';
+  color: #1f2041;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 24px;
 }
 
 h3 {
-    font-family: Montserrat;
-    color: #1F2041;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
-    text-transform: uppercase;
+  font-family: Montserrat;
+  color: #1f2041;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
 }

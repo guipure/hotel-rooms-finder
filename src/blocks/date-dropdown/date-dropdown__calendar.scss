@@ -22,12 +22,16 @@ $datepickerTextColor: (
   common: $dark-shade-50,
   title: $dark-shade-100,
   dayNames: $purple,
-  navArrows: $purple
+  navArrows: $purple,
 ) !default;
 
-$currentGradient: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-$selectedGradient: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-$rangeGradient: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
+$currentGradient: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+$selectedGradient: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+$rangeGradient: linear-gradient(
+  180deg,
+  rgba(188, 156, 255, 0.25) 0%,
+  rgba(139, 164, 249, 0.25) 100%
+);
 
 $datepickerBG: (
   selected: $selectedGradient,
@@ -38,7 +42,7 @@ $datepickerBG: (
 ) !default;
 
 $datepickerBorderColor: (
-  default: $dark-shade-25
+  default: $dark-shade-25,
 ) !default;
 
 $datepickerNavigationHeight: 24px !default;
@@ -48,7 +52,7 @@ $datepickerPointerSize: 0 !default;
 $datepickerPointerOffset: 0 !default;
 
 // Transitions
-$datepickerTransitionSpeed: .3s !default;
+$datepickerTransitionSpeed: 0.3s !default;
 $datepickerTransitionEase: ease !default;
 $datepickerTransitionOffset: 8px !default;
 
@@ -73,7 +77,7 @@ $datepickerTransitionOffset: 8px !default;
       background: map_get($datepickerBG, selected);
     }
   }
-  
+
   &.-in-range- {
     background-color: map_get($datepickerBG, inRange);
     color: map_get($datepickerTextColor, otherMonth);
@@ -82,7 +86,6 @@ $datepickerTransitionOffset: 8px !default;
       background-color: map_get($datepickerBG, inRange);
     }
   }
-
 
   &:empty {
     background: none;
@@ -187,7 +190,6 @@ $datepickerTransitionOffset: 8px !default;
 
   &.-range-from-.-range-to- {
     border-radius: $datepickerBorderRadius;
-
   }
 
   &.-selected- {
@@ -235,18 +237,18 @@ $datepickerTransitionOffset: 8px !default;
 // -------------------------------------------------
 
 .datepicker--cell-day {
-  width: (100/7)#{'%'};
+  width: (100/7) #{'%'};
 
   &.-other-month- {
     @extend %otherMonth;
   }
 }
 
-
 //  Months
 // -------------------------------------------------
 
-.datepicker--months {}
+.datepicker--months {
+}
 
 .datepicker--cells-months {
   height: $datepickerMinBodyHeight;
@@ -278,7 +280,7 @@ $datepickerTransitionOffset: 8px !default;
   width: 100% / $datepickerYearsPerRow;
   height: 33.33%;
   border-radius: $datepickerBorderRadius;
-  
+
   &.-other-decade- {
     @extend %otherMonth;
   }
@@ -311,7 +313,9 @@ $datepickerTransitionOffset: 8px !default;
   position: absolute;
   left: -100000px;
   opacity: 0;
-  transition: opacity $datepickerTransitionSpeed $datepickerTransitionEase, transform $datepickerTransitionSpeed $datepickerTransitionEase, left 0s $datepickerTransitionSpeed;
+  transition: opacity $datepickerTransitionSpeed $datepickerTransitionEase,
+    transform $datepickerTransitionSpeed $datepickerTransitionEase,
+    left 0s $datepickerTransitionSpeed;
   z-index: $datepickerZIndex;
 
   &.-from-top- {
@@ -327,11 +331,11 @@ $datepickerTransitionOffset: 8px !default;
     transform: translateX(-$datepickerTransitionOffset);
   }
 
-
   &.active {
     opacity: 1;
     transform: translate(0);
-    transition: opacity $datepickerTransitionSpeed $datepickerTransitionEase, transform $datepickerTransitionSpeed $datepickerTransitionEase, left 0s 0s;
+    transition: opacity $datepickerTransitionSpeed $datepickerTransitionEase,
+      transform $datepickerTransitionSpeed $datepickerTransitionEase, left 0s 0s;
   }
 }
 
@@ -378,22 +382,30 @@ $pointerHalfSize: $datepickerPointerSize / 2 - 1;
   //  Main axis
   // -------------------------
 
-  .-top-left- &, .-top-center- &, .-top-right- & {
+  .-top-left- &,
+  .-top-center- &,
+  .-top-right- & {
     top: calc(100% - #{$pointerHalfSize});
     transform: rotate(135deg);
   }
 
-  .-right-top- &, .-right-center- &, .-right-bottom- & {
+  .-right-top- &,
+  .-right-center- &,
+  .-right-bottom- & {
     right: calc(100% - #{$pointerHalfSize});
     transform: rotate(225deg);
   }
 
-  .-bottom-left- &, .-bottom-center- &, .-bottom-right- & {
+  .-bottom-left- &,
+  .-bottom-center- &,
+  .-bottom-right- & {
     bottom: calc(100% - #{$pointerHalfSize});
     transform: rotate(315deg);
   }
 
-  .-left-top- &, .-left-center- &, .-left-bottom- & {
+  .-left-top- &,
+  .-left-center- &,
+  .-left-bottom- & {
     left: calc(100% - #{$pointerHalfSize});
     transform: rotate(45deg);
   }
@@ -401,26 +413,31 @@ $pointerHalfSize: $datepickerPointerSize / 2 - 1;
   //  Secondary axis
   // -------------------------
 
-  .-top-left- &, .-bottom-left- & {
+  .-top-left- &,
+  .-bottom-left- & {
     left: $datepickerPointerOffset;
   }
-  .-top-right- &, .-bottom-right- & {
+  .-top-right- &,
+  .-bottom-right- & {
     right: $datepickerPointerOffset;
   }
-  .-top-center- &, .-bottom-center- & {
+  .-top-center- &,
+  .-bottom-center- & {
     left: calc(50% - #{$datepickerPointerSize} / 2);
   }
 
-  .-left-top- &, .-right-top- & {
+  .-left-top- &,
+  .-right-top- & {
     top: $datepickerPointerOffset;
   }
-  .-left-bottom- &, .-right-bottom- & {
+  .-left-bottom- &,
+  .-right-bottom- & {
     bottom: $datepickerPointerOffset;
   }
-  .-left-center- &, .-right-center- & {
+  .-left-center- &,
+  .-right-center- & {
     top: calc(50% - #{$datepickerPointerSize} / 2);
   }
-
 }
 
 //  Body
@@ -433,7 +450,6 @@ $pointerHalfSize: $datepickerPointerSize / 2 - 1;
     display: block;
   }
 }
-
 
 /* -------------------------------------------------
     Navigation
@@ -573,7 +589,7 @@ $rangeThumbBg: #dedede;
   background: #fff;
   cursor: pointer;
 
-  transition: background .2s;
+  transition: background 0.2s;
 }
 
 @mixin track {
@@ -671,7 +687,8 @@ $rangeThumbBg: #dedede;
   align-items: center;
   font-size: 11px;
   height: 17px;
-  background: linear-gradient(to right,$rangeTrackBg, $rangeTrackBg) left 50%/100% $rangeTrackHeight no-repeat;
+  background: linear-gradient(to right, $rangeTrackBg, $rangeTrackBg) left 50%/100%
+    $rangeTrackHeight no-repeat;
 
   &:first-child {
     margin-bottom: 4px;
@@ -730,13 +747,11 @@ $rangeThumbBg: #dedede;
       background: transparent;
     }
     &:focus::-ms-fill-lower {
-
     }
     &::-ms-fill-upper {
       background: transparent;
     }
     &:focus::-ms-fill-upper {
-
     }
   }
   span {
@@ -754,14 +769,15 @@ $rangeThumbBg: #dedede;
   width: 1em;
   height: 1em;
 
-  &:after, &:before {
+  &:after,
+  &:before {
     content: '';
     background: currentColor;
     position: absolute;
   }
 
   &:after {
-    height: .4em;
+    height: 0.4em;
     width: 1px;
     left: calc(50% - 1px);
     top: calc(50% + 1px);
@@ -769,10 +785,9 @@ $rangeThumbBg: #dedede;
   }
 
   &:before {
-    width: .4em;
+    width: 0.4em;
     height: 1px;
     top: calc(50% + 1px);
     left: calc(50% - 1px);
   }
 }
-

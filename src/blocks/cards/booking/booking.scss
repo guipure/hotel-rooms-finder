@@ -1,99 +1,99 @@
 @import 'blocks/color/color';
 
 .booking {
-    background-color: white;
-    display: inline-block;
-    padding: 39px 29px 29px;
-    max-width: 380px;
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    border-radius: 4px;
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  display: inline-block;
+  padding: 39px 29px 29px;
+  max-width: 380px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
 
-    &__title {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-        line-height: 30px;
-    }
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    line-height: 30px;
+  }
 
-    &_num {
-        font-size: 14px;
-        font-weight: bold;
-        font-family: 'Quicksand';
-        color: $dark-shade-100;
-    }
+  &_num {
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Quicksand';
+    color: $dark-shade-100;
+  }
 
-    &_number {
-        font-size: 24px;
-        font-weight: bold;
-        font-family: 'Quicksand';
-        color: $dark-shade-100;
-        padding: 0 5px 0 4px;
-    }
+  &_number {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Quicksand';
+    color: $dark-shade-100;
+    padding: 0 5px 0 4px;
+  }
 
-    &_lux {
-        color: $purple;
-        font-weight: bold;
-        font-family: Montserrat;
-        font-size: 12px;
-    }
+  &_lux {
+    color: $purple;
+    font-weight: bold;
+    font-family: Montserrat;
+    font-size: 12px;
+  }
 
-    &__day-price {
-        color: $dark-shade-50;
-    }
+  &__day-price {
+    color: $dark-shade-50;
+  }
 
-    &__per-day {
-        font-size: 12px;
-    }
+  &__per-day {
+    font-size: 12px;
+  }
 
-    &__dates {
-        padding: 15px 0 10px;
-    }
+  &__dates {
+    padding: 15px 0 10px;
+  }
 
-    &__price {
-        position: relative;
-        padding: 21px 0 15px;
-    }
+  &__price {
+    position: relative;
+    padding: 21px 0 15px;
+  }
 
-    &__fee {
-        display: flex;
-        justify-content: space-between;
-        line-height: 18px;
-        padding-bottom: 16px;
-    }
+  &__fee {
+    display: flex;
+    justify-content: space-between;
+    line-height: 18px;
+    padding-bottom: 16px;
+  }
 
-    &__left-col {
-        max-width: 214px;
-    }
+  &__left-col {
+    max-width: 214px;
+  }
 
-    &__info {
-        position: absolute;
-        left: 220px;
-        color: $dark-shade-25;
-        font-weight: bold;
-        border: 1px solid $dark-shade-25;
-        border-radius: 50%;
-        width: 20px;
-        height: 20px;
-        text-align: center;
-        line-height: 20px;
-        cursor: default;
-    }
+  &__info {
+    position: absolute;
+    left: 220px;
+    color: $dark-shade-25;
+    font-weight: bold;
+    border: 1px solid $dark-shade-25;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    cursor: default;
+  }
 
-    &__total-price {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-        padding: 14px 0 5px;
-        font-family: Quicksand, 'Open Sans';
-        color: #1F2041;
-        font-weight: bold;
-        font-size: 19px;
-        line-height: 24px;
-    }
+  &__total-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 14px 0 5px;
+    font-family: Quicksand, 'Open Sans';
+    color: #1f2041;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 24px;
+  }
 
-    &__dotted-line {
-        width: 55%;
-        border-bottom: 1px dotted $dark-shade-25;
-    }
+  &__dotted-line {
+    width: 55%;
+    border-bottom: 1px dotted $dark-shade-25;
+  }
 }

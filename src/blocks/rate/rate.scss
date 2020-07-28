@@ -1,18 +1,18 @@
 @import '../color/color.scss';
 
 .rate {
-    display: inline-block;
-    position: relative;
-    margin-top: 11px;
-    margin-right: 10px;
-    user-select: none;
+  display: inline-block;
+  position: relative;
+  margin-top: 11px;
+  margin-right: 10px;
+  user-select: none;
 
-    &__star {
-        font-size: 24px;
-        line-height: 20px;
-        background: $purple-gradient;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
+  &__star {
+    font-size: 24px;
+    line-height: 20px;
+    background: $purple-gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }

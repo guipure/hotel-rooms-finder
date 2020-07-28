@@ -17,21 +17,21 @@
 @import 'blocks/comment/comment';
 
 .form-elements-wrapper {
-    position: relative;
-    padding: 0 15px;
-    max-width: 1470px;
-    margin: 100px auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 72px;
-    row-gap: 72px;
+  position: relative;
+  padding: 0 15px;
+  max-width: 1470px;
+  margin: 100px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 72px;
+  row-gap: 72px;
 }
 
 .form-elements__cell-for-comment {
-    grid-column-start: 2;
-    grid-column-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 4;
 }
 
 .buttons-wrapper {
-    max-width: 320px;
+  max-width: 320px;
 }

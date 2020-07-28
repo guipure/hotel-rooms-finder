@@ -3,28 +3,28 @@
 @import 'blocks/typography/typography';
 
 .wrapper {
-    display: flex;
-    padding: 0 15px;
-    max-width: 1470px;
-    margin: auto;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  display: flex;
+  padding: 0 15px;
+  max-width: 1470px;
+  margin: auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .colors-wrapper {
-    padding-top: 97px;
-    padding-left: 150px;
+  padding-top: 97px;
+  padding-left: 150px;
 }
 
 .typography-wrapper {
-    padding-top: 99px;
-    padding-right: 183px;
-    margin-left: 145px;
+  padding-top: 99px;
+  padding-right: 183px;
+  margin-left: 145px;
 }
 
 .logo {
-    top: 30px;
-    left: 30px;
-    position: relative;
-    align-self: flex-start;
+  top: 30px;
+  left: 30px;
+  position: relative;
+  align-self: flex-start;
 }
