@@ -1,12 +1,7 @@
 @import '../color/color.scss';
 
 .checkbox-rich {
-  margin-bottom: 10px;
-  width: 267px;
-
-  &:nth-child(2) {
-    margin-top: 12px;
-  }
+  max-width: 267px;
 
   &__container {
     position: relative;
