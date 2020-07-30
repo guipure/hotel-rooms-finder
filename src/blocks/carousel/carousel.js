@@ -3,12 +3,18 @@ class Carousel {
     this.carousel = element;
     this.slideIndex = 1;
     this.showSlides(this.slideIndex);
-    const prev = this.carousel.querySelector('.js-carousel__prev');
-    const next = this.carousel.querySelector('.js-carousel__next');
+    this.addEventListeners();
+  }
+
+  addEventListeners() {
+    const prev = this.carousel.querySelector('.js-carousel__button_prev');
+    prev.addEventListener('click', this.plusSlides.bind(this, -1));
+
+    const next = this.carousel.querySelector('.js-carousel__button_next');
+    next.addEventListener('click', this.plusSlides.bind(this, 1));
+
     const dots = Array.from(this.carousel.querySelectorAll('.js-carousel__dot'));
-    prev.addEventListener('click', () => this.plusSlides(-1));
-    next.addEventListener('click', () => this.plusSlides(1));
-    dots.map((dot, i) => dot.addEventListener('click', () => this.currentSlide(i + 1)));
+    dots.map((dot, i) => dot.addEventListener('click', this.currentSlide.bind(this, i + 1)));
   }
 
   plusSlides(n) {
@@ -23,14 +29,23 @@ class Carousel {
     let i;
     const slides = this.carousel.getElementsByClassName('js-carousel__image');
     const dots = this.carousel.getElementsByClassName('js-carousel__dot');
-    if (n > slides.length) { this.slideIndex = 1; }
-    if (n < 1) { this.slideIndex = slides.length; }
+
+    if (n > slides.length) {
+      this.slideIndex = 1;
+    }
+
+    if (n < 1) {
+      this.slideIndex = slides.length;
+    }
+
     for (i = 0; i < slides.length; i++) {
       slides[i].style.display = 'none';
     }
+
     for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(' js-carousel__dot_active', '');
     }
+
     slides[this.slideIndex - 1].style.display = 'block';
     dots[this.slideIndex - 1].className += ' js-carousel__dot_active';
   }

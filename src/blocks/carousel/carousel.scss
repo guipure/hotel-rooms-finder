@@ -9,8 +9,7 @@
     border-radius: 4px 4px 0 0;
   }
 
-  &__prev,
-  &__next {
+  &__button {
     position: absolute;
     top: 50%;
     width: 44px;
@@ -20,21 +19,23 @@
     cursor: pointer;
     line-height: 0;
     display: none;
+  
+    &_next {
+      right: 0;
+    }
   }
 
-  &__next {
-    right: 0;
-  }
-
-  &:hover > &__prev,
-  &:hover > &__next {
+  &:hover > &__button_prev,
+  &:hover > &__button_next {
     display: block;
   }
 
   &__dots {
     position: absolute;
-    bottom: 6px;
-    right: 13px;
+    bottom: 15px;
+    right: 14px;
+    display: flex;
+    gap: 4px;
   }
 
   &__dot {
@@ -43,7 +44,7 @@
     height: 7.5px;
     border: 1px solid white;
     border-radius: 50%;
-    margin: 2px;
+    cursor: pointer;
   }
 
   &__dot_active {
