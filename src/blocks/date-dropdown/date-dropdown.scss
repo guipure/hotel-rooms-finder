@@ -1,60 +1,38 @@
 @import '../color/color.scss';
-@import './date-dropdown__calendar.scss';
 
 .js-date-dropdown {
   display: flex;
+  justify-content: space-between;
+  position: relative;
+  min-width: 320px;
 
-  &__input {
+  &__input-box {
     position: relative;
   }
 
-  &__box {
+  &__input {
     font-family: inherit;
     border: 1px solid $dark-shade-25;
     border-radius: 3px;
     padding: 13px 15px;
     outline: none;
+    width: 100%;
+
+    &::placeholder {
+      color: $dark-shade-25;
+    }
+  
+    &:focus,
+    &:hover {
+      border: 1px solid $dark-shade-50;
+    }
   }
 
-  &__box::placeholder {
-    color: $dark-shade-25;
+  &__calendar_default {
+    position: absolute;
+    z-index: 10;
+    top: 70px;
   }
-
-  &__box:focus,
-  &__box:hover {
-    border: 1px solid $dark-shade-50;
-  }
-
-  &__box_inline {
-    border: none;
-    min-width: 320px;
-    padding: 0;
-    box-shadow: 0px 10px 20px $dark-shade-5;
-  }
-
-  &__box_inline:focus,
-  &__box_inline:hover {
-    border: none;
-  }
-
-  &__submit {
-    float: right;
-  }
-}
-
-.date-dropdown__box_large {
-  width: 320px;
-  height: 44px;
-}
-
-.date-dropdown__box_medium {
-  width: 267px;
-  height: 44px;
-}
-
-.date-dropdown__box_small {
-  width: 150px;
-  height: 44px;
 }
 
 .date-dropdown__icon {
@@ -66,6 +44,115 @@
   cursor: pointer;
 }
 
-.field:first-child {
-  margin-right: 20px;
+.datepicker-inline .datepicker {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 15px 19px;
+  border: 1px solid $dark-shade-25;
+
+  .datepicker--nav {
+    border: none;
+    padding: 0;
+  
+    &-action {
+      color: $purple;
+      width: 25px;
+    }
+  
+    &-title {
+      color: $dark-shade-100;
+      font-family: Quicksand, 'Open Sans', Arial, sans-serif;
+      font-size: 19px;
+      font-weight: bold;
+  
+      i {
+        color: $dark-shade-100;
+      }
+    }
+  }
+  
+  .datepicker--content {
+    font-family: Montserrat, Arial, sans-serif;
+    padding: 26px 0 15px;
+    
+    .datepicker--days-names {
+      padding-bottom: 5px;
+
+      .datepicker--day-name {
+        color: $purple;
+        font-weight: bold;
+        text-transform: none;
+      }
+    }
+  
+    .datepicker--cell {
+      font-size: 12px;
+      color: $dark-shade-50;
+      height: 40px;
+      width: 40px;
+    }
+    
+    .datepicker--cell.-other-month- {
+      color: $dark-shade-25;
+    }
+  
+    .datepicker--cell.-current- {
+      color: #fff;
+      background: $green-gradient;
+      font-weight: bold;
+    }
+  
+    .datepicker--cell.-selected-,
+    .datepicker--cell.-selected-.-current- {
+      color: #fff;
+      border: none;
+      background: $purple-gradient;
+      font-weight: bold;
+    }
+  
+    .datepicker--cell.-range-from-,
+    .datepicker--cell.-range-to-,
+    .datepicker--cell.-current- {
+      border-radius: 50%;
+      border: none;
+    }
+
+    .datepicker--cell.-current-.-in-range- {
+      border-radius: 0;
+    }
+    
+    .-range-from-::after {
+      content: '';
+      background: $purple-gradient;
+      opacity: 0.25;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50% 0 0 50%;
+      z-index: -1;
+    }
+    
+    .-range-to-::before {
+      content: '';
+      background: $purple-gradient;
+      opacity: 0.25;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 0 50% 50% 0;
+      z-index: -1;
+    }
+  
+    .datepicker--cell.-in-range- {
+      color: $dark-shade-50;
+      background: linear-gradient(180deg, rgba(188,156,255,0.25) 0%, rgba(139,164,249,0.25) 100%);
+    }
+  }
+  
+  .datepicker--buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    border: none;
+  }
 }

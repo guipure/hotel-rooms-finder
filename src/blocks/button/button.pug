@@ -15,6 +15,6 @@ mixin button(options)
             - buttonClassName += ' button_purple'
 
     div(class=wrapperClassName)
-        button(class=buttonClassName)= options.value
+        button(class=buttonClassName type=options.type)= options.value
             if options.theme == 'long'
-                i(class="button__icon material-icons") arrow_forward
+                i.button__icon.material-icons arrow_forward

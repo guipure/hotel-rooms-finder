@@ -7,30 +7,27 @@ mixin date-dropdown(options)
     if hasSecondField
         - var secondName = options.labels[1]
         - var size = 'small'
-    else if options.isInline
-        - var size = 'large'
     else
         - var size = 'medium'
     -
-        var inputClassName = 'js-date-dropdown__box' + ' date-dropdown__box_' + size
-        inputClassName += options.isSub ? ' date-dropdown__box_sub' : ''
         var dateDropdownClassName = 'js-date-dropdown'
         dateDropdownClassName += hasSecondField ? ' js-date-dropdown_doubleField' : ''
-        var inline = options.isInline? 'true' : 'false'
-
+        var calendarClassName = 'js-date-dropdown__calendar js-date-dropdown__calendar_'
+        calendarClassName += options.isInline ? 'inline' : 'default'
     
     div(class=dateDropdownClassName)
-        if options.isInline
-            .js-date-dropdown__input
-                .js-date-dropdown__box.js-date-dropdown__box_inline(data-inline=inline)
-        else
+        div(class=calendarClassName)
+            .js-date-dropdown__submit
+                +button({theme: 'purple-link', value: 'применить', type: 'button'})
+            .js-date-dropdown__clear
+                +button({theme: 'grey-link', value: 'очистить', type: 'button'})
+        if !options.isInline
             +field({name: firstName, size: size})
-                .js-date-dropdown__input
-                    input(type="text" placeholder=options.placeholder class=inputClassName)
+                .js-date-dropdown__input-box
+                    input.js-date-dropdown__input(placeholder=options.placeholder readonly)
                     i.date-dropdown__icon.material-icons expand_more
-            if (hasSecondField)
+            if hasSecondField
                 +field({name: secondName, size: size})
-        .js-date-dropdown__submit
-                +button({theme: 'purple-link', value: 'применить'})
-        .js-date-dropdown__clear
-                +button({theme: 'grey-link', value: 'очистить'})
+                    .js-date-dropdown__input-box
+                        input.js-date-dropdown__input(placeholder=options.placeholder readonly)
+                        i.date-dropdown__icon.material-icons expand_more

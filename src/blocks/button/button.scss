@@ -62,11 +62,11 @@ $border: 2px;
 
   &_purple-link {
     color: $purple;
-    line-height: 15px;
+    line-height: inherit;
   }
 
   &_grey-link {
     color: $dark-shade-50;
-    line-height: 15px;
+    line-height: inherit;
   }
 }
