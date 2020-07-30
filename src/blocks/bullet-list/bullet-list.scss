@@ -1,9 +1,9 @@
 @import '../color/color.scss';
 
 .bullet-list {
-  &__item {
-    margin: 7px 0 10px;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 
   &__bullet {
     display: inline-block;
