@@ -6,8 +6,8 @@
   &__link {
     font-size: 24px;
     background: $purple-gradient;
-    background-clip: text;
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 }
