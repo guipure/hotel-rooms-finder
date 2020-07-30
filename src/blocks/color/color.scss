@@ -12,7 +12,6 @@ $green-gradient: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
 $grey-gradient: linear-gradient(180deg, #919191 0%, #3d4975 100%);
 
 .color {
-  margin-bottom: 20px;
   height: 70px;
   display: flex;
 
@@ -56,18 +55,16 @@ $grey-gradient: linear-gradient(180deg, #919191 0%, #3d4975 100%);
     padding: 10px 0 10px 40px;
     width: 200px;
     height: 70px;
-    font-family: Quicksand, 'Open Sans';
+    font-family: Quicksand, 'Open Sans', Arial, sans-serif;
     color: #1f2041;
     font-size: 19px;
   }
 
   &__theme {
     font-weight: bold;
-    line-height: 24px;
   }
 
   &__number {
     font-weight: normal;
-    line-height: 28px;
   }
 }
