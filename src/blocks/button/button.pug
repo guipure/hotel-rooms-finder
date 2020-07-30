@@ -1,18 +1,23 @@
 mixin button(options)
-    - var buttonClassName = 'button'
-    - var wrapperClassName = 'button-wrap'
+    - var buttonClassName = 'button__inner button__inner_'
+    - var wrapperClassName = 'button'
     case options.theme
         when 'purple-border'
-            - buttonClassName += ' button_purple-border'
-            - wrapperClassName += ' button-wrap_purple-border'
+            - wrapperClassName += ' button_purple-border'
+            - buttonClassName += 'purple-border'
+        when 'small-purple-border'
+            - wrapperClassName += ' button_purple-border'
+            - buttonClassName += 'small-purple-border'
         when 'long'
-            - buttonClassName += ' button_long'
+            - buttonClassName += 'long'
         when 'purple-link'
-            - buttonClassName += ' button_purple-link'
+            - buttonClassName += 'purple-link'
         when 'grey-link'
-            - buttonClassName += ' button_grey-link'
+            - buttonClassName += 'grey-link'
+        when 'small-purple'
+            - buttonClassName += 'small-purple'
         default
-            - buttonClassName += ' button_purple'
+            - buttonClassName += 'purple'
 
     div(class=wrapperClassName)
         button(class=buttonClassName type=options.type)= options.value

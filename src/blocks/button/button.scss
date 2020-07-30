@@ -2,7 +2,7 @@
 
 $border: 2px;
 
-.button-wrap {
+.button {
   display: inline-block;
   border-radius: 25px;
 
@@ -14,59 +14,70 @@ $border: 2px;
   &:hover {
     opacity: 0.5;
   }
-}
 
-.button {
-  border: none;
-  background: none;
-  border-radius: 22px;
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  text-transform: uppercase;
-  cursor: pointer;
-  outline: none;
+  &__inner {
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    border-radius: 22px;
+    font-family: Montserrat, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+
+    &_purple-border {
+      height: 44px - 2 * $border;
+      background: white;
+      color: $purple;
+      padding: 0 20px-$border;
+    }
+
+    &_small-purple-border {
+      height: 34px - 2 * $border;
+      background: white;
+      color: $purple;
+      padding: 0 20px-$border;
+    }
+
+    &_long {
+      position: relative;
+      min-height: 44px;
+      min-width: 320px;
+      color: white;
+      background: $purple-gradient;
+    }
+
+    &_purple-link {
+      color: $purple;
+      line-height: inherit;
+    }
+
+    &_grey-link {
+      color: $dark-shade-50;
+      line-height: inherit;
+    }
+
+    &_purple {
+      height: 44px;
+      color: white;
+      background: $purple-gradient;
+      padding: 0 20px;
+    }
+  
+    &_small-purple {
+      height: 34px;
+      color: white;
+      background: $purple-gradient;
+      padding: 0 20px;
+    }
+  }
 
   &__icon {
     position: absolute;
-    width: 44px;
-    right: 0;
-    top: 0;
-    margin-top: 10px;
-  }
-
-  &_purple-border {
-    height: 44px - 2 * $border;
-    min-width: 83px - 2 * $border;
-    background: white;
-    color: $purple;
-    padding: 0 20px-$border;
-  }
-
-  &_purple {
-    height: 44px;
-    min-width: 79px;
-    color: white;
-    background: $purple-gradient;
-    padding: 0 20px;
-  }
-
-  &_long {
-    position: relative;
-    min-height: 44px;
-    min-width: 320px;
-    color: white;
-    background: $purple-gradient;
-  }
-
-  &_purple-link {
-    color: $purple;
-    line-height: inherit;
-  }
-
-  &_grey-link {
-    color: $dark-shade-50;
-    line-height: inherit;
+    right: 10px;
+    top: 10px;
   }
 }
+
+
