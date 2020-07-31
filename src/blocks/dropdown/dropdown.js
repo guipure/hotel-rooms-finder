@@ -1,129 +1,164 @@
-const boxes = document.querySelectorAll('.dropdown__box');
-const pluses = document.querySelectorAll('.dropdown__operator_plus');
-const minuses = document.querySelectorAll('.dropdown__operator_minus');
-const clearBtns = document.querySelectorAll('.dropdown__clear');
-const submitBtns = document.querySelectorAll('.dropdown__submit');
-
-window.addEventListener('click', hide);
-Array.from(boxes).forEach((box) => box.addEventListener('click', show));
-Array.from(pluses).forEach((plus) => plus.addEventListener('click', () => operator('plus')));
-Array.from(minuses).forEach((minus) => minus.addEventListener('click', () => operator('minus')));
-Array.from(submitBtns).forEach((btn) => btn.addEventListener('click', submit));
-
-for (const btn of clearBtns) {
-  const dropdown = btn.closest('.dropdown');
-  const result = dropdown.querySelector('.dropdown__result');
-  btn.firstElementChild.addEventListener('click', () => clear(dropdown, result));
-}
-
-function submit() {
-  show();
-}
-
-function show() {
-  const dropdown = event.currentTarget.closest('.dropdown');
-  const menu = dropdown.querySelector('.dropdown__menu');
-  const icon = dropdown.querySelector('.dropdown__icon');
-  menu.classList.toggle('dropdown__menu_hidden');
-  icon.classList.toggle('dropdown__icon_rotated');
-}
-
-function hide() {
-  if (event.target.closest('.dropdown')) return;
-  const menus = document.querySelectorAll('.dropdown__menu');
-  const rotatedIcons = document.querySelectorAll('.dropdown__icon_rotated');
-
-  for (const icon of rotatedIcons) {
-    icon.classList.remove('dropdown__icon_rotated');
+class Dropdown {
+  constructor(element) {
+    this.dropdown = element;
+    this.addEventListeners();
   }
 
-  for (const menu of menus) {
-    menu.classList.add('dropdown__menu_hidden');
-  }
-}
+  addEventListeners() {
+    document.addEventListener('click', this.hide.bind(this));
 
-function operator(sign) {
-  let valueDiv;
-  let minusDiv;
-  if (sign == 'plus') {
-    valueDiv = event.target.previousElementSibling;
-    minusDiv = valueDiv.previousElementSibling;
-  } else {
-    valueDiv = event.target.nextElementSibling;
-    minusDiv = event.target;
-  }
-  let value = Number(valueDiv.innerHTML);
-  sign == 'plus' ? value++ : value--;
-  if (value < 0) return;
-  if (value == 0) {
-    minusDiv.classList.add('dropdown__operator_disabled');
-  }
-  if (value > 0 && minusDiv.classList.contains('dropdown__operator_disabled')) {
-    minusDiv.classList.remove('dropdown__operator_disabled');
-  }
-  valueDiv.innerHTML = value.toString();
-  sum(event.target.closest('.dropdown'));
-}
+    const box = this.dropdown.querySelector('.js-dropdown__box');
+    box.addEventListener('click', this.toggle.bind(this));
 
-function sum(dropdown) {
-  const values = Array.from(dropdown.querySelectorAll('.dropdown__value')).map((value) => Number(value.innerHTML));
-  const result = dropdown.querySelector('.dropdown__result');
-  const labels = Array.from(dropdown.querySelectorAll('.dropdown__label')).map((label) => label.innerHTML);
-  if (result.classList.contains('guests')) {
-    const sum = values.reduce((a, b) => a + b, 0);
-    result.innerHTML = sum.toString() + ending(sum, 'гость');
-  } else {
-    const itemsCount = [];
+    const operators = this.dropdown.querySelectorAll('.js-dropdown__operator');
+    Array.from(operators).forEach((operator) => operator.addEventListener('click', this.handleOperator.bind(this)));
 
-    values.forEach((value, index) => {
-      if (value > 0) {
-        itemsCount.push(value.toString() + ending(value, labels[index]));
-      }
-    });
+    const submitButton = this.dropdown.querySelector('.js-dropdown__submit');
+    submitButton.addEventListener('click', this.submit.bind(this));
 
-    if (itemsCount.length > 2) {
-      result.innerHTML = `${itemsCount.slice(0, 2).join(', ')}...`;
+    const clearButton = this.dropdown.querySelector('.js-dropdown__clear');
+    clearButton.firstElementChild.addEventListener('click', this.clear.bind(this));
+  }
+
+  submit() {
+    this.toggle();
+  }
+
+  toggle() {
+    const menu = this.dropdown.querySelector('.js-dropdown__menu');
+    menu.classList.toggle('js-dropdown__menu_hidden');
+    const icon = this.dropdown.querySelector('.js-dropdown__icon');
+    icon.classList.toggle('js-dropdown__icon_rotated');
+    const box = this.dropdown.querySelector('.js-dropdown__box');
+    box.classList.toggle('js-dropdown__box_opened');
+    box.classList.toggle('js-dropdown__box_closed');
+  }
+
+  hide(event) {
+    if (event.target.closest('.js-dropdown') === this.dropdown) return;
+    const isClosed = !this.dropdown.querySelector('.js-dropdown__box_opened');
+    if (isClosed) return;
+    this.toggle();
+  }
+
+  showClearButton() {
+    const clearButton = this.dropdown.querySelector('.js-dropdown__clear');
+    clearButton.classList.remove('js-dropdown__clear_hidden');
+  }
+
+  hideClearButton() {
+    const clearButton = this.dropdown.querySelector('.js-dropdown__clear');
+    clearButton.classList.add('js-dropdown__clear_hidden');
+  }
+
+  handleOperator(event) {
+    let valueElement;
+    let minusElement;
+    const isTargetPlus = event.target.classList.contains('js-dropdown__operator_plus');
+
+    if (isTargetPlus) {
+      valueElement = event.target.previousElementSibling;
+      minusElement = valueElement.previousElementSibling;
     } else {
-      result.innerHTML = itemsCount.join(', ');
+      valueElement = event.target.nextElementSibling;
+      minusElement = event.target;
+    }
+
+    this.calculateValue(valueElement, minusElement, isTargetPlus);
+  }
+
+  calculateValue(valueElement, minusElement, isTargetPlus) {
+    let value = Number(valueElement.innerHTML);
+    isTargetPlus ? value++ : value--;
+    if (value < 0) return;
+    this.handleMinus(minusElement, value);
+    valueElement.innerHTML = value.toString();
+    this.sum();
+  }
+
+  handleMinus(minusElement, value) {
+    if (value === 0) {
+      minusElement.classList.add('js-dropdown__operator_disabled');
+    }
+
+    if (value > 0 && minusElement.classList.contains('js-dropdown__operator_disabled')) {
+      minusElement.classList.remove('js-dropdown__operator_disabled');
     }
   }
-}
 
-function ending(value, word) {
-  let types;
+  sum() {
+    const values = Array.from(this.dropdown.querySelectorAll('.js-dropdown__value'))
+      .map((value) => Number(value.innerHTML));
+    const sum = values.reduce((a, b) => a + b, 0);
 
-  switch (word) {
-    case 'спальни':
-      types = ['спальня', 'спальни', 'спален'];
-      break;
-    case 'кровати':
-      types = ['кровать', 'кровати', 'кроватей'];
-      break;
-    case 'ванные комнаты':
-      types = ['ванная', 'ванных', 'ванных'];
-      break;
-    case 'гость':
-      types = ['гость', 'гостя', 'гостей'];
-      break;
+    if (sum === 0) {
+      this.clear();
+      return;
+    }
+
+    this.showClearButton();
+    const result = this.dropdown.querySelector('.js-dropdown__result');
+    const labels = Array.from(this.dropdown.querySelectorAll('.js-dropdown__label'))
+      .map((label) => label.innerHTML);
+
+    if (result.classList.contains('guests')) {
+      result.innerHTML = sum.toString() + this.correctEnding(sum, 'гость');
+    } else {
+      const allItems = [];
+
+      values.forEach((value, index) => {
+        if (value > 0) {
+          allItems.push(value.toString() + this.correctEnding(value, labels[index]));
+        }
+      });
+
+      result.innerHTML = allItems.join(', ');
+    }
   }
 
-  if (value > 4 && value < 21) return (` ${types[2]}`);
-  if (value % 10 == 1) return (` ${types[0]}`);
-  if (value % 10 > 1 && value % 10 < 5) return (` ${types[1]}`);
-  return (` ${types[2]}`);
-}
+  correctEnding(value, word) {
+    let types;
 
-function clear(dropdown, result) {
-  const values = dropdown.querySelectorAll('.dropdown__value');
+    switch (word) {
+      case 'спальни':
+        types = ['спальня', 'спальни', 'спален'];
+        break;
+      case 'кровати':
+        types = ['кровать', 'кровати', 'кроватей'];
+        break;
+      case 'ванные комнаты':
+        types = ['ванная', 'ванных', 'ванных'];
+        break;
+      case 'гость':
+        types = ['гость', 'гостя', 'гостей'];
+        break;
+      // no default
+    }
 
-  for (const value of values) {
-    value.innerHTML = '0';
-    value.previousElementSibling.classList.add('dropdown__operator_disabled');
+    if (value > 4 && value < 21) return (` ${types[2]}`);
+    if (value % 10 === 1) return (` ${types[0]}`);
+    if (value % 10 > 1 && value % 10 < 5) return (` ${types[1]}`);
+    return (` ${types[2]}`);
   }
 
-  if (result.classList.contains('guests')) {
-    result.innerHTML = 'Сколько гостей';
-  } else {
-    result.innerHTML = 'Сколько кроватей';
+  clear() {
+    const result = this.dropdown.querySelector('.js-dropdown__result');
+    const values = this.dropdown.querySelectorAll('.js-dropdown__value');
+
+    values.forEach((value) => {
+      value.innerHTML = '0';
+      value.previousElementSibling.classList.add('js-dropdown__operator_disabled');
+    });
+
+    if (result.classList.contains('guests')) {
+      result.innerHTML = 'Сколько гостей';
+    } else {
+      result.innerHTML = 'Сколько кроватей';
+    }
+
+    this.hideClearButton();
   }
 }
+
+const dropdowns = document.querySelectorAll('.js-dropdown');
+dropdowns.forEach((dropdown) => new Dropdown(dropdown));

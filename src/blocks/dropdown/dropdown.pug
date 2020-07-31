@@ -1,26 +1,23 @@
 include ../button/button
 
-mixin dropdown__item(name)
-    .dropdown__item
-        .dropdown__label= name
-        .dropdown__count
-            .dropdown__operator.dropdown__operator_minus.dropdown__operator_disabled
-            .dropdown__value 0
-            .dropdown__operator.dropdown__operator_plus
-
-mixin dropdown(options)
+mixin dropdown({ type, placeholder, items })
     -
-        var dropdownClassName = 'dropdown__box' + ' dropdown__box_' + options.size
-        dropdownClassName += options.isSub ? ' dropdown__box_sub' : ''
-        var resultClassName = 'dropdown__result ' + options.type
-    .dropdown
+        var dropdownClassName = 'js-dropdown__box js-dropdown__box_closed'
+        var resultClassName = 'js-dropdown__result ' + type
+    .js-dropdown
         div(class=dropdownClassName)
-            div(class=resultClassName)= options.placeholder
-            i.dropdown__icon.material-icons expand_more
-        .dropdown__menu.dropdown__menu_hidden
-            each item in options.items
-                +dropdown__item(item)
-            .dropdown__submit
-                +button({theme: 'purple-link', value: 'применить'})
-            .dropdown__clear
-                +button({theme: 'grey-link', value: 'очистить'})
+            div(class=resultClassName)= placeholder
+            i.js-dropdown__icon.material-icons expand_more
+        .js-dropdown__menu.js-dropdown__menu_hidden
+            each item in items
+                .js-dropdown__item
+                    .js-dropdown__label= item
+                    .js-dropdown__calculator
+                        .js-dropdown__operator.js-dropdown__operator_minus.js-dropdown__operator_disabled
+                        .js-dropdown__value 0
+                        .js-dropdown__operator.js-dropdown__operator_plus
+            .js-dropdown__buttons
+                .js-dropdown__submit
+                    +button({theme: 'purple-link', value: 'применить', type: 'button'})
+                .js-dropdown__clear.js-dropdown__clear_hidden
+                    +button({theme: 'grey-link', value: 'очистить', type: 'button'})
