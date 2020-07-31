@@ -1,33 +1,33 @@
 .field {
   position: relative;
-}
 
-.field_small {
-  width: 150px;
-}
-
-.field_medium {
-  width: 267px;
-}
-
-.field_large {
-  width: 320px;
-}
-
-.field__label {
-  padding-bottom: 20px;
-}
-
-.field__name {
-  float: left;
-}
-
-.field__annotation {
-  float: right;
-  font-family: Montserrat;
-  color: rgba(31, 32, 65, 0.5);
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
+  &_small {
+    width: 150px;
+  }
+  
+  &_medium {
+    width: 267px;
+  }
+  
+  &_large {
+    width: 320px;
+  }
+  
+  &__label {
+    padding-bottom: 20px;
+  }
+  
+  &__name {
+    float: left;
+  }
+  
+  &__annotation {
+    float: right;
+    font-family: Montserrat, Arial, sans-serif;
+    color: rgba(31, 32, 65, 0.5);
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+  }
 }
