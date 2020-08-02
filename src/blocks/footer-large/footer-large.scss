@@ -24,7 +24,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 100px 0 90px;
+    padding: 99px 0 90px;
   }
 
   @media (max-width: 970px) {
@@ -104,12 +104,14 @@
 
   &__menu-item {
     list-style-type: none;
-    height: 38px;
   }
 
   &__menu-link {
     font-size: 14px;
     white-space: nowrap;
+    text-decoration: none;
+    color: $dark-shade-50;
+    line-height: 38px;
   }
 
   &__subscription {

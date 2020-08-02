@@ -1,29 +1,29 @@
 include ../input/input
 include ../socials/socials
 
-mixin footer-large(options)
+mixin footer-large({info, menus, subscription, copyright})
     .footer-large
         .footer-large__container
             .footer-large__top
                 .footer-large__main
                     img.footer-large__logo(src=require('../../assets/logo/logo.svg').default, alt="logo")
-                    .footer-large__info=options.info
-                .footer-large__menus
-                    each menu in options.menus
-                        nav.footer-large__menu
+                    .footer-large__info=info
+                nav.footer-large__menus
+                    each menu in menus
+                        .footer-large__menu
                             h3.footer-large__menu-title=menu.title
                             ul
                                 each item in menu.items
                                     li.footer-large__menu-item
                                         a.footer-large__menu-link(href="/mock-address/change-me")=item
                 .footer-large__subscription
-                    h3.footer-large__sub-title=options.subscription.title
-                    .footer-large__sub-info=options.subscription.info
+                    h3.footer-large__sub-title=subscription.title
+                    .footer-large__sub-info=subscription.info
                     .footer-large__sub-email
                         +input({placeholder: 'Email', size: 'medium', isSub: true})
         .footer-large__line
         .footer-large__container
             .footer-large__bottom
-                .footer-large__copyright=options.copyright
+                .footer-large__copyright=copyright
                 .footer-large__socials
                     +socials

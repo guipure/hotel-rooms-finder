@@ -52,6 +52,10 @@
   &__link {
     font-size: 14px;
     outline: none;
+    white-space: nowrap;
+    text-decoration: none;
+    color: $dark-shade-50;
+    line-height: 40px;
   }
 
   &__item_active > &__link {
