@@ -1,37 +1,40 @@
 @import '../color/color.scss';
 
-.icon__inner {
-  position: relative;
-  display: flex;
+.icon {
+  &__inner {
+    position: relative;
+    display: flex;
+  }
+
+  &__icon {
+    max-width: 48px;
+    max-height: 48px;
+    font-size: 48px;
+    line-height: 48px;
+    background: $purple-gradient;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  &__text {
+    display: inline-block;
+    padding-left: 10px;
+  }
+  
+  &__header {
+    font-weight: bold;
+  }
+  
+  &__line {
+    max-width: 280px;
+    height: 1px;
+    background-color: $dark-shade-10;
+    margin: 20px 0;
+  }
+  
+  &:last-child &__line {
+    display: none;
+  }
 }
 
-.icon__icon {
-  max-width: 48px;
-  max-height: 48px;
-  font-size: 48px;
-  line-height: 41px;
-  background: $purple-gradient;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.icon__text {
-  display: inline-block;
-  padding-left: 10px;
-}
-
-.icon__header {
-  font-weight: bold;
-}
-
-.icon__line {
-  max-width: 280px;
-  height: 1px;
-  background-color: $dark-shade-10;
-  margin: 20px 0;
-}
-
-.icon:last-child .icon__line {
-  display: none;
-}
