@@ -5,7 +5,8 @@ include ../../toggle/toggle
 
 mixin registration
     form.registration
-        .registration__title Регистрация аккаунта
+        .registration__title
+            h1 Регистрация аккаунта
         .registration__name
             +input({placeholder: 'Имя', type: 'text'})
         .registration__surname

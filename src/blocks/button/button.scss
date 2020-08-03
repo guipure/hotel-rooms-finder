@@ -28,6 +28,7 @@ $border: 2px;
 
     &_purple-border {
       height: 44px - 2 * $border;
+      min-width: 95px;
       background: white;
       color: $purple;
       padding: 0 20px-$border;
