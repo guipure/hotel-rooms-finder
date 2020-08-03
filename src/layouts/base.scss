@@ -1,0 +1,13 @@
+.base {
+  @media (max-width: 767px) {
+    &__footer-large {
+      display: none;
+    }
+  }
+
+  @media (min-width: 768px) {
+    &__footer-small {
+      display: none;
+    }
+  }
+}
