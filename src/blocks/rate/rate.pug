@@ -5,6 +5,8 @@ mixin rate(stars)
             while n < stars
                 span(class="rate__star material-icons") star
                 - n++
+                if n === 5
+                    - break
             while n < 5
                 span(class="rate__star material-icons") star_border
                 - n++
