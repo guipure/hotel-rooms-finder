@@ -3,7 +3,8 @@ include ../../button/button
 
 mixin sign-in
     form.sign-in
-        .sign-in__title Войти
+        .sign-in__title
+            h1 Войти
         .sign-in__email
             +input({placeholder: 'Email', type: 'email'})
         .sign-in__pass
@@ -11,5 +12,4 @@ mixin sign-in
         .sign-in__button
             +button({theme: 'long', value: 'войти'})
         .sign-in__sign-up Нет аккаунта на Toxin?
-            .sign-in__sign-up-btn
-                +button({theme: 'purple-border', value: 'создать'})
+            +button({theme: 'purple-border', value: 'создать'})
