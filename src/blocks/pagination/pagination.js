@@ -1,15 +1,15 @@
 import 'paginationjs';
 
 class Pagination {
-  constructor(element, pageSize, totalNumber) {
-    element.pagination({
-      dataSource: this.range(totalNumber),
+  constructor($element, pageSize, totalNumber) {
+    $element.pagination({
+      dataSource: this.getRange(totalNumber),
       pageSize,
       pageRange: 1,
       autoHidePrevious: true,
       autoHideNext: true,
       showFirstOnEllipsisShow: false,
-      footer: this.footer.bind(this),
+      footer: this.getFooter.bind(this),
       nextText: '<i class="pagination__icon material-icons">arrow_forward</i>',
       prevText: '<i class="pagination__icon material-icons">arrow_back</i>',
       ulClassName: 'js-pagination__ul',
@@ -17,7 +17,7 @@ class Pagination {
     });
   }
 
-  range(number) {
+  getRange(number) {
     const result = [];
     for (let i = 1; i <= number; i++) {
       result.push(i);
@@ -25,10 +25,10 @@ class Pagination {
     return result;
   }
 
-  footer(currentPage, totalPage, totalNumber) {
+  getFooter(currentPage, totalPage, totalNumber) {
     const pageRange = Math.ceil(totalNumber / totalPage);
-    const isExeeded = pageRange * currentPage > totalNumber;
-    const to = isExeeded ? totalNumber : pageRange * currentPage;
+    const isExceeded = pageRange * currentPage > totalNumber;
+    const to = isExceeded ? totalNumber : pageRange * currentPage;
     const from = pageRange * (currentPage - 1) + 1;
     let total;
 
@@ -37,9 +37,12 @@ class Pagination {
     } else {
       total = totalNumber.toString();
     }
-    return `${from} – ${to} из ${total} вариантов аренды`;
+    return `<span class="js-pagination__text">${from} – ${to} из ${total} вариантов аренды</span>`;
   }
 }
 
 const paginations = $('.js-pagination');
-paginations.each((index, element) => new Pagination($(element), Number(element.dataset.pageSize), Number(element.dataset.totalNumber)));
+paginations.each((index, element) => {
+  const { pageSize, totalNumber } = element.dataset;
+  new Pagination($(element), Number(pageSize), Number(totalNumber));
+});
