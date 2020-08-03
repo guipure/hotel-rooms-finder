@@ -12,6 +12,8 @@
 
   &__input {
     font-family: inherit;
+    font-size: 14px;
+    line-height: 16px;
     border: 1px solid $dark-shade-25;
     border-radius: 3px;
     padding: 13px 15px;
@@ -19,7 +21,7 @@
     width: 100%;
 
     &::placeholder {
-      color: $dark-shade-25;
+      color: $dark-shade-75;
     }
   
     &:focus,
