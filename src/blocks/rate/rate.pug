@@ -3,10 +3,10 @@ mixin rate(stars)
         .rate__stars
             - var n = 0
             while n < stars
-                span(class="rate__star material-icons") star
+                i.rate__star.material-icons star
                 - n++
                 if n === 5
                     - break
             while n < 5
-                span(class="rate__star material-icons") star_border
+                i.rate__star.material-icons star_border
                 - n++
