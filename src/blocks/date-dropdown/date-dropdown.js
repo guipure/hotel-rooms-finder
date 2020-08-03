@@ -43,8 +43,14 @@ class DateDropdown {
   documentOnClick(event) {
     const $target = $(event.target);
     const targetIsCell = $target.hasClass('datepicker--cell');
+    const targetIsNavAction = !!$target.parents('.datepicker--nav-action').length;
+    const targetIsNavTitle = !!$target.closest('.datepicker--nav-title').length;
     const targetIsDropdown = !!$target.parents('.js-date-dropdown').length;
-    if (targetIsDropdown || targetIsCell) return;
+    const targetIsWithinCalendar = targetIsDropdown
+      || targetIsNavAction
+      || targetIsNavTitle
+      || targetIsCell;
+    if (targetIsWithinCalendar) return;
     this.hideCalendar();
   }
 
