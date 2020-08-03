@@ -23,9 +23,9 @@ block content
     .form-elements-wrapper
         .form-elements__cell
             +field({name: 'text field', annotation: 'default', size: 'large'})
-                +input({placeholder: 'Email', size: 'large', type: 'email'})
+                +input({placeholder: 'Email', type: 'email'})
             +field({name: 'text field', annotation: 'hover/focus', size: 'large'})
-                +input({placeholder: 'This is pretty awesome', size: 'large', type: 'text'})
+                +input({placeholder: 'This is pretty awesome', type: 'text'})
             +field({name: 'dropdown', annotation: 'default', size: 'large'})
                 +dropdown({
                     placeholder: 'Сколько гостей',
@@ -33,11 +33,11 @@ block content
                     type: 'guests'
                 })
             +field({name: 'masked text field', annotation: 'default', size: 'large'})
-                +input({placeholder: 'ДД.ММ.ГГГГ', size: 'large', isMasked: true})
+                +input({placeholder: 'ДД.ММ.ГГГГ', isMasked: true})
             +date-dropdown({placeholder: 'ДД.ММ.ГГГГ', labels: ['date dropdown', 'date dropdown']})
             +date-dropdown({placeholder: 'Выберите даты', labels: ['filter date dropdown']})
-            +field({name: 'subscription text field'})
-                +input({placeholder: 'Email', size: 'medium', isSub: true, type: 'email'})
+            +field({name: 'subscription text field', size: 'medium'})
+                +input({placeholder: 'Email', isSub: true, type: 'email'})
         .form-elements__cell
             +field({name: 'checkbox buttons', size: 'medium'})
                 +checkbox('Можно курить')

@@ -7,19 +7,19 @@ mixin registration
     form.registration
         .registration__title Регистрация аккаунта
         .registration__name
-            +input({placeholder: 'Имя', size: 'large', type: 'text'})
+            +input({placeholder: 'Имя', type: 'text'})
         .registration__surname
-            +input({placeholder: 'Фамилия', size: 'large', type: 'text'})
+            +input({placeholder: 'Фамилия', type: 'text'})
         .registration__sex
             +radio(['Мужчина', 'Женщина'])
         .registration__birth
             +field({name: 'дата рождения', size: 'large'})
-                +input({placeholder: 'ДД.ММ.ГГГГ', size: 'large', isMasked: true})
+                +input({placeholder: 'ДД.ММ.ГГГГ', isMasked: true})
         .registration__email
             +field({name: 'данные для входа в сервис', size: 'large'})
-                +input({placeholder: 'Email', size: 'large', type: 'email'})
+                +input({placeholder: 'Email', type: 'email'})
         .registration__pass
-            +input({placeholder: 'Пароль', size: 'large', type: 'password'})
+            +input({placeholder: 'Пароль', type: 'password'})
         .registration__specials
             +toggle('Получать спецпредложения')
         .registration__payBtn

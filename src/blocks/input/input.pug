@@ -1,9 +1,9 @@
-mixin input(options)
+mixin input({ type, placeholder, isSub, isMasked })
     -
-        var inputClassName = 'input__box' + ' input__box_' + options.size
-        inputClassName += options.isSub ? ' input__box_sub' : ''
-        inputClassName += options.isMasked ? ' input__box_masked' : ''
+        var inputClassName = 'input__box'
+        inputClassName += isSub ? ' input__box_sub' : ''
+        inputClassName += isMasked ? ' js-input__box_masked' : ''
     .input
-        input(type=options.type, placeholder=options.placeholder, class=inputClassName)
-        if options.isSub
-            i(class="input__icon material-icons") arrow_forward
+        input(type=type, placeholder=placeholder, class=inputClassName)
+        if isSub
+            i.input__icon.material-icons arrow_forward
