@@ -6,10 +6,10 @@ mixin booking(options)
     form.booking
         .booking__title
             .booking__room
-                span.booking_num №
-                span.booking_number=options.number
+                span.booking__number-sign №
+                span.booking__number=options.number
                 if options.isLux
-                    span.booking_lux ЛЮКС
+                    span.booking__lux ЛЮКС
             .booking__day-price
                 strong= options.price + '₽ '
                 span.booking__per-day в сутки

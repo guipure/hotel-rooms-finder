@@ -16,25 +16,24 @@
     line-height: 30px;
   }
 
-  &_num {
+  &__number-sign {
     font-size: 14px;
     font-weight: bold;
-    font-family: 'Quicksand';
+    font-family: 'Quicksand', Arial, sans-serif;
     color: $dark-shade-100;
   }
 
-  &_number {
+  &__number {
     font-size: 24px;
     font-weight: bold;
-    font-family: 'Quicksand';
+    font-family: 'Quicksand', Arial, sans-serif;
     color: $dark-shade-100;
-    padding: 0 5px 0 4px;
+    padding: 0 6px 0 4px;
   }
 
-  &_lux {
+  &__lux {
     color: $purple;
     font-weight: bold;
-    font-family: Montserrat;
     font-size: 12px;
   }
 
@@ -47,12 +46,12 @@
   }
 
   &__dates {
-    padding: 15px 0 10px;
+    padding: 15px 0 20px;
   }
 
   &__price {
     position: relative;
-    padding: 21px 0 15px;
+    padding: 21px 0px 15px 1px;
   }
 
   &__fee {
@@ -85,7 +84,7 @@
     justify-content: space-between;
     align-items: baseline;
     padding: 14px 0 5px;
-    font-family: Quicksand, 'Open Sans';
+    font-family: Quicksand, 'Open Sans', Arial, sans-serif;
     color: #1f2041;
     font-weight: bold;
     font-size: 19px;
