@@ -1,40 +1,42 @@
 .typography {
-  width: 415px;
+  max-width: 415px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 
   &__row {
-    margin-bottom: 50px;
     display: flex;
+    gap: 30px;
   }
 
-  &__right {
-    padding-left: 30px;
-    max-width: 366px;
-  }
-
-  &__left {
-    font-family: Montserrat;
+  &__left-side {
+    font-family: Montserrat, Arial, sans-serif;
     color: rgba(31, 32, 65, 0.25);
     min-width: 40px;
     text-align: right;
   }
 
-  &__left_h1 {
+  &__left-side_h1 {
     font-size: 24px;
     line-height: 29px;
   }
 
-  &__left_h2 {
+  &__left-side_h2 {
     font-size: 19px;
     line-height: 23px;
   }
 
-  &__left_h3 {
+  &__left-side_h3 {
     font-size: 12px;
     line-height: 15px;
   }
 
-  &__left_body {
+  &__left-side_body {
     font-size: 14px;
     line-height: 24px;
+  }
+
+  &__right-side {
+    max-width: 366px;
   }
 }
