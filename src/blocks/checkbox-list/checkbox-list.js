@@ -3,6 +3,7 @@ class CheckboxList {
     const $dropdown = $element.find('.js-checkbox-list__dropdown');
     const $label = $element.children('.js-checkbox-list__label');
     $label.on('click', this.slide.bind(this, $dropdown, $label));
+    $dropdown.hide();
   }
 
   slide($dropdown, $label) {

@@ -2,13 +2,16 @@
   cursor: pointer;
 
   &__dropdown {
-    display: none;
+    padding-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 
   &__icon {
     position: absolute;
-    right: 10px;
-    top: -5px;
+    right: 11px;
+    top: -4px;
     color: $dark-shade-50;
     transition: transform 0.25s;
   }

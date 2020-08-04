@@ -2,8 +2,22 @@
 
 .range-slider {
   position: relative;
+  top: -8px;
+
+  .js-range-slider__result {
+    position: absolute;
+    right: 0;
+    top: -17px;
+    color: $dark-shade-50;
+    font-size: 12px;
+  }
+
+  .irs--flat {
+    height: 32px;
+  }
   
   .irs {
+
     .irs-line {
       background: white;
       border: 1px solid $dark-shade-25;
@@ -29,11 +43,4 @@
       width: 10px;
     }
   }
-  
-}
-
-.js-range-slider__result {
-  position: absolute;
-  right: 0;
-  top: -25px;
 }
