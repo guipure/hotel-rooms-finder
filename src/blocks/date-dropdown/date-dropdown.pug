@@ -10,8 +10,8 @@ mixin date-dropdown(options)
     else
         - var size = 'medium'
     -
-        var dateDropdownClassName = 'js-date-dropdown'
-        dateDropdownClassName += hasSecondField ? ' js-date-dropdown_doubleField' : ''
+        var dateDropdownClassName = 'js-date-dropdown js-date-dropdown_'
+        dateDropdownClassName += hasSecondField ? 'doubleField' : 'oneField'
         var calendarClassName = 'js-date-dropdown__calendar js-date-dropdown__calendar_'
         calendarClassName += options.isInline ? 'inline' : 'default'
     

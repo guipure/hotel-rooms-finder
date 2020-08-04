@@ -31,6 +31,12 @@
     }
   }
 
+  &_oneField {
+    .js-date-dropdown__calendar {
+      min-width: 320px;
+    }
+  }
+
   &__calendar_default {
     position: absolute;
     z-index: 10;
