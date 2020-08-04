@@ -12,4 +12,5 @@ mixin sign-in
         .sign-in__button
             +button({theme: 'long', value: 'войти'})
         .sign-in__sign-up Нет аккаунта на Toxin?
-            +button({theme: 'purple-border', value: 'создать'})
+            .sign-in__sign-up-button
+                +button({theme: 'purple-border', value: 'создать'})

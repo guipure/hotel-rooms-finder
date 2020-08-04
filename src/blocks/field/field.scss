@@ -2,15 +2,15 @@
   position: relative;
 
   &_small {
-    width: 150px;
+    max-width: 150px;
   }
   
   &_medium {
-    width: 267px;
+    max-width: 267px;
   }
   
   &_large {
-    width: 320px;
+    max-width: 320px;
   }
   
   &__label {

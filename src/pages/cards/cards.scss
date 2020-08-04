@@ -8,6 +8,7 @@
 
 .cards__card {
   margin: 40px 20px;
+  width: 100%;
 }
 
 .cards__background {
@@ -18,7 +19,7 @@
 
 .cards__wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 420px 420px 320px;
   max-width: 1440px;
   padding: 140px 150px;
   margin: auto;
