@@ -2,16 +2,23 @@
 @import 'blocks/color/color';
 @import 'blocks/typography/typography';
 
-.wrapper {
+.colors-and-type__logo {
+  top: 30px;
+  left: 30px;
+  position: relative;
+  align-self: flex-start;
+}
+
+.colors-and-type__container {
   display: flex;
   padding: 0 15px;
   max-width: 1470px;
-  margin: auto;
+  margin: 0 auto;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.colors-wrapper {
+.colors-and-type__colors {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -19,15 +26,8 @@
   padding-left: 150px;
 }
 
-.typography-wrapper {
+.colors-and-type__type {
   padding-top: 99px;
   padding-right: 183px;
   margin-left: 145px;
-}
-
-.logo {
-  top: 30px;
-  left: 30px;
-  position: relative;
-  align-self: flex-start;
 }

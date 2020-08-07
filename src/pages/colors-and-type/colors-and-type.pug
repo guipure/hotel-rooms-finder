@@ -5,9 +5,9 @@ include ../../blocks/typography/typography
 block title
     title Hotel Rooms
 block content
-    img(class="logo", src=require('../../assets/logo/grey-logo.svg').default, alt="logo")
-    .wrapper
-        .colors-wrapper
+    img.colors-and-type__logo(src=require('../../assets/logo/grey-logo.svg').default, alt="logo")
+    .colors-and-type__container
+        .colors-and-type__colors
             +color('Dark Shade 100%')
             +color('Dark Shade 75%')
             +color('Dark Shade 50%')
@@ -15,5 +15,5 @@ block content
             +color('Dark Shade 5%')
             +color('Purple')
             +color('Green')
-        .typography-wrapper
+        .colors-and-type__type
             +typography()
