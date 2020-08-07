@@ -4,31 +4,33 @@
   &__gallery {
     width: 100%;
     max-width: 1440px;
+    height: 485px;
     margin: 0 auto;
   }
 
   &__photos {
     display: grid;
-    grid-template-columns: 68% 32%;
-    grid-template-rows: 50% 50%;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    height: 100%;
   }
 
-  @media (max-width: 970px) {
+  @media (max-width: 400px) {
     &__photos {
-      grid-template-columns: auto;
+      display: block;
     }
   }
 
   &__photo {
     width: 100%;
     height: 100%;
-    max-height: 243px;
+    object-fit: cover;
   }
 
   &__photo:first-child {
     grid-row-start: 1;
     grid-row-end: 3;
-    max-height: 486px;
+    max-height: 100%;
   }
 
   &__photo:last-child {
@@ -36,15 +38,29 @@
   }
 
   @media (max-width: 970px) {
-    &__photo:first-child,
-    &__photo:last-child {
-      grid-column-start: initial;
+    &__photo:first-child {
+      grid-row-start: 1;
+      grid-row-end: 2;
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+
+    &__photo:nth-child(2) {
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
+  }
+
+  @media (max-width: 400px) {
+    &__photo:last-child,
+    &__photo:nth-child(2) {
+      display: none;
     }
   }
 
   &__container {
     width: 1200px;
-    padding: 70px 20px;
+    padding: 70px 20px 72px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -55,6 +71,7 @@
       flex-direction: column;
       width: 90%;
       align-items: center;
+      gap: 20px;
     }
   }
 
@@ -64,11 +81,19 @@
     }
   }
 
+  @media (max-width: 970px) {
+    &__container {
+      padding: 70px 0;
+      width: 95%;
+    }
+  }
+
   &__info {
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-row-gap: 30px;
-    max-width: 711px;
+    grid-row-gap: 34px;
+    grid-column-gap: 11px;
+    max-width: 700px;
   }
 
   @media (max-width: 660px) {
@@ -89,11 +114,39 @@
     }
   }
 
+  &__info-group-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
   &__info-title {
     padding-bottom: 20px;
+  }
+
+  &__info-annotation {
+    color: $dark-shade-50;
+  }
+
+  &__impressions-title {
+    padding-bottom: 17px;
+  }
+
+  &__rules-title {
+    padding-bottom: 16px;
+    padding-left: 20px;
+  }
+
+  &__cancel-title {
+    padding-bottom: 16px;
   }
   
   &__info-comment:nth-child(2) {
     padding-bottom: 22px;
+  }
+
+  &__booking {
+    max-width: 380px;
+    flex-grow: 1;
   }
 }
