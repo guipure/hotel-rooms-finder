@@ -80,6 +80,12 @@
     cursor: default;
   }
 
+  @media (max-width: 380px) {
+    &__info {
+      display: none;
+    }
+  }
+
   &__total-price {
     display: flex;
     justify-content: space-between;

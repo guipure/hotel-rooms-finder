@@ -31,6 +31,12 @@
     }
   }
 
+  @media (max-width: 380px) {
+    &__input {
+      font-size: 12px;
+    }
+  }
+
   &_oneField {
     .js-date-dropdown__calendar {
       min-width: 320px;
