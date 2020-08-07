@@ -52,9 +52,9 @@ $grey-gradient: linear-gradient(180deg, #919191 0%, #3d4975 100%);
 
   &__label {
     display: inline-block;
-    padding: 10px 0 10px 40px;
+    padding: 6px 0 10px 40px;
     width: 200px;
-    height: 70px;
+    line-height: 30px;
     font-family: Quicksand, 'Open Sans', Arial, sans-serif;
     color: #1f2041;
     font-size: 19px;
