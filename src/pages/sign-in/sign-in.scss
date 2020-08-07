@@ -3,10 +3,12 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 702px;
   width: 100%;
+}
+
+.sign-in__container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin: 0 auto;
+  padding-top: 172px;
+  padding-bottom: 172px;
 }
