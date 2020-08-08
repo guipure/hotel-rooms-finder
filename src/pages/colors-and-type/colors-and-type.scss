@@ -2,17 +2,10 @@
 @import 'blocks/color/color';
 @import 'blocks/typography/typography';
 
-.colors-and-type__logo {
-  top: 30px;
-  left: 30px;
-  position: relative;
-  align-self: flex-start;
-}
-
 .colors-and-type__container {
   display: flex;
   justify-content: space-between;
-  padding: 90px 15px 0;
+  padding: 145px 15px 0;
   max-width: 1470px;
   margin: 0 auto;
 }
