@@ -1,6 +1,6 @@
 # Hotel rooms finder layout
 
-## Preview(https://guipure.github.io/hotel-rooms-finder/)
+## [Preview](https://guipure.github.io/hotel-rooms-finder/)
 
 ## Clone repository
 
@@ -14,6 +14,6 @@ npm i
 
 ## Used plugins
 
-- air-datepicker(http://t1m0n.name/air-datepicker/docs/index.html)
-- ion-rangeslider(http://ionden.com/a/plugins/ion.rangeSlider/)
-- paginationjs(https://pagination.js.org/)
+- [air-datepicker](http://t1m0n.name/air-datepicker/docs/index.html)
+- [ion-rangeslider](http://ionden.com/a/plugins/ion.rangeSlider/)
+- [paginationjs](https://pagination.js.org/)
