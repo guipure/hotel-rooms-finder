@@ -18,7 +18,7 @@ block content
         each page in pages
             .index__card
                 h3.index__title
-                    a(href=`./${page}.html`)=page
+                    a.index__link(href=`./${page}.html`)=page
                         img.index__image(
                             src=require(`../../assets/index/${page}.jpg`).default,
                             alt="page preview"

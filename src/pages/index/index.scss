@@ -11,6 +11,11 @@
     border-radius: 10px;
   }
 
+  &__link {
+    text-decoration: none;
+    color: #777;
+  }
+
   &__image {
     width: 100%;
     cursor: pointer;
