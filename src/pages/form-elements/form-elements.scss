@@ -1,0 +1,126 @@
+@import 'blocks/input/input';
+@import 'blocks/dropdown/dropdown';
+@import 'blocks/date-dropdown/date-dropdown';
+@import 'blocks/field/field';
+@import 'blocks/checkbox/checkbox';
+@import 'blocks/checkbox-rich/checkbox-rich';
+@import 'blocks/checkbox-list/checkbox-list';
+@import 'blocks/radio/radio';
+@import 'blocks/toggle/toggle';
+@import 'blocks/like/like';
+@import 'blocks/rate/rate';
+@import 'blocks/range-slider/range-slider';
+@import 'blocks/pagination/pagination';
+@import 'blocks/icon/icon';
+@import 'blocks/bullet-list/bullet-list';
+@import 'blocks/comment/comment';
+
+.form-elements {
+  position: relative;
+  margin: 143px auto;
+  padding-left: 2px;
+  display: grid;
+  grid-template-columns: 320px 268px 320px;
+  grid-template-rows: auto 258px 306px auto;
+  column-gap: 126px;
+  row-gap: 62px;
+  
+  &__item {
+    padding-bottom: 40px;
+  }
+  
+  &__sub-item {
+    padding-bottom: 21px;
+  }
+  
+  &__sub-item:last-child {
+    padding-bottom: 0;
+  }
+
+  &__checkboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 12px;
+  }
+
+  &__radio-buttons {
+    padding-top: 6px;
+  }
+
+  &__toggles {
+    padding-top: 8px;
+    padding-bottom: 3px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__likes {
+    display: flex;
+    gap: 10px;
+    padding-top: 11px;
+  }
+
+  &__rates {
+    display: flex;
+    gap: 20px;
+    padding-top: 11px;
+  }
+
+  &__slider {
+    padding-bottom: 36px;
+  }
+
+  &__button-row {
+    display: flex;
+    gap: 20px;
+    padding-top: 11px;
+    padding-bottom: 19px;
+  }
+
+  &__button-row:nth-last-child(2) {
+    padding-top: 7px;
+    padding-bottom: 14px;
+  }
+
+  &__button-row:last-child {
+    padding-bottom: 0;
+  }
+
+  &__pagination {
+    padding-top: 12px;
+  }
+
+  &__dropdown {
+    padding-bottom: 20px;
+  }
+
+  &__cell-for-dropdowns {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__checkbox-list {
+    padding-bottom: 44px;
+  }
+
+  &__rich-checkboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 11px;
+  }
+
+  &__bullet-list {
+    padding-top: 8px;
+  }
+
+  &__cell-for-comment {
+    padding-top: 10px;
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+}

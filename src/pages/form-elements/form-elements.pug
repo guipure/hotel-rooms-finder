@@ -20,66 +20,100 @@ include ../../blocks/comment/comment
 block title
     title Hotel Rooms
 block content
-    .form-elements-wrapper
+    main.form-elements
         .form-elements__cell
-            +field({name: 'text field', annotation: 'default', size: 'large'})
-                +input({placeholder: 'Email', type: 'email'})
-            +field({name: 'text field', annotation: 'hover/focus', size: 'large'})
-                +input({placeholder: 'This is pretty awesome', type: 'text'})
-            +field({name: 'dropdown', annotation: 'default', size: 'large'})
+            .form-elements__item
+                .form-elements__sub-item
+                    +field({name: 'text field', annotation: 'default', size: 'large'})
+                        +input({placeholder: 'Email', type: 'email'})
+                .form-elements__sub-item
+                    +field({name: 'text field', annotation: 'hover/focus', size: 'large'})
+                        +input({placeholder: 'This is pretty awesome', type: 'text'})
+                .form-elements__sub-item
+                    +field({name: 'dropdown', annotation: 'default', size: 'large'})
+                        +dropdown({
+                            placeholder: 'Сколько гостей',
+                            items: ['взрослые', 'дети', 'младенцы'],
+                            type: 'guests'
+                        })
+                .form-elements__sub-item
+                    +field({name: 'masked text field', annotation: 'default', size: 'large'})
+                        +input({placeholder: 'ДД.ММ.ГГГГ', isMasked: true})
+            .form-elements__item
+                +date-dropdown({placeholder: 'ДД.ММ.ГГГГ', labels: ['date dropdown', 'date dropdown']})
+            .form-elements__item
+                +date-dropdown({placeholder: 'Выберите даты', labels: ['filter date dropdown']})
+            .form-elements__item
+                +field({name: 'subscription text field', size: 'medium'})
+                    +input({placeholder: 'Email', isSub: true, type: 'email'})
+        .form-elements__cell
+            .form-elements__item
+                +field({name: 'checkbox buttons', size: 'medium'})
+                    .form-elements__checkboxes
+                        +checkbox('Можно курить')
+                        +checkbox('Можно с питомцами')
+                        +checkbox('Можно пригласить гостей (до 10 человек)')
+            .form-elements__item
+                +field({name: 'radio buttons', size: 'medium'})
+                    .form-elements__radio-buttons
+                        +radio(['Мужчина', 'Женщина'])
+            .form-elements__item
+                +field({name: 'toggle', size: 'medium'})
+                    .form-elements__toggles
+                        +toggle('Получать спецпредложения')
+                        +toggle('Получать спецпредложения')
+            .form-elements__item
+                +field({name: 'like button', size: 'small'})
+                    .form-elements__likes
+                        +like(2)
+                        +like(11)
+            .form-elements__item
+                +field({name: 'rate button', size: 'medium'})
+                    .form-elements__rates
+                        +rate(4)
+                        +rate(5)
+        .form-elements__cell
+            .form-elements__slider
+                +range-slider('range slider', '0', '15000')
+            .form-elements__item
+                +field({name: 'buttons', size: 'large'})
+                    .form-elements__button-row
+                        +button({theme: 'purple', value: 'click me'})
+                        +button({theme: 'purple', value: 'click me'})
+                    .form-elements__button-row
+                        +button({theme: 'purple-border', value: 'click me'})
+                        +button({theme: 'purple-border', value: 'click me'})
+                    .form-elements__button-row                
+                        +button({theme: 'purple-link', value: 'click me'})
+                        +button({theme: 'grey-link', value: 'click me'})
+                    .form-elements__button-row
+                        +button({theme: 'long', value: 'перейти к оплате'})
+            .form-elements__item
+                +field({name: 'pagination', size: 'large'})
+                    .form-elements__pagination
+                        +pagination({pageSize: '12', totalNumber: '175'})
+        .form-elements__cell
+            .form-elements__dropdown
+                +field({name: 'dropdown', annotation: 'default', size: 'medium'})
+                    +dropdown({
+                        placeholder: 'Сколько кроватей',
+                        items: ['спальни', 'кровати', 'ванные комнаты'],
+                        type: 'beds'
+                    })
+            .form-elements__dropdown
+                +field({name: 'dropdown', annotation: 'default', size: 'medium'})
+                    +dropdown({
+                        placeholder: 'Сколько кроватей',
+                        items: ['спальни', 'кровати', 'ванные комнаты'],
+                        type: 'beds'
+                    })
+        .form-elements__cell-for-dropdowns
+            +field({name: 'dropdown', size: 'large'})
                 +dropdown({
                     placeholder: 'Сколько гостей',
                     items: ['взрослые', 'дети', 'младенцы'],
                     type: 'guests'
                 })
-            +field({name: 'masked text field', annotation: 'default', size: 'large'})
-                +input({placeholder: 'ДД.ММ.ГГГГ', isMasked: true})
-            +date-dropdown({placeholder: 'ДД.ММ.ГГГГ', labels: ['date dropdown', 'date dropdown']})
-            +date-dropdown({placeholder: 'Выберите даты', labels: ['filter date dropdown']})
-            +field({name: 'subscription text field', size: 'medium'})
-                +input({placeholder: 'Email', isSub: true, type: 'email'})
-        .form-elements__cell
-            +field({name: 'checkbox buttons', size: 'medium'})
-                +checkbox('Можно курить')
-                +checkbox('Можно с питомцами')
-                +checkbox('Можно пригласить гостей (до 10 человек)')
-            +field({name: 'radio buttons', size: 'medium'})
-                +radio(['Мужчина', 'Женщина'])
-            +field({name: 'toggle', size: 'medium'})
-                +toggle('Получать спецпредложения')
-                +toggle('Получать спецпредложения')
-            +field({name: 'like button', size: 'small'})
-                +like(2)
-                +like(11)
-            +field({name: 'rate button', size: 'medium'})
-                +rate(4)
-                +rate(5)
-        .form-elements__cell
-            +range-slider('range slider', '0', '15000')
-            +field({name: 'buttons', size: 'medium'})
-                +button({theme: 'purple', value: 'click me'})
-                +button({theme: 'purple', value: 'click me'})
-                +button({theme: 'purple-border', value: 'click me'})
-                +button({theme: 'purple-border', value: 'click me'})                
-                +button({theme: 'purple-link', value: 'click me'})
-                +button({theme: 'grey-link', value: 'click me'})
-                +button({theme: 'long', value: 'перейти к оплате'})
-            +field({name: 'pagination', size: 'large'})
-                +pagination({pageSize: '12', totalNumber: '175'})
-        .form-elements__cell
-            +field({name: 'dropdown', annotation: 'default', size: 'medium'})
-                +dropdown({
-                    placeholder: 'Сколько кроватей',
-                    items: ['спальни', 'кровати', 'ванные комнаты'],
-                    type: 'beds'
-                })
-            +field({name: 'dropdown', annotation: 'default', size: 'medium'})
-                +dropdown({
-                    placeholder: 'Сколько кроватей',
-                    items: ['спальни', 'кровати', 'ванные комнаты'],
-                    type: 'beds'
-                })
-        .form-elements__cell
             +field({name: 'dropdown', size: 'large'})
                 +dropdown({
                     placeholder: 'Сколько гостей',
@@ -87,55 +121,48 @@ block content
                     type: 'guests'
                 })
         .form-elements__cell
-            +field({name: 'dropdown', size: 'large'})
-                +dropdown({
-                    placeholder: 'Сколько гостей',
-                    items: ['взрослые', 'дети', 'младенцы'],
-                    type: 'guests'
-                })
-        .form-elements__cell
-            +checkbox-list(
-                'expandable checkbox list',
-                [
-                    'Завтрак',
-                    'Письменный стол',
-                    'Стул для кормления',
-                    'Кроватка',
-                    'Телевизор',
-                    'Шампунь',
-                    'Телевизор',
-                    'Шампунь'
-                ]
-            )
-            +checkbox-list(
-                'expandable checkbox list',
-                [
-                    'Завтрак',
-                    'Письменный стол',
-                    'Стул для кормления',
-                    'Кроватка',
-                    'Телевизор',
-                    'Шампунь',
-                    'Телевизор',
-                    'Шампунь'
-                ]
-            )
-        .form-elements__cell
-            +field({name: 'rich checkbox buttons', size: 'medium'})
-                +checkbox-rich('Широкий коридор', 'Ширина коридоров в номере не менее 91 см.')
-                +checkbox-rich(
-                    'Помощник для инвалидов',
-                    'На 1 этаже вас встретит специалист  и проводит до номера.'
-                )
-        .form-elements__cell
-            +field({name: 'bullet list', size: 'medium'})
-                +bullet-list(
+            .form-elements__checkbox-list
+                +checkbox-list(
+                    'expandable checkbox list',
                     [
-                        'Нельзя с питомцами',
-                        'Без вечеринок и мероприятий',
-                        'Время прибытия — после 13:00, а выезд до 12:00'
+                        'Завтрак',
+                        'Письменный стол',
+                        'Стул для кормления',
+                        'Кроватка',
+                        'Телевизор',
+                        'Шампунь'
                     ]
                 )
+            .form-elements__checkbox-list
+                +checkbox-list(
+                    'expandable checkbox list',
+                    [
+                        'Завтрак',
+                        'Письменный стол',
+                        'Стул для кормления',
+                        'Кроватка',
+                        'Телевизор',
+                        'Шампунь'
+                    ]
+                )
+        .form-elements__cell
+            +field({name: 'rich checkbox buttons', size: 'medium'})
+                .form-elements__rich-checkboxes
+                    +checkbox-rich('Широкий коридор', 'Ширина коридоров в номере не\u00A0менее 91 см.')
+                    +checkbox-rich(
+                        'Помощник для инвалидов',
+                        'На 1 этаже вас встретит специалист и\u00A0проводит до номера.'
+                    )
+        .form-elements__cell
+            +field({name: 'bullet list', size: 'medium'})
+                .form-elements__bullet-list
+                    +bullet-list(
+                        [
+                            'Нельзя с питомцами',
+                            'Без вечеринок и мероприятий',
+                            'Время прибытия — после 13:00, а выезд до 12:00'
+                        ]
+                    )
         .form-elements__cell
             +icon({icon: 'insert_emoticon', header: 'Комфорт', content: 'Шумопоглощающие стены'})
             +icon({icon: 'location_city', header: 'Удобство', content: 'Окно в каждой из спален'})
@@ -143,7 +170,7 @@ block content
             +comment({
                 photo: 'murad.jpg',
                 name: 'Мурад Сарафанов',
-                date: '2020-04-19',
+                date: '2020-07-19',
                 likes: '11',
                 comment: `Великолепный матрас на кровати в основной спальне! 
                     А пуфик вообще потрясающий. 
