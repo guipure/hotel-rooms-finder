@@ -2,7 +2,7 @@
   "name": "hotel-rooms-finder",
   "version": "1.0.0",
   "description": "site layout",
-  "main": "./src/index.js",
+  "private": true,
   "scripts": {
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
