@@ -2,21 +2,21 @@ include ../../carousel/carousel
 include ../../rate/rate
 
 mixin room(options)
-    .room
-        +carousel(options.images)
-        .room__info
-            .room__title
-                .room__room
-                    span.room_num №
-                    span.room_number=options.number
-                    if options.isLux
-                        span.room_lux ЛЮКС
-                .room__day-price
-                    strong=options.price + '₽ '
-                    span.room__per-day в сутки
-            .room__line
-            .room__feedback
-                +rate(options.rate)
-                .room__responses
-                    span.room__resp-sum=options.responses + ' '
-                    span.room__resp Отзывов
+  .room
+    +carousel(options.images)
+    .room__info
+      .room__title
+        .room__room
+          span.room_num №
+          span.room_number=options.number
+          if options.isLux
+            span.room_lux ЛЮКС
+        .room__day-price
+          strong=options.price + '₽ '
+          span.room__per-day в сутки
+      .room__line
+      .room__feedback
+        +rate(options.rate)
+        .room__responses
+          span.room__resp-sum=options.responses + ' '
+          span.room__resp Отзывов

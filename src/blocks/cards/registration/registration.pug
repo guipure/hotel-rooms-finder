@@ -4,27 +4,27 @@ include ../../radio/radio
 include ../../toggle/toggle
 
 mixin registration
-    form.registration
-        .registration__title
-            h1 Регистрация аккаунта
-        .registration__name
-            +input({placeholder: 'Имя', type: 'text'})
-        .registration__surname
-            +input({placeholder: 'Фамилия', type: 'text'})
-        .registration__sex
-            +radio(['Мужчина', 'Женщина'])
-        .registration__birth
-            +field({name: 'дата рождения', size: 'large'})
-                +input({placeholder: 'ДД.ММ.ГГГГ', isMasked: true})
-        .registration__email
-            +field({name: 'данные для входа в сервис', size: 'large'})
-                +input({placeholder: 'Email', type: 'email'})
-        .registration__pass
-            +input({placeholder: 'Пароль', type: 'password'})
-        .registration__specials
-            +toggle('Получать спецпредложения')
-        .registration__payBtn
-            +button({theme: 'long', value: 'перейти к оплате'})
-        .registration__sign-in Уже есть аккаунт на Toxin
-            .registration__sign-in-btn
-                +button({theme: 'purple-border', value: 'войти'})
+  form.registration
+    .registration__title
+      h1 Регистрация аккаунта
+    .registration__name
+      +input({placeholder: 'Имя', type: 'text'})
+    .registration__surname
+      +input({placeholder: 'Фамилия', type: 'text'})
+    .registration__sex
+      +radio(['Мужчина', 'Женщина'])
+    .registration__birth
+      +field({name: 'дата рождения', size: 'large'})
+        +input({placeholder: 'ДД.ММ.ГГГГ', isMasked: true})
+    .registration__email
+      +field({name: 'данные для входа в сервис', size: 'large'})
+        +input({placeholder: 'Email', type: 'email'})
+    .registration__pass
+      +input({placeholder: 'Пароль', type: 'password'})
+    .registration__specials
+      +toggle('Получать спецпредложения')
+    .registration__payBtn
+      +button({theme: 'long', value: 'перейти к оплате'})
+    .registration__sign-in Уже есть аккаунт на Toxin
+      .registration__sign-in-btn
+        +button({theme: 'purple-border', value: 'войти'})

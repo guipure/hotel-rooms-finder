@@ -2,32 +2,32 @@ include ../button/button
 include ../../blocks/field/field
 
 mixin date-dropdown(options)
-    - var firstName = options.labels[0]
-    - var hasSecondField = options.labels.length > 1
-    if hasSecondField
-        - var secondName = options.labels[1]
-        - var size = 'small'
-    else
-        - var size = 'medium'
-    -
-        var dateDropdownClassName = 'js-date-dropdown js-date-dropdown_'
-        dateDropdownClassName += hasSecondField ? 'doubleField' : 'oneField'
-        var calendarClassName = 'js-date-dropdown__calendar js-date-dropdown__calendar_'
-        calendarClassName += options.isInline ? 'inline' : 'default'
-    
-    div(class=dateDropdownClassName)
-        div(class=calendarClassName)
-            .js-date-dropdown__submit
-                +button({theme: 'purple-link', value: 'применить', type: 'button'})
-            .js-date-dropdown__clear
-                +button({theme: 'grey-link', value: 'очистить', type: 'button'})
-        if !options.isInline
-            +field({name: firstName, size: size})
-                .js-date-dropdown__input-box
-                    input.js-date-dropdown__input(placeholder=options.placeholder readonly)
-                    i.date-dropdown__icon.material-icons expand_more
-            if hasSecondField
-                +field({name: secondName, size: size})
-                    .js-date-dropdown__input-box
-                        input.js-date-dropdown__input(placeholder=options.placeholder readonly)
-                        i.date-dropdown__icon.material-icons expand_more
+  - var firstName = options.labels[0]
+  - var hasSecondField = options.labels.length > 1
+  if hasSecondField
+    - var secondName = options.labels[1]
+    - var size = 'small'
+  else
+    - var size = 'medium'
+  -
+    var dateDropdownClassName = 'js-date-dropdown js-date-dropdown_'
+    dateDropdownClassName += hasSecondField ? 'doubleField' : 'oneField'
+    var calendarClassName = 'js-date-dropdown__calendar js-date-dropdown__calendar_'
+    calendarClassName += options.isInline ? 'inline' : 'default'
+
+  div(class=dateDropdownClassName)
+    div(class=calendarClassName)
+      .js-date-dropdown__submit
+        +button({theme: 'purple-link', value: 'применить', type: 'button'})
+      .js-date-dropdown__clear
+        +button({theme: 'grey-link', value: 'очистить', type: 'button'})
+    if !options.isInline
+      +field({name: firstName, size: size})
+        .js-date-dropdown__input-box
+          input.js-date-dropdown__input(placeholder=options.placeholder readonly)
+          i.date-dropdown__icon.material-icons expand_more
+      if hasSecondField
+        +field({name: secondName, size: size})
+          .js-date-dropdown__input-box
+            input.js-date-dropdown__input(placeholder=options.placeholder readonly)
+            i.date-dropdown__icon.material-icons expand_more

@@ -1,31 +1,31 @@
 include ../button/button
 
 mixin header(options)
-    - let login = options.login ? options.login : 'login'
-    - let register = options.register ? options.register : 'register'
+  - let login = options.login ? options.login : 'login'
+  - let register = options.register ? options.register : 'register'
 
-    .header
-        .header__container
-            img.header__logo(src=require('../../assets/logo/logo.svg').default, alt="logo")
-            nav.header__menu
-                ul
-                    each item in options.menu
-                        -
-                            let itemClass = 'header__item'
-                            itemClass += item.list ? ' header__item_expandable' : ''
-                            itemClass += item.isActive ? ' header__item_active' : ''
-                        li(class=itemClass)
-                            a.header__link(href="/mock-address/change-me")=item.item
-                            if item.list
-                                span.header__arrow.material-icons expand_more
-            .header__login
-                if options.isLoggedIn
-                    .header__name-group
-                        .header__line
-                        .header__name=options.name
-                else
-                    .header__buttons
-                        .header__button
-                            +button({theme: 'small-purple-border', value: login})
-                        .header__button
-                            +button({theme: 'small-purple', value: register})
+  .header
+    .header__container
+      img.header__logo(src=require('../../assets/logo/logo.svg').default, alt="logo")
+      nav.header__menu
+        ul
+          each item in options.menu
+            -
+              let itemClass = 'header__item'
+              itemClass += item.list ? ' header__item_expandable' : ''
+              itemClass += item.isActive ? ' header__item_active' : ''
+            li(class=itemClass)
+              a.header__link(href="/mock-address/change-me")=item.item
+              if item.list
+                span.header__arrow.material-icons expand_more
+      .header__login
+        if options.isLoggedIn
+          .header__name-group
+            .header__line
+            .header__name=options.name
+        else
+          .header__buttons
+            .header__button
+              +button({theme: 'small-purple-border', value: login})
+            .header__button
+              +button({theme: 'small-purple', value: register})

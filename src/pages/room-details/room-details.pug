@@ -8,61 +8,61 @@ include ../../blocks/bullet-list/bullet-list
 include ../../blocks/donut-chart/donut-chart
 
 block title
-    title Room details
+  title Room details
 block content
-    main
-        section.room-details__gallery
-            .room-details__photos
-                img.room-details__photo(src=require('../../assets/room-details/888-1.jpg').default, alt="room photo")
-                img.room-details__photo(src=require('../../assets/room-details/888-2.jpg').default, alt="room photo")
-                img.room-details__photo(src=require('../../assets/room-details/888-3.jpg').default, alt="room photo")
-        .room-details__container
-            section.room-details__info
-                .room-details__info-item
-                    h2.room-details__info-title Сведения о номере
-                    +icon({icon: 'insert_emoticon', header: 'Комфорт', content: 'Шумопоглощающие стены'})
-                    +icon({icon: 'location_city', header: 'Удобство', content: 'Окно в каждой из спален'})
-                    +icon({icon: 'whatshot', header: 'Уют', content: 'Номер оснащён камином'})
-                .room-details__info-item
-                    h2.room-details__impressions-title Впечатления от номера
-                    +donut-chart({great: 130, good: 65, normal: 65, bad: 0})
-                .room-details__info-item
-                    .room-details__info-group-title
-                        h2.room-details__info-title Отзывы посетителей номера
-                        span.room-details__info-annotation 2&nbspотзыва
-                    .room-details__info-comment
-                        +comment({
-                            photo: 'murad.jpg',
-                            name: 'Мурад Сарафанов',
-                            date: '2020-07-19',
-                            likes: '11',
-                            comment: `Великолепный матрас на кровати в основной спальне! 
-                            А пуфик вообще потрясающий. 
-                            И стены, действительно, шумоподавляющие. 
-                            Выкрикивал комплименты повару — никто не жаловался из соседей.`
-                        })
-                    .room-details__info-comment
-                        +comment({
-                            photo: 'patricia.jpg',
-                            name: 'Патрисия Стёклышкова',
-                            date: '2020-07-15',
-                            likes: '2',
-                            comment: `Обслуживание на высоте! 
-                            Всё аккуратно, чисто. 
-                            Завтраки в номер советую заказать, 
-                            каждый день новое блюдо и десерт как комплимент`
-                        })
-                .room-details__info-item
-                    h2.room-details__rules-title Правила
-                    +bullet-list([
-                        'Нельзя с питомцами',
-                        'Без вечеринок и мероприятий',
-                        'Время прибытия — после 13:00, а выезд до 12:00'
-                    ])
-                .room-details__info-item
-                    h2.room-details__cancel-title Отмена
-                    p.info__text Бесплатная отмена в течение 48 ч. После
-                    | этого при отмене не позднее чем за 5 дн. до 
-                    | прибытия вы получите полный возврат за вычетом сбора за услуги.
-            aside.room-details__booking
-                +booking({number: '888', price: '9 900', isLux: true})
+  main
+    section.room-details__gallery
+      .room-details__photos
+        img.room-details__photo(src=require('../../assets/room-details/888-1.jpg').default, alt="room photo")
+        img.room-details__photo(src=require('../../assets/room-details/888-2.jpg').default, alt="room photo")
+        img.room-details__photo(src=require('../../assets/room-details/888-3.jpg').default, alt="room photo")
+    .room-details__container
+      section.room-details__info
+        .room-details__info-item
+          h2.room-details__info-title Сведения о номере
+          +icon({icon: 'insert_emoticon', header: 'Комфорт', content: 'Шумопоглощающие стены'})
+          +icon({icon: 'location_city', header: 'Удобство', content: 'Окно в каждой из спален'})
+          +icon({icon: 'whatshot', header: 'Уют', content: 'Номер оснащён камином'})
+        .room-details__info-item
+          h2.room-details__impressions-title Впечатления от номера
+          +donut-chart({great: 130, good: 65, normal: 65, bad: 0})
+        .room-details__info-item
+          .room-details__info-group-title
+            h2.room-details__info-title Отзывы посетителей номера
+            span.room-details__info-annotation 2&nbspотзыва
+          .room-details__info-comment
+            +comment({
+              photo: 'murad.jpg',
+              name: 'Мурад Сарафанов',
+              date: '2020-07-19',
+              likes: '11',
+              comment: `Великолепный матрас на кровати в основной спальне! 
+              А пуфик вообще потрясающий. 
+              И стены, действительно, шумоподавляющие. 
+              Выкрикивал комплименты повару — никто не жаловался из соседей.`
+            })
+          .room-details__info-comment
+            +comment({
+              photo: 'patricia.jpg',
+              name: 'Патрисия Стёклышкова',
+              date: '2020-07-15',
+              likes: '2',
+              comment: `Обслуживание на высоте! 
+              Всё аккуратно, чисто. 
+              Завтраки в номер советую заказать, 
+              каждый день новое блюдо и десерт как комплимент`
+            })
+        .room-details__info-item
+          h2.room-details__rules-title Правила
+          +bullet-list([
+            'Нельзя с питомцами',
+            'Без вечеринок и мероприятий',
+            'Время прибытия — после 13:00, а выезд до 12:00'
+          ])
+        .room-details__info-item
+          h2.room-details__cancel-title Отмена
+          p.info__text Бесплатная отмена в течение 48 ч. После
+          | этого при отмене не позднее чем за 5 дн. до 
+          | прибытия вы получите полный возврат за вычетом сбора за услуги.
+      aside.room-details__booking
+        +booking({number: '888', price: '9 900', isLux: true})

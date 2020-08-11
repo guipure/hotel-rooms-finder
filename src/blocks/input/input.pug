@@ -1,9 +1,9 @@
 mixin input({ type, placeholder, isSub, isMasked })
-    -
-        var inputClassName = 'input__box'
-        inputClassName += isSub ? ' input__box_sub' : ''
-        inputClassName += isMasked ? ' js-input__box_masked' : ''
-    .input
-        input(type=type, placeholder=placeholder, class=inputClassName)
-        if isSub
-            i.input__icon.material-icons arrow_forward
+  -
+    var inputClassName = 'input__box'
+    inputClassName += isSub ? ' input__box_sub' : ''
+    inputClassName += isMasked ? ' js-input__box_masked' : ''
+  .input
+    input(type=type, placeholder=placeholder, class=inputClassName)
+    if isSub
+      i.input__icon.material-icons arrow_forward

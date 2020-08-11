@@ -1,26 +1,26 @@
 mixin button(options)
-    - var buttonClassName = 'button__inner button__inner_'
-    - var wrapperClassName = 'button'
-    case options.theme
-        when 'purple-border'
-            - wrapperClassName += ' button_purple-border'
-            - buttonClassName += 'purple-border'
-        when 'small-purple-border'
-            - wrapperClassName += ' button_purple-border'
-            - buttonClassName += 'small-purple-border'
-        when 'long'
-            - wrapperClassName += ' button_long'
-            - buttonClassName += 'long'
-        when 'purple-link'
-            - buttonClassName += 'purple-link'
-        when 'grey-link'
-            - buttonClassName += 'grey-link'
-        when 'small-purple'
-            - buttonClassName += 'small-purple'
-        default
-            - buttonClassName += 'purple'
+  - var buttonClassName = 'button__inner button__inner_'
+  - var wrapperClassName = 'button'
+  case options.theme
+    when 'purple-border'
+      - wrapperClassName += ' button_purple-border'
+      - buttonClassName += 'purple-border'
+    when 'small-purple-border'
+      - wrapperClassName += ' button_purple-border'
+      - buttonClassName += 'small-purple-border'
+    when 'long'
+      - wrapperClassName += ' button_long'
+      - buttonClassName += 'long'
+    when 'purple-link'
+      - buttonClassName += 'purple-link'
+    when 'grey-link'
+      - buttonClassName += 'grey-link'
+    when 'small-purple'
+      - buttonClassName += 'small-purple'
+    default
+      - buttonClassName += 'purple'
 
-    div(class=wrapperClassName)
-        button(class=buttonClassName type=options.type)= options.value
-            if options.theme == 'long'
-                i.button__icon.material-icons arrow_forward
+  div(class=wrapperClassName)
+    button(class=buttonClassName type=options.type)= options.value
+      if options.theme == 'long'
+        i.button__icon.material-icons arrow_forward

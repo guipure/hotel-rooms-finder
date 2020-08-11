@@ -12,153 +12,153 @@ include ../../blocks/checkbox-list/checkbox-list
 include ../../blocks/cards/room/room
 
 block title
-    title Search room
+  title Search room
 block content
-    main.search-room__container
-        aside.search-room__filter
-            .search-room__filter-element
-                +date-dropdown({placeholder: 'Выберите даты', labels: ['даты пребывания в отеле']})
-            .search-room__filter-element
-                +field({name: 'гости', size: 'medium'})
-                    +dropdown({
-                        placeholder: 'Сколько гостей',
-                        items: ['взрослые', 'дети', 'младенцы'],
-                        type: 'guests'
-                    })
-            .search-room__price-range
-                +range-slider('диапазон цены', '0', '15000')
-                span.search-room__price-tip Стоимость за сутки пребывания в номере
-            h3.search-room__filter-title checkbox buttons
-            .search-room__checkbox
-                +checkbox('Можно курить')
-                +checkbox('Можно с питомцами')
-                +checkbox('Можно пригласить гостей (до 10 человек)')
-            h3.search-room__filter-title доступность
-            .search-room__checkbox-rich
-                +checkbox-rich('Широкий коридор', 'Ширина коридоров в номере не\u00A0менее 91 см.')
-                +checkbox-rich(
-                    'Помощник для инвалидов',
-                    'На 1 этаже вас встретит специалист  и\u00A0проводит до номера.'
-                )
-            .search-room__filter-element
-                +field({name: 'удобства номера', size: 'medium'})
-                    +dropdown({
-                        placeholder: 'Сколько кроватей',
-                        items: ['спальни', 'кровати', 'ванные комнаты'],
-                        type: 'beds'
-                    })
-            .search-room__checkbox-list
-                +checkbox-list(
-                    'дополнительные удобства',
-                    [
-                        'Завтрак',
-                        'Письменный стол',
-                        'Стул для кормления',
-                        'Кроватка',
-                        'Телевизор',
-                        'Шампунь'
-                    ]
-                )
-        section.search-room__result
-            h1.search-room__result-title Номера, которые мы для вас подобрали
-            .search-room__result-cards
-                .search-room__result-card
-                    +room({
-                        images: ['888', '856', '740', '982'],
-                        number: '888',
-                        isLux: true,
-                        price: '9 900',
-                        rate: 5,
-                        responses: '145'
-                    })
-                .search-room__result-card
-                    +room({
-                        images: ['840', '856', '740', '982'],
-                        number: '840',
-                        price: '9 900',
-                        rate: 4,
-                        responses: '65'
-                    })
-                .search-room__result-card
-                    +room({
-                        images: ['980', '856', '740', '982'],
-                        number: '980',
-                        isLux: true,
-                        price: '8 500',
-                        rate: 3,
-                        responses: '35'
-                    })
-                .search-room__result-card
-                    +room({
-                        images: ['856', '666', '444', '352'],
-                        number: '856',
-                        price: '7 300',
-                        rate: 5,
-                        responses: '19'
-                    })
-                .search-room__result-card
-                    +room({
-                        images: ['740', '666', '444', '352'],
-                        number: '740',
-                        price: '6 000',
-                        rate: 4,
-                        responses: '44'
-                    })
-                .search-room__result-card
-                    +room({
-                        images: ['982', '666', '444', '352'],
-                        number: '982',
-                        price: '5 800',
-                        rate: 3,
-                        responses: '56'
-                    })
-                .search-room__result-card
-                    +room({
-                        images: ['678', '888', '840', '980'],
-                        number: '678',
-                        price: '5 500',
-                        rate: 5,
-                        responses: '45'
-                    })
-                .search-room__result-card
-                    +room({
-                        images: ['450', '888', '840', '980'],
-                        number: '450',
-                        price: '5 300',
-                        rate: 4,
-                        responses: '39'
-                    })
-                .search-room__result-card
-                    +room({
-                        images: ['350', '888', '840', '980'],
-                        number: '350',
-                        price: '5 000',
-                        rate: 3,
-                        responses: '77'
-                    })
-                .search-room__result-card
-                    +room({
-                        images: ['666', '888', '840', '980'],
-                        number: '666',
-                        price: '5 000',
-                        rate: 5,
-                        responses: '25'
-                    })
-                .search-room__result-card
-                    +room({
-                        images: ['444', '888', '840', '980'],
-                        number: '444',
-                        price: '5 000',
-                        rate: 3,
-                        responses: '15'
-                    })
-                .search-room__result-card
-                    +room({
-                        images: ['352', '888', '840', '980'],
-                        number: '352',
-                        price: '5 000',
-                        rate: 3,
-                        responses: '55'
-                    })
-            .search-room__result-pagination
-                +pagination({pageSize: '12', totalNumber: '175'})
+  main.search-room__container
+    aside.search-room__filter
+      .search-room__filter-element
+        +date-dropdown({placeholder: 'Выберите даты', labels: ['даты пребывания в отеле']})
+      .search-room__filter-element
+        +field({name: 'гости', size: 'medium'})
+          +dropdown({
+            placeholder: 'Сколько гостей',
+            items: ['взрослые', 'дети', 'младенцы'],
+            type: 'guests'
+          })
+      .search-room__price-range
+        +range-slider('диапазон цены', '0', '15000')
+        span.search-room__price-tip Стоимость за сутки пребывания в номере
+      h3.search-room__filter-title checkbox buttons
+      .search-room__checkbox
+        +checkbox('Можно курить')
+        +checkbox('Можно с питомцами')
+        +checkbox('Можно пригласить гостей (до 10 человек)')
+      h3.search-room__filter-title доступность
+      .search-room__checkbox-rich
+        +checkbox-rich('Широкий коридор', 'Ширина коридоров в номере не\u00A0менее 91 см.')
+        +checkbox-rich(
+          'Помощник для инвалидов',
+          'На 1 этаже вас встретит специалист  и\u00A0проводит до номера.'
+        )
+      .search-room__filter-element
+        +field({name: 'удобства номера', size: 'medium'})
+          +dropdown({
+            placeholder: 'Сколько кроватей',
+            items: ['спальни', 'кровати', 'ванные комнаты'],
+            type: 'beds'
+          })
+      .search-room__checkbox-list
+        +checkbox-list(
+          'дополнительные удобства',
+          [
+            'Завтрак',
+            'Письменный стол',
+            'Стул для кормления',
+            'Кроватка',
+            'Телевизор',
+            'Шампунь'
+          ]
+        )
+    section.search-room__result
+      h1.search-room__result-title Номера, которые мы для вас подобрали
+      .search-room__result-cards
+        .search-room__result-card
+          +room({
+            images: ['888', '856', '740', '982'],
+            number: '888',
+            isLux: true,
+            price: '9 900',
+            rate: 5,
+            responses: '145'
+          })
+        .search-room__result-card
+          +room({
+            images: ['840', '856', '740', '982'],
+            number: '840',
+            price: '9 900',
+            rate: 4,
+            responses: '65'
+          })
+        .search-room__result-card
+          +room({
+            images: ['980', '856', '740', '982'],
+            number: '980',
+            isLux: true,
+            price: '8 500',
+            rate: 3,
+            responses: '35'
+          })
+        .search-room__result-card
+          +room({
+            images: ['856', '666', '444', '352'],
+            number: '856',
+            price: '7 300',
+            rate: 5,
+            responses: '19'
+          })
+        .search-room__result-card
+          +room({
+            images: ['740', '666', '444', '352'],
+            number: '740',
+            price: '6 000',
+            rate: 4,
+            responses: '44'
+          })
+        .search-room__result-card
+          +room({
+            images: ['982', '666', '444', '352'],
+            number: '982',
+            price: '5 800',
+            rate: 3,
+            responses: '56'
+          })
+        .search-room__result-card
+          +room({
+            images: ['678', '888', '840', '980'],
+            number: '678',
+            price: '5 500',
+            rate: 5,
+            responses: '45'
+          })
+        .search-room__result-card
+          +room({
+            images: ['450', '888', '840', '980'],
+            number: '450',
+            price: '5 300',
+            rate: 4,
+            responses: '39'
+          })
+        .search-room__result-card
+          +room({
+            images: ['350', '888', '840', '980'],
+            number: '350',
+            price: '5 000',
+            rate: 3,
+            responses: '77'
+          })
+        .search-room__result-card
+          +room({
+            images: ['666', '888', '840', '980'],
+            number: '666',
+            price: '5 000',
+            rate: 5,
+            responses: '25'
+          })
+        .search-room__result-card
+          +room({
+            images: ['444', '888', '840', '980'],
+            number: '444',
+            price: '5 000',
+            rate: 3,
+            responses: '15'
+          })
+        .search-room__result-card
+          +room({
+            images: ['352', '888', '840', '980'],
+            number: '352',
+            price: '5 000',
+            rate: 3,
+            responses: '55'
+          })
+      .search-room__result-pagination
+        +pagination({pageSize: '12', totalNumber: '175'})

@@ -1,12 +1,12 @@
 mixin rate(stars)
-    .rate
-        .rate__stars
-            - var n = 0
-            while n < stars
-                i.rate__star.material-icons star
-                - n++
-                if n === 5
-                    - break
-            while n < 5
-                i.rate__star.material-icons star_border
-                - n++
+  .rate
+    .rate__stars
+      - var n = 0
+      while n < stars
+        i.rate__star.material-icons star
+        - n++
+        if n === 5
+          - break
+      while n < 5
+        i.rate__star.material-icons star_border
+        - n++

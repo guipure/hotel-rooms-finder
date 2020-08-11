@@ -1,25 +1,25 @@
 extends ../../layouts/ui-kit.pug
 block title
-    title Toxin Hotel
+  title Toxin Hotel
 block content
-    - 
-        const pages = [
-            'landing-page',
-            'search-room',
-            'room-details',
-            'registration',
-            'sign-in',
-            'colors-and-type',
-            'form-elements',
-            'cards',
-            'headers-and-footers'
-        ]
-    nav.index
-        each page in pages
-            .index__card
-                h3.index__title
-                    a.index__link(href=`./${page}.html`)=page
-                        img.index__image(
-                            src=require(`../../assets/index/${page}.jpg`).default,
-                            alt="page preview"
-                        )
+  - 
+    const pages = [
+      'landing-page',
+      'search-room',
+      'room-details',
+      'registration',
+      'sign-in',
+      'colors-and-type',
+      'form-elements',
+      'cards',
+      'headers-and-footers'
+    ]
+  nav.index
+    each page in pages
+      .index__card
+        h3.index__title
+          a.index__link(href=`./${page}.html`)=page
+            img.index__image(
+              src=require(`../../assets/index/${page}.jpg`).default,
+              alt="page preview"
+            )

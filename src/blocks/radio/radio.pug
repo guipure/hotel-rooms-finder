@@ -1,12 +1,12 @@
 mixin radio(labels)
-    - var randomName = '_' + Math.floor(Math.random() * 1000000).toString()
-    .radio
-        each label in labels
-            +radioBtn(label, randomName)
+  - var randomName = '_' + Math.floor(Math.random() * 1000000).toString()
+  .radio
+    each label in labels
+      +radioBtn(label, randomName)
 
 
 mixin radioBtn(label, randomName)
-    label.radio__container
-        input.radio__input_default(type="radio" name=randomName)
-        span.radio__input_styled
-        span.radio__label=label
+  label.radio__container
+    input.radio__input_default(type="radio" name=randomName)
+    span.radio__input_styled
+    span.radio__label=label

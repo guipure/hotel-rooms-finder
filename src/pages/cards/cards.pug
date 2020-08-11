@@ -7,38 +7,38 @@ include ../../blocks/cards/room/room
 include ../../blocks/date-dropdown/date-dropdown
 
 block title
-        title Cards
+  title Cards
 block content
-    .cards__background
-        .cards__wrapper
-            .cards__column
-                .cards__card
-                    +selection
-                .cards__card
-                    +registration
-            .cards__column
-                .cards__card
-                    +booking({number: '888', price: '9 900', isLux: true})
-                .cards__card
-                    +sign-in
-            .cards__column
-                .cards__card
-                    +date-dropdown({labels: [], isInline: true})
-                .cards__card
-                    +room({
-                        images: ['888', '856', '740', '982'],
-                        number: '888',
-                        isLux: true,
-                        price: '9 900',
-                        rate: 5,
-                        responses: '145'
-                    })
-                .cards__card
-                    +room({
-                        images: ['840', '678', '450', '350'],
-                        number: '840',
-                        isLux: false,
-                        price: '9 900',
-                        rate: 4,
-                        responses: '65'
-                    })
+  .cards__background
+    .cards__wrapper
+      .cards__column
+        .cards__card
+          +selection
+        .cards__card
+          +registration
+      .cards__column
+        .cards__card
+          +booking({number: '888', price: '9 900', isLux: true})
+        .cards__card
+          +sign-in
+      .cards__column
+        .cards__card
+          +date-dropdown({labels: [], isInline: true})
+        .cards__card
+          +room({
+            images: ['888', '856', '740', '982'],
+            number: '888',
+            isLux: true,
+            price: '9 900',
+            rate: 5,
+            responses: '145'
+          })
+        .cards__card
+          +room({
+            images: ['840', '678', '450', '350'],
+            number: '840',
+            isLux: false,
+            price: '9 900',
+            rate: 4,
+            responses: '65'
+          })

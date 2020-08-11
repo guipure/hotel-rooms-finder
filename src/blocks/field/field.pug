@@ -1,7 +1,7 @@
 mixin field({size, name, annotation})
-    .field(class= size ? 'field_' + size : '')
-        .field__label
-            .field__name
-                h3= name
-            .field__annotation= annotation
-        block
+  .field(class= size ? 'field_' + size : '')
+    .field__label
+      .field__name
+        h3= name
+      .field__annotation= annotation
+    block
