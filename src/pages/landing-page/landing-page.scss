@@ -1,6 +1,13 @@
+@import '../../layouts/base';
+@import '../../style.scss';
+@import '@blocks/color/color';
+@import '@blocks/header/header';
+@import '@blocks/footer-large/footer-large';
+@import '@blocks/cards/selection/selection';
+
 .landing-page {
   &__main {
-    background: url('assets/landing-page/main.jpg');
+    background: url('../../assets/landing-page/main.jpg');
     background-repeat: no-repeat;
     background-position: center;
     height: 830px;

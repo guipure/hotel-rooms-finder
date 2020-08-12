@@ -1,4 +1,13 @@
-@import 'blocks/donut-chart/donut-chart';
+@import '../../layouts/base';
+@import '../../style.scss';
+@import '@blocks/color/color';
+@import '@blocks/donut-chart/donut-chart';
+@import '@blocks/header/header';
+@import '@blocks/footer-large/footer-large';
+@import '@blocks/cards/booking/booking';
+@import '@blocks/icon/icon';
+@import '@blocks/comment/comment';
+@import '@blocks/bullet-list/bullet-list';
 
 .room-details {
   &__gallery {

@@ -1,4 +1,17 @@
-@import 'blocks/color/color';
+@import '../../layouts/base';
+@import '../../style.scss';
+@import '@blocks/color/color';
+@import '@blocks/header/header';
+@import '@blocks/footer-large/footer-large';
+@import '@blocks/field/field';
+@import '@blocks/dropdown/dropdown';
+@import '@blocks/date-dropdown/date-dropdown';
+@import '@blocks/checkbox/checkbox';
+@import '@blocks/checkbox-rich/checkbox-rich';
+@import '@blocks/range-slider/range-slider';
+@import '@blocks/pagination/pagination';
+@import '@blocks/checkbox-list/checkbox-list';
+@import '@blocks/cards/room/room';
 
 .search-room {
   &__container {

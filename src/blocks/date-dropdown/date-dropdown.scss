@@ -1,4 +1,5 @@
-@import '../color/color.scss';
+@import '@blocks/button/button';
+@import '@blocks/field/field';
 
 .js-date-dropdown {
   display: flex;

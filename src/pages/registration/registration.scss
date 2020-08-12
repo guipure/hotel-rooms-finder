@@ -1,5 +1,12 @@
+@import '../../layouts/base';
+@import '../../style.scss';
+@import '@blocks/color/color';
+@import '@blocks/header/header';
+@import '@blocks/footer-large/footer-large';
+@import '@blocks/cards/registration/registration';
+
 .registration__main {
-  background: url('assets/registration/registration.jpg');
+  background: url('../../assets/registration/registration.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

@@ -1,4 +1,7 @@
-@import 'blocks/color/color';
+@import '@blocks/field/field';
+@import '@blocks/input/input';
+@import '@blocks/radio/radio';
+@import '@blocks/toggle/toggle';
 
 .registration {
   background-color: white;

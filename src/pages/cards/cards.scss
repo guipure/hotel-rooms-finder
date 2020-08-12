@@ -1,10 +1,12 @@
-@import 'blocks/color/color';
-@import 'blocks/cards/selection/selection';
-@import 'blocks/cards/registration/registration';
-@import 'blocks/cards/booking/booking';
-@import 'blocks/cards/sign-in/sign-in';
-@import 'blocks/cards/room/room';
-@import 'blocks/carousel/carousel';
+@import '../../layouts/ui-kit';
+@import '../../style.scss';
+@import '@blocks/color/color';
+@import '@blocks/cards/selection/selection';
+@import '@blocks/cards/registration/registration';
+@import '@blocks/cards/booking/booking';
+@import '@blocks/cards/sign-in/sign-in';
+@import '@blocks/cards/room/room';
+@import '@blocks/carousel/carousel';
 
 .cards__card {
   margin: 40px 20px;
