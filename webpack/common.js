@@ -85,7 +85,7 @@ function getPlugins(type) {
     }),
   ].concat(type === 'prod' ? (
     new MiniCssExtractPlugin({
-      filename: '[name].css',
+      filename: '[name].bundle.css',
     })
   ) : []);
 }
