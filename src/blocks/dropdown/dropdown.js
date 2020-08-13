@@ -26,35 +26,35 @@ class Dropdown {
 
   toggle() {
     const menu = this.dropdown.querySelector('.js-dropdown__menu');
-    menu.classList.toggle('js-dropdown__menu_hidden');
+    menu.classList.toggle('dropdown__menu_hidden');
     const icon = this.dropdown.querySelector('.js-dropdown__icon');
-    icon.classList.toggle('js-dropdown__icon_rotated');
+    icon.classList.toggle('dropdown__icon_rotated');
     const box = this.dropdown.querySelector('.js-dropdown__box');
-    box.classList.toggle('js-dropdown__box_opened');
-    box.classList.toggle('js-dropdown__box_closed');
+    box.classList.toggle('dropdown__box_opened');
+    box.classList.toggle('dropdown__box_closed');
   }
 
   hide(event) {
     if (event.target.closest('.js-dropdown') === this.dropdown) return;
-    const isClosed = !this.dropdown.querySelector('.js-dropdown__box_opened');
+    const isClosed = !this.dropdown.querySelector('.dropdown__box_opened');
     if (isClosed) return;
     this.toggle();
   }
 
   showClearButton() {
     const clearButton = this.dropdown.querySelector('.js-dropdown__clear');
-    clearButton.classList.remove('js-dropdown__clear_hidden');
+    clearButton.classList.remove('dropdown__clear_hidden');
   }
 
   hideClearButton() {
     const clearButton = this.dropdown.querySelector('.js-dropdown__clear');
-    clearButton.classList.add('js-dropdown__clear_hidden');
+    clearButton.classList.add('dropdown__clear_hidden');
   }
 
   handleOperator(event) {
     let valueElement;
     let minusElement;
-    const isTargetPlus = event.target.classList.contains('js-dropdown__operator_plus');
+    const isTargetPlus = event.target.classList.contains('dropdown__operator_plus');
 
     if (isTargetPlus) {
       valueElement = event.target.previousElementSibling;
@@ -78,11 +78,11 @@ class Dropdown {
 
   handleMinus(minusElement, value) {
     if (value === 0) {
-      minusElement.classList.add('js-dropdown__operator_disabled');
+      minusElement.classList.add('dropdown__operator_disabled');
     }
 
-    if (value > 0 && minusElement.classList.contains('js-dropdown__operator_disabled')) {
-      minusElement.classList.remove('js-dropdown__operator_disabled');
+    if (value > 0 && minusElement.classList.contains('dropdown__operator_disabled')) {
+      minusElement.classList.remove('dropdown__operator_disabled');
     }
   }
 
@@ -147,7 +147,7 @@ class Dropdown {
 
     values.forEach((value) => {
       value.innerHTML = '0';
-      value.previousElementSibling.classList.add('js-dropdown__operator_disabled');
+      value.previousElementSibling.classList.add('dropdown__operator_disabled');
     });
 
     if (result.classList.contains('guests')) {
