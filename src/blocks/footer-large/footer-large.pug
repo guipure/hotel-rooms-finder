@@ -12,12 +12,12 @@ mixin footer-large({info, menus, subscription, copyright})
           each menu in menus
             .footer-large__menu
               h3.footer-large__menu-title=menu.title
-              ul
+              ul.footer-large__menu-list
                 each item in menu.items
                   li.footer-large__menu-item
                     a.footer-large__menu-link(href="/mock-address/change-me")=item
         .footer-large__subscription
-          h3.footer-large__sub-title=subscription.title
+          h3.footer-large__menu-title=subscription.title
           .footer-large__sub-info=subscription.info
           .footer-large__sub-email
             +input({placeholder: 'Email', isSub: true})

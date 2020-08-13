@@ -1,11 +1,10 @@
+@import '@blocks/color/color';
+@import '@blocks/cards/registration/registration';
 @import '../../layouts/base';
 @import '../../style.scss';
-@import '@blocks/color/color';
-@import '@blocks/header/header';
-@import '@blocks/footer-large/footer-large';
-@import '@blocks/cards/registration/registration';
 
 .registration__main {
+  flex: 1 0 auto;
   background: url('../../assets/registration/registration.jpg');
   background-repeat: no-repeat;
   background-position: center;

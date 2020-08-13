@@ -1,5 +1,6 @@
 .donut-chart {
   display: flex;
+  margin: 0;
 
   &__svg {
     max-width: 120px;
@@ -33,6 +34,8 @@
 
   &__key-list {
     list-style: none;
+    padding: 0;
+    margin: 0;
   }
 
   &__key-circle {

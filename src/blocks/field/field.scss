@@ -20,12 +20,18 @@
   
   &__name {
     float: left;
+    font-family: Montserrat, Arial, sans-serif;
+    color: $dark-shade-100;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
   }
   
   &__annotation {
     float: right;
     font-family: Montserrat, Arial, sans-serif;
-    color: rgba(31, 32, 65, 0.5);
+    color: $dark-shade-50;
     font-weight: normal;
     font-size: 12px;
     line-height: 15px;

@@ -16,6 +16,7 @@
     width: 40px;
     border-radius: 10px;
     border: 1px solid $dark-shade-25;
+    box-sizing: border-box;
   }
 
   &__input_styled::before {

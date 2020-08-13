@@ -11,7 +11,7 @@ block title
   title Room details
   link(rel="stylesheet" href="room-details.bundle.css")
 block content
-  main
+  main.room-details__main
     section.room-details__gallery
       .room-details__photos
         img.room-details__photo(src=require('../../assets/room-details/888-1.jpg').default, alt="room photo")
@@ -62,7 +62,7 @@ block content
           ])
         .room-details__info-item
           h2.room-details__cancel-title Отмена
-          p.info__text Бесплатная отмена в течение 48 ч. После
+          .info__text Бесплатная отмена в течение 48 ч. После
           | этого при отмене не позднее чем за 5 дн. до 
           | прибытия вы получите полный возврат за вычетом сбора за услуги.
       aside.room-details__booking

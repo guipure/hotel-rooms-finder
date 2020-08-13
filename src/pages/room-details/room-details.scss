@@ -1,15 +1,26 @@
-@import '../../layouts/base';
-@import '../../style.scss';
 @import '@blocks/color/color';
 @import '@blocks/donut-chart/donut-chart';
-@import '@blocks/header/header';
-@import '@blocks/footer-large/footer-large';
 @import '@blocks/cards/booking/booking';
 @import '@blocks/icon/icon';
 @import '@blocks/comment/comment';
 @import '@blocks/bullet-list/bullet-list';
+@import '../../layouts/base';
+@import '../../style.scss';
+
+%title {
+  font-family: Quicksand, 'Open Sans', Arial, sans-serif;
+  color: $dark-shade-100;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 24px;
+  margin: 0;
+}
 
 .room-details {
+  &__main {
+    flex: 1 0 auto;
+  }
+
   &__gallery {
     width: 100%;
     max-width: 1440px;
@@ -73,6 +84,7 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    box-sizing: border-box;
   }
 
   @media (max-width: 1200px) {
@@ -130,6 +142,7 @@
   }
 
   &__info-title {
+    @extend %title;
     padding-bottom: 20px;
   }
 
@@ -138,15 +151,18 @@
   }
 
   &__impressions-title {
+    @extend %title;
     padding-bottom: 17px;
   }
 
   &__rules-title {
+    @extend %title;
     padding-bottom: 16px;
     padding-left: 20px;
   }
 
   &__cancel-title {
+    @extend %title;
     padding-bottom: 16px;
   }
   

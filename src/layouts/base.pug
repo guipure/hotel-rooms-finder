@@ -13,7 +13,7 @@ html
     meta(name="msapplication-TileColor" content="#603cba")
     meta(name="theme-color" content="#ffffff")
     block title
-  body
+  body.base__body
     header
       +header({
         menu: [
@@ -28,7 +28,7 @@ html
         register: 'зарегистрироваться'
       })
     block content
-    footer
+    footer.base__footer
       .base__footer-large
         +footer-large({
           info: 'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»',

@@ -21,6 +21,7 @@
     padding: 13px 15px;
     outline: none;
     width: 100%;
+    box-sizing: border-box;
 
     &::placeholder {
       color: $dark-shade-75;

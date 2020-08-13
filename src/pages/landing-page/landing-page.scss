@@ -1,12 +1,11 @@
+@import '@blocks/color/color';
+@import '@blocks/cards/selection/selection';
 @import '../../layouts/base';
 @import '../../style.scss';
-@import '@blocks/color/color';
-@import '@blocks/header/header';
-@import '@blocks/footer-large/footer-large';
-@import '@blocks/cards/selection/selection';
 
 .landing-page {
   &__main {
+    flex: 1 0 auto;
     background: url('../../assets/landing-page/main.jpg');
     background-repeat: no-repeat;
     background-position: center;
