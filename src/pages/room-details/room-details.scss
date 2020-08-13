@@ -1,20 +1,11 @@
-@import '@blocks/color/color';
+@import '../../assets/styles/main';
 @import '@blocks/donut-chart/donut-chart';
 @import '@blocks/cards/booking/booking';
 @import '@blocks/icon/icon';
 @import '@blocks/comment/comment';
 @import '@blocks/bullet-list/bullet-list';
 @import '../../layouts/base';
-@import '../../style.scss';
-
-%title {
-  font-family: Quicksand, 'Open Sans', Arial, sans-serif;
-  color: $dark-shade-100;
-  font-weight: bold;
-  font-size: 19px;
-  line-height: 24px;
-  margin: 0;
-}
+@import '@styles/titles';
 
 .room-details {
   &__main {
@@ -142,7 +133,7 @@
   }
 
   &__info-title {
-    @extend %title;
+    @extend %h2;
     padding-bottom: 20px;
   }
 
@@ -151,18 +142,18 @@
   }
 
   &__impressions-title {
-    @extend %title;
+    @extend %h2;
     padding-bottom: 17px;
   }
 
   &__rules-title {
-    @extend %title;
+    @extend %h2;
     padding-bottom: 16px;
     padding-left: 20px;
   }
 
   &__cancel-title {
-    @extend %title;
+    @extend %h2;
     padding-bottom: 16px;
   }
   

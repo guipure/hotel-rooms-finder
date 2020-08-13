@@ -1,5 +1,6 @@
+@import '../../assets/styles/main';
 @import '../../layouts/ui-kit';
-@import '../../style.scss';
+@import '@styles/titles';
 
 .index {
   display: grid;
@@ -15,12 +16,7 @@
   }
 
   &__title {
-    font-family: Montserrat, Arial, sans-serif;
-    color: #1f2041;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
-    text-transform: uppercase;
+    @extend %h3;
   }
 
   &__link {

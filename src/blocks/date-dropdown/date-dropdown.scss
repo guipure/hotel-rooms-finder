@@ -1,5 +1,6 @@
 @import '@blocks/button/button';
 @import '@blocks/field/field';
+@import '@styles/titles';
 
 .js-date-dropdown {
   display: flex;
@@ -77,10 +78,7 @@
     }
   
     &-title {
-      color: $dark-shade-100;
-      font-family: Quicksand, 'Open Sans', Arial, sans-serif;
-      font-size: 19px;
-      font-weight: bold;
+      @extend %h2;
   
       i {
         color: $dark-shade-100;

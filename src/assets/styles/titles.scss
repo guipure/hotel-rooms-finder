@@ -1,0 +1,31 @@
+ @import './variables';
+
+%title {
+  color: $dark-shade-100;
+  font-weight: bold;
+}
+
+%h1 {
+  @extend %title;
+
+  font-family: Quicksand, 'Open Sans', Arial, sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+%h2 {
+  @extend %title;
+
+  font-family: Quicksand, 'Open Sans', Arial, sans-serif;
+  font-size: 19px;
+  line-height: 24px;
+}
+
+%h3 {
+  @extend %title;
+
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+}

@@ -1,8 +1,9 @@
-@import './fonts/fonts';
+@import './variables';
+@import '../fonts/fonts';
 
 html {
   font-family: Montserrat, Arial, sans-serif;
-  color: rgba(31, 32, 65, 0.75);
+  color: $dark-shade-75;
   font-size: 14px;
   line-height: 24px;
   background-color: white;

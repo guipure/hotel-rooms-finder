@@ -1,3 +1,5 @@
+@import '@styles/titles';
+
 .field {
   position: relative;
   width: 100%;
@@ -19,22 +21,14 @@
   }
   
   &__name {
+    @extend %h3;
     float: left;
-    font-family: Montserrat, Arial, sans-serif;
-    color: $dark-shade-100;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
-    text-transform: uppercase;
   }
   
   &__annotation {
+    @extend %h3;
     float: right;
-    font-family: Montserrat, Arial, sans-serif;
     color: $dark-shade-50;
     font-weight: normal;
-    font-size: 12px;
-    line-height: 15px;
-    text-transform: uppercase;
   }
 }

@@ -1,4 +1,4 @@
-@import '@blocks/color/color';
+@import '../../assets/styles/main';
 @import '@blocks/cards/selection/selection';
 @import '@blocks/cards/registration/registration';
 @import '@blocks/cards/booking/booking';
@@ -6,7 +6,6 @@
 @import '@blocks/cards/room/room';
 @import '@blocks/carousel/carousel';
 @import '../../layouts/ui-kit';
-@import '../../style.scss';
 
 .cards__card {
   margin: 40px 20px;

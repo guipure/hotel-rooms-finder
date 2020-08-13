@@ -32,7 +32,7 @@ function getRules(type) {
       test: /\.(png|jpg|svg|gif)$/,
       loader: 'file-loader',
       exclude: [
-        path.resolve(__dirname, '../src/fonts/'),
+        path.resolve(__dirname, '../src/assets/fonts/'),
       ],
       options: {
         outputPath: 'img/',
@@ -41,7 +41,7 @@ function getRules(type) {
     {
       test: /\.(ttf|woff|svg|eot|woff2)$/,
       include: [
-        path.resolve(__dirname, '../src/fonts/'),
+        path.resolve(__dirname, '../src/assets/fonts/'),
       ],
       loader: 'file-loader',
       options: {
@@ -113,7 +113,7 @@ const commonConfig = {
   resolve: {
     alias: {
       '@blocks': path.resolve(__dirname, '../src/blocks'),
-      '@fonts': path.resolve(__dirname, '../src/fonts'),
+      '@styles': path.resolve(__dirname, '../src/assets/styles'),
     },
   },
 };

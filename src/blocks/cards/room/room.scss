@@ -1,5 +1,6 @@
 @import '@blocks/carousel/carousel';
 @import '@blocks/rate/rate';
+@import '@styles/titles';
 
 
 .room {
@@ -28,10 +29,7 @@
   }
 
   &_number {
-    font-size: 19px;
-    font-weight: bold;
-    font-family: 'Quicksand', Arial, sans-serif;
-    color: $dark-shade-100;
+    @extend %h2;
     padding: 0 5px 0 4px;
   }
 

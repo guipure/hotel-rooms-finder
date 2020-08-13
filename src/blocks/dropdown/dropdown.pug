@@ -9,13 +9,14 @@ mixin dropdown({ type, placeholder, items })
       div(class=resultClassName)= placeholder
       i.js-dropdown__icon.material-icons expand_more
     .js-dropdown__menu.js-dropdown__menu_hidden
-      each item in items
-        .js-dropdown__item
-          .js-dropdown__label= item
-          .js-dropdown__calculator
-            .js-dropdown__operator.js-dropdown__operator_minus.js-dropdown__operator_disabled
-            .js-dropdown__value 0
-            .js-dropdown__operator.js-dropdown__operator_plus
+      .js-dropdown__items
+        each item in items
+          .js-dropdown__item
+            .js-dropdown__label= item
+            .js-dropdown__calculator
+              .js-dropdown__operator.js-dropdown__operator_minus.js-dropdown__operator_disabled
+              .js-dropdown__value 0
+              .js-dropdown__operator.js-dropdown__operator_plus
       .js-dropdown__buttons
         .js-dropdown__submit
           +button({theme: 'purple-link', value: 'применить', type: 'button'})

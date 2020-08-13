@@ -1,7 +1,6 @@
-@import '@blocks/color/color';
+@import '../../assets/styles/main';
 @import '@blocks/cards/sign-in/sign-in';
 @import '../../layouts/base';
-@import '../../style.scss';
 
 .sign-in__main {
   flex: 1 0 auto;

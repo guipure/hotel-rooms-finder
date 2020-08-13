@@ -1,15 +1,4 @@
-$dark-shade-100: #1f2041;
-$dark-shade-75: rgba(31, 32, 65, 0.75);
-$dark-shade-50: rgba(31, 32, 65, 0.5);
-$dark-shade-25: rgba(31, 32, 65, 0.25);
-$dark-shade-10: rgba(31, 32, 65, 0.1);
-$dark-shade-5: rgba(31, 32, 65, 0.05);
-$purple: #bc9cff;
-$green: #6fcf97;
-$yellow-gradient: linear-gradient(180deg, #ffe39c 0%, #ffba9c 100%);
-$purple-gradient: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-$green-gradient: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
-$grey-gradient: linear-gradient(180deg, #919191 0%, #3d4975 100%);
+@import '@styles/titles';
 
 .color {
   height: 70px;
@@ -51,17 +40,14 @@ $grey-gradient: linear-gradient(180deg, #919191 0%, #3d4975 100%);
   }
 
   &__label {
+    @extend %h2;
     display: inline-block;
     padding: 6px 0 10px 40px;
     width: 200px;
-    line-height: 30px;
-    font-family: Quicksand, 'Open Sans', Arial, sans-serif;
-    color: #1f2041;
-    font-size: 19px;
   }
 
   &__theme {
-    font-weight: bold;
+    line-height: 32px;
   }
 
   &__number {

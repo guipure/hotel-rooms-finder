@@ -1,5 +1,6 @@
 @import '@blocks/input/input';
 @import '@blocks/button/button';
+@import '@styles/titles';
 
 .sign-in {
   background-color: white;
@@ -12,12 +13,8 @@
   box-sizing: border-box;
 
   &__title {
+    @extend %h1;
     padding-bottom: 20px;
-    font-family: Quicksand, 'Open Sans', Arial, sans-serif;
-    color: $dark-shade-100;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 30px;
   }
 
   &__pass {

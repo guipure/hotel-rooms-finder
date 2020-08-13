@@ -1,4 +1,4 @@
-@import '@blocks/color/color';
+@import '../../assets/styles/main';
 @import '@blocks/input/input';
 @import '@blocks/dropdown/dropdown';
 @import '@blocks/date-dropdown/date-dropdown';
@@ -16,7 +16,6 @@
 @import '@blocks/bullet-list/bullet-list';
 @import '@blocks/comment/comment';
 @import '../../layouts/ui-kit';
-@import '../../style.scss';
 
 .form-elements {
   position: relative;
