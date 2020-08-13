@@ -4,7 +4,8 @@ include ../../blocks/typography/typography
 
 block title
   title Colors and type
-  link(rel="stylesheet" href="colors-and-type.bundle.css")
+  if isProdEnv
+    link(rel="stylesheet" href="colors-and-type.bundle.css")
 block content
   main.colors-and-type
     .colors-and-type__container

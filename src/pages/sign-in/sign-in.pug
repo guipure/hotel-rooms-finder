@@ -5,7 +5,8 @@ include ../../blocks/cards/sign-in/sign-in
 
 block title
   title Sign in
-  link(rel="stylesheet" href="sign-in.bundle.css")
+  if isProdEnv
+    link(rel="stylesheet" href="sign-in.bundle.css")
 block content
   main.sign-in__main
     .sign-in__container

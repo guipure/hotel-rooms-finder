@@ -67,6 +67,7 @@ function getHTMLPlugins() {
 
   return pages.map((page) => (
     new HTMLWebpackPlugin({
+      currentEnv: process.env.NODE_ENV,
       filename: `${page}.html`,
       template: `../src/pages/${page}/${page}.pug`,
       inject: false,

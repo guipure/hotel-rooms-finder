@@ -5,7 +5,8 @@ include ../../blocks/cards/registration/registration
 
 block title
   title Registration
-  link(rel="stylesheet" href="registration.bundle.css")
+  if isProdEnv
+    link(rel="stylesheet" href="registration.bundle.css")
 block content
   main.registration__main
     .registration__container

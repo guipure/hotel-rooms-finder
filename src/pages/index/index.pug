@@ -1,7 +1,8 @@
 extends ../../layouts/ui-kit.pug
 block title
   title Toxin Hotel
-  link(rel="stylesheet" href="index.bundle.css")
+  if isProdEnv
+    link(rel="stylesheet" href="index.bundle.css")
 block content
   - 
     const pages = [

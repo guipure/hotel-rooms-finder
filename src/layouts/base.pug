@@ -1,5 +1,8 @@
 include ../blocks/footer-small/footer-small
 
+block variables
+  - const isProdEnv = htmlWebpackPlugin.options.currentEnv === 'production';
+
 doctype html
 html
   head
