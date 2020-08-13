@@ -1,7 +1,7 @@
-@import '../../layouts/ui-kit';
-@import '../../style.scss';
 @import '@blocks/color/color';
 @import '@blocks/typography/typography';
+@import '../../layouts/ui-kit';
+@import '../../style.scss';
 
 .colors-and-type__container {
   display: flex;
@@ -9,6 +9,7 @@
   padding: 145px 15px 0;
   max-width: 1470px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .colors-and-type__colors {

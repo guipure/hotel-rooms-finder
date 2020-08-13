@@ -7,7 +7,7 @@
     border-radius: 4px 4px 0 0;
   }
 
-  &__button {
+  &__button.material-icons {
     position: absolute;
     top: 50%;
     width: 44px;
@@ -17,10 +17,10 @@
     cursor: pointer;
     line-height: 0;
     display: none;
-  
-    &_next {
-      right: 0;
-    }
+  }
+
+  &__button_next {
+    right: 0;
   }
 
   &:hover > &__button_prev,
@@ -43,6 +43,7 @@
     border: 1px solid white;
     border-radius: 50%;
     cursor: pointer;
+    box-sizing: border-box;
   }
 
   &__dot_active {

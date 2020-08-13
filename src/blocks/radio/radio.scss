@@ -21,6 +21,7 @@
     width: 20px;
     border: 1px solid $dark-shade-25;
     border-radius: 50%;
+    box-sizing: border-box;
   }
 
   &__input_styled:after {

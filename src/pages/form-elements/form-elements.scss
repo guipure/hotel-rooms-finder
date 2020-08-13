@@ -1,5 +1,3 @@
-@import '../../layouts/ui-kit';
-@import '../../style.scss';
 @import '@blocks/color/color';
 @import '@blocks/input/input';
 @import '@blocks/dropdown/dropdown';
@@ -17,6 +15,8 @@
 @import '@blocks/icon/icon';
 @import '@blocks/bullet-list/bullet-list';
 @import '@blocks/comment/comment';
+@import '../../layouts/ui-kit';
+@import '../../style.scss';
 
 .form-elements {
   position: relative;

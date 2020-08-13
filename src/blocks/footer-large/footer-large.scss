@@ -97,12 +97,23 @@
     }
   }
 
-  &__menu-title,
-  &__sub-title {
+  &__menu-title {
     padding-bottom: 11px;
     padding-top: 4px;
     letter-spacing: -0.3px;
     white-space: nowrap;
+    font-family: Montserrat, Arial, sans-serif;
+    color: $dark-shade-100;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  &__menu-list {
+    padding: 0;
+    margin: 0;
   }
 
   &__menu-item {

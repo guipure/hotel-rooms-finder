@@ -5,7 +5,7 @@ include ../../date-dropdown/date-dropdown
 mixin selection
   form.selection
     .selection__title
-      h1 Найдём номера под ваши пожелания
+      | Найдём номера под ваши пожелания
     .selection__dates
       +date-dropdown({placeholder: 'ДД.ММ.ГГГГ', labels: ['прибытие', 'выезд']})
     .selection__guests
