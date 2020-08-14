@@ -10,24 +10,24 @@ mixin date-dropdown(options)
   else
     - var size = 'medium'
   -
-    var dateDropdownClassName = 'js-date-dropdown js-date-dropdown_'
+    var dateDropdownClassName = 'date-dropdown js-date-dropdown date-dropdown_'
     dateDropdownClassName += hasSecondField ? 'doubleField' : 'oneField'
-    var calendarClassName = 'js-date-dropdown__calendar js-date-dropdown__calendar_'
+    var calendarClassName = 'date-dropdown__calendar js-date-dropdown__calendar date-dropdown__calendar_'
     calendarClassName += options.isInline ? 'inline' : 'default'
 
   div(class=dateDropdownClassName)
     div(class=calendarClassName)
-      .js-date-dropdown__submit
+      .date-dropdown__submit.js-date-dropdown__submit
         +button({theme: 'purple-link', value: 'применить', type: 'button'})
-      .js-date-dropdown__clear
+      .date-dropdown__clear.js-date-dropdown__clear
         +button({theme: 'grey-link', value: 'очистить', type: 'button'})
     if !options.isInline
       +field({name: firstName, size: size})
-        .js-date-dropdown__input-box
-          input.js-date-dropdown__input(placeholder=options.placeholder readonly)
+        .date-dropdown__input-box.js-date-dropdown__input-box
+          input.date-dropdown__input.js-date-dropdown__input(placeholder=options.placeholder readonly)
           i.date-dropdown__icon.material-icons expand_more
       if hasSecondField
         +field({name: secondName, size: size})
-          .js-date-dropdown__input-box
-            input.js-date-dropdown__input(placeholder=options.placeholder readonly)
+          .date-dropdown__input-box.js-date-dropdown__input-box
+            input.date-dropdown__input.js-date-dropdown__input(placeholder=options.placeholder readonly)
             i.date-dropdown__icon.material-icons expand_more

@@ -1,4 +1,4 @@
-.js-like {
+.like {
   display: inline-block;
   position: relative;
   height: 20px;
@@ -22,7 +22,7 @@
     line-height: 18px;
   }
 
-  &__icon.material-icons {
+  &__icon {
     position: relative;
     vertical-align: top;
     left: 10%;

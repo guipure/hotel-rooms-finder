@@ -22,8 +22,8 @@ class DateDropdown {
       inline: true,
     }).data('datepicker');
     this.$datepicker = this.calendar.$datepicker;
-    this.isInline = $calendar.hasClass('js-date-dropdown__calendar_inline');
-    this.hasTwoInputs = this.$dropdown.hasClass('js-date-dropdown_doubleField');
+    this.isInline = $calendar.hasClass('date-dropdown__calendar_inline');
+    this.hasTwoInputs = this.$dropdown.hasClass('date-dropdown_doubleField');
     this.addButtons();
     this.addEventListeners();
   }

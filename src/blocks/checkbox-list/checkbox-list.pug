@@ -2,10 +2,10 @@ include ../field/field
 include ../checkbox/checkbox
 
 mixin checkbox-list(label, options)
-  .js-checkbox-list
-    .js-checkbox-list__label
+  .checkbox-list.js-checkbox-list
+    .checkbox-list__label.js-checkbox-list__label
       +field({name: label, size: 'medium'})
-        i.js-checkbox-list__icon.material-icons expand_more
-    .js-checkbox-list__dropdown
+        i.checkbox-list__icon.js-checkbox-list__icon.material-icons expand_more
+    .checkbox-list__dropdown.js-checkbox-list__dropdown
       each option in options
         +checkbox(option)

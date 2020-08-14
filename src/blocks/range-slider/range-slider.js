@@ -19,5 +19,5 @@ class Slider {
   }
 }
 
-const sliders = $('.js-range-slider');
+const sliders = $('.js-range-slider__input');
 sliders.each((index, element) => new Slider($(element)));
