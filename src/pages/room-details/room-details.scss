@@ -14,8 +14,8 @@
 
   &__gallery {
     width: 100%;
-    max-width: 1440px;
-    height: 485px;
+    max-width: 144rem;
+    height: 48.5rem;
     margin: 0 auto;
   }
 
@@ -70,8 +70,8 @@
   }
 
   &__container {
-    width: 1200px;
-    padding: 70px 20px 72px;
+    width: 120rem;
+    padding: 7rem 2rem 7.2rem;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -83,7 +83,7 @@
       flex-direction: column;
       width: 90%;
       align-items: center;
-      gap: 20px;
+      gap: 2rem;
     }
   }
 
@@ -95,7 +95,7 @@
 
   @media (max-width: 970px) {
     &__container {
-      padding: 70px 0;
+      padding: 7rem 0;
       width: 95%;
     }
   }
@@ -103,9 +103,9 @@
   &__info {
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-row-gap: 34px;
-    grid-column-gap: 11px;
-    max-width: 700px;
+    grid-row-gap: 3.4rem;
+    grid-column-gap: 1.1rem;
+    max-width: 70rem;
   }
 
   @media (max-width: 660px) {
@@ -134,35 +134,40 @@
 
   &__info-title {
     @extend %h2;
-    padding-bottom: 20px;
+    padding-bottom: 2rem;
   }
 
   &__info-annotation {
     color: $dark-shade-50;
+    font-size: 1.4rem;
+  }
+
+  &__info-text {
+    font-size: 1.4rem;
   }
 
   &__impressions-title {
     @extend %h2;
-    padding-bottom: 17px;
+    padding-bottom: 1.7rem;
   }
 
   &__rules-title {
     @extend %h2;
-    padding-bottom: 16px;
-    padding-left: 20px;
+    padding-bottom: 1.6rem;
+    padding-left: 2rem;
   }
 
   &__cancel-title {
     @extend %h2;
-    padding-bottom: 16px;
+    padding-bottom: 1.6rem;
   }
   
   &__info-comment:nth-child(2) {
-    padding-bottom: 22px;
+    padding-bottom: 2.2rem;
   }
 
   &__booking {
-    max-width: 380px;
+    max-width: 38rem;
     flex-grow: 1;
   }
 }

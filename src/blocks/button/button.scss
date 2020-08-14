@@ -1,8 +1,8 @@
-$border: 2px;
+$border: 0.2rem;
 
 .button {
   display: inline-block;
-  border-radius: 25px;
+  border-radius: 2.5rem;
 
   &_purple-border {
     background: $purple-gradient;
@@ -22,31 +22,31 @@ $border: 2px;
     background: none;
     cursor: pointer;
     outline: none;
-    border-radius: 22px;
+    border-radius: 2.2rem;
     font-family: Montserrat, Arial, sans-serif;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 1.2rem;
     text-transform: uppercase;
     padding: 0;
 
     &_purple-border {
-      height: 44px - 2 * $border;
-      min-width: 95px;
+      height: 4.4rem - 2 * $border;
+      min-width: 9.5rem;
       background: white;
       color: $purple;
-      padding: 0 20px-$border;
+      padding: 0 2rem-$border;
     }
 
     &_small-purple-border {
-      height: 34px - 2 * $border;
+      height: 3.4rem - 2 * $border;
       background: white;
       color: $purple;
-      padding: 0 20px-$border;
+      padding: 0 2rem-$border;
     }
 
     &_long {
       position: relative;
-      min-height: 44px;
+      min-height: 4.4rem;
       width: 100%;
       color: white;
       background: $purple-gradient;
@@ -63,24 +63,24 @@ $border: 2px;
     }
 
     &_purple {
-      height: 44px;
+      height: 4.4rem;
       color: white;
       background: $purple-gradient;
-      padding: 0 20px;
+      padding: 0 2rem;
     }
   
     &_small-purple {
-      height: 34px;
+      height: 3.4rem;
       color: white;
       background: $purple-gradient;
-      padding: 0 20px;
+      padding: 0 2rem;
     }
   }
 
   &__icon {
     position: absolute;
-    right: 10px;
-    top: 10px;
+    right: 1rem;
+    top: 1rem;
   }
 }
 

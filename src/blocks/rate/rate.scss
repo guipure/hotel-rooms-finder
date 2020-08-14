@@ -1,9 +1,9 @@
 .rate {
   user-select: none;
-  line-height: 10px;
+  line-height: 1.0rem;
 
   &__star {
-    font-size: 24px;
+    font-size: 2.4rem;
     background: $purple-gradient;
     -webkit-background-clip: text;
     background-clip: text;

@@ -1,14 +1,14 @@
 @import '@styles/titles';
 
 .color {
-  height: 70px;
+  height: 7rem;
   display: flex;
 
   &__square {
     display: inline-block;
-    width: 70px;
-    height: 70px;
-    border-radius: 6px;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 0.6rem;
   }
 
   &__square_dark-shade-100 {
@@ -42,12 +42,12 @@
   &__label {
     @extend %h2;
     display: inline-block;
-    padding: 6px 0 10px 40px;
-    width: 200px;
+    padding: 0.6rem 0 1rem 4rem;
+    width: 20rem;
   }
 
   &__theme {
-    line-height: 32px;
+    line-height: 3.2rem;
   }
 
   &__number {

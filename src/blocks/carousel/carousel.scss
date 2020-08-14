@@ -1,17 +1,17 @@
 .carousel {
   position: relative;
-  max-width: 270px;
+  max-width: 27rem;
 
   &__image {
     max-width: inherit;
-    border-radius: 4px 4px 0 0;
+    border-radius: 0.4rem 0.4rem 0 0;
   }
 
   &__button-prev,
   &__button-next {
     position: absolute;
     top: 50%;
-    width: 44px;
+    width: 4.4rem;
     text-align: center;
     color: white;
     user-select: none;
@@ -31,17 +31,17 @@
 
   &__dots {
     position: absolute;
-    bottom: 15px;
-    right: 14px;
+    bottom: 1.5rem;
+    right: 1.4rem;
     display: flex;
-    gap: 4px;
+    gap: 0.4rem;
   }
 
   &__dot {
     display: inline-block;
-    width: 7.5px;
-    height: 7.5px;
-    border: 1px solid white;
+    width: 0.75rem;
+    height: 0.75rem;
+    border: 0.1rem solid white;
     border-radius: 50%;
     cursor: pointer;
     box-sizing: border-box;

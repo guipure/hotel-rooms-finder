@@ -5,24 +5,25 @@
 
 .room {
   background-color: white;
-  max-width: 270px;
-  border-radius: 4px;
-  box-shadow: 0px 10px 20px $dark-shade-5;
+  max-width: 27rem;
+  border-radius: 0.4rem;
+  box-shadow: 0 1rem 2rem $dark-shade-5;
 
   &__info {
-    padding: 20px 19px 19px 21px;
+    font-size: 1.4rem;
+    padding: 2rem 1.9rem 1.9rem 2.1rem;
   }
 
   &__title {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    line-height: 24px;
-    padding-bottom: 7px;
+    line-height: 2.4rem;
+    padding-bottom: 0.7rem;
   }
 
   &_num {
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: bold;
     font-family: 'Quicksand', Arial, sans-serif;
     color: $dark-shade-100;
@@ -30,13 +31,13 @@
 
   &_number {
     @extend %h2;
-    padding: 0 5px 0 4px;
+    padding: 0 0.5rem 0 0.4rem;
   }
 
   &_lux {
     color: $purple;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 1.2rem;
   }
 
   &__day-price {
@@ -44,12 +45,12 @@
   }
 
   &__per-day {
-    font-size: 12px;
+    font-size: 1.2rem;
   }
 
   &__line {
-    width: 230px;
-    height: 1px;
+    width: 23rem;
+    height: 0.1rem;
     background-color: $dark-shade-10;
   }
 
@@ -58,7 +59,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 9px;
+    padding-top: 0.9rem;
   }
 
   &__resp-sum {

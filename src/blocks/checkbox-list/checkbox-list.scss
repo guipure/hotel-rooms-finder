@@ -5,16 +5,16 @@
   cursor: pointer;
 
   &__dropdown {
-    padding-top: 12px;
+    padding-top: 1.2rem;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 1rem;
   }
 
   &__icon {
     position: absolute;
-    right: 11px;
-    top: -4px;
+    right: 1.1rem;
+    top: -0.4rem;
     color: $dark-shade-50;
     transition: transform 0.25s;
   }

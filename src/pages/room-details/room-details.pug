@@ -63,9 +63,10 @@ block content
           ])
         .room-details__info-item
           h2.room-details__cancel-title Отмена
-          .info__text Бесплатная отмена в течение 48 ч. После
-          | этого при отмене не позднее чем за 5 дн. до 
-          | прибытия вы получите полный возврат за вычетом сбора за услуги.
+          .room-details__info-text
+            | Бесплатная отмена в течение 48 ч. После
+            | этого при отмене не позднее чем за 5 дн. до 
+            | прибытия вы получите полный возврат за вычетом сбора за услуги.
       aside.room-details__booking
         +booking({number: '888', price: '9 900', isLux: true})
   script(src="scripts/room-details.bundle.js")

@@ -8,7 +8,7 @@
 @import '../../layouts/ui-kit';
 
 .cards__card {
-  margin: 40px 20px;
+  margin: 4rem 2rem;
   width: 100%;
 }
 
@@ -20,9 +20,9 @@
 
 .cards__wrapper {
   display: grid;
-  grid-template-columns: 420px 420px 320px;
-  max-width: 1440px;
-  padding: 140px 150px;
+  grid-template-columns: 42rem 42rem 32rem;
+  max-width: 144rem;
+  padding: 14rem 15rem;
   margin: auto;
   box-sizing: border-box;
 }

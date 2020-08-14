@@ -2,47 +2,49 @@
 
 .range-slider {
   position: relative;
-  top: -8px;
+  top: -0.8rem;
 
   .range-slider__result {
     position: absolute;
     right: 0;
-    top: -17px;
+    top: -1.7rem;
     color: $dark-shade-50;
-    font-size: 12px;
+    font-size: 1.2rem;
   }
 
   .irs--flat {
-    height: 32px;
+    height: 3.2rem;
   }
   
   .irs {
-
     .irs-line {
       background: white;
-      border: 1px solid $dark-shade-25;
-      height: 6px;
+      border: 0.1rem solid $dark-shade-25;
+      height: 0.6rem;
       box-sizing: border-box;
+      cursor: pointer;
     }
     
     .irs-bar {
       background: $green-gradient;
-      height: 6px;
+      height: 0.6rem;
+      cursor: pointer;
     }
     
     .irs-handle > i:first-child {
       background: $green-gradient;
-      height: 16px;
-      width: 16px;
+      height: 1.6rem;
+      width: 1.6rem;
       border-radius: 50%;
-      border: 2px solid white;
+      border: 0.2rem solid white;
       left: 0;
-      top: -2px;
+      top: -0.2rem;
       box-sizing: border-box;
+      cursor: pointer;
     }
     
     .irs-handle {
-      width: 10px;
+      width: 1rem;
     }
   }
 }

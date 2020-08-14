@@ -5,13 +5,13 @@
   justify-content: center;
   background-color: white;
   max-width: 100%;
-  min-height: 70px;
-  box-shadow: 0px 10px 20px $dark-shade-5;
+  min-height: 7rem;
+  box-shadow: 0 1rem 2rem $dark-shade-5;
 
   &__container {
     display: flex;
     align-items: center;
-    width: 1160px;
+    width: 116rem;
   }
 
   @media (max-width: 1200px) {
@@ -23,7 +23,7 @@
   @media (max-width: 970px) {
     &__container {
       flex-direction: column;
-      padding: 10px 0;
+      padding: 1rem 0;
     }
   }
 
@@ -31,7 +31,7 @@
     flex-grow: 1;
     display: flex;
     justify-content: flex-end;
-    padding-right: 2px;
+    padding-right: 0.2rem;
     flex-wrap: wrap;
   }
 
@@ -43,21 +43,21 @@
 
   &__item {
     display: inline-block;
-    padding-right: 17px;
+    padding-right: 1.7rem;
   }
 
   &__item_expandable {
     position: relative;
-    padding-right: 41px;
+    padding-right: 4.1rem;
   }
 
   &__link {
-    font-size: 14px;
+    font-size: 1.4rem;
     outline: none;
     white-space: nowrap;
     text-decoration: none;
     color: $dark-shade-50;
-    line-height: 40px;
+    line-height: 4rem;
   }
 
   &__item_active > &__link {
@@ -67,7 +67,7 @@
 
   &__arrow {
     position: absolute;
-    top: 9px;
+    top: 0.9rem;
     color: $dark-shade-50;
     cursor: pointer;
   }
@@ -75,17 +75,17 @@
   &__buttons {
     display: flex;
     justify-content: space-between;
-    min-width: 200px;
+    min-width: 20rem;
   }
 
   &__button:first-child {
-    padding-right: 20px;
+    padding-right: 2rem;
   }
 
   &__name-group {
     display: flex;
     align-items: center;
-    padding-left: 2px;
+    padding-left: 0.2rem;
   }
 
   @media (max-width: 970px) {
@@ -95,21 +95,22 @@
   }
 
   &__line {
-    height: 30px;
-    width: 1px;
+    height: 3rem;
+    width: 0.1rem;
     background-color: $dark-shade-10;
   }
 
   @media (max-width: 970px) {
     &__line {
       width: 50%;
-      height: 1px;
+      height: 0.1rem;
     }
   }
 
   &__name {
     color: $dark-shade-50;
-    padding-left: 30px;
+    font-size: 1.4rem;
+    padding-left: 3rem;
   }
 
   @media (max-width: 970px) {

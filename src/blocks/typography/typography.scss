@@ -1,26 +1,30 @@
 @import '@styles/titles';
 
 .typography {
-  max-width: 415px;
+  max-width: 41.5rem;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 5rem;
 
   &__row {
     display: flex;
-    gap: 30px;
+    gap: 3rem;
   }
 
   &__left-side {
     font-family: Montserrat, Arial, sans-serif;
-    color: rgba(31, 32, 65, 0.25);
-    min-width: 40px;
+    color: $dark-shade-25;
+    min-width: 4rem;
     text-align: right;
   }
 
+  &__right-side {
+    max-width: 36.6rem;
+  }
+
   &__left-side_h1 {
-    font-size: 24px;
-    line-height: 29px;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
   }
 
   &__right-side_h1 {
@@ -28,8 +32,8 @@
   }
 
   &__left-side_h2 {
-    font-size: 19px;
-    line-height: 23px;
+    font-size: 1.9rem;
+    line-height: 2.3rem;
   }
 
   &__right-side_h2 {
@@ -37,8 +41,8 @@
   }
 
   &__left-side_h3 {
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
   }
 
   &__right-side_h3 {
@@ -46,11 +50,11 @@
   }
 
   &__left-side_body {
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
   }
 
-  &__right-side {
-    max-width: 366px;
+  &__right-side_body {
+    font-size: 1.4rem;
   }
 }

@@ -2,35 +2,36 @@
 @import '@styles/titles';
 
 .dropdown {
-  max-width: 320px;
+  max-width: 32rem;
   user-select: none;
   position: relative;
 
   &__box {
     font-family: inherit;
-    padding: 10px 10px 0 15px;
-    height: 44px;
+    padding: 1rem 1rem 0 1.5rem;
+    height: 4.4rem;
     outline: none;
     cursor: pointer;
     box-sizing: border-box;
 
     &:hover {
-      border: 1px solid $dark-shade-50;
+      border: 0.1rem solid $dark-shade-50;
     }
 
     &_opened {
-      border: 1px solid $dark-shade-50;
-      border-radius: 3px 3px 0 0;
+      border: 0.1rem solid $dark-shade-50;
+      border-radius: 0.3rem 0.3rem 0 0;
     }
 
     &_closed {
-      border: 1px solid $dark-shade-25;
-      border-radius: 3px;
+      border: 0.1rem solid $dark-shade-25;
+      border-radius: 0.3rem;
     }
   }
 
   &__result {
     display: inline-block;
+    font-size: 1.4rem;
     white-space: nowrap;
     text-overflow: ellipsis;
     max-width: 80%;
@@ -52,11 +53,11 @@
     width: 100%;
     background: white;
     z-index: 10;
-    border: 1px solid $dark-shade-50;
+    border: 0.1rem solid $dark-shade-50;
     border-top: none;
-    border-radius: 0 0 3px 3px;
-    padding: 4px 5px 7px 15px;
-    box-shadow: 0px 10px 20px $dark-shade-5;
+    border-radius: 0 0 0.3rem 0.3rem;
+    padding: 0.4rem 0.5rem 0.7rem 1.5rem;
+    box-shadow: 0 1rem 2rem $dark-shade-5;
     box-sizing: border-box;
 
     &_hidden {
@@ -67,7 +68,7 @@
   &__items {
     display: flex;
     flex-direction: column;
-    gap: 7px;
+    gap: 0.7rem;
   }
 
   &__item {
@@ -88,36 +89,36 @@
 
   &__operator {
     display: inline-block;
-    border: 1px solid $dark-shade-50;
+    border: 0.1rem solid $dark-shade-50;
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
+    width: 3rem;
+    height: 3rem;
     text-align: center;
-    font-size: 18px;
+    font-size: 1.8rem;
     cursor: pointer;
     box-sizing: border-box;
 
     &_disabled {
-      border: 1px solid $dark-shade-25;
+      border: 0.1rem solid $dark-shade-25;
       color: $dark-shade-25;
     }
 
     &_minus::before {
       content: '-';
       vertical-align: middle;
-      line-height: 28px;
+      line-height: 2.8rem;
     }
   
     &_plus::before {
       content: '+';
       vertical-align: middle;
-      line-height: 28px;
+      line-height: 2.8rem;
     }
   }
 
   &__value {
     @extend .dropdown__label;
-    min-width: 32px;
+    min-width: 3.2rem;
     text-align: center;
   }
 
@@ -125,7 +126,7 @@
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    padding-top: 17px;
+    padding-top: 1.7rem;
   }
 
   &__clear_hidden {

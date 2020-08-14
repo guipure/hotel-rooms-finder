@@ -1,12 +1,12 @@
 .checkbox {
-  max-width: 230px;
+  max-width: 23rem;
   user-select: none;
 
   &__container {
     position: relative;
     cursor: pointer;
     display: flex;
-    gap: 10px;
+    gap: 1rem;
   }
 
   &__input_default {
@@ -17,20 +17,20 @@
     position: relative;
     display: inline-block;
     vertical-align: middle;
-    height: 20px;
-    min-width: 20px;
-    border: 1px solid $dark-shade-25;
-    border-radius: 4px;
+    height: 2rem;
+    min-width: 2rem;
+    border: 0.1rem solid $dark-shade-25;
+    border-radius: 0.4rem;
     box-sizing: border-box;
   }
 
   &__input_styled:after {
     content: '';
     position: relative;
-    left: 2px;
-    top: 3px;
-    height: 6px;
-    width: 8px;
+    left: 0.2rem;
+    top: 0.3rem;
+    height: 0.6rem;
+    width: 0.8rem;
     background: linear-gradient(270deg, #bc9cff 0%, #8ba4f9 100%);
     transform: rotate(-45deg);
     transform-origin: top right;
@@ -40,10 +40,10 @@
   &__input_styled:before {
     content: '';
     position: absolute;
-    left: 3px;
-    top: 2px;
-    height: 5px;
-    width: 7px;
+    left: 0.3rem;
+    top: 0.2rem;
+    height: 0.5rem;
+    width: 0.7rem;
     background: white;
     z-index: 2;
     transform: rotate(-45deg);
@@ -52,7 +52,7 @@
   }
 
   &__input_default:checked ~ &__input_styled {
-    border: 1px solid $purple;
+    border: 0.1rem solid $purple;
   }
 
   &__input_default:checked ~ &__input_styled:after,
@@ -61,7 +61,8 @@
   }
 
   &__label {
-    line-height: 20px;
+    font-size: 1.4rem;
+    line-height: 2rem;
     color: $dark-shade-50;
     vertical-align: middle;
     cursor: pointer;

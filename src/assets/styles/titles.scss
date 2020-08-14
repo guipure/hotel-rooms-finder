@@ -9,23 +9,23 @@
   @extend %title;
 
   font-family: Quicksand, 'Open Sans', Arial, sans-serif;
-  font-size: 24px;
-  line-height: 30px;
+  font-size: 2.4rem;
+  line-height: 3rem;
 }
 
 %h2 {
   @extend %title;
 
   font-family: Quicksand, 'Open Sans', Arial, sans-serif;
-  font-size: 19px;
-  line-height: 24px;
+  font-size: 1.9rem;
+  line-height: 2.4rem;
 }
 
 %h3 {
   @extend %title;
 
   font-family: Montserrat, Arial, sans-serif;
-  font-size: 12px;
-  line-height: 15px;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
   text-transform: uppercase;
 }

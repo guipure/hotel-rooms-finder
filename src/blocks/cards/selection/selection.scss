@@ -6,23 +6,23 @@
 .selection {
   background-color: white;
   display: inline-block;
-  padding: 39px 29px 29px;
-  max-width: 380px;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  padding: 3.9rem 2.9rem 2.9rem;
+  max-width: 38rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.12);
+  border-radius: 0.4rem;
+  box-shadow: 0 0 2.5rem rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
 
   &__title {
     @extend %h1;
-    padding-bottom: 20px;
+    padding-bottom: 2rem;
   }
 
   &__dates {
-    padding-bottom: 21px;
+    padding-bottom: 2.1rem;
   }
 
   &__guests {
-    padding-bottom: 31px;
+    padding-bottom: 3.1rem;
   }
 }
