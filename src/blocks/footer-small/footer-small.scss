@@ -7,7 +7,7 @@
   background-color: white;
   max-width: 100%;
   border-top: 0.1rem solid $dark-shade-10;
-  box-shadow: 0 1rem 2rem $dark-shade-5;
+  box-shadow: $subtle-shadow;
   padding: 10rem 0 11rem;
 
   &__info {

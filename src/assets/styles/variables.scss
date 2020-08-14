@@ -6,7 +6,12 @@ $dark-shade-10: rgba(31, 32, 65, 0.1);
 $dark-shade-5: rgba(31, 32, 65, 0.05);
 $purple: #bc9cff;
 $green: #6fcf97;
+
 $yellow-gradient: linear-gradient(180deg, #ffe39c 0%, #ffba9c 100%);
 $purple-gradient: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
 $green-gradient: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
 $grey-gradient: linear-gradient(180deg, #919191 0%, #3d4975 100%);
+
+$strong-shadow: 0 0 2.5rem rgba(0, 0, 0, 0.2);
+$light-shadow: 0 1rem 2rem $dark-shade-10;
+$subtle-shadow: 0 1rem 2rem $dark-shade-5;

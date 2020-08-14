@@ -9,7 +9,7 @@
     max-width: 4.8rem;
     border: 0.2rem solid #ffffff;
     box-sizing: border-box;
-    box-shadow: 0 1rem 2rem $dark-shade-10;
+    box-shadow: $light-shadow;
   }
 
   &__like {

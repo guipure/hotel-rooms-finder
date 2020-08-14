@@ -57,7 +57,7 @@
     border-top: none;
     border-radius: 0 0 0.3rem 0.3rem;
     padding: 0.4rem 0.5rem 0.7rem 1.5rem;
-    box-shadow: 0 1rem 2rem $dark-shade-5;
+    box-shadow: $subtle-shadow;
     box-sizing: border-box;
 
     &_hidden {
