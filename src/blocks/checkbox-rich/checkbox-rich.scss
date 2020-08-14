@@ -33,7 +33,7 @@
     top: 0.3rem;
     height: 0.6rem;
     width: 0.8rem;
-    background: linear-gradient(270deg, #bc9cff 0%, #8ba4f9 100%);
+    background: $skewed-purple-gradient;
     transform: rotate(-45deg);
     transform-origin: top right;
     display: none;
