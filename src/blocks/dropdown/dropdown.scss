@@ -15,16 +15,16 @@
     box-sizing: border-box;
 
     &:hover {
-      border: 0.1rem solid $dark-shade-50;
+      border: $border-50;
     }
 
     &_opened {
-      border: 0.1rem solid $dark-shade-50;
+      border: $border-50;
       border-radius: 0.3rem 0.3rem 0 0;
     }
 
     &_closed {
-      border: 0.1rem solid $dark-shade-25;
+      border: $border-25;
       border-radius: 0.3rem;
     }
   }
@@ -53,7 +53,7 @@
     width: 100%;
     background: white;
     z-index: 10;
-    border: 0.1rem solid $dark-shade-50;
+    border: $border-50;
     border-top: none;
     border-radius: 0 0 0.3rem 0.3rem;
     padding: 0.4rem 0.5rem 0.7rem 1.5rem;
@@ -89,7 +89,7 @@
 
   &__operator {
     display: inline-block;
-    border: 0.1rem solid $dark-shade-50;
+    border: $border-50;
     border-radius: 50%;
     width: 3rem;
     height: 3rem;
@@ -99,7 +99,7 @@
     box-sizing: border-box;
 
     &_disabled {
-      border: 0.1rem solid $dark-shade-25;
+      border: $border-25;
       color: $dark-shade-25;
     }
 

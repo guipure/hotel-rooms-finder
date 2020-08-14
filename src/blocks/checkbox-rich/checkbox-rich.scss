@@ -14,14 +14,14 @@
   }
 
   &__input_default:checked ~ &__input_styled {
-    border: 0.1rem solid $purple;
+    border: $border-purple;
   }
 
   &__input_styled {
     position: absolute;
     height: 2rem;
     width: 2rem;
-    border: 0.1rem solid $dark-shade-25;
+    border: $border-25;
     border-radius: 0.4rem;
     box-sizing: border-box;
   }

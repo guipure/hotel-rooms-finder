@@ -19,7 +19,7 @@
     vertical-align: middle;
     height: 2rem;
     min-width: 2rem;
-    border: 0.1rem solid $dark-shade-25;
+    border: $border-25;
     border-radius: 0.4rem;
     box-sizing: border-box;
   }
@@ -52,7 +52,7 @@
   }
 
   &__input_default:checked ~ &__input_styled {
-    border: 0.1rem solid $purple;
+    border: $border-purple;
   }
 
   &__input_default:checked ~ &__input_styled:after,
