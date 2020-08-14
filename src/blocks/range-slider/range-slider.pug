@@ -1,6 +1,6 @@
 include ../field/field
 
-mixin range-slider(title, from, to)
+mixin range-slider(title, from = 0, to = 5000)
   +field({name: title, size: 'medium'})
     .range-slider
       span.range-slider__result.js-range-slider__result

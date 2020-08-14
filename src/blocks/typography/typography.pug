@@ -1,18 +1,14 @@
-mixin typography()
+mixin typography
+  -
+    const types = require('@blocks/typography/data.json');
+
   .typography
-    .typography__row
-      .typography__left-side.typography__left-side_h1 H1
-      .typography__right-side.typography__right-side_h1
-        | This one is the sub-section or widget title
-    .typography__row
-      .typography__left-side.typography__left-side_h2 H2
-      .typography__right-side.typography__right-side_h2
-        | Next one is the item title inside widgets
-    .typography__row
-      .typography__left-side.typography__left-side_h3 H3
-      .typography__right-side.typography__right-side_h3
-        | This is a label or CTA text
-    .typography__row
-      .typography__left-side.typography__left-side_body Body
-      .typography__right-side.typography__right-side_body
-        | This is the body text which is used for most of&nbspthe&nbspdesign, like paragraphs, lists, etc.
+    each item in types
+      -
+        const { label, example, type } = item;
+        const leftClass = `typography__left-side typography__left-side_${type}`;
+        const rightClass = `typography__right-side typography__right-side_${type}`
+      
+      .typography__row
+        div(class=leftClass)=label
+        div(class=rightClass)=example

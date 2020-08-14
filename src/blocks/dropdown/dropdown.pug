@@ -1,6 +1,6 @@
 include ../button/button
 
-mixin dropdown({ type, placeholder, items })
+mixin dropdown({ type = 'guests', placeholder = '', items })
   -
     var dropdownClassName = 'js-dropdown__box dropdown__box dropdown__box_closed'
     var resultClassName = 'js-dropdown__result dropdown__result ' + type

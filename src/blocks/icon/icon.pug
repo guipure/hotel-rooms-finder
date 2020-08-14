@@ -1,8 +1,8 @@
-mixin icon(options)
+mixin icon({ icon, header = '', content = '' })
   .icon
     .icon__inner
-      i.icon__icon.material-icons=options.icon
+      i.icon__icon.material-icons=icon
       .icon__text
-        .icon__header=options.header
-        .icon__content=options.content
+        .icon__header=header
+        .icon__content=content
     .icon__line

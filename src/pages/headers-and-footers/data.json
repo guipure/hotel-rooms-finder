@@ -1,0 +1,42 @@
+{
+  "firstHeaderOptions":{
+    "menu":[
+      {"item":"Home","isActive":true},
+      {"item":"About Us"},
+      {"item":"Services","list":["Service 1","Service 2","Service 3"]},
+      {"item":"Careers"},
+      {"item":"News"},
+      {"item":"Documentation"}
+    ],
+    "isLoggedIn":false
+  },
+  "secondHeaderOptions":{
+    "menu":[
+      {"item":"Home"},
+      {"item":"About Us"},
+      {"item":"Services","list":["Service 1","Service 2","Service 3"]},
+      {"item":"Careers"},
+      {"item":"News"},
+      {"item":"Documentation"}
+    ],
+    "isLoggedIn":true,
+    "name":"Cosmin Negoita"
+  },
+  "largeFooterOptions":{
+    "info":"Lorem ipsum dolor sit amet consectetur adipiscing \n    elit aliquam eget nullam pellentesque aliquam curabitur cociis.",
+    "menus":[
+      {"title":"Navigation","items":["About Us","News","Support","Products"]},
+      {
+        "title":"About Us",
+        "items":["Who we are","Our team","Careers","Investors"]
+      },
+      {"title":"Support","items":["Documentation","Community","Get in touch"]}
+    ],
+    "subscription":{
+      "title":"Subscribe to our newsletter",
+      "info":"Receive our latest news and promotions in your inbox!"
+    },
+    "copyright":"Copyright © 2018 Toxin UI Kit. All rights reserved."
+  },
+  "smallFooterOptions":"Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis."
+}

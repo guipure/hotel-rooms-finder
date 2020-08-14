@@ -1,7 +1,7 @@
 include ../field/field
 include ../checkbox/checkbox
 
-mixin checkbox-list(label, options)
+mixin checkbox-list(label = '', options)
   .checkbox-list.js-checkbox-list
     .checkbox-list__label.js-checkbox-list__label
       +field({name: label, size: 'medium'})

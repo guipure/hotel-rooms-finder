@@ -1,9 +1,9 @@
 include ../like/like
 
-mixin comment(options)
+mixin comment({ date, photo, name = 'User', likes = 0, comment = '' })
   - 
-    const date = new Date(options.date)
-    let period = Math.floor((Date.now() - date) / 86400000)
+    const commentDate = new Date(date)
+    let period = Math.floor((Date.now() - commentDate) / 86400000)
     const isPublishedToday = period < 1
     const dayForms = ['день', 'дня', 'дней']
     let dayForm
@@ -21,12 +21,12 @@ mixin comment(options)
     .comment__info
       img(
         class="comment__photo",
-        src=require('@blocks/comment/img/' + options.photo).default,
+        src=require('@blocks/comment/img/' + photo).default,
         alt="commentator's photo"
       )
-      .comment__name=options.name
+      .comment__name=name
       .comment__date=relDate
     .comment__body
       .comment__like
-        +like(options.likes)
-      .comment__text=options.comment
+        +like(likes)
+      .comment__text=comment

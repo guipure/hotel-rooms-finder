@@ -1,22 +1,22 @@
 include ../../carousel/carousel
 include ../../rate/rate
 
-mixin room(options)
+mixin room({ images, number = '000', isLux = false, price = '0', rate = 0, responses = '0' })
   .room
-    +carousel(options.images)
+    +carousel(images)
     .room__info
       .room__title
         .room__room
           span.room_num №
-          span.room_number=options.number
-          if options.isLux
+          span.room_number=number
+          if isLux
             span.room_lux ЛЮКС
         .room__day-price
-          strong=options.price + '₽ '
+          strong=price + '₽ '
           span.room__per-day в сутки
       .room__line
       .room__feedback
-        +rate(options.rate)
+        +rate(rate)
         .room__responses
-          span.room__resp-sum=options.responses + ' '
+          span.room__resp-sum=responses + ' '
           span.room__resp Отзывов

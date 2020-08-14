@@ -1,9 +1,9 @@
 include ../logo/logo
 include ../button/button
 
-mixin header(options)
-  - let login = options.login ? options.login : 'login'
-  - let register = options.register ? options.register : 'register'
+mixin header({ login, register, menu, isLoggedIn = false, name = 'User' })
+  - const loginValue = login ? login : 'login'
+  - const registerValue = register ? register : 'register'
 
   .header
     .header__container
@@ -11,7 +11,7 @@ mixin header(options)
         +logo
       nav.header__menu
         ul
-          each item in options.menu
+          each item in menu
             -
               let itemClass = 'header__item'
               itemClass += item.list ? ' header__item_expandable' : ''
@@ -21,13 +21,13 @@ mixin header(options)
               if item.list
                 span.header__arrow.material-icons expand_more
       .header__login
-        if options.isLoggedIn
+        if isLoggedIn
           .header__name-group
             .header__line
-            .header__name=options.name
+            .header__name=name
         else
           .header__buttons
             .header__button
-              +button({theme: 'small-purple-border', value: login})
+              +button({theme: 'small-purple-border', value: loginValue})
             .header__button
-              +button({theme: 'small-purple', value: register})
+              +button({theme: 'small-purple', value: registerValue})

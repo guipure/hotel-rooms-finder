@@ -64,104 +64,10 @@ block content
     section.search-room__result
       h1.search-room__result-title Номера, которые мы для вас подобрали
       .search-room__result-cards
-        .search-room__result-card
-          +room({
-            images: ['888', '856', '740', '982'],
-            number: '888',
-            isLux: true,
-            price: '9 900',
-            rate: 5,
-            responses: '145'
-          })
-        .search-room__result-card
-          +room({
-            images: ['840', '856', '740', '982'],
-            number: '840',
-            price: '9 900',
-            rate: 4,
-            responses: '65'
-          })
-        .search-room__result-card
-          +room({
-            images: ['980', '856', '740', '982'],
-            number: '980',
-            isLux: true,
-            price: '8 500',
-            rate: 3,
-            responses: '35'
-          })
-        .search-room__result-card
-          +room({
-            images: ['856', '666', '444', '352'],
-            number: '856',
-            price: '7 300',
-            rate: 5,
-            responses: '19'
-          })
-        .search-room__result-card
-          +room({
-            images: ['740', '666', '444', '352'],
-            number: '740',
-            price: '6 000',
-            rate: 4,
-            responses: '44'
-          })
-        .search-room__result-card
-          +room({
-            images: ['982', '666', '444', '352'],
-            number: '982',
-            price: '5 800',
-            rate: 3,
-            responses: '56'
-          })
-        .search-room__result-card
-          +room({
-            images: ['678', '888', '840', '980'],
-            number: '678',
-            price: '5 500',
-            rate: 5,
-            responses: '45'
-          })
-        .search-room__result-card
-          +room({
-            images: ['450', '888', '840', '980'],
-            number: '450',
-            price: '5 300',
-            rate: 4,
-            responses: '39'
-          })
-        .search-room__result-card
-          +room({
-            images: ['350', '888', '840', '980'],
-            number: '350',
-            price: '5 000',
-            rate: 3,
-            responses: '77'
-          })
-        .search-room__result-card
-          +room({
-            images: ['666', '888', '840', '980'],
-            number: '666',
-            price: '5 000',
-            rate: 5,
-            responses: '25'
-          })
-        .search-room__result-card
-          +room({
-            images: ['444', '888', '840', '980'],
-            number: '444',
-            price: '5 000',
-            rate: 3,
-            responses: '15'
-          })
-        .search-room__result-card
-          +room({
-            images: ['352', '888', '840', '980'],
-            number: '352',
-            price: '5 000',
-            rate: 3,
-            responses: '55'
-          })
+        - const rooms = require('@pages/search-room/rooms.json');
+        each room in rooms
+          .search-room__result-card
+            +room(room)
       .search-room__result-pagination
         +pagination({pageSize: '12', totalNumber: '175'})
   script(src="scripts/search-room.bundle.js")

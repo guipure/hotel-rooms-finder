@@ -112,6 +112,8 @@ const commonConfig = {
   },
   resolve: {
     alias: {
+      '@layouts': path.resolve(__dirname, '../src/layouts'),
+      '@pages': path.resolve(__dirname, '../src/pages'),
       '@blocks': path.resolve(__dirname, '../src/blocks'),
       '@styles': path.resolve(__dirname, '../src/assets/styles'),
     },

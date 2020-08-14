@@ -7,16 +7,12 @@ block title
   if isProdEnv
     link(rel="stylesheet" href="colors-and-type.bundle.css")
 block content
+  - const colors = require('@pages/colors-and-type/data.json');
   main.colors-and-type
     .colors-and-type__container
       .colors-and-type__colors
-        +color('Dark Shade 100%')
-        +color('Dark Shade 75%')
-        +color('Dark Shade 50%')
-        +color('Dark Shade 25%')
-        +color('Dark Shade 5%')
-        +color('Purple')
-        +color('Green')
+        each color in colors
+          +color(color)
       .colors-and-type__type
         +typography()
   script(src="scripts/colors-and-type.bundle.js")

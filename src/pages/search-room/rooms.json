@@ -1,0 +1,88 @@
+[
+  {
+    "images":["888", "856", "740", "982"],
+    "number": "888",
+    "isLux":true,
+    "price": "9 900",
+    "rate": 5,
+    "responses": "145"
+  },
+  {
+    "images":["840", "856", "740", "982"],
+    "number": "840",
+    "price": "9 900",
+    "rate": 4,
+    "responses": "65"
+  },
+  {
+    "images":["980", "856", "740", "982"],
+    "number": "980",
+    "isLux":true,
+    "price": "8 500",
+    "rate": 3,
+    "responses": "35"
+  },
+  {
+    "images":["856", "666", "444", "352"],
+    "number": "856",
+    "price": "7 300",
+    "rate": 5,
+    "responses": "19"
+  },
+  {
+    "images":["740", "666", "444", "352"],
+    "number": "740",
+    "price": "6 000",
+    "rate": 4,
+    "responses": "44"
+  },
+  {
+    "images":["982", "666", "444", "352"],
+    "number": "982",
+    "price": "5 800",
+    "rate": 3,
+    "responses": "56"
+  },
+  {
+    "images":["678", "888", "840", "980"],
+    "number": "678",
+    "price": "5 500",
+    "rate": 5,
+    "responses": "45"
+  },
+  {
+    "images":["450", "888", "840", "980"],
+    "number": "450",
+    "price": "5 300",
+    "rate": 4,
+    "responses": "39"
+  },
+  {
+    "images":["350", "888", "840", "980"],
+    "number": "350",
+    "price": "5 000",
+    "rate": 3,
+    "responses": "77"
+  },
+  {
+    "images":["666", "888", "840", "980"],
+    "number": "666",
+    "price": "5 000",
+    "rate": 5,
+    "responses": "25"
+  },
+  {
+    "images":["444", "888", "840", "980"],
+    "number": "444",
+    "price": "5 000",
+    "rate": 3,
+    "responses": "15"
+  },
+  {
+    "images":["352", "888", "840", "980"],
+    "number": "352",
+    "price": "5 000",
+    "rate": 3,
+    "responses": "55"
+  }
+]

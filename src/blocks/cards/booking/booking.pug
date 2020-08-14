@@ -2,16 +2,16 @@ include ../../button/button
 include ../../dropdown/dropdown
 include ../../date-dropdown/date-dropdown
 
-mixin booking(options)
+mixin booking({ number = '000', isLux = false, price = '0' })
   form.booking
     .booking__title
       .booking__room
         span.booking__number-sign №
-        span.booking__number=options.number
-        if options.isLux
+        span.booking__number=number
+        if isLux
           span.booking__lux ЛЮКС
       .booking__day-price
-        strong= options.price + '₽ '
+        strong= price + '₽ '
         span.booking__per-day в сутки
     .booking__dates
       +date-dropdown({placeholder: 'ДД.ММ.ГГГГ', labels: ['прибытие', 'выезд']})

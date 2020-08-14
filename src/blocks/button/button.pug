@@ -1,7 +1,7 @@
-mixin button(options)
+mixin button({ theme = 'purple-link', type = 'button', value = '' })
   - var buttonClassName = 'button__inner button__inner_'
   - var wrapperClassName = 'button'
-  case options.theme
+  case theme
     when 'purple-border'
       - wrapperClassName += ' button_purple-border'
       - buttonClassName += 'purple-border'
@@ -21,6 +21,6 @@ mixin button(options)
       - buttonClassName += 'purple'
 
   div(class=wrapperClassName)
-    button(class=buttonClassName type=options.type)= options.value
-      if options.theme == 'long'
+    button(class=buttonClassName type=type)= value
+      if theme == 'long'
         i.button__icon.material-icons arrow_forward

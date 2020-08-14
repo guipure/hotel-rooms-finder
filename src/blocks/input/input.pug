@@ -1,4 +1,4 @@
-mixin input({ type, placeholder, isSub, isMasked })
+mixin input({ type = 'text', placeholder = '', isSub = false, isMasked = false })
   -
     var inputClassName = 'input__box'
     inputClassName += isSub ? ' input__box_sub' : ''

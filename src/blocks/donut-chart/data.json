@@ -1,0 +1,30 @@
+{
+  "gradients": [
+    {
+      "id": "yellow-gradient",
+      "firstColor": "#FFE39C",
+      "secondColor": "#FFBA9C"
+    },
+    {
+      "id": "purple-gradient",
+      "firstColor": "#BC9CFF",
+      "secondColor": "#8BA4F9"
+    },
+    {
+      "id": "green-gradient",
+      "firstColor": "#6FCF97",
+      "secondColor": "#66D2EA"
+    },
+    {
+      "id": "grey-gradient",
+      "firstColor": "#909090",
+      "secondColor": "#3D4975"
+    }
+  ],
+  "ratings": [
+    { "color": "yellow", "label": "Великолепно" },
+    { "color": "green", "label": "Хорошо" },
+    { "color": "purple", "label": "Удовлетворительно" },
+    { "color": "grey", "label": "Разочарован" }
+  ]
+}

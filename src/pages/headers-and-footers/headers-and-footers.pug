@@ -8,74 +8,21 @@ block title
   if isProdEnv
     link(rel="stylesheet" href="headers-and-footers.bundle.css")
 block content
+  - 
+    const {
+      firstHeaderOptions,
+      secondHeaderOptions,
+      largeFooterOptions,
+      smallFooterOptions
+    } = require('@pages/headers-and-footers/data.json');
   .h-and-f__background
     .h-and-f__wrapper
       .h-and-f__card
-        +header({
-          menu: [
-            {item: 'Home', isActive: true},
-            {item: 'About Us'},
-            {item: 'Services', list: ['Service 1', 'Service 2', 'Service 3']},
-            {item: 'Careers'},
-            {item: 'News'},
-            {item: 'Documentation'}
-          ],
-          isLoggedIn: false
-        })
+        +header(firstHeaderOptions)
       .h-and-f__card
-        +header({
-          menu: [
-            {item: 'Home'},
-            {item: 'About Us'},
-            {item: 'Services', list: ['Service 1', 'Service 2', 'Service 3']},
-            {item: 'Careers'},
-            {item: 'News'},
-            {item: 'Documentation'}
-          ],
-          isLoggedIn: true,
-          name: 'Cosmin Negoita'
-        })
+        +header(secondHeaderOptions)
       .h-and-f__card
-        +footer-large({
-          info: `Lorem ipsum dolor sit amet consectetur adipiscing 
-          elit aliquam eget nullam pellentesque aliquam curabitur cociis.`,
-          menus: [
-            {
-              title: 'Navigation',
-              items: [
-                'About Us',
-                'News',
-                'Support',
-                'Products'
-              ]
-            },
-            {
-              title: 'About Us',
-              items: [
-                'Who we are',
-                'Our team',
-                'Careers',
-                'Investors'
-              ]
-            },
-            {
-              title: 'Support',
-              items: [
-                'Documentation',
-                'Community',
-                'Get in touch'
-              ]
-            }
-          ],
-          subscription: {
-            title: 'Subscribe to our newsletter',
-            info: 'Receive our latest news and promotions in your inbox!'
-          },
-          copyright: 'Copyright © 2018 Toxin UI Kit. All rights reserved.'
-        })
+        +footer-large(largeFooterOptions)
       .h-and-f__card
-        +footer-small(
-          `Lorem ipsum dolor sit amet consectetur adipiscing 
-          elit aliquam eget nullam pellentesque aliquam curabitur cociis.`
-        )
+        +footer-small(smallFooterOptions)
   script(src="scripts/headers-and-footers.bundle.js")
