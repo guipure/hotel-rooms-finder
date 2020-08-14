@@ -21,7 +21,7 @@ mixin comment(options)
     .comment__info
       img(
         class="comment__photo",
-        src=require('../../assets/comment/' + options.photo).default,
+        src=require('@blocks/comment/img/' + options.photo).default,
         alt="commentator's photo"
       )
       .comment__name=options.name
