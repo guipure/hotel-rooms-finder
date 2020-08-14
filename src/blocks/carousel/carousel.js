@@ -7,10 +7,10 @@ class Carousel {
   }
 
   addEventListeners() {
-    const prev = this.carousel.querySelector('.js-carousel__button_prev');
+    const prev = this.carousel.querySelector('.js-carousel__button-prev');
     prev.addEventListener('click', this.plusSlides.bind(this, -1));
 
-    const next = this.carousel.querySelector('.js-carousel__button_next');
+    const next = this.carousel.querySelector('.js-carousel__button-next');
     next.addEventListener('click', this.plusSlides.bind(this, 1));
 
     const dots = Array.from(this.carousel.querySelectorAll('.js-carousel__dot'));
@@ -43,11 +43,11 @@ class Carousel {
     }
 
     for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(' js-carousel__dot_active', '');
+      dots[i].className = dots[i].className.replace(' carousel__dot_active', '');
     }
 
     slides[this.slideIndex - 1].style.display = 'block';
-    dots[this.slideIndex - 1].className += ' js-carousel__dot_active';
+    dots[this.slideIndex - 1].className += ' carousel__dot_active';
   }
 }
 

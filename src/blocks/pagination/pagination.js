@@ -12,8 +12,8 @@ class Pagination {
       footer: this.getFooter.bind(this),
       nextText: '<i class="pagination__icon material-icons">arrow_forward</i>',
       prevText: '<i class="pagination__icon material-icons">arrow_back</i>',
-      ulClassName: 'js-pagination__ul',
-      activeClassName: 'js-pagination_active',
+      ulClassName: 'pagination__ul',
+      activeClassName: 'pagination_active',
     });
   }
 
@@ -37,7 +37,7 @@ class Pagination {
     } else {
       total = totalNumber.toString();
     }
-    return `<span class="js-pagination__text">${from} – ${to} из ${total} вариантов аренды</span>`;
+    return `<span class="pagination__text">${from} – ${to} из ${total} вариантов аренды</span>`;
   }
 }
 

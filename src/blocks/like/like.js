@@ -5,7 +5,7 @@ function likeToggle(event) {
   const likeDiv = event.currentTarget;
   const iconSpan = likeDiv.querySelector('.js-like__icon');
   const numberSpan = likeDiv.querySelector('.js-like__number');
-  likeDiv.classList.toggle('js-like_liked');
+  likeDiv.classList.toggle('like_liked');
   iconToggle(iconSpan);
   numberToggle(numberSpan);
 }
@@ -16,6 +16,6 @@ function iconToggle(iconSpan) {
 
 function numberToggle(numberSpan) {
   const number = Number(numberSpan.innerHTML);
-  const isLiked = !!numberSpan.closest('.js-like_liked');
+  const isLiked = !!numberSpan.closest('.like_liked');
   numberSpan.innerHTML = isLiked ? (number + 1).toString() : (number - 1).toString();
 }
