@@ -1,3 +1,4 @@
+include ../logo/logo
 include ../input/input
 include ../socials/socials
 
@@ -6,7 +7,8 @@ mixin footer-large({info, menus, subscription, copyright})
     .footer-large__container
       .footer-large__top
         .footer-large__main
-          img.footer-large__logo(src=require('../../assets/logo/logo.svg').default, alt="logo")
+          .footer-large__logo
+            +logo
           .footer-large__info=info
         nav.footer-large__menus
           each menu in menus

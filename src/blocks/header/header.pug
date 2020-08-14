@@ -1,3 +1,4 @@
+include ../logo/logo
 include ../button/button
 
 mixin header(options)
@@ -6,7 +7,8 @@ mixin header(options)
 
   .header
     .header__container
-      img.header__logo(src=require('../../assets/logo/logo.svg').default, alt="logo")
+      .header__logo
+        +logo
       nav.header__menu
         ul
           each item in options.menu

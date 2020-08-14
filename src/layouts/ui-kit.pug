@@ -1,3 +1,5 @@
+include ../blocks/logo-ui/logo-ui
+
 block variables
   - const isProdEnv = htmlWebpackPlugin.options.currentEnv === 'production';
 
@@ -15,5 +17,6 @@ html
     meta(name="theme-color" content="#ffffff")
     block title
   body.ui-kit__body
-    img.ui-kit__logo(src=require('../../assets/logo/grey-logo.svg').default, alt="logo")
+    .ui-kit__logo
+      +logo-ui
     block content
