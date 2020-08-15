@@ -29,4 +29,9 @@ module.exports = {
     'no-param-reassign': 'off',
     'class-methods-use-this': 'off',
   },
+  settings: {
+    'import/resolver': {
+      webpack,
+    },
+  },
 };
