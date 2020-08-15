@@ -29,15 +29,8 @@ class Carousel {
     let i;
     const slides = this.carousel.getElementsByClassName('js-carousel__image');
     const dots = this.carousel.getElementsByClassName('js-carousel__dot');
-
-    if (n > slides.length) {
-      this.slideIndex = 1;
-    }
-
-    if (n < 1) {
-      this.slideIndex = slides.length;
-    }
-
+    n > slides.length && (this.slideIndex = 1);
+    n < 1 && (this.slideIndex = slides.length);
     for (i = 0; i < slides.length; i++) {
       slides[i].style.display = 'none';
     }

@@ -91,9 +91,7 @@ class DateDropdown {
     const $inputs = this.$dropdown.find('.js-date-dropdown__input');
     const $input = $inputs.eq(0);
     let $secondInput;
-    if (this.hasTwoInputs) {
-      $secondInput = $inputs.eq(1);
-    }
+    this.hasTwoInputs && ($secondInput = $inputs.eq(1));
     const dates = this.calendar.selectedDates;
     if (this.hasTwoInputs) {
       $input.val(this._formatDate(dates[0], 'dotted'));
@@ -121,14 +119,8 @@ class DateDropdown {
 
     switch (format) {
       case 'dotted':
-        if (Number(day) < 10) {
-          day = `0${day}`;
-        }
-
-        if (Number(month) < 10) {
-          month = `0${month}`;
-        }
-
+        Number(day) < 10 && (day = `0${day}`);
+        Number(month) < 10 && (month = `0${month}`);
         return `${day}.${month}.${year}`;
       case 'dayAndMonth':
         return `${day} ${monthName}`;
