@@ -17,6 +17,7 @@ module.exports = {
     'import/no-cycle': 'off',
     'no-use-before-define': 'off',
     'no-plusplus': 'off',
+    'no-underscore-dangle': 'off',
     'import/order': ['error', {
       groups: [['builtin', 'external'], 'internal', ['parent', 'sibling'], 'index'],
       'newlines-between': 'always',
