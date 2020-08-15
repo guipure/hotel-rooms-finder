@@ -4,10 +4,10 @@ import 'air-datepicker/dist/css/datepicker.min.css';
 class DateDropdown {
   constructor($element) {
     this.$dropdown = $element;
-    this.init();
+    this._init();
   }
 
-  init() {
+  _init() {
     const $calendar = this.$dropdown.children('.js-date-dropdown__calendar');
     this.calendar = $calendar.datepicker({
       prevHtml: '<span class="material-icons">arrow_back</span>',
@@ -18,29 +18,29 @@ class DateDropdown {
       clearButton: true,
       selectOtherYears: false,
       range: true,
-      onSelect: this.onSelect.bind(this),
+      onSelect: this._onSelect.bind(this),
       inline: true,
     }).data('datepicker');
     this.$datepicker = this.calendar.$datepicker;
     this.isInline = $calendar.hasClass('date-dropdown__calendar_inline');
     this.hasTwoInputs = this.$dropdown.hasClass('date-dropdown_doubleField');
-    this.addButtons();
-    this.addEventListeners();
+    this._addButtons();
+    this._addEventListeners();
   }
 
-  toggleCalendar() {
+  _toggleCalendar() {
     this.$datepicker.toggle();
   }
 
-  hideCalendar() {
+  _hideCalendar() {
     this.$datepicker.hide();
   }
 
-  clearInputs() {
+  _clearInputs() {
     this.calendar.clear();
   }
 
-  documentOnClick(event) {
+  _documentOnClick(event) {
     const $target = $(event.target);
     const targetIsCell = $target.hasClass('datepicker--cell');
     const targetIsNavAction = !!$target.parents('.datepicker--nav-action').length;
@@ -51,43 +51,43 @@ class DateDropdown {
       || targetIsNavTitle
       || targetIsCell;
     if (targetIsWithinCalendar) return;
-    this.hideCalendar();
+    this._hideCalendar();
   }
 
-  addButtons() {
+  _addButtons() {
     const $buttons = this.$datepicker.find('.datepicker--buttons');
     $buttons.empty();
-    this.addClearBtn($buttons);
-    this.addSubmitBtn($buttons);
+    this._addClearBtn($buttons);
+    this._addSubmitBtn($buttons);
   }
 
-  addClearBtn($buttons) {
+  _addClearBtn($buttons) {
     const clear = this.$dropdown.find('.js-date-dropdown__clear');
     const clearBtn = clear.find('button');
-    clearBtn.on('click', this.clearInputs.bind(this));
+    clearBtn.on('click', this._clearInputs.bind(this));
     $buttons.append(clear);
   }
 
-  addSubmitBtn($buttons) {
+  _addSubmitBtn($buttons) {
     const submit = this.$dropdown.find('.js-date-dropdown__submit');
     const submitBtn = submit.find('button');
     if (!this.isInline) {
-      submitBtn.on('click', this.hideCalendar.bind(this));
+      submitBtn.on('click', this._hideCalendar.bind(this));
     }
     $buttons.append(submit);
   }
 
-  addEventListeners() {
+  _addEventListeners() {
     const $inputs = this.$dropdown.find('.js-date-dropdown__input');
     if (!this.isInline) {
       this.$datepicker.hide();
-      $(document).on('click', this.documentOnClick.bind(this));
+      $(document).on('click', this._documentOnClick.bind(this));
     }
     $inputs.closest('.js-date-dropdown__input-box')
-      .each((index, element) => $(element).on('click', this.toggleCalendar.bind(this)));
+      .each((index, element) => $(element).on('click', this._toggleCalendar.bind(this)));
   }
 
-  onSelect() {
+  _onSelect() {
     const $inputs = this.$dropdown.find('.js-date-dropdown__input');
     const $input = $inputs.eq(0);
     let $secondInput;
@@ -96,21 +96,21 @@ class DateDropdown {
     }
     const dates = this.calendar.selectedDates;
     if (this.hasTwoInputs) {
-      $input.val(this.formatDate(dates[0], 'dotted'));
+      $input.val(this._formatDate(dates[0], 'dotted'));
       if (dates.length === 2) {
-        $secondInput.val(this.formatDate(dates[1], 'dotted'));
+        $secondInput.val(this._formatDate(dates[1], 'dotted'));
       } else $secondInput.val('');
     } else {
-      const firstDate = this.formatDate(dates[0], 'dayAndMonth');
+      const firstDate = this._formatDate(dates[0], 'dayAndMonth');
       $input.val(firstDate);
       if (dates.length === 2) {
-        const secondDate = this.formatDate(dates[1], 'dayAndMonth');
+        const secondDate = this._formatDate(dates[1], 'dayAndMonth');
         $input.val(`${firstDate} - ${secondDate}`);
       }
     }
   }
 
-  formatDate(date, format) {
+  _formatDate(date, format) {
     if (!date) return '';
     let day = date.getDate().toString();
     const monthNumber = date.getMonth();

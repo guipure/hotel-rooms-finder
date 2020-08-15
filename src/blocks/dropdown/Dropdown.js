@@ -1,30 +1,30 @@
 class Dropdown {
   constructor(element) {
     this.dropdown = element;
-    this.addEventListeners();
+    this._addEventListeners();
   }
 
-  addEventListeners() {
-    document.addEventListener('click', this.hide.bind(this));
+  _addEventListeners() {
+    document.addEventListener('click', this._hide.bind(this));
 
     const box = this.dropdown.querySelector('.js-dropdown__box');
-    box.addEventListener('click', this.toggle.bind(this));
+    box.addEventListener('click', this._toggle.bind(this));
 
     const operators = this.dropdown.querySelectorAll('.js-dropdown__operator');
-    Array.from(operators).forEach((operator) => operator.addEventListener('click', this.handleOperator.bind(this)));
+    Array.from(operators).forEach((operator) => operator.addEventListener('click', this._handleOperator.bind(this)));
 
     const submitButton = this.dropdown.querySelector('.js-dropdown__submit');
-    submitButton.addEventListener('click', this.submit.bind(this));
+    submitButton.addEventListener('click', this._submit.bind(this));
 
     const clearButton = this.dropdown.querySelector('.js-dropdown__clear');
-    clearButton.firstElementChild.addEventListener('click', this.clear.bind(this));
+    clearButton.firstElementChild.addEventListener('click', this._clear.bind(this));
   }
 
-  submit() {
-    this.toggle();
+  _submit() {
+    this._toggle();
   }
 
-  toggle() {
+  _toggle() {
     const menu = this.dropdown.querySelector('.js-dropdown__menu');
     menu.classList.toggle('dropdown__menu_hidden');
     const icon = this.dropdown.querySelector('.js-dropdown__icon');
@@ -34,24 +34,24 @@ class Dropdown {
     box.classList.toggle('dropdown__box_closed');
   }
 
-  hide(event) {
+  _hide(event) {
     if (event.target.closest('.js-dropdown') === this.dropdown) return;
     const isClosed = !this.dropdown.querySelector('.dropdown__box_opened');
     if (isClosed) return;
-    this.toggle();
+    this._toggle();
   }
 
-  showClearButton() {
+  _showClearButton() {
     const clearButton = this.dropdown.querySelector('.js-dropdown__clear');
     clearButton.classList.remove('dropdown__clear_hidden');
   }
 
-  hideClearButton() {
+  _hideClearButton() {
     const clearButton = this.dropdown.querySelector('.js-dropdown__clear');
     clearButton.classList.add('dropdown__clear_hidden');
   }
 
-  handleOperator(event) {
+  _handleOperator(event) {
     let valueElement;
     let minusElement;
     const isTargetPlus = event.target.classList.contains('dropdown__operator_plus');
@@ -64,19 +64,19 @@ class Dropdown {
       minusElement = event.target;
     }
 
-    this.calculateValue(valueElement, minusElement, isTargetPlus);
+    this._calculateValue(valueElement, minusElement, isTargetPlus);
   }
 
-  calculateValue(valueElement, minusElement, isTargetPlus) {
+  _calculateValue(valueElement, minusElement, isTargetPlus) {
     let value = Number(valueElement.innerHTML);
     isTargetPlus ? value++ : value--;
     if (value < 0) return;
-    this.handleMinus(minusElement, value);
+    this._handleMinus(minusElement, value);
     valueElement.innerHTML = value.toString();
-    this.sum();
+    this._sum();
   }
 
-  handleMinus(minusElement, value) {
+  _handleMinus(minusElement, value) {
     if (value === 0) {
       minusElement.classList.add('dropdown__operator_disabled');
     }
@@ -86,29 +86,29 @@ class Dropdown {
     }
   }
 
-  sum() {
+  _sum() {
     const values = Array.from(this.dropdown.querySelectorAll('.js-dropdown__value'))
       .map((value) => Number(value.innerHTML));
     const sum = values.reduce((a, b) => a + b, 0);
 
     if (sum === 0) {
-      this.clear();
+      this._clear();
       return;
     }
 
-    this.showClearButton();
+    this._showClearButton();
     const result = this.dropdown.querySelector('.js-dropdown__result');
     const labels = Array.from(this.dropdown.querySelectorAll('.js-dropdown__label'))
       .map((label) => label.innerHTML);
 
     if (result.classList.contains('guests')) {
-      result.innerHTML = sum.toString() + this.correctEnding(sum, 'гость');
+      result.innerHTML = sum.toString() + this._correctEnding(sum, 'гость');
     } else {
       const allItems = [];
 
       values.forEach((value, index) => {
         if (value > 0) {
-          allItems.push(value.toString() + this.correctEnding(value, labels[index]));
+          allItems.push(value.toString() + this._correctEnding(value, labels[index]));
         }
       });
 
@@ -116,7 +116,7 @@ class Dropdown {
     }
   }
 
-  correctEnding(value, word) {
+  _correctEnding(value, word) {
     let types;
 
     switch (word) {
@@ -141,7 +141,7 @@ class Dropdown {
     return (` ${types[2]}`);
   }
 
-  clear() {
+  _clear() {
     const result = this.dropdown.querySelector('.js-dropdown__result');
     const values = this.dropdown.querySelectorAll('.js-dropdown__value');
 
@@ -156,7 +156,7 @@ class Dropdown {
       result.innerHTML = 'Сколько кроватей';
     }
 
-    this.hideClearButton();
+    this._hideClearButton();
   }
 }
 

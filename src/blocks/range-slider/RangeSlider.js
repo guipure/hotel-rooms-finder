@@ -9,12 +9,12 @@ class RangeSlider {
       step: 100,
       hide_min_max: true,
       hide_from_to: true,
-      onChange: this.showData.bind(this),
-      onStart: this.showData.bind(this),
+      onChange: this._showData.bind(this),
+      onStart: this._showData.bind(this),
     });
   }
 
-  showData(data) {
+  _showData(data) {
     this.resultSpan.html(`${data.from_pretty}₽ - ${data.to_pretty}₽`);
   }
 }

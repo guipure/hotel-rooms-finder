@@ -3,13 +3,13 @@ import 'paginationjs';
 class Pagination {
   constructor($element, pageSize, totalNumber) {
     $element.pagination({
-      dataSource: this.getRange(totalNumber),
+      dataSource: this._getRange(totalNumber),
       pageSize,
       pageRange: 1,
       autoHidePrevious: true,
       autoHideNext: true,
       showFirstOnEllipsisShow: false,
-      footer: this.getFooter.bind(this),
+      footer: this._getFooter.bind(this),
       nextText: '<i class="pagination__icon material-icons">arrow_forward</i>',
       prevText: '<i class="pagination__icon material-icons">arrow_back</i>',
       ulClassName: 'pagination__ul',
@@ -17,7 +17,7 @@ class Pagination {
     });
   }
 
-  getRange(number) {
+  _getRange(number) {
     const result = [];
     for (let i = 1; i <= number; i++) {
       result.push(i);
@@ -25,7 +25,7 @@ class Pagination {
     return result;
   }
 
-  getFooter(currentPage, totalPage, totalNumber) {
+  _getFooter(currentPage, totalPage, totalNumber) {
     const pageRange = Math.ceil(totalNumber / totalPage);
     const isExceeded = pageRange * currentPage > totalNumber;
     const to = isExceeded ? totalNumber : pageRange * currentPage;
