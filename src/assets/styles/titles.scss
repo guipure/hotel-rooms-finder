@@ -1,28 +1,28 @@
  @import './variables';
 
-%title {
+@mixin title {
   color: $dark-shade-100;
   font-weight: bold;
 }
 
-%h1 {
-  @extend %title;
+@mixin h1 {
+  @include title;
 
   font-family: Quicksand, 'Open Sans', Arial, sans-serif;
   font-size: 2.4rem;
   line-height: 3rem;
 }
 
-%h2 {
-  @extend %title;
+@mixin h2 {
+  @include title;
 
   font-family: Quicksand, 'Open Sans', Arial, sans-serif;
   font-size: 1.9rem;
   line-height: 2.4rem;
 }
 
-%h3 {
-  @extend %title;
+@mixin h3 {
+  @include title;
 
   font-family: Montserrat, Arial, sans-serif;
   font-size: 1.2rem;

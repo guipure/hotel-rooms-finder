@@ -16,7 +16,7 @@
   }
 
   &__title {
-    @extend %h3;
+    @include h3;
   }
 
   &__link {

@@ -54,7 +54,7 @@
   }
 
   &__filter-title {
-    @extend %h3;
+    @include h3;
     margin: 0;
   }
 
@@ -85,7 +85,7 @@
   }
 
   &__result-title {
-    @extend %h1;
+    @include h1;
     margin: 0;
   }
 

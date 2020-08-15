@@ -21,12 +21,12 @@
   }
   
   &__name {
-    @extend %h3;
+    @include h3;
     float: left;
   }
   
   &__annotation {
-    @extend %h3;
+    @include h3;
     float: right;
     color: $dark-shade-50;
     font-weight: normal;

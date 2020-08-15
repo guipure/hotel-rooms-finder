@@ -133,7 +133,7 @@
   }
 
   &__info-title {
-    @extend %h2;
+    @include h2;
     padding-bottom: 2rem;
   }
 
@@ -147,18 +147,18 @@
   }
 
   &__impressions-title {
-    @extend %h2;
+    @include h2;
     padding-bottom: 1.7rem;
   }
 
   &__rules-title {
-    @extend %h2;
+    @include h2;
     padding-bottom: 1.6rem;
     padding-left: 2rem;
   }
 
   &__cancel-title {
-    @extend %h2;
+    @include h2;
     padding-bottom: 1.6rem;
   }
   

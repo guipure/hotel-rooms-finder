@@ -30,7 +30,7 @@
   }
 
   &_number {
-    @extend %h2;
+    @include h2;
     padding: 0 0.5rem 0 0.4rem;
   }
 

@@ -40,7 +40,7 @@
   }
 
   &__label {
-    @extend %h2;
+    @include h2;
     display: inline-block;
     padding: 0.6rem 0 1rem 4rem;
     width: 20rem;

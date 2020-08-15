@@ -78,7 +78,7 @@
   }
 
   &__label {
-    @extend %h3;
+    @include h3;
     display: inline-block;
   }
 

@@ -78,7 +78,7 @@
     }
   
     &-title {
-      @extend %h2;
+      @include h2;
   
       i {
         color: $dark-shade-100;

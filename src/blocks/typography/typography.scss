@@ -28,7 +28,7 @@
   }
 
   &__right-side_h1 {
-    @extend %h1;
+    @include h1;
   }
 
   &__left-side_h2 {
@@ -37,7 +37,7 @@
   }
 
   &__right-side_h2 {
-    @extend %h2;
+    @include h2;
   }
 
   &__left-side_h3 {
@@ -46,7 +46,7 @@
   }
 
   &__right-side_h3 {
-    @extend %h3;
+    @include h3;
   }
 
   &__left-side_body {

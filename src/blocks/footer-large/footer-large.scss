@@ -100,7 +100,7 @@
   }
 
   &__menu-title {
-    @extend %h3;
+    @include h3;
     padding-bottom: 1.1rem;
     padding-top: 0.4rem;
     letter-spacing: -0.03rem;

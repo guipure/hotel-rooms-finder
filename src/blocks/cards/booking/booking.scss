@@ -29,7 +29,7 @@
   }
 
   &__number {
-    @extend %h1;
+    @include h1;
     padding: 0 0.6rem 0 0.4rem;
   }
 
@@ -91,7 +91,7 @@
   }
 
   &__total-price {
-    @extend %h2;
+    @include h2;
     display: flex;
     justify-content: space-between;
     align-items: baseline;

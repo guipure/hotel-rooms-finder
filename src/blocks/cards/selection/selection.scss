@@ -14,7 +14,7 @@
   box-sizing: border-box;
 
   &__title {
-    @extend %h1;
+    @include h1;
     padding-bottom: 2rem;
   }
 
