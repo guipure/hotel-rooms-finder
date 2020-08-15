@@ -16,14 +16,15 @@ mixin comment({ date, photo, name = 'User', likes = 0, comment = '' })
     else
       dayForm = dayForms[2]
     relDate = isPublishedToday ? 'сегодня' : `${period} ${dayForm} назад`
+    const imgAttributes = {
+      class: 'comment__photo',
+      src: require('@blocks/comment/img/' + photo).default,
+      alt: `commentator's photo`
+    }
 
   .comment
     .comment__info
-      img(
-        class="comment__photo",
-        src=require('@blocks/comment/img/' + photo).default,
-        alt="commentator's photo"
-      )
+      img&attributes(imgAttributes)
       .comment__name=name
       .comment__date=relDate
     .comment__body

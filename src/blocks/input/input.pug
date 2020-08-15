@@ -1,9 +1,10 @@
 mixin input({ type = 'text', placeholder = '', isSub = false, isMasked = false })
   -
-    var inputClassName = 'input__box'
+    let inputClassName = 'input__box'
     inputClassName += isSub ? ' input__box_sub' : ''
     inputClassName += isMasked ? ' js-input__box_masked' : ''
+    const inputAttributes = { type, placeholder, class: inputClassName }
   .input
-    input(type=type, placeholder=placeholder, class=inputClassName)
+    input&attributes(inputAttributes)
     if isSub
       i.input__icon.material-icons arrow_forward

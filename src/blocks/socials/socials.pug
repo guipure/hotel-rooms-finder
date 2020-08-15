@@ -1,17 +1,11 @@
 mixin socials
+  -
+    const linkAttributes = {
+      href: '/mock-address/change-me',
+      target: '_blank',
+      rel: 'noopener noreferrer'
+    }
   .socials
-    a.fab.fa-twitter.socials__link(
-      href="/mock-address/change-me",
-      target="_blank",
-      rel="noopener noreferrer"
-    )
-    a.fab.fa-facebook-square.socials__link(
-      href="/mock-address/change-me",
-      target="_blank",
-      rel="noopener noreferrer"
-    )
-    a.fab.fa-instagram.socials__link(
-      href="/mock-address/change-me",
-      target="_blank",
-      rel="noopener noreferrer"
-    )
+    a.fab.fa-twitter.socials__link&attributes(linkAttributes)
+    a.fab.fa-facebook-square.socials__link&attributes(linkAttributes)
+    a.fab.fa-instagram.socials__link&attributes(linkAttributes)

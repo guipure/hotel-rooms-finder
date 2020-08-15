@@ -19,8 +19,9 @@ mixin button({ theme = 'purple-link', type = 'button', value = '' })
       - buttonClassName += 'small-purple'
     default
       - buttonClassName += 'purple'
+  - const buttonAttributes = { class: buttonClassName, type }
 
   div(class=wrapperClassName)
-    button(class=buttonClassName type=type)= value
+    button&attributes(buttonAttributes)= value
       if theme == 'long'
         i.button__icon.material-icons arrow_forward

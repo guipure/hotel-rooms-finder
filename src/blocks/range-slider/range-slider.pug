@@ -1,7 +1,15 @@
 include ../field/field
 
 mixin range-slider(title, from = 0, to = 5000)
+  -
+    const sliderAttributes = {
+      type: 'text',
+      name: 'my_range',
+      value: '',
+      'data-min': from,
+      'data-max': to
+    }
   +field({name: title, size: 'medium'})
     .range-slider
       span.range-slider__result.js-range-slider__result
-      input.js-range-slider__input(type="text" name="my_range" value="" data-min=from data-max=to)
+      input.js-range-slider__input&attributes(sliderAttributes)
