@@ -79,10 +79,9 @@ class DateDropdown {
 
   _addEventListeners() {
     const $inputs = this.$dropdown.find('.js-date-dropdown__input');
-    if (!this.isInline) {
-      this.$datepicker.hide();
-      $(document).on('click', this._documentOnClick.bind(this));
-    }
+    !this.isInline
+      && this.$datepicker.hide()
+      && $(document).on('click', this._documentOnClick.bind(this));
     $inputs.closest('.js-date-dropdown__input-box')
       .each((index, element) => $(element).on('click', this._toggleCalendar.bind(this)));
   }

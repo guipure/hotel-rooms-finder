@@ -9,9 +9,7 @@ class CheckboxList {
   _slide($dropdown, $label) {
     const $icon = $label.find('.js-checkbox-list__icon');
     $icon.toggleClass('checkbox-list__icon_rotated');
-    if ($dropdown.is(':hidden')) {
-      $dropdown.slideDown('fast');
-    } else $dropdown.hide('fast');
+    $dropdown.is(':hidden') ? $dropdown.slideDown('fast') : $dropdown.hide('fast');
   }
 }
 
