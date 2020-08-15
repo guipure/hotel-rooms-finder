@@ -1,7 +1,7 @@
 import 'ion-rangeslider';
 import 'ion-rangeslider/css/ion.rangeSlider.css';
 
-class Slider {
+class RangeSlider {
   constructor(element) {
     this.resultSpan = element.siblings('.js-range-slider__result');
     element.ionRangeSlider({
@@ -19,5 +19,4 @@ class Slider {
   }
 }
 
-const sliders = $('.js-range-slider__input');
-sliders.each((index, element) => new Slider($(element)));
+export { RangeSlider };

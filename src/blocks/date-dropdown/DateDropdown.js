@@ -138,5 +138,4 @@ class DateDropdown {
   }
 }
 
-const dropdowns = $('.js-date-dropdown');
-dropdowns.each((index, element) => new DateDropdown($(element)));
+export { DateDropdown };

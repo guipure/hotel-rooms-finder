@@ -1,7 +1,7 @@
 import './search-room.scss';
-import '@blocks/carousel/carousel';
-import '@blocks/checkbox-list/checkbox-list';
-import '@blocks/date-dropdown/date-dropdown';
-import '@blocks/dropdown/dropdown';
-import '@blocks/pagination/pagination';
-import '@blocks/range-slider/range-slider';
+import '@blocks/carousel/carousel-init';
+import '@blocks/checkbox-list/checkbox-list-init';
+import '@blocks/date-dropdown/date-dropdown-init';
+import '@blocks/dropdown/dropdown-init';
+import '@blocks/pagination/pagination-init';
+import '@blocks/range-slider/range-slider-init';

@@ -1,5 +1,5 @@
 import './cards.scss';
 import '../../assets/favicons/favicons';
-import '@blocks/date-dropdown/date-dropdown';
-import '@blocks/dropdown/dropdown';
-import '@blocks/carousel/carousel';
+import '@blocks/date-dropdown/date-dropdown-init';
+import '@blocks/dropdown/dropdown-init';
+import '@blocks/carousel/carousel-init';

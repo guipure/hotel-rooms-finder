@@ -15,5 +15,4 @@ class CheckboxList {
   }
 }
 
-const $lists = $('.js-checkbox-list');
-$lists.each((index, element) => new CheckboxList($(element)));
+export { CheckboxList };
