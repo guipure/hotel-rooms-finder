@@ -10,11 +10,14 @@ mixin booking({ number = '000', isLux = false, price = '0' })
         span.booking__number=number
         if isLux
           span.booking__lux ЛЮКС
+
       .booking__day-price
         strong= price + '₽ '
         span.booking__per-day в сутки
+
     .booking__dates
       +date-dropdown({placeholder: 'ДД.ММ.ГГГГ', labels: ['прибытие', 'выезд']})
+
     .booking__guests
       +field({name: 'гости', size: 'large'})
         +dropdown({
@@ -22,21 +25,26 @@ mixin booking({ number = '000', isLux = false, price = '0' })
           items: ['взрослые', 'дети', 'младенцы'],
           type: 'guests'
         })
+
     .booking__price
       .booking__fee
         .booking__left-col 9 990₽ х 4 суток
         .booking__right-col 39 960₽
+
       .booking__fee
         .booking__left-col Сбор за услуги: скидка 2 179₽
         .booking__right-col 0₽
         .booking__info i
+
       .booking__fee
         .booking__left-col Сбор за дополнительные услуги
         .booking__right-col 300₽
         .booking__info i
+
       .booking__total-price
         | Итого
         .booking__dotted-line
         | 38&nbsp081₽
+
     .booking__button
       +button({theme: 'long', value: 'забронировать'})

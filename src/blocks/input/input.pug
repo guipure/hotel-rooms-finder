@@ -4,6 +4,7 @@ mixin input({ type = 'text', placeholder = '', isSub = false, isMasked = false }
     inputClassName += isSub ? ' input__box_sub' : ''
     inputClassName += isMasked ? ' js-input__box_masked' : ''
     const inputAttributes = { type, placeholder, class: inputClassName }
+
   .input
     input&attributes(inputAttributes)
     if isSub

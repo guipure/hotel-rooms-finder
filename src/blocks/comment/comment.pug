@@ -1,32 +1,14 @@
 include ../like/like
 
 mixin comment({ date, photo, name = 'User', likes = 0, comment = '' })
-  - 
-    const commentDate = new Date(date)
-    let period = Math.floor((Date.now() - commentDate) / 86400000)
-    const isPublishedToday = period < 1
-    const dayForms = ['день', 'дня', 'дней']
-    let dayForm
-    if (period > 4 && period < 21)
-      dayForm = dayForms[2]
-    else if (period % 10 == 1)
-      dayForm = dayForms[0]
-    else if (period % 10 > 1 && period % 10 < 5)
-      dayForm = dayForms[1]
-    else
-      dayForm = dayForms[2]
-    relDate = isPublishedToday ? 'сегодня' : `${period} ${dayForm} назад`
-    const imgAttributes = {
-      class: 'comment__photo',
-      src: require('@blocks/comment/img/' + photo).default,
-      alt: `commentator's photo`
-    }
+  include ./vars
 
   .comment
     .comment__info
       img&attributes(imgAttributes)
       .comment__name=name
       .comment__date=relDate
+
     .comment__body
       .comment__like
         +like(likes)

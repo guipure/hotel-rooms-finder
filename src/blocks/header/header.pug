@@ -9,6 +9,7 @@ mixin header({ login, register, menu, isLoggedIn = false, name = 'User' })
     .header__container
       .header__logo
         +logo
+
       nav.header__menu
         ul
           each item in menu
@@ -16,10 +17,12 @@ mixin header({ login, register, menu, isLoggedIn = false, name = 'User' })
               let itemClass = 'header__item'
               itemClass += item.list ? ' header__item_expandable' : ''
               itemClass += item.isActive ? ' header__item_active' : ''
+
             li(class=itemClass)
               a.header__link(href="/mock-address/change-me")=item.item
               if item.list
                 span.header__arrow.material-icons expand_more
+
       .header__login
         if isLoggedIn
           .header__name-group
@@ -29,5 +32,6 @@ mixin header({ login, register, menu, isLoggedIn = false, name = 'User' })
           .header__buttons
             .header__button
               +button({theme: 'small-purple-border', value: loginValue})
+
             .header__button
               +button({theme: 'small-purple', value: registerValue})

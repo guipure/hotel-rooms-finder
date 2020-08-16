@@ -1,10 +1,13 @@
 extends ../../layouts/ui-kit.pug
 block title
   title Toxin Hotel
+
   if isProdEnv
     link(rel="stylesheet" href="index.bundle.css")
+
 block content
   - const pages = require('@pages/index/pages.json');
+
   nav.index
     each page in pages
       .index__card
@@ -14,4 +17,5 @@ block content
               src=require(`./img/${page}.jpg`).default,
               alt="page preview"
             )
+
   script(src="scripts/index.bundle.js")

@@ -19,9 +19,11 @@ class Pagination {
 
   _getRange(number) {
     const result = [];
+
     for (let i = 1; i <= number; i++) {
       result.push(i);
     }
+
     return result;
   }
 
@@ -37,6 +39,7 @@ class Pagination {
     } else {
       total = totalNumber.toString();
     }
+
     return `<span class="pagination__text">${from} – ${to} из ${total} вариантов аренды</span>`;
   }
 }

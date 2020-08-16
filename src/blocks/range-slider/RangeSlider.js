@@ -4,6 +4,7 @@ import 'ion-rangeslider/css/ion.rangeSlider.css';
 class RangeSlider {
   constructor(element) {
     this.resultSpan = element.siblings('.js-range-slider__result');
+
     element.ionRangeSlider({
       type: 'double',
       step: 100,

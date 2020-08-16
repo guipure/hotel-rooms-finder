@@ -5,12 +5,15 @@ include ../../blocks/cards/selection/selection
 
 block title
   title Landing Page
+
   if isProdEnv
     link(rel="stylesheet" href="landing-page.bundle.css")
+
 block content
   main.landing-page__main
     .landing-page__container
       .landing-page__selection
         +selection
       .landing-page__slogan Лучшие номера для вашей работы, отдыха и просто вдохновения
+
   script(src="scripts/landing-page.bundle.js")

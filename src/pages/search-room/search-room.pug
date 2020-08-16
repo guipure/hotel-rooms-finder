@@ -13,13 +13,16 @@ include ../../blocks/cards/room/room
 
 block title
   title Search room
+
   if isProdEnv
     link(rel="stylesheet" href="search-room.bundle.css")
+
 block content
   main.search-room__container
     aside.search-room__filter
       .search-room__filter-element
         +date-dropdown({placeholder: 'Выберите даты', labels: ['даты пребывания в отеле']})
+
       .search-room__filter-element
         +field({name: 'гости', size: 'medium'})
           +dropdown({
@@ -27,14 +30,17 @@ block content
             items: ['взрослые', 'дети', 'младенцы'],
             type: 'guests'
           })
+
       .search-room__price-range
         +range-slider('диапазон цены', '0', '15000')
         span.search-room__price-tip Стоимость за сутки пребывания в номере
+
       h3.search-room__filter-title checkbox buttons
       .search-room__checkbox
         +checkbox('Можно курить')
         +checkbox('Можно с питомцами')
         +checkbox('Можно пригласить гостей (до 10 человек)')
+        
       h3.search-room__filter-title доступность
       .search-room__checkbox-rich
         +checkbox-rich('Широкий коридор', 'Ширина коридоров в номере не\u00A0менее 91 см.')
@@ -42,6 +48,7 @@ block content
           'Помощник для инвалидов',
           'На 1 этаже вас встретит специалист  и\u00A0проводит до номера.'
         )
+
       .search-room__filter-element
         +field({name: 'удобства номера', size: 'medium'})
           +dropdown({
@@ -61,13 +68,17 @@ block content
             'Шампунь'
           ]
         )
+
     section.search-room__result
       h1.search-room__result-title Номера, которые мы для вас подобрали
       .search-room__result-cards
         - const rooms = require('@pages/search-room/rooms.json');
+
         each room in rooms
           .search-room__result-card
             +room(room)
+
       .search-room__result-pagination
         +pagination({pageSize: '12', totalNumber: '175'})
+
   script(src="scripts/search-room.bundle.js")

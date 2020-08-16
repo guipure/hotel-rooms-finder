@@ -5,8 +5,10 @@ include ../../blocks/footer-small/footer-small
 
 block title
   title Headers and Footers
+
   if isProdEnv
     link(rel="stylesheet" href="headers-and-footers.bundle.css")
+
 block content
   - 
     const {
@@ -15,14 +17,19 @@ block content
       largeFooterOptions,
       smallFooterOptions
     } = require('@pages/headers-and-footers/data.json');
+
   .h-and-f__background
     .h-and-f__wrapper
       .h-and-f__card
         +header(firstHeaderOptions)
+
       .h-and-f__card
         +header(secondHeaderOptions)
+
       .h-and-f__card
         +footer-large(largeFooterOptions)
+
       .h-and-f__card
         +footer-small(smallFooterOptions)
+
   script(src="scripts/headers-and-footers.bundle.js")

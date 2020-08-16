@@ -6,10 +6,18 @@ mixin selection
   form.selection
     .selection__title
       | Найдём номера под ваши пожелания
+
     .selection__dates
       +date-dropdown({placeholder: 'ДД.ММ.ГГГГ', labels: ['прибытие', 'выезд']})
+
     .selection__guests
       +field({name: 'гости', size: 'large'})
-        +dropdown({placeholder: 'Сколько гостей', size: 'large', items: ['взрослые', 'дети', 'младенцы'], type: 'guests'})
+        +dropdown({
+          placeholder: 'Сколько гостей',
+          size: 'large',
+          items: ['взрослые', 'дети', 'младенцы'],
+          type: 'guests'
+        })
+
     .selection__button
       +button({theme: 'long', value: 'подобрать номер'})

@@ -10,20 +10,25 @@ mixin footer-large({ info = '', menus, subscription, copyright = '' })
           .footer-large__logo
             +logo
           .footer-large__info=info
+
         nav.footer-large__menus
           each menu in menus
             .footer-large__menu
               h3.footer-large__menu-title=menu.title
+
               ul.footer-large__menu-list
                 each item in menu.items
                   li.footer-large__menu-item
                     a.footer-large__menu-link(href="/mock-address/change-me")=item
+
         .footer-large__subscription
           h3.footer-large__menu-title=subscription.title
           .footer-large__sub-info=subscription.info
           .footer-large__sub-email
             +input({placeholder: 'Email', isSub: true})
+
     .footer-large__line
+
     .footer-large__container
       .footer-large__bottom
         .footer-large__copyright=copyright

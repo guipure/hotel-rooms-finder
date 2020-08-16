@@ -7,8 +7,10 @@ mixin carousel(images)
         src=require('@blocks/carousel/img/' + img + '.jpg').default,
         alt="room photo"
       )
+
     a.carousel__button-prev.js-carousel__button-prev.material-icons chevron_left
     a.carousel__button-next.js-carousel__button-next.material-icons chevron_right
+
     .carousel__dots
       - for (let i = 0; i < sum; i++)
         span.carousel__dot.js-carousel__dot

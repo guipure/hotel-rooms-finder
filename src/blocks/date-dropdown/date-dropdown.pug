@@ -4,11 +4,13 @@ include ../field/field
 mixin date-dropdown({ labels, isInline = false, placeholder = 'ДД.ММ.ГГГГ' })
   - var firstName = labels[0]
   - var hasSecondField = labels.length > 1
+
   if hasSecondField
     - var secondName = labels[1]
     - var size = 'small'
   else
     - var size = 'medium'
+
   -
     var dateDropdownClassName = 'date-dropdown js-date-dropdown date-dropdown_'
     dateDropdownClassName += hasSecondField ? 'doubleField' : 'oneField'
@@ -19,13 +21,16 @@ mixin date-dropdown({ labels, isInline = false, placeholder = 'ДД.ММ.ГГГ�
     div(class=calendarClassName)
       .date-dropdown__submit.js-date-dropdown__submit
         +button({theme: 'purple-link', value: 'применить', type: 'button'})
+
       .date-dropdown__clear.js-date-dropdown__clear
         +button({theme: 'grey-link', value: 'очистить', type: 'button'})
+
     if !isInline
       +field({name: firstName, size: size})
         .date-dropdown__input-box.js-date-dropdown__input-box
           input.date-dropdown__input.js-date-dropdown__input(placeholder=placeholder readonly)
           i.date-dropdown__icon.material-icons expand_more
+
       if hasSecondField
         +field({name: secondName, size: size})
           .date-dropdown__input-box.js-date-dropdown__input-box

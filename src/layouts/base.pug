@@ -16,13 +16,18 @@ html
     link(rel="shortcut icon" href="./assets/favicons/favicon.ico")
     meta(name="msapplication-TileColor" content="#603cba")
     meta(name="theme-color" content="#ffffff")
+
     block title
+
   body.base__body
     header
       +header(headerOptions)
+
     block content
+
     footer.base__footer
       .base__footer-large
         +footer-large(footerOptions)
+
       .base__footer-small
         +footer-small('Copyright © 2018 Toxin отель. Все права защищены.')

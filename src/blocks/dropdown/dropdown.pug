@@ -4,10 +4,12 @@ mixin dropdown({ type = 'guests', placeholder = '', items })
   -
     var dropdownClassName = 'js-dropdown__box dropdown__box dropdown__box_closed'
     var resultClassName = 'js-dropdown__result dropdown__result ' + type
+
   .dropdown.js-dropdown
     div(class=dropdownClassName)
       div(class=resultClassName)= placeholder
       i.js-dropdown__icon.dropdown__icon.material-icons expand_more
+
     .js-dropdown__menu.dropdown__menu.dropdown__menu_hidden
       .dropdown__items
         each item in items
@@ -17,8 +19,10 @@ mixin dropdown({ type = 'guests', placeholder = '', items })
               .js-dropdown__operator.dropdown__operator.dropdown__operator_minus.dropdown__operator_disabled
               .js-dropdown__value.dropdown__value 0
               .js-dropdown__operator.dropdown__operator.dropdown__operator_plus
+
       .dropdown__buttons
         .js-dropdown__submit.dropdown__submit
           +button({theme: 'purple-link', value: 'применить', type: 'button'})
+
         .js-dropdown__clear.dropdown__clear.dropdown__clear_hidden
           +button({theme: 'grey-link', value: 'очистить', type: 'button'})

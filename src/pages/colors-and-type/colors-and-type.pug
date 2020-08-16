@@ -4,15 +4,20 @@ include ../../blocks/typography/typography
 
 block title
   title Colors and type
+
   if isProdEnv
     link(rel="stylesheet" href="colors-and-type.bundle.css")
+
 block content
   - const colors = require('@pages/colors-and-type/data.json');
+
   main.colors-and-type
     .colors-and-type__container
       .colors-and-type__colors
         each color in colors
           +color(color)
+
       .colors-and-type__type
         +typography()
+
   script(src="scripts/colors-and-type.bundle.js")

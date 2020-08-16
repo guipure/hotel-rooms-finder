@@ -11,10 +11,13 @@ mixin room({ images, number = '000', isLux = false, price = '0', rate = 0, respo
           span.room_number=number
           if isLux
             span.room_lux ЛЮКС
+
         .room__day-price
           strong=price + '₽ '
           span.room__per-day в сутки
+
       .room__line
+
       .room__feedback
         +rate(rate)
         .room__responses

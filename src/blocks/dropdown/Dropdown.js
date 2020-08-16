@@ -11,13 +11,18 @@ class Dropdown {
     box.addEventListener('click', this._toggle.bind(this));
 
     const operators = this.dropdown.querySelectorAll('.js-dropdown__operator');
-    Array.from(operators).forEach((operator) => operator.addEventListener('click', this._handleOperator.bind(this)));
+    Array.from(operators).forEach((operator) =>
+      operator.addEventListener('click', this._handleOperator.bind(this))
+    );
 
     const submitButton = this.dropdown.querySelector('.js-dropdown__submit');
     submitButton.addEventListener('click', this._submit.bind(this));
 
     const clearButton = this.dropdown.querySelector('.js-dropdown__clear');
-    clearButton.firstElementChild.addEventListener('click', this._clear.bind(this));
+    clearButton.firstElementChild.addEventListener(
+      'click',
+      this._clear.bind(this)
+    );
   }
 
   _submit() {
@@ -54,7 +59,9 @@ class Dropdown {
   _handleOperator(event) {
     let valueElement;
     let minusElement;
-    const isTargetPlus = event.target.classList.contains('dropdown__operator_plus');
+    const isTargetPlus = event.target.classList.contains(
+      'dropdown__operator_plus'
+    );
 
     if (isTargetPlus) {
       valueElement = event.target.previousElementSibling;
@@ -70,9 +77,12 @@ class Dropdown {
   _calculateValue(valueElement, minusElement, isTargetPlus) {
     let value = Number(valueElement.innerHTML);
     isTargetPlus ? value++ : value--;
+
     if (value < 0) return;
+
     this._handleMinus(minusElement, value);
     valueElement.innerHTML = value.toString();
+
     this._sum();
   }
 
@@ -81,14 +91,16 @@ class Dropdown {
       minusElement.classList.add('dropdown__operator_disabled');
     }
 
-    if (value > 0 && minusElement.classList.contains('dropdown__operator_disabled')) {
-      minusElement.classList.remove('dropdown__operator_disabled');
-    }
+    value > 0
+      && minusElement.classList.contains('dropdown__operator_disabled')
+      && minusElement.classList.remove('dropdown__operator_disabled');
   }
 
   _sum() {
-    const values = Array.from(this.dropdown.querySelectorAll('.js-dropdown__value'))
-      .map((value) => Number(value.innerHTML));
+    const values = Array.from(
+      this.dropdown.querySelectorAll('.js-dropdown__value')
+    ).map((value) => Number(value.innerHTML));
+
     const sum = values.reduce((a, b) => a + b, 0);
 
     if (sum === 0) {
@@ -98,8 +110,10 @@ class Dropdown {
 
     this._showClearButton();
     const result = this.dropdown.querySelector('.js-dropdown__result');
-    const labels = Array.from(this.dropdown.querySelectorAll('.js-dropdown__label'))
-      .map((label) => label.innerHTML);
+
+    const labels = Array.from(
+      this.dropdown.querySelectorAll('.js-dropdown__label')
+    ).map((label) => label.innerHTML);
 
     if (result.classList.contains('guests')) {
       result.innerHTML = sum.toString() + this._correctEnding(sum, 'гость');
@@ -108,7 +122,9 @@ class Dropdown {
 
       values.forEach((value, index) => {
         if (value > 0) {
-          allItems.push(value.toString() + this._correctEnding(value, labels[index]));
+          allItems.push(
+            value.toString() + this._correctEnding(value, labels[index])
+          );
         }
       });
 
@@ -135,10 +151,10 @@ class Dropdown {
       // no default
     }
 
-    if (value > 4 && value < 21) return (` ${types[2]}`);
-    if (value % 10 === 1) return (` ${types[0]}`);
-    if (value % 10 > 1 && value % 10 < 5) return (` ${types[1]}`);
-    return (` ${types[2]}`);
+    if (value > 4 && value < 21) return ` ${types[2]}`;
+    if (value % 10 === 1) return ` ${types[0]}`;
+    if (value % 10 > 1 && value % 10 < 5) return ` ${types[1]}`;
+    return ` ${types[2]}`;
   }
 
   _clear() {
