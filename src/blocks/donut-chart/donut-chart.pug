@@ -1,57 +1,5 @@
 mixin donut-chart(score)
-  -
-    const radius = '58'
-    const sum = Object.values(score).reduce((acc, val) => acc + val)
-
-    const badDash = makeDash(score.bad, sum)
-    const normalDash = makeDash(score.normal, sum)
-    const goodDash = makeDash(score.good, sum)
-    const greatDash = makeDash(score.great, sum)
-
-    const badOffset = (2 * Math.PI * radius * 0.25).toString()
-    const normalOffset = makeOffset(badDash, badOffset)
-    const goodOffset = makeOffset(normalDash, normalOffset)
-    const greatOffset = makeOffset(goodDash, goodOffset)
-
-    const circles = [
-      {
-        gradient: 'url(#grey-gradient)',
-        dash: badDash,
-        offset: badOffset,
-      },
-      {
-        gradient: 'url(#purple-gradient)',
-        dash: normalDash,
-        offset: normalOffset,
-      },
-      {
-        gradient: 'url(#green-gradient)',
-        dash: goodDash,
-        offset: goodOffset,
-      },
-      {
-        gradient: 'url(#yellow-gradient)',
-        dash: greatDash,
-        offset: greatOffset,
-      },
-    ]
-
-    const { gradients, ratings } = require('@blocks/donut-chart/data.json');
-
-    function makeDash(val, total) {
-      const circLength = 2 * Math.PI * radius
-      const ratio = Math.round(circLength * val / total)
-      const remain = circLength - ratio
-      return ratio.toString() + ' ' + remain.toString()
-    }
-
-
-    function makeOffset(prevDash, prevOffset) {
-      const prevDashNum = Number(prevDash.split(' ')[0])
-      const prevOffsetNum = Number(prevOffset)
-      const offset = prevOffsetNum - prevDashNum
-      return offset.toString()
-    }
+  include ./constants
 
   figure.donut-chart
     .donut-chart__donut
@@ -59,9 +7,11 @@ mixin donut-chart(score)
         defs
           each gradient in gradients
             - const { id, firstColor, secondColor } = gradient
+
             linearGradient(id=id x1="0%" y1="0%" x2="0%" y2="100%")
               stop(offset="0%" stop-color=firstColor)
               stop(offset="100%" stop-color=secondColor)
+
         circle.donut-chart__hole(cx="60" cy="60" r=radius fill="#fff")
 
         each circle in circles
@@ -81,6 +31,7 @@ mixin donut-chart(score)
         g.donut-chart__text
           text.donut-chart__number(x="50%" y="50%")=sum
           text.donut-chart__label(x="50%" y="50%") голосов
+
     figcaption.donut-chart__legend
       ul.donut-chart__key-list
         each rating in ratings
