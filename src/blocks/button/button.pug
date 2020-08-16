@@ -1,25 +1,5 @@
 mixin button({ theme = 'purple-link', type = 'button', value = '' })
-  - var buttonClassName = 'button__inner button__inner_'
-  - var wrapperClassName = 'button'
-  case theme
-    when 'purple-border'
-      - wrapperClassName += ' button_purple-border'
-      - buttonClassName += 'purple-border'
-    when 'small-purple-border'
-      - wrapperClassName += ' button_purple-border'
-      - buttonClassName += 'small-purple-border'
-    when 'long'
-      - wrapperClassName += ' button_long'
-      - buttonClassName += 'long'
-    when 'purple-link'
-      - buttonClassName += 'purple-link'
-    when 'grey-link'
-      - buttonClassName += 'grey-link'
-    when 'small-purple'
-      - buttonClassName += 'small-purple'
-    default
-      - buttonClassName += 'purple'
-  - const buttonAttributes = { class: buttonClassName, type }
+  include ./vars
 
   div(class=wrapperClassName)
     button&attributes(buttonAttributes)= value
