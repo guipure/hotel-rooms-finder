@@ -12,7 +12,7 @@ mixin booking({ number = '000', isLux = false, price = '0' })
           span.booking__lux ЛЮКС
 
       .booking__day-price
-        strong= price + '₽ '
+        strong= `${price}₽ `
         span.booking__per-day в сутки
 
     .booking__dates

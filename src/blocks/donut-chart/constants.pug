@@ -42,7 +42,7 @@ block fakeBlock
       const circLength = 2 * Math.PI * radius
       const ratio = Math.round(circLength * val / total)
       const remain = circLength - ratio
-      return ratio.toString() + ' ' + remain.toString()
+      return `${ratio} ${remain}`
     }
 
 
