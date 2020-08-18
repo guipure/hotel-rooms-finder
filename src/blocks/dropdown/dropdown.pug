@@ -2,8 +2,8 @@ include ../button/button
 
 mixin dropdown({ type = 'guests', placeholder = '', items })
   -
-    var dropdownClassName = 'js-dropdown__box dropdown__box dropdown__box_closed'
-    var resultClassName = 'js-dropdown__result dropdown__result ' + type
+    const dropdownClassName = 'js-dropdown__box dropdown__box dropdown__box_closed'
+    const resultClassName = `js-dropdown__result dropdown__result ${type}`
 
   .dropdown.js-dropdown
     div(class=dropdownClassName)

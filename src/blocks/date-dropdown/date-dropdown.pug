@@ -2,19 +2,22 @@ include ../button/button
 include ../field/field
 
 mixin date-dropdown({ labels, isInline = false, placeholder = 'ДД.ММ.ГГГГ' })
-  - var firstName = labels[0]
-  - var hasSecondField = labels.length > 1
+  -
+    const firstName = labels[0]
+    const hasSecondField = labels.length > 1
+    let secondName
+    let size
 
   if hasSecondField
-    - var secondName = labels[1]
-    - var size = 'small'
+    - secondName = labels[1]
+    - size = 'small'
   else
-    - var size = 'medium'
+    - size = 'medium'
 
   -
-    var dateDropdownClassName = 'date-dropdown js-date-dropdown date-dropdown_'
+    let dateDropdownClassName = 'date-dropdown js-date-dropdown date-dropdown_'
     dateDropdownClassName += hasSecondField ? 'doubleField' : 'oneField'
-    var calendarClassName = 'date-dropdown__calendar js-date-dropdown__calendar date-dropdown__calendar_'
+    let calendarClassName = 'date-dropdown__calendar js-date-dropdown__calendar date-dropdown__calendar_'
     calendarClassName += isInline ? 'inline' : 'default'
 
   div(class=dateDropdownClassName)
@@ -26,13 +29,13 @@ mixin date-dropdown({ labels, isInline = false, placeholder = 'ДД.ММ.ГГГ�
         +button({theme: 'grey-link', value: 'очистить', type: 'button'})
 
     if !isInline
-      +field({name: firstName, size: size})
+      +field({name: firstName, size })
         .date-dropdown__input-box.js-date-dropdown__input-box
           input.date-dropdown__input.js-date-dropdown__input(placeholder=placeholder readonly)
           i.date-dropdown__icon.material-icons expand_more
 
       if hasSecondField
-        +field({name: secondName, size: size})
+        +field({name: secondName, size })
           .date-dropdown__input-box.js-date-dropdown__input-box
             input.date-dropdown__input.js-date-dropdown__input(placeholder=placeholder readonly)
             i.date-dropdown__icon.material-icons expand_more
