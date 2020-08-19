@@ -35,7 +35,7 @@ function getRules(type) {
         path.resolve(__dirname, '../src/assets/fonts/'),
       ],
       options: {
-        outputPath: 'img/',
+        outputPath: 'assets/img/',
       },
     },
     {
@@ -45,7 +45,7 @@ function getRules(type) {
       ],
       loader: 'file-loader',
       options: {
-        outputPath: 'fonts/',
+        outputPath: 'assets/fonts/',
       },
     },
   ];
