@@ -1,5 +1,5 @@
 @import '../../assets/fonts/awesome-brands/css/all.min.css';
-@import '../../assets/styles/font-face';
+@import './font-face';
 
 @include font-face('Quicksand', 'quicksand');
 @include font-face('Quicksand', 'quicksand', 'bold', 700);
