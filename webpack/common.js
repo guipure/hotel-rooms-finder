@@ -12,7 +12,7 @@ function getRules(type) {
 
   const scssLoaders = {
     dev: ['style-loader', 'css-loader', 'sass-loader'],
-    prod: [MiniCssExtractPlugin.loader, 'css-loader', { loader: 'sass-loader', options: { sourceMap: true } }],
+    prod: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
   };
 
   return [
@@ -36,6 +36,7 @@ function getRules(type) {
       ],
       options: {
         outputPath: 'assets/img/',
+        publicPath: '../assets/img/'
       },
     },
     {
@@ -46,6 +47,7 @@ function getRules(type) {
       loader: 'file-loader',
       options: {
         outputPath: 'assets/fonts/',
+        publicPath: '../assets/fonts/'
       },
     },
   ];
