@@ -32,13 +32,9 @@ class Pagination {
     const isExceeded = pageRange * currentPage > totalNumber;
     const to = isExceeded ? totalNumber : pageRange * currentPage;
     const from = pageRange * (currentPage - 1) + 1;
-    let total;
-
-    if (totalNumber > 100) {
-      total = `${(100 * Math.floor(totalNumber / 100)).toString()}+`;
-    } else {
-      total = totalNumber.toString();
-    }
+    const total = totalNumber > 100
+      ? `${(100 * Math.floor(totalNumber / 100)).toString()}+`
+      : totalNumber.toString();
 
     return `<span class="pagination__text">${from} – ${to} из ${total} вариантов аренды</span>`;
   }
