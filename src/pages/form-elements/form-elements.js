@@ -1,4 +1,3 @@
-import './form-elements.scss';
 import '../../assets/favicons/favicons';
 import '@blocks/carousel/carousel-init';
 import '@blocks/checkbox-list/checkbox-list-init';

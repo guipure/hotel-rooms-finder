@@ -99,16 +99,34 @@ const commonConfig = {
   target: 'web',
   context: path.resolve(__dirname, '..', 'src'),
   entry: {
-    'colors-and-type': './pages/colors-and-type/colors-and-type.js',
-    'form-elements': './pages/form-elements/form-elements.js',
-    cards: './pages/cards/cards.js',
-    'headers-and-footers': './pages/headers-and-footers/headers-and-footers.js',
-    'landing-page': './pages/landing-page/landing-page.js',
-    'search-room': './pages/search-room/search-room.js',
-    'room-details': './pages/room-details/room-details.js',
-    registration: './pages/registration/registration.js',
-    'sign-in': './pages/sign-in/sign-in.js',
-    index: './pages/index/index.js',
+    'colors-and-type': './pages/colors-and-type/colors-and-type.scss',
+    'form-elements': [
+      './pages/form-elements/form-elements.js',
+      './pages/form-elements/form-elements.scss',
+    ],
+    cards: [
+      './pages/cards/cards.js',
+      './pages/cards/cards.scss',
+    ],
+    'headers-and-footers': './pages/headers-and-footers/headers-and-footers.scss',
+    'landing-page': [
+      './pages/landing-page/landing-page.js',
+      './pages/landing-page/landing-page.scss',
+    ],
+    'search-room': [
+      './pages/search-room/search-room.js',
+      './pages/search-room/search-room.scss',
+    ],
+    'room-details': [
+      './pages/room-details/room-details.js',
+      './pages/room-details/room-details.scss',
+    ],
+    registration: [
+      './pages/registration/registration.js',
+      './pages/registration/registration.scss',
+    ],
+    'sign-in': './pages/sign-in/sign-in.scss',
+    index: './pages/index/index.scss',
   },
   output: {
     filename: 'scripts/[name].bundle.js',
