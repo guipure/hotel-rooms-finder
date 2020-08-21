@@ -1,7 +1,7 @@
 const likes = document.querySelectorAll('.js-like');
-likes.forEach((like) => like.addEventListener('click', likeToggle));
+likes.forEach((like) => like.addEventListener('click', handleLikeClick));
 
-function likeToggle(event) {
+function handleLikeClick(event) {
   const likeDiv = event.currentTarget;
   const iconSpan = likeDiv.querySelector('.js-like__icon');
   const numberSpan = likeDiv.querySelector('.js-like__number');

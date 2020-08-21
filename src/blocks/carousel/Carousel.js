@@ -1,31 +1,35 @@
 class Carousel {
   constructor(element) {
-    this.carousel = element;
-    this.slideIndex = 1;
+    this._init(element);
     this._showSlides(this.slideIndex);
     this._addEventListeners();
   }
 
+  _init(element) {
+    this.carousel = element;
+    this.slideIndex = 1;
+  }
+
   _addEventListeners() {
     const prev = this.carousel.querySelector('.js-carousel__button-prev');
-    prev.addEventListener('click', this._plusSlides.bind(this, -1));
+    prev.addEventListener('click', this._handleArrowClick.bind(this, -1));
 
     const next = this.carousel.querySelector('.js-carousel__button-next');
-    next.addEventListener('click', this._plusSlides.bind(this, 1));
+    next.addEventListener('click', this._handleArrowClick.bind(this, 1));
 
     const dots = Array.from(
       this.carousel.querySelectorAll('.js-carousel__dot')
     );
     dots.map((dot, i) =>
-      dot.addEventListener('click', this._currentSlide.bind(this, i + 1))
+      dot.addEventListener('click', this._handleDotClick.bind(this, i + 1))
     );
   }
 
-  _plusSlides(n) {
+  _handleArrowClick(n) {
     this._showSlides((this.slideIndex += n));
   }
 
-  _currentSlide(n) {
+  _handleDotClick(n) {
     this._showSlides((this.slideIndex = n));
   }
 

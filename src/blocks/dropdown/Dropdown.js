@@ -5,44 +5,56 @@ class Dropdown {
   }
 
   _addEventListeners() {
-    document.addEventListener('click', this._hide.bind(this));
+    document.addEventListener('click', this._handleDocumentClick.bind(this));
 
     const box = this.dropdown.querySelector('.js-dropdown__box');
-    box.addEventListener('click', this._toggle.bind(this));
+    box.addEventListener('click', this._handleBoxClick.bind(this));
 
     const operators = this.dropdown.querySelectorAll('.js-dropdown__operator');
     Array.from(operators).forEach((operator) =>
-      operator.addEventListener('click', this._handleOperator.bind(this))
+      operator.addEventListener('click', this._handleOperatorClick.bind(this))
     );
 
     const submitButton = this.dropdown.querySelector('.js-dropdown__submit');
-    submitButton.addEventListener('click', this._submit.bind(this));
+    submitButton.addEventListener('click', this._handleSubmitButtonClick.bind(this));
 
     const clearButton = this.dropdown.querySelector('.js-dropdown__clear');
     clearButton.firstElementChild.addEventListener(
       'click',
-      this._clear.bind(this)
+      this._handleClearButtonClick.bind(this)
     );
   }
 
-  _submit() {
+  _handleBoxClick() {
     this._toggle();
+  }
+
+  _handleSubmitButtonClick() {
+    this._toggle();
+  }
+
+  _handleClearButtonClick() {
+    this._clear();
   }
 
   _toggle() {
     const menu = this.dropdown.querySelector('.js-dropdown__menu');
     menu.classList.toggle('dropdown__menu_hidden');
+
     const icon = this.dropdown.querySelector('.js-dropdown__icon');
     icon.classList.toggle('dropdown__icon_rotated');
+
     const box = this.dropdown.querySelector('.js-dropdown__box');
     box.classList.toggle('dropdown__box_opened');
     box.classList.toggle('dropdown__box_closed');
   }
 
-  _hide(event) {
+  _handleDocumentClick(event) {
     if (event.target.closest('.js-dropdown') === this.dropdown) return;
+
     const isClosed = !this.dropdown.querySelector('.dropdown__box_opened');
     if (isClosed) return;
+
     this._toggle();
   }
 
@@ -56,7 +68,7 @@ class Dropdown {
     clearButton.classList.add('dropdown__clear_hidden');
   }
 
-  _handleOperator(event) {
+  _handleOperatorClick(event) {
     let valueElement;
     let minusElement;
     const isTargetPlus = event.target.classList.contains(

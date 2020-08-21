@@ -3,6 +3,10 @@ import 'ion-rangeslider/css/ion.rangeSlider.css';
 
 class RangeSlider {
   constructor(element) {
+    this._init(element);
+  }
+
+  _init(element) {
     this.resultSpan = element.siblings('.js-range-slider__result');
 
     element.ionRangeSlider({

@@ -3,11 +3,11 @@ import 'air-datepicker/dist/css/datepicker.min.css';
 
 class DateDropdown {
   constructor($element) {
-    this.$dropdown = $element;
-    this._init();
+    this._init($element);
   }
 
-  _init() {
+  _init($element) {
+    this.$dropdown = $element;
     const $calendar = this.$dropdown.children('.js-date-dropdown__calendar');
 
     this.calendar = $calendar
@@ -32,19 +32,19 @@ class DateDropdown {
     this._addEventListeners();
   }
 
-  _toggleCalendar() {
+  _handleInputClick() {
     this.$datepicker.toggle();
   }
 
-  _hideCalendar() {
+  _handleSubmitBtnClick() {
     this.$datepicker.hide();
   }
 
-  _clearInputs() {
+  _handleClearBtnClick() {
     this.calendar.clear();
   }
 
-  _documentOnClick(event) {
+  _handleDocumentClick(event) {
     const $target = $(event.target);
     const targetIsCell = $target.hasClass('datepicker--cell');
     const targetIsNavAction = !!$target.parents('.datepicker--nav-action')
@@ -55,7 +55,7 @@ class DateDropdown {
       targetIsDropdown || targetIsNavAction || targetIsNavTitle || targetIsCell;
     if (targetIsWithinCalendar) return;
 
-    this._hideCalendar();
+    this.$datepicker.hide();
   }
 
   _addButtons() {
@@ -70,7 +70,7 @@ class DateDropdown {
     const clear = this.$dropdown.find('.js-date-dropdown__clear');
     const clearBtn = clear.find('button');
 
-    clearBtn.on('click', this._clearInputs.bind(this));
+    clearBtn.on('click', this._handleClearBtnClick.bind(this));
     $buttons.append(clear);
   }
 
@@ -79,7 +79,7 @@ class DateDropdown {
     const submitBtn = submit.find('button');
 
     if (!this.isInline) {
-      submitBtn.on('click', this._hideCalendar.bind(this));
+      submitBtn.on('click', this._handleSubmitBtnClick.bind(this));
     }
 
     $buttons.append(submit);
@@ -90,12 +90,12 @@ class DateDropdown {
 
     !this.isInline
       && this.$datepicker.hide()
-      && $(document).on('click', this._documentOnClick.bind(this));
+      && $(document).on('click', this._handleDocumentClick.bind(this));
 
     $inputs
       .closest('.js-date-dropdown__input-box')
       .each((index, element) =>
-        $(element).on('click', this._toggleCalendar.bind(this))
+        $(element).on('click', this._handleInputClick.bind(this))
       );
   }
 
