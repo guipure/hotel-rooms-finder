@@ -99,9 +99,8 @@ class Dropdown {
   }
 
   _handleMinus(minusElement, value) {
-    if (value === 0) {
-      minusElement.classList.add('dropdown__operator_disabled');
-    }
+    value === 0
+      && minusElement.classList.add('dropdown__operator_disabled');
 
     value > 0
       && minusElement.classList.contains('dropdown__operator_disabled')
@@ -133,11 +132,11 @@ class Dropdown {
       const allItems = [];
 
       values.forEach((value, index) => {
-        if (value > 0) {
+        value > 0 && (
           allItems.push(
             value.toString() + this._correctEnding(value, labels[index])
-          );
-        }
+          )
+        )
       });
 
       result.innerHTML = allItems.join(', ');
@@ -178,11 +177,9 @@ class Dropdown {
       value.previousElementSibling.classList.add('dropdown__operator_disabled');
     });
 
-    if (result.classList.contains('guests')) {
-      result.innerHTML = 'Сколько гостей';
-    } else {
-      result.innerHTML = 'Сколько кроватей';
-    }
+    result.classList.contains('guests')
+      ? result.innerHTML = 'Сколько гостей'
+      : result.innerHTML = 'Сколько кроватей';
 
     this._hideClearButton();
   }
