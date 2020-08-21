@@ -4,10 +4,7 @@ mixin radio(labels)
 
   .radio
     each label in labels
-      +radioBtn(label, randomName)
-
-mixin radioBtn(label, randomName)
-  label.radio__container
-    input.radio__input_default(type="radio" name=randomName)
-    span.radio__input_styled
-    span.radio__label=label
+      label.radio__container
+        input.radio__input_default(type="radio" name=randomName)
+        span.radio__input_styled
+        span.radio__label=label 
