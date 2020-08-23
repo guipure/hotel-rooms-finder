@@ -1,0 +1,6 @@
+mixin ui-color({ theme = 'Dark Shade 100%', number, className = 'dark-shade-100' })
+  .ui-color
+    div(class=`ui-color__square ui-color__square_${className}`)
+    .ui-color__label
+      .ui-color__theme= theme
+      .ui-color__number= number

@@ -1,6 +1,6 @@
 extends ../../layouts/ui-kit.pug
-include ../../blocks/color/color
-include ../../blocks/typography/typography
+include ../../blocks/ui-color/ui-color
+include ../../blocks/ui-typography/ui-typography
 
 block title
   title Colors and type
@@ -15,10 +15,10 @@ block content
     .colors-and-type__container
       .colors-and-type__colors
         each color in colors
-          +color(color)
+          +ui-color(color)
 
       .colors-and-type__type
-        +typography()
+        +ui-typography()
 
   if !isProdEnv
     script(src="scripts/colors-and-type.bundle.js")

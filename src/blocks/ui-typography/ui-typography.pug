@@ -1,0 +1,14 @@
+mixin ui-typography
+  -
+    const types = require('@blocks/ui-typography/data.json');
+
+  .ui-typography
+    each item in types
+      -
+        const { label, example, type } = item;
+        const labelClass = `ui-typography__label ui-typography__label_${type}`;
+        const exampleClass = `ui-typography__example ui-typography__example_${type}`
+      
+      .ui-typography__row
+        div(class=labelClass)=label
+        div(class=exampleClass)=example

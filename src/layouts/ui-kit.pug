@@ -1,4 +1,4 @@
-include ../blocks/logo-ui/logo-ui
+include ../blocks/ui-logo/ui-logo
 
 block variables
   - const isProdEnv = htmlWebpackPlugin.options.currentEnv === 'production';
@@ -21,6 +21,6 @@ html
 
   body.ui-kit
     .ui-kit__logo
-      +logo-ui
+      +ui-logo
 
     block content
