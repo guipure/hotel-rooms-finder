@@ -1,9 +1,37 @@
 [
-  "Dark Shade 100%",
-  "Dark Shade 75%",
-  "Dark Shade 50%",
-  "Dark Shade 25%",
-  "Dark Shade 5%",
-  "Purple",
-  "Green"
+  {
+    "theme": "Dark Shade 100%",
+    "number": "#1F2041",
+    "className": "dark-shade-100"
+  },
+  {
+    "theme": "Dark Shade 75%",
+    "number": "#1F2041",
+    "className": "dark-shade-75"
+  },
+  {
+    "theme": "Dark Shade 50%",
+    "number": "#1F2041",
+    "className": "dark-shade-50"
+  },
+  {
+    "theme": "Dark Shade 25%",
+    "number": "#1F2041",
+    "className": "dark-shade-25"
+  },
+  {
+    "theme": "Dark Shade 5%",
+    "number": "#1F2041",
+    "className": "dark-shade-5"
+  },
+  {
+    "theme": "Purple",
+    "number": "#BC9CFF",
+    "className": "purple"
+  },
+  {
+    "theme": "Green",
+    "number": "#6FCF97",
+    "className": "green"
+  }
 ]
