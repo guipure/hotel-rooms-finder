@@ -14,4 +14,5 @@ block content
     .sign-in__container
       +sign-in
 
-  script(src="scripts/sign-in.bundle.js")
+  if !isProdEnv
+    script(src="scripts/sign-in.bundle.js")

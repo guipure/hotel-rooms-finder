@@ -20,4 +20,5 @@ block content
       .colors-and-type__type
         +typography()
 
-  script(src="scripts/colors-and-type.bundle.js")
+  if !isProdEnv
+    script(src="scripts/colors-and-type.bundle.js")

@@ -32,4 +32,5 @@ block content
       .h-and-f__card
         +footer-small(smallFooterOptions)
 
-  script(src="scripts/headers-and-footers.bundle.js")
+  if !isProdEnv
+    script(src="scripts/headers-and-footers.bundle.js")
