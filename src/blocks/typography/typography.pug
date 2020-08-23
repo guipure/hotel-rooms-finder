@@ -6,9 +6,9 @@ mixin typography
     each item in types
       -
         const { label, example, type } = item;
-        const leftClass = `typography__left-side typography__left-side_${type}`;
-        const rightClass = `typography__right-side typography__right-side_${type}`
+        const labelClass = `typography__label typography__label_${type}`;
+        const exampleClass = `typography__example typography__example_${type}`
       
       .typography__row
-        div(class=leftClass)=label
-        div(class=rightClass)=example
+        div(class=labelClass)=label
+        div(class=exampleClass)=example

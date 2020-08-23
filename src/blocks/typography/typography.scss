@@ -11,50 +11,50 @@
     gap: 3rem;
   }
 
-  &__left-side {
+  &__label {
     font-family: Montserrat, Arial, sans-serif;
     color: $dark-shade-25;
     min-width: 4rem;
     text-align: right;
   }
 
-  &__right-side {
+  &__example {
     max-width: 36.6rem;
   }
 
-  &__left-side_h1 {
+  &__label_h1 {
     font-size: 2.4rem;
     line-height: 2.9rem;
   }
 
-  &__right-side_h1 {
+  &__example_h1 {
     @include h1;
   }
 
-  &__left-side_h2 {
+  &__label_h2 {
     font-size: 1.9rem;
     line-height: 2.3rem;
   }
 
-  &__right-side_h2 {
+  &__example_h2 {
     @include h2;
   }
 
-  &__left-side_h3 {
+  &__label_h3 {
     font-size: 1.2rem;
     line-height: 1.5rem;
   }
 
-  &__right-side_h3 {
+  &__example_h3 {
     @include h3;
   }
 
-  &__left-side_body {
+  &__label_body {
     font-size: 1.4rem;
     line-height: 2.4rem;
   }
 
-  &__right-side_body {
+  &__example_body {
     font-size: 1.4rem;
   }
 }
