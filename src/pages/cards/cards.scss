@@ -7,22 +7,22 @@
 @import '@blocks/carousel/carousel';
 @import '../../layouts/ui-kit';
 
-.cards__card {
-  margin: 4rem 2rem;
-  width: 100%;
-}
-
-.cards__background {
+.cards {
   position: absolute;
   background-color: #f4f4f6;
   min-width: 100%;
-}
 
-.cards__wrapper {
-  display: grid;
-  grid-template-columns: 42rem 42rem 32rem;
-  max-width: 144rem;
-  padding: 14rem 15rem;
-  margin: auto;
-  box-sizing: border-box;
+  &__card {
+    margin: 4rem 2rem;
+    width: 100%;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 42rem 42rem 32rem;
+    max-width: 144rem;
+    padding: 14rem 15rem;
+    margin: auto;
+    box-sizing: border-box;
+  }
 }

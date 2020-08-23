@@ -5,19 +5,19 @@
 @import '@blocks/socials/socials';
 @import '../../layouts/ui-kit';
 
-.h-and-f__card {
-  margin-bottom: 4rem;
-}
-
-.h-and-f__background {
+.h-and-f {
   position: absolute;
   background-color: #f4f4f6;
   min-width: 100%;
   min-height: 100%;
-}
 
-.h-and-f__wrapper {
-  max-width: 144rem;
-  padding: 14rem 0;
-  margin: auto;
+  &__card {
+    margin-bottom: 4rem;
+  }
+
+  &__wrapper {
+    max-width: 144rem;
+    padding: 14rem 0;
+    margin: auto;
+  }
 }

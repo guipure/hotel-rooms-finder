@@ -3,17 +3,15 @@
 @import '../../layouts/base';
 
 .landing-page {
-  &__main {
-    flex: 1 0 auto;
-    background: url('./img/main.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 83rem;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-  }
+  flex: 1 0 auto;
+  background: url('./img/main.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 83rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
 
   &__container {
     width: 116rem;

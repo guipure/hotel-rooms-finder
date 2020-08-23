@@ -12,15 +12,13 @@
 @import '@styles/titles';
 
 .search-room {
-  &__container {
-    flex: 1 0 auto;
-    width: 120rem;
-    padding: 0 2rem;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    box-sizing: border-box;
-  }
+  flex: 1 0 auto;
+  width: 120rem;
+  padding: 0 2rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
 
   @media (max-width: 1200px) {
     &__container {
