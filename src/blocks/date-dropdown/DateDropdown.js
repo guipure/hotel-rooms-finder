@@ -94,7 +94,7 @@ class DateDropdown {
 
     $inputs
       .closest('.js-date-dropdown__input-box')
-      .each((index, element) =>
+      .each((_, element) =>
         $(element).on('click', this._handleInputClick.bind(this))
       );
   }
