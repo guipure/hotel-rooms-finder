@@ -22,7 +22,15 @@ mixin dropdown({ type = 'guests', placeholder = '', items })
 
       .dropdown__buttons
         .js-dropdown__submit.dropdown__submit
-          +button({theme: 'purple-link', value: 'применить', type: 'button'})
+          +button({
+            typeModifier: 'link',
+            colorModifier: 'purple',
+            value: 'применить'
+          })
 
         .js-dropdown__clear.dropdown__clear.dropdown__clear_hidden
-          +button({theme: 'grey-link', value: 'очистить', type: 'button'})
+          +button({
+            typeModifier: 'link',
+            colorModifier: 'gray',
+            value: 'очистить'
+          })

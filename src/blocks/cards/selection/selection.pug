@@ -20,4 +20,8 @@ mixin selection
         })
 
     .selection__button
-      +button({theme: 'long', value: 'подобрать номер'})
+      +button({
+        typeModifier: 'submit',
+        themeModifier: 'filled',
+        value: 'подобрать номер'
+      })

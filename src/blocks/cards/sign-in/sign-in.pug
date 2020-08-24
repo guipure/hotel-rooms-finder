@@ -13,8 +13,16 @@ mixin sign-in
       +input({placeholder: 'Пароль', type: 'password'})
 
     .sign-in__button
-      +button({theme: 'long', value: 'войти'})
+      +button({
+        typeModifier: 'submit',
+        themeModifier: 'filled',
+        value: 'войти'
+      })
 
     .sign-in__sign-up Нет аккаунта на Toxin?
       .sign-in__sign-up-button
-        +button({theme: 'purple-border', value: 'создать'})
+        +button({
+          typeModifier: 'button',
+          themeModifier: 'bordered',
+          value: 'создать'
+        })

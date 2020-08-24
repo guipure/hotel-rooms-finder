@@ -23,10 +23,18 @@ mixin date-dropdown({ labels, isInline = false, placeholder = 'ДД.ММ.ГГГ�
   div(class=dateDropdownClassName)
     div(class=calendarClassName)
       .date-dropdown__submit.js-date-dropdown__submit
-        +button({theme: 'purple-link', value: 'применить', type: 'button'})
+        +button({
+          typeModifier: 'link',
+          colorModifier: 'purple',
+          value: 'применить'
+        })
 
       .date-dropdown__clear.js-date-dropdown__clear
-        +button({theme: 'grey-link', value: 'очистить', type: 'button'})
+        +button({
+          typeModifier: 'link',
+          colorModifier: 'gray',
+          value: 'очистить'
+        })
 
     if !isInline
       +field({name: firstName, size })

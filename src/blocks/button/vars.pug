@@ -1,30 +1,35 @@
 block fakeBlock
-  - let buttonClassName = 'button__inner button__inner_'
-  - let wrapperClassName = 'button'
+  -
+    const typeModifiers = {
+      button: 'button_type_button',
+      submit: 'button_type_submit',
+      link: 'button_type_link',
+    };
+    
+    const themeModifiers = {
+      filled: 'button_theme_filled',
+      bordered: 'button_theme_bordered',
+    };
 
-  case theme
-    when 'purple-border'
-      - wrapperClassName += ' button_purple-border'
-      - buttonClassName += 'purple-border'
+    const colorModifiers = {
+      gray: 'button_color_gray',
+      purple: 'button_color_purple',
+    };
 
-    when 'small-purple-border'
-      - wrapperClassName += ' button_purple-border'
-      - buttonClassName += 'small-purple-border'
+    const sizeModifiers = {
+      small: 'button_size_small',
+    };
 
-    when 'long'
-      - wrapperClassName += ' button_long'
-      - buttonClassName += 'long'
+    const classes = [
+      'button',
+      typeModifiers[typeModifier],
+      themeModifiers[themeModifier],
+      colorModifiers[colorModifier],
+      sizeModifiers[sizeModifier],
+    ]
 
-    when 'purple-link'
-      - buttonClassName += 'purple-link'
+    const isLink = typeModifier === 'link';
+    const tag = isLink ? 'a' : 'button';
+    const type = isLink ? false : typeModifier;
 
-    when 'grey-link'
-      - buttonClassName += 'grey-link'
-
-    when 'small-purple'
-      - buttonClassName += 'small-purple'
-
-    default
-      - buttonClassName += 'purple'
-
-  - const buttonAttributes = { class: buttonClassName, type }
+    const buttonAttributes = { class: classes, type }

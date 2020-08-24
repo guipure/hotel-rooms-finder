@@ -32,8 +32,16 @@ mixin registration
       +toggle('Получать спецпредложения')
 
     .registration__payBtn
-      +button({theme: 'long', value: 'перейти к оплате'})
+      +button({
+        typeModifier: 'submit',
+        themeModifier: 'filled',
+        value: 'перейти к оплате'
+      })
 
     .registration__sign-in Уже есть аккаунт на Toxin
       .registration__sign-in-btn
-        +button({theme: 'purple-border', value: 'войти'})
+        +button({
+          typeModifier: 'button',
+          themeModifier: 'bordered',
+          value: 'войти'
+        })

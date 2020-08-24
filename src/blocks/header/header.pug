@@ -31,7 +31,17 @@ mixin header({ login, register, menu, isLoggedIn = false, name = 'User' })
         else
           .header__buttons
             .header__button
-              +button({theme: 'small-purple-border', value: loginValue})
+              +button({
+                typeModifier: 'button',
+                themeModifier: 'bordered',
+                sizeModifier: 'small',
+                value: loginValue,
+              })
 
             .header__button
-              +button({theme: 'small-purple', value: registerValue})
+              +button({
+                typeModifier: 'button',
+                themeModifier: 'filled',
+                sizeModifier: 'small',
+                value: registerValue,
+              })

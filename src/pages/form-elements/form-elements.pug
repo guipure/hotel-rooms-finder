@@ -95,19 +95,47 @@ block content
       .form-elements__item
         +field({name: 'buttons', size: 'large'})
           .form-elements__button-row
-            +button({theme: 'purple', value: 'click me'})
-            +button({theme: 'purple', value: 'click me'})
+            +button({
+              typeModifier: 'button',
+              themeModifier: 'filled',
+              value: 'click me'
+            })
+            +button({
+              typeModifier: 'button',
+              themeModifier: 'filled',
+              value: 'click me'
+            })
 
           .form-elements__button-row
-            +button({theme: 'purple-border', value: 'click me'})
-            +button({theme: 'purple-border', value: 'click me'})
+            +button({
+              typeModifier: 'button',
+              themeModifier: 'bordered',
+              value: 'click me'
+            })
+            +button({
+              typeModifier: 'button',
+              themeModifier: 'bordered',
+              value: 'click me'
+            })
 
           .form-elements__button-row                
-            +button({theme: 'purple-link', value: 'click me'})
-            +button({theme: 'grey-link', value: 'click me'})
+            +button({
+              typeModifier: 'link',
+              colorModifier: 'purple',
+              value: 'click me'
+            })
+            +button({
+              typeModifier: 'link',
+              colorModifier: 'gray',
+              value: 'click me'
+            })
 
           .form-elements__button-row
-            +button({theme: 'long', value: 'перейти к оплате'})
+            +button({
+              typeModifier: 'submit',
+              themeModifier: 'filled',
+              value: 'перейти к оплате'
+            })
 
       .form-elements__item
         +field({name: 'pagination', size: 'large'})

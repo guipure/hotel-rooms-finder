@@ -47,4 +47,8 @@ mixin booking({ number = '000', isLux = false, price = '0' })
         | 38&nbsp081₽
 
     .booking__button
-      +button({theme: 'long', value: 'забронировать'})
+      +button({
+        typeModifier: 'submit',
+        themeModifier: 'filled',
+        value: 'забронировать'
+      })

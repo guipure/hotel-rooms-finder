@@ -1,86 +1,67 @@
 $border: 0.2rem;
 
 .button {
+  margin: 0;
   display: inline-block;
-  border-radius: 2.5rem;
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  border-radius: 2.2rem;
+  text-transform: uppercase;
 
-  &_purple-border {
-    background: $purple-gradient;
-    padding: $border;
-  }
-
-  &_long {
+  &_type_submit {
+    position: relative;
+    min-height: 4.4rem;
     width: 100%;
+
+    &::after {
+      content: 'arrow_forward';
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      font-family: 'Material Icons';
+      font-weight: normal;
+      font-size: 24px;
+      text-transform: none;
+    }
   }
 
-  &:hover {
-    opacity: 0.5;
-  }
-
-  &__inner {
-    border: none;
+  &_type_link {
+    line-height: inherit;
     background: none;
-    cursor: pointer;
-    outline: none;
-    border-radius: 2.2rem;
-    font-family: Montserrat, Arial, sans-serif;
-    font-weight: bold;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    padding: 0;
-
-    &_purple-border {
-      height: 4.4rem - 2 * $border;
-      min-width: 9.5rem;
-      background: white;
-      color: $purple;
-      padding: 0 2rem-$border;
-    }
-
-    &_small-purple-border {
-      height: 3.4rem - 2 * $border;
-      background: white;
-      color: $purple;
-      padding: 0 2rem-$border;
-    }
-
-    &_long {
-      position: relative;
-      min-height: 4.4rem;
-      width: 100%;
-      color: white;
-      background: $purple-gradient;
-    }
-
-    &_purple-link {
-      color: $purple;
-      line-height: inherit;
-    }
-
-    &_grey-link {
-      color: $dark-shade-50;
-      line-height: inherit;
-    }
-
-    &_purple {
-      height: 4.4rem;
-      color: white;
-      background: $purple-gradient;
-      padding: 0 2rem;
-    }
-  
-    &_small-purple {
-      height: 3.4rem;
-      color: white;
-      background: $purple-gradient;
-      padding: 0 2rem;
-    }
   }
 
-  &__icon {
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
+  &_theme_filled {
+    height: 4.4rem;
+    color: white;
+    background: $purple-gradient;
+    padding: 0 2rem;
+  }
+
+  &_theme_bordered {
+    border: solid $border transparent;
+    background-image: linear-gradient(white, white), $purple-gradient;
+    -webkit-background-clip: padding-box, border-box;
+    background-clip: padding-box, border-box;
+    min-width: 9.5rem;
+    height: 4.4rem;
+    color: $purple;
+    padding: 0 2rem-$border;
+  }
+
+  &_color_gray {
+    color: $dark-shade-50;
+  }
+
+  &_color_purple {
+    color: $purple;
+  }
+
+  &_size_small {
+    height: 3.4rem;
   }
 }
 
