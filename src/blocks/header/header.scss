@@ -49,6 +49,18 @@
   &__item_expandable {
     position: relative;
     padding-right: 4.1rem;
+
+    &::after {
+      content: 'expand_more';
+      position: absolute;
+      top: 0.9rem;
+      color: $dark-shade-50;
+      cursor: pointer;
+      font-family: 'Material Icons';
+      font-weight: normal;
+      font-size: 24px;
+      text-transform: none;
+    }
   }
 
   &__link {
@@ -63,13 +75,6 @@
   &__item_active > &__link {
     font-weight: bold;
     color: $dark-shade-75;
-  }
-
-  &__arrow {
-    position: absolute;
-    top: 0.9rem;
-    color: $dark-shade-50;
-    cursor: pointer;
   }
 
   &__buttons {

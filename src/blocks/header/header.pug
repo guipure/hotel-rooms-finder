@@ -1,10 +1,7 @@
 include ../logo/logo
 include ../button/button
 
-mixin header({ login, register, menu, isLoggedIn = false, name = 'User' })
-  - const loginValue = login ? login : 'login'
-  - const registerValue = register ? register : 'register'
-
+mixin header({ login = 'login', register = 'register', menu, isLoggedIn = false, name = 'User' })
   .header
     .header__container
       .header__logo
@@ -14,14 +11,13 @@ mixin header({ login, register, menu, isLoggedIn = false, name = 'User' })
         ul
           each item in menu
             -
-              let itemClass = 'header__item'
-              itemClass += item.list ? ' header__item_expandable' : ''
-              itemClass += item.isActive ? ' header__item_active' : ''
+              const modifiers = [
+                item.list && 'header__item_expandable',
+                item.isActive && 'header__item_active',
+              ]
 
-            li(class=itemClass)
+            li.header__item(class=modifiers)
               a.header__link(href="/mock-address/change-me")=item.item
-              if item.list
-                span.header__arrow.material-icons expand_more
 
       .header__login
         if isLoggedIn
@@ -35,7 +31,7 @@ mixin header({ login, register, menu, isLoggedIn = false, name = 'User' })
                 typeModifier: 'button',
                 themeModifier: 'bordered',
                 sizeModifier: 'small',
-                value: loginValue,
+                value: login,
               })
 
             .header__button
@@ -43,5 +39,5 @@ mixin header({ login, register, menu, isLoggedIn = false, name = 'User' })
                 typeModifier: 'button',
                 themeModifier: 'filled',
                 sizeModifier: 'small',
-                value: registerValue,
+                value: register,
               })
