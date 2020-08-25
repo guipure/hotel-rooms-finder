@@ -47,8 +47,7 @@ class DateDropdown {
   _handleDocumentClick(event) {
     const $target = $(event.target);
     const targetIsCell = $target.hasClass('datepicker--cell');
-    const targetIsNavAction = !!$target.parents('.datepicker--nav-action')
-      .length;
+    const targetIsNavAction = !!$target.parents('.datepicker--nav-action').length;
     const targetIsNavTitle = !!$target.closest('.datepicker--nav-title').length;
     const targetIsDropdown = !!$target.parents('.js-date-dropdown').length;
     const targetIsWithinCalendar =
