@@ -1,5 +1,5 @@
 mixin field({ size, name = '', annotation = '' })
-  .field(class= size ? `field_${size}` : '')
+  .field(class= size && `field_${size}`)
     .field__label
       .field__name= name
       .field__annotation= annotation
