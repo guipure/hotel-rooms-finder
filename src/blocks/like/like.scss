@@ -13,15 +13,6 @@
     border-color: $purple;
   }
 
-  &__number {
-    position: relative;
-    vertical-align: top;
-    left: 30%;
-    color: $dark-shade-25;
-    font-size: 1rem;
-    line-height: 1.8rem;
-  }
-
   &__icon {
     position: relative;
     vertical-align: top;
@@ -31,8 +22,17 @@
     line-height: 1.8rem;
   }
 
-  &_liked &__number,
-  &_liked &__icon {
+  &__number {
+    position: relative;
+    vertical-align: top;
+    left: 30%;
+    color: $dark-shade-25;
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
+
+  &_liked &__icon,
+  &_liked &__number {
     color: $purple;
   }
 }
