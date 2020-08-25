@@ -4,7 +4,7 @@ mixin carousel(images)
   .carousel.js-carousel
     each img in images
       img.carousel__image.js-carousel__image(
-        src=require('@blocks/carousel/img/' + img + '.jpg').default,
+        src=require(`@blocks/carousel/img/${img}.jpg`).default,
         alt="room photo"
       )
 
