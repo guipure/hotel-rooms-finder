@@ -138,6 +138,7 @@ const commonConfig = {
       '@pages': path.resolve(__dirname, '../src/pages'),
       '@blocks': path.resolve(__dirname, '../src/blocks'),
       '@styles': path.resolve(__dirname, '../src/assets/styles'),
+      '@fonts': path.resolve(__dirname, '../src/assets/styles/fonts'),
     },
   },
 };
