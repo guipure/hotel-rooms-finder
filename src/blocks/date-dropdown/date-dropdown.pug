@@ -5,23 +5,17 @@ mixin date-dropdown({ labels, isInline = false, placeholder = 'ДД.ММ.ГГГ�
   -
     const firstName = labels[0]
     const hasSecondField = labels.length > 1
-    let secondName
-    let size
+    const secondName = hasSecondField && labels[1]
+    const size = hasSecondField ? 'small' : 'medium'
 
-  if hasSecondField
-    - secondName = labels[1]
-    - size = 'small'
-  else
-    - size = 'medium'
+    const fieldModifier = hasSecondField ? 'doubleField' : 'oneField'
+    const dateDropdownClassName = `date-dropdown_${fieldModifier}`
 
-  -
-    let dateDropdownClassName = 'date-dropdown js-date-dropdown date-dropdown_'
-    dateDropdownClassName += hasSecondField ? 'doubleField' : 'oneField'
-    let calendarClassName = 'date-dropdown__calendar js-date-dropdown__calendar date-dropdown__calendar_'
-    calendarClassName += isInline ? 'inline' : 'default'
+    const calendarModifier = isInline ? 'inline' : 'default'
+    const calendarClassName = `date-dropdown__calendar_${calendarModifier}`
 
-  div(class=dateDropdownClassName)
-    div(class=calendarClassName)
+  .date-dropdown.js-date-dropdown(class=dateDropdownClassName)
+    .date-dropdown__calendar.js-date-dropdown__calendar(class=calendarClassName)
       .date-dropdown__submit.js-date-dropdown__submit
         +button({
           typeModifier: 'link',
