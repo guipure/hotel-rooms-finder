@@ -1,3 +1,3 @@
 import '@blocks/date-dropdown/date-dropdown-init';
 import '@blocks/dropdown/dropdown-init';
-import '@blocks/like/like';
+import '@blocks/like/like-init';
