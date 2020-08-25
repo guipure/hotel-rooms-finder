@@ -1,11 +1,15 @@
 @import '../../assets/styles/main';
+@import '@fonts/material-icons';
+@import '@fonts/montserrat';
+@import '@fonts/open-sans';
+@import '@fonts/quicksand';
 @import '@blocks/donut-chart/donut-chart';
 @import '@blocks/cards/booking/booking';
 @import '@blocks/icon/icon';
 @import '@blocks/comment/comment';
 @import '@blocks/bullet-list/bullet-list';
 @import '../../layouts/base';
-@import '@styles/titles';
+@import '@styles/mixins/titles';
 
 .room-details {
   flex: 1 0 auto;

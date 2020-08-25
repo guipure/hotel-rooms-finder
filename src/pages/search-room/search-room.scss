@@ -1,4 +1,8 @@
 @import '../../assets/styles/main';
+@import '@fonts/material-icons';
+@import '@fonts/montserrat';
+@import '@fonts/open-sans';
+@import '@fonts/quicksand';
 @import '@blocks/field/field';
 @import '@blocks/dropdown/dropdown';
 @import '@blocks/date-dropdown/date-dropdown';
@@ -9,7 +13,7 @@
 @import '@blocks/checkbox-list/checkbox-list';
 @import '@blocks/cards/room/room';
 @import '../../layouts/base';
-@import '@styles/titles';
+@import '@styles/mixins/titles';
 
 .search-room {
   flex: 1 0 auto;

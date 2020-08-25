@@ -1,12 +1,6 @@
 @import '../../assets/fonts/awesome-brands/css/all.min.css';
-@import './font-face';
+@import '../mixins/font-face';
 
-@include font-face('Quicksand', 'quicksand');
-@include font-face('Quicksand', 'quicksand', 'bold', 700);
-@include font-face('Montserrat', 'montserrat');
-@include font-face('Montserrat', 'montserrat', 'bold', 700);
-@include font-face('Open Sans', 'open-sans');
-@include font-face('Open Sans', 'open-sans', 'bold', 700);
 @include font-face('Material Icons', 'material-icons');
 
 .material-icons {

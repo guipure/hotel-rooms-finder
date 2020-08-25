@@ -1,6 +1,6 @@
 @import '@blocks/button/button';
 @import '@blocks/field/field';
-@import '@styles/titles';
+@import '@styles/mixins/titles';
 
 .date-dropdown {
   display: flex;
