@@ -20,7 +20,7 @@ block content
     section.room-details__gallery
       .room-details__photos
         each image in images
-          img.room-details__photo(src=require(image + '.jpg').default, alt="room photo")
+          img.room-details__photo(src=require(`${image}.jpg`).default, alt="room photo")
 
     .room-details__container
       section.room-details__info
