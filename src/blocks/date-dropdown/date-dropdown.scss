@@ -51,15 +51,15 @@
     z-index: 10;
     top: 7rem;
   }
-}
 
-.date-dropdown__icon {
-  color: $dark-shade-50;
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
-  user-select: none;
-  cursor: pointer;
+  &__icon {
+    color: $dark-shade-50;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    user-select: none;
+    cursor: pointer;
+  }
 }
 
 .datepicker-inline .datepicker {
