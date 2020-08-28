@@ -18,7 +18,6 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    line-height: 3rem;
   }
 
   &__number-sign {
@@ -49,7 +48,7 @@
   }
 
   &__dates {
-    padding: 1.5rem 0 2rem;
+    padding: 1.8rem 0 2rem;
   }
 
   &__price {
@@ -61,7 +60,7 @@
   &__fee {
     display: flex;
     justify-content: space-between;
-    line-height: 1.8rem;
+    line-height: 1.2857;
     padding-bottom: 1.6rem;
   }
 
@@ -78,7 +77,6 @@
     width: 2rem;
     height: 2rem;
     text-align: center;
-    line-height: 2rem;
     cursor: default;
     box-sizing: border-box;
   }

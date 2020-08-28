@@ -10,7 +10,7 @@
     color: $dark-shade-50;
     text-decoration: none;
     font-size: 1.2rem;
-    line-height: 4rem;
+    line-height: 3.3333;
   }
 
   &_active {
@@ -31,7 +31,6 @@
     height: 4rem;
     border-radius: 50%;
     text-align: center;
-    line-height: 4rem;
   }
   
   .paginationjs-prev,
@@ -41,13 +40,13 @@
   
   .pagination__icon {
     font-size: 2.4rem;
-    line-height: 4rem;
+    line-height: 1.6667;
     color: white;
   }
 
   &__text {
     font-size: 1.4rem;
     padding-left: 0.5rem;
-    line-height: 4rem;
+    line-height: 2.8571;
   }
 }

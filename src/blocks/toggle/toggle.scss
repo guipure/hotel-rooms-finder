@@ -1,6 +1,7 @@
 .toggle {
   &__container {
     display: flex;
+    align-items: center;
     cursor: pointer;
   }
 
@@ -40,7 +41,6 @@
   &__label {
     padding-left: 1rem;
     font-size: 1.4rem;
-    line-height: 2rem;
     color: $dark-shade-75;
     user-select: none;
   }
