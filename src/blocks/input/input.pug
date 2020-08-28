@@ -1,11 +1,12 @@
 mixin input({ type = 'text', placeholder = '', isSub = false, isMasked = false })
   -
-    let inputClassName = 'input__box'
-    inputClassName += isSub ? ' input__box_sub' : ''
-    inputClassName += isMasked ? ' js-input__box_masked' : ''
-    const inputAttributes = { type, placeholder, class: inputClassName }
+    const modifiers = [
+      isSub && 'input__box_sub',
+      isMasked && 'input__box_masked js-input__box_masked',
+    ]
+    const inputAttributes = { type, placeholder, class: modifiers }
 
   .input
-    input&attributes(inputAttributes)
+    input.input__box&attributes(inputAttributes)
     if isSub
       i.input__icon.material-icons arrow_forward
