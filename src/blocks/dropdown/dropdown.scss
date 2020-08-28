@@ -104,13 +104,11 @@
 
     &_minus::before {
       content: '-';
-      vertical-align: middle;
       line-height: 2.8rem;
     }
   
     &_plus::before {
       content: '+';
-      vertical-align: middle;
       line-height: 2.8rem;
     }
   }
