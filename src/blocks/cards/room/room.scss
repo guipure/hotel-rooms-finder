@@ -20,6 +20,7 @@
     align-items: baseline;
     line-height: 2.4rem;
     padding-bottom: 0.7rem;
+    border-bottom: 1px solid $dark-shade-10;
   }
 
   &_num {
@@ -46,12 +47,6 @@
 
   &__per-day {
     font-size: 1.2rem;
-  }
-
-  &__line {
-    width: 23rem;
-    height: 0.1rem;
-    background-color: $dark-shade-10;
   }
 
   &__feedback {
