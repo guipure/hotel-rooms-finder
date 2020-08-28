@@ -35,10 +35,9 @@ $border: 0.2rem;
   }
 
   &_theme_filled {
-    height: 4.4rem;
     color: white;
     background: $purple-gradient;
-    padding: 0 2rem;
+    padding: 1.45rem 2rem;
   }
 
   &_theme_bordered {
@@ -47,9 +46,8 @@ $border: 0.2rem;
     -webkit-background-clip: padding-box, border-box;
     background-clip: padding-box, border-box;
     min-width: 9.5rem;
-    height: 4.4rem;
     color: $purple;
-    padding: 0 2rem-$border;
+    padding: 1.45rem-$border 2rem-$border;
   }
 
   &_color_gray {
@@ -62,6 +60,7 @@ $border: 0.2rem;
 
   &_size_small {
     height: 3.4rem;
+    padding: 0 2rem;
   }
 }
 
