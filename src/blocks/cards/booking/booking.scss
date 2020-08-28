@@ -67,11 +67,10 @@
 
   &__left-col {
     max-width: 21.4rem;
+    padding-right: 0.6rem;
   }
 
   &__info {
-    position: absolute;
-    left: 22rem;
     color: $dark-shade-25;
     font-weight: bold;
     border: $border-25;
@@ -88,6 +87,11 @@
     &__info {
       display: none;
     }
+  }
+
+  &__right-col {
+    flex-grow: 1;
+    text-align: right;
   }
 
   &__total-price {
