@@ -47,13 +47,12 @@
   }
 
   &__item_expandable {
-    position: relative;
-    padding-right: 4.1rem;
+    padding-right: 1.7rem;
 
     &::after {
       content: 'expand_more';
-      position: absolute;
-      top: 0.9rem;
+      position: relative;
+      top: 0.8rem;
       color: $dark-shade-50;
       cursor: pointer;
       font-family: 'Material Icons';
