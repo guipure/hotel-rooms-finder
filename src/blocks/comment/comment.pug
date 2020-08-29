@@ -1,13 +1,16 @@
 include ../like/like
 
 mixin comment({ date, photo, name = 'User', likes = 0, comment = '' })
-  include ./vars
+  include ./functions
+  -
+    const imgAttributes = generateImgAttributes(photo, name);
+    const relativeDate = generateDate(date);
 
   .comment
     .comment__info
       img&attributes(imgAttributes)
       .comment__name=name
-      .comment__date=relDate
+      .comment__date=relativeDate
 
     .comment__body
       .comment__like
