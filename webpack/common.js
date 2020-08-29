@@ -33,20 +33,25 @@ function getRules(type) {
       use: scssLoaders[type],
     },
     {
+      test: /\.(png|jpe?g|gif|svg|ico|webmanifest)$/i,
+      include: path.resolve(__dirname, '../src/assets/favicons/'),
+      loader: 'file-loader',
+      options: {
+        name: '[path][name].[ext]',
+        emitFile: false,
+      },
+    },
+    {
       test: /\.(png|jpg|svg|gif)$/,
       loader: 'file-loader',
-      exclude: [
-        path.resolve(__dirname, '../src/assets/fonts/'),
-      ],
+      exclude: path.resolve(__dirname, '../src/assets/fonts/'),
       options: {
         outputPath: 'assets/img/',
       },
     },
     {
       test: /\.(ttf|woff|svg|eot|woff2)$/,
-      include: [
-        path.resolve(__dirname, '../src/assets/fonts/'),
-      ],
+      include: path.resolve(__dirname, '../src/assets/fonts/'),
       loader: 'file-loader',
       options: {
         outputPath: 'assets/fonts/',
@@ -139,6 +144,7 @@ const commonConfig = {
       '@blocks': path.resolve(__dirname, '../src/blocks'),
       '@styles': path.resolve(__dirname, '../src/assets/styles'),
       '@fonts': path.resolve(__dirname, '../src/assets/styles/fonts'),
+      '@favicons': path.resolve(__dirname, '../src/assets/favicons'),
     },
   },
 };
