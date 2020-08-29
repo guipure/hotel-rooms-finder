@@ -63,9 +63,10 @@ function getRules(type) {
       use: {
         loader: 'babel-loader',
         options: {
-          presets: [
-            '@babel/preset-env',
-          ]
+          presets: ['@babel/preset-env'],
+          plugins: [
+            ['@babel/plugin-proposal-decorators', { legacy: true }]
+          ],
         }
       }
     },
@@ -122,6 +123,7 @@ const commonConfig = {
       './pages/form-elements/form-elements.scss',
     ],
     cards: [
+      // '@babel/polyfill',
       './pages/cards/cards.js',
       './pages/cards/cards.scss',
     ],
@@ -135,6 +137,7 @@ const commonConfig = {
       './pages/search-room/search-room.scss',
     ],
     'room-details': [
+      // '@babel/polyfill',
       './pages/room-details/room-details.js',
       './pages/room-details/room-details.scss',
     ],
