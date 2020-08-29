@@ -1,5 +1,10 @@
 mixin donut-chart(score)
-  include ./constants
+  include ./functions
+  -
+    const radius = '58';
+    const sum = getSum(score);
+    const circles = generateCircles(score, sum, radius);
+    const { gradients, ratings } = require('@blocks/donut-chart/data.json');
 
   figure.donut-chart
     .donut-chart__donut
