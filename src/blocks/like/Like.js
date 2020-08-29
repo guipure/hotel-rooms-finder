@@ -1,13 +1,15 @@
+import bind from 'bind-decorator';
+
 class Like {
   constructor(element) {
     this._init(element);
   }
 
   _init(element) {
-    this._handleLikeClick = this._handleLikeClick.bind(this);
     element.addEventListener('click', this._handleLikeClick);
   }
 
+  @bind
   _handleLikeClick(event) {
     const likeDiv = event.currentTarget;
     const iconSpan = likeDiv.querySelector('.js-like__icon');

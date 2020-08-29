@@ -1,3 +1,4 @@
+import bind from 'bind-decorator';
 import 'ion-rangeslider';
 import 'ion-rangeslider/css/ion.rangeSlider.css';
 
@@ -14,11 +15,12 @@ class RangeSlider {
       step: 100,
       hide_min_max: true,
       hide_from_to: true,
-      onChange: this._showData.bind(this),
-      onStart: this._showData.bind(this),
+      onChange: this._showData,
+      onStart: this._showData,
     });
   }
 
+  @bind
   _showData(data) {
     this.resultSpan.html(`${data.from_pretty}₽ - ${data.to_pretty}₽`);
   }

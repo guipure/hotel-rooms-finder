@@ -1,3 +1,5 @@
+import bind from 'bind-decorator';
+
 class Dropdown {
   constructor(element) {
     this.dropdown = element;
@@ -5,34 +7,37 @@ class Dropdown {
   }
 
   _addEventListeners() {
-    document.addEventListener('click', this._handleDocumentClick.bind(this));
+    document.addEventListener('click', this._handleDocumentClick);
 
     const box = this.dropdown.querySelector('.js-dropdown__box');
-    box.addEventListener('click', this._handleBoxClick.bind(this));
+    box.addEventListener('click', this._handleBoxClick);
 
     const operators = this.dropdown.querySelectorAll('.js-dropdown__operator');
     Array.from(operators).forEach((operator) =>
-      operator.addEventListener('click', this._handleOperatorClick.bind(this))
+      operator.addEventListener('click', this._handleOperatorClick)
     );
 
     const submitButton = this.dropdown.querySelector('.js-dropdown__submit');
-    submitButton.addEventListener('click', this._handleSubmitButtonClick.bind(this));
+    submitButton.addEventListener('click', this._handleSubmitButtonClick);
 
     const clearButton = this.dropdown.querySelector('.js-dropdown__clear');
     clearButton.firstElementChild.addEventListener(
       'click',
-      this._handleClearButtonClick.bind(this)
+      this._handleClearButtonClick
     );
   }
 
+  @bind
   _handleBoxClick() {
     this._toggle();
   }
 
+  @bind
   _handleSubmitButtonClick() {
     this._toggle();
   }
 
+  @bind
   _handleClearButtonClick() {
     this._clear();
   }
@@ -49,6 +54,7 @@ class Dropdown {
     box.classList.toggle('dropdown__box_closed');
   }
 
+  @bind
   _handleDocumentClick(event) {
     if (event.target.closest('.js-dropdown') === this.dropdown) return;
 
@@ -68,6 +74,7 @@ class Dropdown {
     clearButton.classList.add('dropdown__clear_hidden');
   }
 
+  @bind
   _handleOperatorClick(event) {
     let valueElement;
     let minusElement;
