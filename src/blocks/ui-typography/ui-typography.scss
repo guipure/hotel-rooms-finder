@@ -1,29 +1,29 @@
 @import '@styles/mixins/titles';
 
 .ui-typography {
-  max-width: 41.5rem;
+  max-width: 29.6429rem;
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  gap: 3.5714rem;
 
   &__row {
     display: flex;
-    gap: 3rem;
+    gap: 2.1429rem;
   }
 
   &__label {
     font-family: Montserrat, Arial, sans-serif;
     color: $dark-shade-25;
-    min-width: 4rem;
+    min-width: 2.8571rem;
     text-align: right;
   }
 
   &__example {
-    max-width: 36.6rem;
+    max-width: 26.1429rem;
   }
 
   &__label_h1 {
-    font-size: 2.4rem;
+    font-size: 1.7143rem;
     line-height: 1.2083;
   }
 
@@ -32,7 +32,7 @@
   }
 
   &__label_h2 {
-    font-size: 1.9rem;
+    font-size: 1.3571rem;
     line-height: 1.2105;
   }
 
@@ -41,7 +41,7 @@
   }
 
   &__label_h3 {
-    font-size: 1.2rem;
+    font-size: 0.8571rem;
     line-height: 1.25;
   }
 
@@ -50,11 +50,11 @@
   }
 
   &__label_body {
-    font-size: 1.4rem;
+    font-size: 1rem;
     line-height: 1.7143;
   }
 
   &__example_body {
-    font-size: 1.4rem;
+    font-size: 1rem;
   }
 }

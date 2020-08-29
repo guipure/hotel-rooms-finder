@@ -4,8 +4,8 @@
   &__box {
     font-family: inherit;
     border: $border-25;
-    border-radius: 0.3rem;
-    padding: 1.3rem 1.5rem;
+    border-radius: 0.2143rem;
+    padding: 0.9286rem 1.0714rem;
     outline: none;
     width: 100%;
     box-sizing: border-box;
@@ -26,8 +26,8 @@
 
   &__icon {
     position: absolute;
-    right: 1rem;
-    top: 1rem;
+    right: 0.7143rem;
+    top: 0.7143rem;
     color: $purple;
     user-select: none;
     cursor: pointer;

@@ -1,10 +1,10 @@
 .donut-chart {
   display: flex;
   margin: 0;
-  font-size: 1.4rem;
+  font-size: 1rem;
 
   &__svg {
-    max-width: 12rem;
+    max-width: 8.5714rem;
   }
 
   &__text {
@@ -15,20 +15,20 @@
   &__number {
     font-family: Quicksand, Arial, sans-serif;
     font-weight: bold;
-    font-size: 2.4rem;
+    font-size: 1.7143rem;
     text-anchor: middle;
     transform: translateY(-0.25em);
   }
 
   &__label {
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.0714rem;
     text-anchor: middle;
     transform: translateY(0.7em);
   }
 
   &__legend {
-    padding-left: 3rem;
+    padding-left: 2.1429rem;
     align-self: flex-end;
   }
 
@@ -40,10 +40,10 @@
 
   &__key-circle {
     display: inline-block;
-    width: 1rem;
-    height: 1rem;
+    width: 0.7143rem;
+    height: 0.7143rem;
     border-radius: 50%;
-    margin-right: 0.5rem;
+    margin-right: 0.3571rem;
   }
   
   &__key-circle_yellow {

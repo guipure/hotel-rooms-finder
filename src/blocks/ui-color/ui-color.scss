@@ -5,9 +5,9 @@
 
   &__square {
     display: inline-block;
-    width: 7rem;
-    height: 7rem;
-    border-radius: 0.6rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 0.4286rem;
   }
 
   &__square_dark-shade-100 {
@@ -41,12 +41,12 @@
   &__label {
     @include h2;
     display: inline-block;
-    padding: 0.9rem 0 0.5rem 4rem;
-    width: 20rem;
+    padding: 0.6429rem 0 0.3571rem 2.8571rem;
+    width: 14.2857rem;
   }
 
   &__number {
     font-weight: normal;
-    padding-top: 0.5rem;
+    padding-top: 0.3571rem;
   }
 }

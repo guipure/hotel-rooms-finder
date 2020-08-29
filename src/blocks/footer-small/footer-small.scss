@@ -6,14 +6,14 @@
   align-items: center;
   background-color: white;
   max-width: 100%;
-  border-top: 0.1rem solid $dark-shade-10;
+  border-top: 0.0714rem solid $dark-shade-10;
   box-shadow: $subtle-shadow;
-  padding: 10rem 0 11rem;
+  padding: 7.1429rem 0 10.7143rem;
 
   &__info {
-    max-width: 60rem;
-    font-size: 1.4rem;
+    max-width: 42.8571rem;
+    font-size: 1rem;
     text-align: center;
-    padding: 1.7rem 0 2.8rem;
+    padding: 1.2143rem 0 2rem;
   }
 }

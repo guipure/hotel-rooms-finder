@@ -10,16 +10,16 @@
   background: url('./img/main.jpg');
   background-repeat: no-repeat;
   background-position: center;
-  height: 83rem;
+  height: 59.2857rem;
   width: 100%;
   display: flex;
   justify-content: center;
   margin: 0 auto;
 
   &__container {
-    width: 116rem;
+    width: 82.8571rem;
     display: flex;
-    padding: 7rem 0 2.1rem;
+    padding: 5rem 0 1.5rem;
     flex-direction: column;
     justify-content: space-between;
   }
@@ -31,9 +31,9 @@
   }
 
   &__slogan {
-    font-size: 1.4rem;
+    font-size: 1rem;
     text-align: right;
-    max-width: 30rem;
+    max-width: 21.4286rem;
     align-self: flex-end;
   }
 

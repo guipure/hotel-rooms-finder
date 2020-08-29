@@ -1,7 +1,7 @@
 .icon {
-  max-width: 28rem;
-  border-bottom: 0.1rem solid $dark-shade-10;
-  padding: 2rem 0;
+  max-width: 20rem;
+  border-bottom: 0.0714rem solid $dark-shade-10;
+  padding: 1.4286rem 0;
   
   &:last-child {
     border: none;
@@ -14,9 +14,9 @@
   }
 
   &__icon.material-icons {
-    max-width: 4.8rem;
-    max-height: 4.8rem;
-    font-size: 4.8rem;
+    max-width: 3.4286rem;
+    max-height: 3.4286rem;
+    font-size: 3.4286rem;
     background: $purple-gradient;
     -webkit-background-clip: text;
     background-clip: text;
@@ -25,8 +25,8 @@
   
   &__text {
     display: inline-block;
-    font-size: 1.4rem;
-    padding-left: 1rem;
+    font-size: 1rem;
+    padding-left: 0.7143rem;
   }
   
   &__header {

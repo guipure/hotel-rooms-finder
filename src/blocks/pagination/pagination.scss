@@ -9,7 +9,7 @@
   a {
     color: $dark-shade-50;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 0.8571rem;
     line-height: 3.3333;
   }
 
@@ -27,8 +27,8 @@
   .paginationjs-next,
   .paginationjs-ellipsis {
     display: inline-block;
-    width: 4rem;
-    height: 4rem;
+    width: 2.8571rem;
+    height: 2.8571rem;
     border-radius: 50%;
     text-align: center;
   }
@@ -39,14 +39,14 @@
   }
   
   .pagination__icon {
-    font-size: 2.4rem;
+    font-size: 1.7143rem;
     line-height: 1.6667;
     color: white;
   }
 
   &__text {
-    font-size: 1.4rem;
-    padding-left: 0.5rem;
+    font-size: 1rem;
+    padding-left: 0.3571rem;
     line-height: 2.8571;
   }
 }

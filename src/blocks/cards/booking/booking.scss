@@ -6,11 +6,11 @@
 .booking {
   background-color: white;
   display: inline-block;
-  padding: 3.9rem 2.9rem 2.9rem;
-  max-width: 38rem;
+  padding: 2.7857rem 2.0714rem 2.0714rem;
+  max-width: 27.1429rem;
   width: 100%;
   border: $border-12;
-  border-radius: 0.4rem;
+  border-radius: 0.2857rem;
   box-shadow: $strong-shadow;
   box-sizing: border-box;
 
@@ -21,7 +21,7 @@
   }
 
   &__number-sign {
-    font-size: 1.4rem;
+    font-size: 1rem;
     font-weight: bold;
     font-family: 'Quicksand', Arial, sans-serif;
     color: $dark-shade-100;
@@ -29,44 +29,44 @@
 
   &__number {
     @include h1;
-    padding: 0 0.6rem 0 0.4rem;
+    padding: 0 0.4286rem 0 0.2857rem;
   }
 
   &__lux {
     color: $purple;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 0.8571rem;
   }
 
   &__day-price {
     color: $dark-shade-50;
-    font-size: 1.4rem;
+    font-size: 1rem;
   }
 
   &__per-day {
-    font-size: 1.2rem;
+    font-size: 0.8571rem;
   }
 
   &__dates {
-    padding: 1.8rem 0 2rem;
+    padding: 1.2857rem 0 1.4286rem;
   }
 
   &__price {
     position: relative;
-    font-size: 1.4rem;
-    padding: 2.1rem 0 1.5rem 0.1rem;
+    font-size: 1rem;
+    padding: 1.5rem 0 1.0714rem 0.0714rem;
   }
 
   &__fee {
     display: flex;
     justify-content: space-between;
     line-height: 1.2857;
-    padding-bottom: 1.6rem;
+    padding-bottom: 1.1429rem;
   }
 
   &__left-col {
-    max-width: 21.4rem;
-    padding-right: 0.6rem;
+    max-width: 21rem;
+    padding-right: 0.4286rem;
   }
 
   &__info {
@@ -74,8 +74,8 @@
     font-weight: bold;
     border: $border-25;
     border-radius: 50%;
-    width: 2rem;
-    height: 2rem;
+    width: 1.4286rem;
+    height: 1.4286rem;
     text-align: center;
     cursor: default;
     box-sizing: border-box;
@@ -97,11 +97,11 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    padding: 1.4rem 0 0.5rem;
+    padding: 1rem 0 0.3571rem;
   }
 
   &__dotted-line {
     width: 55%;
-    border-bottom: 0.1rem dotted $dark-shade-25;
+    border-bottom: 0.0714rem dotted $dark-shade-25;
   }
 }

@@ -5,25 +5,25 @@
 
 .room {
   background-color: white;
-  max-width: 27rem;
-  border-radius: 0.4rem;
+  max-width: 19.2857rem;
+  border-radius: 0.2857rem;
   box-shadow: $subtle-shadow;
 
   &__info {
-    font-size: 1.4rem;
-    padding: 2rem 1.9rem 1.9rem 2.1rem;
+    font-size: 1rem;
+    padding: 1.4286rem 1.3571rem 1.3571rem 1.5rem;
   }
 
   &__title {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    padding-bottom: 0.6rem;
-    border-bottom: 0.1rem solid $dark-shade-10;
+    padding-bottom: 0.4286rem;
+    border-bottom: 0.0714rem solid $dark-shade-10;
   }
 
   &_num {
-    font-size: 1.4rem;
+    font-size: 1rem;
     font-weight: bold;
     font-family: 'Quicksand', Arial, sans-serif;
     color: $dark-shade-100;
@@ -31,13 +31,13 @@
 
   &_number {
     @include h2;
-    padding: 0 0.5rem 0 0.4rem;
+    padding: 0 0.3571rem 0 0.2857rem;
   }
 
   &_lux {
     color: $purple;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 0.8571rem;
   }
 
   &__day-price {
@@ -45,7 +45,7 @@
   }
 
   &__per-day {
-    font-size: 1.2rem;
+    font-size: 0.8571rem;
   }
 
   &__feedback {
@@ -53,7 +53,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 0.9rem;
+    padding-top: 0.6429rem;
   }
 
   &__resp-sum {

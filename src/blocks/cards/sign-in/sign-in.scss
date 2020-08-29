@@ -4,28 +4,28 @@
 
 .sign-in {
   background-color: white;
-  padding: 3.9rem 2.9rem 3.1rem;
-  max-width: 38rem;
+  padding: 2.7857rem 2.0714rem 2.2143rem;
+  max-width: 27.1429rem;
   width: 100%;
   border: $border-12;
-  border-radius: 0.4rem;
+  border-radius: 0.2857rem;
   box-shadow: $strong-shadow;
   box-sizing: border-box;
 
   &__title {
     @include h1;
-    padding-bottom: 2rem;
+    padding-bottom: 1.4286rem;
   }
 
   &__pass {
-    padding: 1rem 0 2rem;
+    padding: 0.7143rem 0 1.4286rem;
   }
 
   &__sign-up {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 1.4rem;
-    padding-top: 3rem;
+    font-size: 1rem;
+    padding-top: 2.1429rem;
   }
 }

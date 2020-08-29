@@ -1,11 +1,11 @@
 .like {
   display: inline-block;
   position: relative;
-  height: 2rem;
-  width: 4rem;
+  height: 1.4286rem;
+  width: 2.8571rem;
   cursor: pointer;
   user-select: none;
-  border-radius: 1rem;
+  border-radius: 0.7143rem;
   border: $border-25;
   box-sizing: border-box;
 
@@ -18,7 +18,7 @@
     vertical-align: top;
     left: 10%;
     color: $dark-shade-25;
-    font-size: 1rem;
+    font-size: 0.7143rem;
     line-height: 1.8;
   }
 
@@ -27,7 +27,7 @@
     vertical-align: top;
     left: 30%;
     color: $dark-shade-25;
-    font-size: 1rem;
+    font-size: 0.7143rem;
     line-height: 1.8;
   }
 

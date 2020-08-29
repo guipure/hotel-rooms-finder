@@ -4,15 +4,15 @@
 
 .index {
   display: grid;
-  padding: 3rem 10rem;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  padding: 2.1429rem 7.1429rem;
+  gap: 1.4286rem;
+  grid-template-columns: repeat(auto-fit, minmax(21.4286rem, 1fr));
 
   &__card {
-    max-width: 40rem;
+    max-width: 28.5714rem;
     text-align: center;
-    border: 0.1rem solid #ccc;
-    border-radius: 1rem;
+    border: 0.0714rem solid #ccc;
+    border-radius: 0.7143rem;
   }
 
   &__title {

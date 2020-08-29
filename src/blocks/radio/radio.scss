@@ -1,5 +1,5 @@
 .radio {
-  width: 25rem;
+  width: 17.8571rem;
   user-select: none;
   display: flex;
   flex-wrap: wrap;
@@ -15,9 +15,9 @@
   }
 
   &__input_styled {
-    padding: 0.3rem;
-    height: 2rem;
-    width: 2rem;
+    padding: 0.2143rem;
+    height: 1.4286rem;
+    width: 1.4286rem;
     border: $border-25;
     border-radius: 50%;
     box-sizing: border-box;
@@ -25,8 +25,8 @@
 
   &__input_styled::after {
     content: '';
-    height: 1.2rem;
-    width: 1.2rem;
+    height: 0.8571rem;
+    width: 0.8571rem;
     border-radius: 50%;
     background: $purple-gradient;
     display: none;
@@ -42,10 +42,10 @@
   }
 
   &__label {
-    padding-left: 1rem;
-    padding-right: 2rem;
+    padding-left: 0.7143rem;
+    padding-right: 1.4286rem;
     color: $dark-shade-50;
-    font-size: 1.4rem;
+    font-size: 1rem;
     cursor: pointer;
   }
 }

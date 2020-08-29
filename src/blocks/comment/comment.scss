@@ -1,26 +1,26 @@
 @import '@blocks/like/like';
 
 .comment {
-  font-size: 1.4rem;
+  font-size: 1rem;
 
   &__photo {
     float: left;
     border-radius: 50%;
-    max-width: 4.8rem;
-    border: 0.2rem solid #ffffff;
+    max-width: 3.4286rem;
+    border: 0.1429rem solid #ffffff;
     box-sizing: border-box;
     box-shadow: $light-shadow;
   }
 
   &__like {
     float: left;
-    padding-top: 0.2rem;
-    padding-left: 0.4rem;
+    padding-top: 0.1429rem;
+    padding-left: 0.2857rem;
   }
 
   &__body {
-    padding-top: 1rem;
-    max-width: 71.1rem;
+    padding-top: 0.7143rem;
+    max-width: 50.7857rem;
   }
 
   &__name {
@@ -30,6 +30,6 @@
   &__name,
   &__date,
   &__text {
-    padding-left: 5.8rem;
+    padding-left: 4.1429rem;
   }
 }
