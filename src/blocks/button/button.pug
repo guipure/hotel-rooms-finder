@@ -1,4 +1,12 @@
 mixin button({ typeModifier, themeModifier, colorModifier, sizeModifier, value = '' })
-  include ./vars
+  include ./functions
+  -
+    const classNames = generateClasses(typeModifier, themeModifier, colorModifier, sizeModifier);
+
+    const isLink = typeModifier === 'link';
+    const tag = isLink ? 'a' : 'button';
+    const type = isLink ? false : typeModifier;
+
+    const buttonAttributes = { class: classNames, type };
 
   #{tag}&attributes(buttonAttributes)= value

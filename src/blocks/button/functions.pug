@@ -1,0 +1,31 @@
+block fakeBlock
+  -
+    function generateClasses(typeModifier, themeModifier, colorModifier, sizeModifier) {
+      const typeModifiers = {
+        button: 'button_type_button',
+        submit: 'button_type_submit',
+        link: 'button_type_link',
+      };
+      
+      const themeModifiers = {
+        filled: 'button_theme_filled',
+        bordered: 'button_theme_bordered',
+      };
+
+      const colorModifiers = {
+        gray: 'button_color_gray',
+        purple: 'button_color_purple',
+      };
+
+      const sizeModifiers = {
+        small: 'button_size_small',
+      };
+
+      return [
+        'button',
+        typeModifiers[typeModifier],
+        themeModifiers[themeModifier],
+        colorModifiers[colorModifier],
+        sizeModifiers[sizeModifier],
+      ];
+    }
