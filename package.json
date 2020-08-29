@@ -13,6 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/guipure/hotel-rooms-finder.git"
   },
+  "browserslist": "> 0.25%, not dead",
   "keywords": [
     "pug",
     "sass",
@@ -27,6 +28,9 @@
   },
   "homepage": "https://github.com/guipure/hotel-rooms-finder#readme",
   "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "@babel/preset-env": "^7.11.0",
+    "babel-loader": "^8.1.0",
     "eslint": "^7.5.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-import-resolver-webpack": "^0.12.2",
@@ -36,6 +40,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.10.4",
     "air-datepicker": "^2.2.3",
     "clean-webpack-plugin": "^3.0.0",
     "cross-env": "^7.0.2",
