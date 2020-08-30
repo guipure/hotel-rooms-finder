@@ -41,7 +41,7 @@ $border: 0.1429rem;
     color: white;
     background: $purple-gradient;
     padding: 1.0357rem 1.4286rem;
-    min-width: 6.2143rem;
+    min-width: 6.7857rem;
   }
 
   &_theme_bordered {
@@ -49,7 +49,7 @@ $border: 0.1429rem;
     background-image: linear-gradient(white, white), $purple-gradient;
     -webkit-background-clip: padding-box, border-box;
     background-clip: padding-box, border-box;
-    min-width: 6.2143rem;
+    min-width: 6.7857rem;
     color: $purple;
     padding: 1.0357rem-$border 1.4286rem-$border;
   }
@@ -63,6 +63,7 @@ $border: 0.1429rem;
   }
 
   &_size_small {
+    min-width: 6.2143rem;
     height: 2.4286rem;
     padding: 0 1.4286rem;
   }
