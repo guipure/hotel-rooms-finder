@@ -66,22 +66,20 @@ class DateDropdown {
   }
 
   _addClearBtn($buttons) {
-    const clear = this.$dropdown.find('.js-date-dropdown__clear');
-    const clearBtn = clear.find('button');
+    const clearBtn = this.$dropdown.find('.js-date-dropdown__clear');
 
     clearBtn.on('click', this._handleClearBtnClick.bind(this));
-    $buttons.append(clear);
+    $buttons.append(clearBtn);
   }
 
   _addSubmitBtn($buttons) {
-    const submit = this.$dropdown.find('.js-date-dropdown__submit');
-    const submitBtn = submit.find('button');
+    const submitBtn = this.$dropdown.find('.js-date-dropdown__submit');
 
     if (!this.isInline) {
       submitBtn.on('click', this._handleSubmitBtnClick.bind(this));
     }
 
-    $buttons.append(submit);
+    $buttons.append(submitBtn);
   }
 
   _addEventListeners() {

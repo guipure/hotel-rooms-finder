@@ -12,6 +12,10 @@ $border: 0.1429rem;
   border-radius: 1.5714rem;
   text-transform: uppercase;
 
+  &:hover {
+    opacity: 0.5;
+  }
+
   &_type_submit {
     position: relative;
     min-height: 3.1429rem;
