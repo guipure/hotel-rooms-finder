@@ -1,3 +1,4 @@
+import bind from 'bind-decorator';
 import 'air-datepicker';
 import 'air-datepicker/dist/css/datepicker.min.css';
 
@@ -20,7 +21,7 @@ class DateDropdown {
         clearButton: true,
         selectOtherYears: false,
         range: true,
-        onSelect: this._onSelect.bind(this),
+        onSelect: this._onSelect,
         inline: true,
       })
       .data('datepicker');
@@ -32,18 +33,22 @@ class DateDropdown {
     this._addEventListeners();
   }
 
+  @bind
   _handleInputClick() {
     this.$datepicker.toggle();
   }
 
+  @bind
   _handleSubmitBtnClick() {
     this.$datepicker.hide();
   }
 
+  @bind
   _handleClearBtnClick() {
     this.calendar.clear();
   }
 
+  @bind
   _handleDocumentClick(event) {
     const $target = $(event.target);
     const targetIsCell = $target.hasClass('datepicker--cell');
@@ -68,7 +73,7 @@ class DateDropdown {
   _addClearBtn($buttons) {
     const clearBtn = this.$dropdown.find('.js-date-dropdown__clear');
 
-    clearBtn.on('click', this._handleClearBtnClick.bind(this));
+    clearBtn.on('click', this._handleClearBtnClick);
     $buttons.append(clearBtn);
   }
 
@@ -76,7 +81,7 @@ class DateDropdown {
     const submitBtn = this.$dropdown.find('.js-date-dropdown__submit');
 
     if (!this.isInline) {
-      submitBtn.on('click', this._handleSubmitBtnClick.bind(this));
+      submitBtn.on('click', this._handleSubmitBtnClick);
     }
 
     $buttons.append(submitBtn);
@@ -87,15 +92,16 @@ class DateDropdown {
 
     !this.isInline
       && this.$datepicker.hide()
-      && $(document).on('click', this._handleDocumentClick.bind(this));
+      && $(document).on('click', this._handleDocumentClick);
 
     $inputs
       .closest('.js-date-dropdown__input-box')
       .each((_, element) =>
-        $(element).on('click', this._handleInputClick.bind(this))
+        $(element).on('click', this._handleInputClick)
       );
   }
 
+  @bind
   _onSelect() {
     const $inputs = this.$dropdown.find('.js-date-dropdown__input');
     const $input = $inputs.eq(0);
