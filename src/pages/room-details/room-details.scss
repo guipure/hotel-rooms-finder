@@ -72,7 +72,7 @@
 
   &__container {
     width: 85.7143rem;
-    padding: 5rem 1.4286rem 5.1429rem;
+    padding: 5rem 1.4286rem 5.2857rem;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -131,11 +131,12 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    padding-bottom: 1.2143rem;
   }
 
   &__info-title {
     @include h2;
-    padding-bottom: 1.4286rem;
+    margin: 0;
   }
 
   &__info-annotation {
@@ -150,17 +151,20 @@
   &__impressions-title {
     @include h2;
     padding-bottom: 1.2143rem;
+    margin: 0;
   }
 
   &__rules-title {
     @include h2;
     padding-bottom: 1.1429rem;
     padding-left: 1.4286rem;
+    margin: 0;
   }
 
   &__cancel-title {
     @include h2;
     padding-bottom: 1.1429rem;
+    margin: 0;
   }
   
   &__info-comment:nth-child(2) {
