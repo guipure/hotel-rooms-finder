@@ -31,7 +31,6 @@
     flex-grow: 1;
     display: flex;
     justify-content: flex-end;
-    padding-right: 0.1429rem;
     flex-wrap: wrap;
   }
 
@@ -43,11 +42,11 @@
 
   &__item {
     display: inline-block;
-    padding-right: 1.2143rem;
+    padding-right: 1.4286rem;
   }
 
   &__item_expandable {
-    padding-right: 1.2143rem;
+    padding-right: 1.3571rem;
 
     &::after {
       content: 'expand_more';
