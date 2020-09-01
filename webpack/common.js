@@ -38,6 +38,7 @@ function getRules(type) {
       loader: 'file-loader',
       options: {
         name: '[path][name].[ext]',
+        outputPath: 'assets/favicons/',
       },
     },
     {
