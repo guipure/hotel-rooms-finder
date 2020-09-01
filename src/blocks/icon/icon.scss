@@ -3,6 +3,10 @@
   border-bottom: 0.0714rem solid $dark-shade-10;
   padding: 1.4286rem 0;
   
+  &:first-child {
+    padding-top: 0;
+  }
+
   &:last-child {
     border: none;
     padding-bottom: 0;
