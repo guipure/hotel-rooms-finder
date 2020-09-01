@@ -38,7 +38,6 @@ function getRules(type) {
       loader: 'file-loader',
       options: {
         name: '[path][name].[ext]',
-        emitFile: false,
       },
     },
     {

@@ -1,4 +1,3 @@
-import '../../assets/favicons/favicons';
 import '@blocks/carousel/carousel-init';
 import '@blocks/checkbox-list/checkbox-list-init';
 import '@blocks/date-dropdown/date-dropdown-init';
