@@ -1,10 +1,10 @@
 include ../logo/logo
 include ../button/button
 
-mixin header({ login = 'login', register = 'register', menu, isLoggedIn = false, name = 'User' })
+mixin header({ logoLink = '', login = 'login', register = 'register', menu, isLoggedIn = false, name = 'User' })
   .header
     .header__container
-      .header__logo
+      a.header__logo(href=logoLink)
         +logo
 
       nav.header__menu
