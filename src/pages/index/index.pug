@@ -12,13 +12,12 @@ block content
 
   nav.index
     each page in pages
-      .index__card
-        h3.index__title
-          a.index__link(href=`./${page}.html`)=page
-            img.index__image(
-              src=require(`./img/${page}.jpg`).default,
-              alt="page preview"
-            )
+      a.index__card(href=`./${page}.html`)
+        h3.index__title=page
+        img.index__image(
+          src=require(`./img/${page}.jpg`).default,
+          alt="page preview"
+        )
 
   if !isProdEnv
     script(src="scripts/index.bundle.js")

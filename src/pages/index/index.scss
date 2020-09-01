@@ -13,14 +13,11 @@
     text-align: center;
     border: 0.0714rem solid #ccc;
     border-radius: 0.7143rem;
+    text-decoration: none;
   }
 
   &__title {
     @include h3;
-  }
-
-  &__link {
-    text-decoration: none;
     color: #777;
   }
 
