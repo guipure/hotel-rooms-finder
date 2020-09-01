@@ -1,7 +1,8 @@
-import 'jquery.maskedinput/src/jquery.maskedinput';
+import Cleave from 'cleave.js';
 
-$.mask.definitions.y = '[12]';
-$.mask.definitions.m = '[01]';
-$.mask.definitions.d = '[0-3]';
-
-$('.js-input__box_masked').each((_, element) => $(element).mask('d9.m9.y999'));
+document.querySelectorAll('.js-input__box_masked').forEach(element => (
+  new Cleave(element, {
+    date: true,
+    delimiter: '.',
+  }
+)));

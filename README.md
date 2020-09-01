@@ -29,3 +29,4 @@ npm i
 - [air-datepicker](http://t1m0n.name/air-datepicker/docs/index.html)
 - [ion-rangeslider](http://ionden.com/a/plugins/ion.rangeSlider/)
 - [paginationjs](https://pagination.js.org/)
+- [cleave.js](https://nosir.github.io/cleave.js/)
