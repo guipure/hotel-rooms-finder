@@ -1,6 +1,6 @@
 {
   "headerOptions": {
-    "logoLink": "/landing-page.html",
+    "logoLink": "/hotel-rooms-finder/landing-page.html",
     "menu": [
       {"item": "О нас"},
       {"item": "Услуги","list": ["Услуга 1", "Услуга 2", "Услуга 3"]},
