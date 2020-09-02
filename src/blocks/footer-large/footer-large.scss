@@ -49,6 +49,10 @@
       display: flex;
       flex-direction: column;
     }
+
+    &__logo {
+      text-align: center;
+    }
   }
 
   &__info {
@@ -65,7 +69,7 @@
     display: flex;
     flex-grow: 1;
     justify-content: space-between;
-    padding: 0 4.0714rem 0 2.8571rem;
+    padding: 0 2.8571rem;
   }
 
   @media (max-width: 1200px) {
@@ -126,6 +130,7 @@
 
   &__subscription {
     max-width: 18.5714rem;
+    padding-left: 1.2143rem;
   }
 
   &__sub-info {

@@ -4,7 +4,7 @@
 
 .date-dropdown {
   display: flex;
-  justify-content: space-between;
+  gap: 1.4286rem;
   position: relative;
   max-width: 22.8571rem;
 
@@ -33,7 +33,7 @@
     }
   }
 
-  @media (max-width: 380px) {
+  @media (max-width: 440px) {
     &__input {
       font-size: 0.8571rem;
     }
@@ -103,7 +103,6 @@
       font-size: 0.8571rem;
       color: $dark-shade-50;
       height: 2.8571rem;
-      width: 2.8571rem;
     }
     
     .datepicker--cell.-other-month- {
