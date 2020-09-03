@@ -43,6 +43,12 @@
     .js-date-dropdown__calendar {
       min-width: 22.8571rem;
     }
+
+    @media (max-width: 440px) {
+      .js-date-dropdown__calendar {
+        min-width: 18rem;
+      }
+    }
   }
 
   &__calendar_default {
