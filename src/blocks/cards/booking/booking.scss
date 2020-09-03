@@ -14,6 +14,12 @@
   box-shadow: $strong-shadow;
   box-sizing: border-box;
 
+  @media(max-width: 440px) {
+    & {
+      padding: 1.5rem;
+    }
+  }
+
   &__title {
     display: flex;
     justify-content: space-between;
