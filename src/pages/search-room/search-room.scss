@@ -17,16 +17,15 @@
 .search-room {
   flex: 1 0 auto;
   width: 100%;
-  max-width: 85.7143rem;
-  padding: 0 1.4286rem;
+  min-width: 320px;
+  padding: 0 10rem;
   margin: 0 auto;
   display: flex;
-  gap: 4.2143rem;
   box-sizing: border-box;
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1439px) {
     & {
-      gap: 2rem;
+      padding: 0 2rem;
     }
   }
 
@@ -39,6 +38,13 @@
 
   &__filter {
     padding-top: 2.1429rem;
+    padding-right: 4.2143rem;
+  }
+
+  @media (max-width: 797px) {
+    &__filter {
+      padding-right: 0;
+    }
   }
 
   &__filter-element {
@@ -82,7 +88,6 @@
 
   &__result {
     flex-grow: 1;
-    max-width: 59.5714rem;
     padding: 2.1429rem 0 4.7143rem;
   }
 
@@ -99,9 +104,16 @@
     padding: 1.4286rem 0 3rem;
   }
 
+  @media (max-width: 1439px) {
+    &__result-cards {
+      grid-template-columns: repeat(auto-fit, minmax(19.2857rem, 1fr));
+    }
+  }
+
   @media (max-width: 970px) {
     &__result-cards {
       justify-content: center;
+      grid-template-columns: repeat(auto-fit, 19.2857rem);
     }
   }
 
