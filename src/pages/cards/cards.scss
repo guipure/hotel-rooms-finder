@@ -12,19 +12,23 @@
 
 .cards {
   background-color: #f4f4f6;
-  min-width: 100%;
-
-  &__card {
-    margin: 2.8571rem 1.4286rem;
-    width: 100%;
-  }
 
   &__wrapper {
-    display: grid;
-    grid-template-columns: 30rem 30rem 22.8571rem;
+    display: flex;
+    gap: 2.8571rem;
     max-width: 102.8571rem;
-    padding: 10rem 10.7143rem;
+    padding: 10.7143rem 10rem;
     margin: auto;
     box-sizing: border-box;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    gap: 2.8571rem;
+  }
+
+  &__card {
+    width: 100%;
   }
 }
