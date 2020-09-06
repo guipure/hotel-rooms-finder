@@ -38,6 +38,11 @@
     margin: 0;
   }
 
+  &__key {
+    display: flex;
+    align-items: center;
+  }
+
   &__key-circle {
     display: inline-block;
     width: 0.7143rem;
