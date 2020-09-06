@@ -4,11 +4,14 @@ include ../button/button
 mixin header({ logoLink = '', login = 'login', register = 'register', menu, isLoggedIn = false, name = 'User' })
   .header
     .header__container
-      a.header__logo(href=logoLink)
-        +logo
+      .header__logo
+        a(href=logoLink)
+          +logo
+        button.header__burger-button.js-header__burger-button
+          .header__burger-icon
 
       nav.header__menu
-        ul
+        ul.header__items-list
           each item in menu
             -
               const modifiers = [
@@ -19,25 +22,25 @@ mixin header({ logoLink = '', login = 'login', register = 'register', menu, isLo
             li.header__item(class=modifiers)
               a.header__link(href="/mock-address/change-me")=item.item
 
-      .header__login
-        if isLoggedIn
-          .header__name-group
-            .header__line
-            .header__name=name
-        else
-          .header__buttons
-            .header__button
-              +button({
-                typeModifier: 'button',
-                themeModifier: 'bordered',
-                sizeModifier: 'small',
-                value: login,
-              })
+        .header__login
+          if isLoggedIn
+            .header__name-group
+              .header__line
+              .header__name=name
+          else
+            .header__buttons
+              .header__button
+                +button({
+                  typeModifier: 'button',
+                  themeModifier: 'bordered',
+                  sizeModifier: 'small',
+                  value: login,
+                })
 
-            .header__button
-              +button({
-                typeModifier: 'button',
-                themeModifier: 'filled',
-                sizeModifier: 'small',
-                value: register,
-              })
+              .header__button
+                +button({
+                  typeModifier: 'button',
+                  themeModifier: 'filled',
+                  sizeModifier: 'small',
+                  value: register,
+                })

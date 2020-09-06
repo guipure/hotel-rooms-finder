@@ -4,6 +4,7 @@
   display: flex;
   justify-content: center;
   background-color: white;
+  min-width: 320px;
   max-width: 100%;
   min-height: 5rem;
   box-shadow: $subtle-shadow;
@@ -11,36 +12,106 @@
   &__container {
     display: flex;
     align-items: center;
-    width: 82.8571rem;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 10rem;
   }
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1439px) {
     &__container {
-      width: 90%;
+      padding: 0 2rem;
     }
   }
 
   @media (max-width: 970px) {
     &__container {
       flex-direction: column;
-      padding: 0.7143rem 0;
+      align-items: unset;
+      justify-content: center;
+      padding: 1.0714rem 2rem;
     }
   }
 
   &__logo {
     line-height: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__burger-button {
+    display: none;
+    border: none;
+    outline: none;
+    background-color: white;
+
+    .header__burger-icon {
+
+      &,
+      &::before,
+      &::after {
+        height: 0.2857rem;
+        width: 2rem;
+        border-radius: 0.2143rem;
+        background: $purple-gradient;
+        transition: 0.2s;
+      }
+  
+      &::before,
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+      }
+  
+      &::before {
+        transform: translateY(0.5714rem);
+      }
+  
+      &::after {
+        transform: translateY(-0.5714rem);
+      }
+    }
+  }
+
+  &__burger-button_active {
+    .header__burger-icon {
+      height: 0;
+
+      &::before {
+        transform: rotate(45deg);
+      }
+      &::after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  @media (max-width: 970px) {
+    &__burger-button {
+      display: block;
+    }
   }
 
   &__menu {
     flex-grow: 1;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     flex-wrap: wrap;
   }
 
   @media (max-width: 970px) {
     &__menu {
+      display: none;
       justify-content: center;
+    }
+  }
+
+  @media (max-width: 970px) {
+    &__items-list {
+      display: flex;
+      flex-direction: column;
+      padding-left: 3.7143rem;
     }
   }
 
@@ -87,6 +158,14 @@
 
   &__button:first-child {
     padding-right: 1.4286rem;
+  }
+
+  @media (max-width: 970px) {
+    &__buttons {
+      flex-direction: column;
+      gap: 1.0714rem;
+      padding-left: 3.7143rem;
+    }
   }
 
   &__name-group {
