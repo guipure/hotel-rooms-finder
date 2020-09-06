@@ -12,6 +12,7 @@
 
 .room-details {
   flex: 1 0 auto;
+  min-width: 320px;
 
   &__gallery {
     width: 100%;
