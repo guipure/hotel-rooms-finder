@@ -10,11 +10,16 @@
   background: url('./img/main.jpg');
   background-repeat: no-repeat;
   background-position: top;
-  height: 59.2857rem;
   width: 100%;
   display: flex;
   justify-content: center;
   margin: 0 auto;
+
+  @media (min-width: 1700px) {
+    & {
+      background-size: 120rem;
+    }
+  }
 
   &__container {
     width: 82.8571rem;
@@ -41,6 +46,12 @@
     max-width: 21.4286rem;
     align-self: flex-end;
     padding-top: 22.6429rem;
+  }
+
+  @media (min-width: 1700px) {
+    &__slogan {
+      padding-top: 28rem;
+    }
   }
 
   @media (max-width: 970px) {
