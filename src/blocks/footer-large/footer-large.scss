@@ -66,40 +66,16 @@
 
   &__menus {
     display: flex;
+    gap: 2rem;
     flex-grow: 1;
-    max-width: 40rem;
+    max-width: 50rem;
     justify-content: space-between;
     padding: 0 2.8571rem;
-  }
-
-  @media (max-width: 1200px) {
-    &__menus {
-      padding: 0 5%;
-    }
   }
 
   @media (max-width: 970px) {
     &__menus {
       padding: 2.1429rem;
-    }
-  }
-
-  @media (max-width: 440px) {
-    &__menus {
-      flex-direction: column;
-    }
-  }
-
-  @media (max-width: 1200px) {
-    &__menu {
-      padding-right: 5%;
-    }
-  }
-
-  @media (max-width: 440px) {
-    &__menu {
-      padding: 0.7143rem;
-      text-align: center;
     }
   }
 
