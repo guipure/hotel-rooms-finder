@@ -21,13 +21,20 @@
       color: white;
     }
   }
+
+  &_active,
+  .paginationjs-prev,
+  .paginationjs-next {
+    min-width: 2.8571rem;
+  }
   
   .paginationjs-page,
   .paginationjs-prev,
   .paginationjs-next,
   .paginationjs-ellipsis {
     display: inline-block;
-    width: 2.8571rem;
+    width: 100%;
+    max-width: 2.8571rem;
     height: 2.8571rem;
     border-radius: 50%;
     text-align: center;

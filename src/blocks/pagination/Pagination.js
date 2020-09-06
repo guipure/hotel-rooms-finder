@@ -8,7 +8,6 @@ class Pagination {
       pageRange: 1,
       autoHidePrevious: true,
       autoHideNext: true,
-      showFirstOnEllipsisShow: false,
       footer: this._getFooter,
       nextText: '<i class="pagination__icon material-icons">arrow_forward</i>',
       prevText: '<i class="pagination__icon material-icons">arrow_back</i>',
