@@ -20,6 +20,12 @@
     margin: 0 auto;
   }
 
+  @media (min-width: 1700px) {
+    &__gallery {
+      max-width: 120rem;
+    }
+  }
+
   &__photos {
     display: grid;
     grid-template-columns: auto auto;
@@ -71,18 +77,23 @@
   }
 
   &__container {
-    width: 85.7143rem;
-    padding: 5rem 1.4286rem 5.2857rem;
+    padding: 5rem 10rem 5.2857rem;
     margin: 0 auto;
     display: flex;
+    gap: 2rem;
     justify-content: space-between;
     box-sizing: border-box;
+  }
+
+  @media (max-width: 1439px) {
+    &__container {
+      padding: 5rem 2rem 5.2857rem;
+    }
   }
 
   @media (max-width: 1200px) {
     &__container {
       flex-direction: column;
-      width: 90%;
       align-items: center;
       gap: 1.4286rem;
     }
@@ -90,14 +101,7 @@
 
   @media (max-width: 970px) {
     &__container {
-      height: auto;
-    }
-  }
-
-  @media (max-width: 970px) {
-    &__container {
       padding: 5rem 0;
-      width: 95%;
     }
   }
 
@@ -109,21 +113,39 @@
     max-width: 50rem;
   }
 
-  @media (max-width: 660px) {
+  @media (min-width: 1700px) {
     &__info {
-      grid-template-columns: auto;
+      max-width: 80rem;
+      column-gap: 5rem;
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     }
   }
 
-  &__info-item:nth-child(3) {
+  @media (max-width: 660px) {
+    &__info {
+      grid-template-columns: auto;
+      padding: 0 1.5rem;
+    }
+  }
+
+  &__comment-item {
     grid-column-start: 1;
     grid-column-end: 3;
   }
   
   @media (max-width: 660px) {
-    &__info-item:nth-child(3) {
+    &__comment-item {
       grid-column-start: 1;
       grid-column-end: 2;
+    }
+  }
+
+  @media (min-width: 1700px) {
+    &__rules-item {
+      grid-column-start: 3;
+      grid-column-end: 4;
+      grid-row-start: 1;
+      grid-row-end: 2;
     }
   }
 
@@ -141,6 +163,7 @@
 
   &__info-annotation {
     color: $dark-shade-50;
+    padding-left: 0.5rem;
     font-size: 1rem;
   }
 
@@ -174,5 +197,7 @@
   &__booking {
     max-width: 27.1429rem;
     flex-grow: 1;
+    flex-shrink: 0;
+    padding: 0 0.6rem;
   }
 }
