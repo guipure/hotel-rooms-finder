@@ -123,11 +123,13 @@ const commonConfig = {
       './pages/form-elements/form-elements.scss',
     ],
     cards: [
-      // '@babel/polyfill',
       './pages/cards/cards.js',
       './pages/cards/cards.scss',
     ],
-    'headers-and-footers': './pages/headers-and-footers/headers-and-footers.scss',
+    'headers-and-footers': [
+      './pages/headers-and-footers/headers-and-footers.js',
+      './pages/headers-and-footers/headers-and-footers.scss',
+    ],
     'landing-page': [
       './pages/landing-page/landing-page.js',
       './pages/landing-page/landing-page.scss',
@@ -137,7 +139,6 @@ const commonConfig = {
       './pages/search-room/search-room.scss',
     ],
     'room-details': [
-      // '@babel/polyfill',
       './pages/room-details/room-details.js',
       './pages/room-details/room-details.scss',
     ],
@@ -145,7 +146,10 @@ const commonConfig = {
       './pages/registration/registration.js',
       './pages/registration/registration.scss',
     ],
-    'sign-in': './pages/sign-in/sign-in.scss',
+    'sign-in': [
+      './pages/sign-in/sign-in.js',
+      './pages/sign-in/sign-in.scss',
+    ],
     index: './pages/index/index.scss',
   },
   output: {
