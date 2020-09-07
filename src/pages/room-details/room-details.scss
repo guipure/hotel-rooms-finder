@@ -9,6 +9,7 @@
 @import '@blocks/bullet-list/bullet-list';
 @import '../../layouts/base';
 @import '@styles/mixins/titles';
+@import '@styles/mixins/container';
 
 .room-details {
   flex: 1 0 auto;
@@ -16,15 +17,9 @@
 
   &__gallery {
     width: 100%;
-    max-width: 102.8571rem;
+    max-width: 120rem;
     height: 34.6429rem;
     margin: 0 auto;
-  }
-
-  @media (min-width: 1700px) {
-    &__gallery {
-      max-width: 120rem;
-    }
   }
 
   &__photos {
@@ -78,12 +73,13 @@
   }
 
   &__container {
-    padding: 5rem 10rem 5.2857rem;
-    margin: 0 auto;
+    @include container;
+
+    padding-top: 5rem;
+    padding-bottom: 5.2857rem;
     display: flex;
     gap: 2rem;
     justify-content: space-between;
-    box-sizing: border-box;
   }
 
   @media (max-width: 1439px) {

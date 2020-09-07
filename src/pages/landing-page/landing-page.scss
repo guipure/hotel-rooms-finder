@@ -4,17 +4,19 @@
 @import '@fonts/quicksand';
 @import '@blocks/cards/selection/selection';
 @import '../../layouts/base';
+@import '@styles/mixins/container';
 
 .landing-page {
+  @include container;
+
   flex: 1 0 auto;
   background: url('./img/main.jpg');
   background-repeat: no-repeat;
   background-position: top;
-  min-width: 320px;
   width: 100%;
   display: flex;
   justify-content: center;
-  margin: 0 auto;
+  padding: 0;
 
   @media (min-width: 1700px) {
     & {

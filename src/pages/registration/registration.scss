@@ -4,15 +4,18 @@
 @import '@fonts/quicksand';
 @import '@blocks/cards/registration/registration';
 @import '../../layouts/base';
+@import '@styles/mixins/container';
 
 .registration-page {
+  @include container;
+
   flex: 1 0 auto;
   background: url('./img/main.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  min-width: 320px;
   width: 100%;
+  padding: 0;
 
   &__container {
     display: flex;

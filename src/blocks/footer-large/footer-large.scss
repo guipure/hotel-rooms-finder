@@ -1,35 +1,34 @@
 @import '@blocks/input/input';
 @import '@blocks/socials/socials';
 @import '@styles/mixins/titles';
+@import '@styles/mixins/container';
 
 .footer-large {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: white;
-  max-width: 100%;
   font-size: 1rem;
   border-top: 0.0714rem solid $dark-shade-10;
   box-shadow: $subtle-shadow;
 
   &__container {
+    @include container;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
   }
 
+  @media (max-width: 1439px) {
+    &__container {
+      padding: 0 2rem;
+    }
+  }
+
   &__top {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 7.0714rem 10rem 6.4286rem;
-  }
-
-  @media (max-width: 1439px) {
-    &__top {
-      padding: 7.0714rem 2rem 6.4286rem;
-    }
+    padding-top: 7.0714rem;
+    padding-bottom: 6.4286rem;
   }
 
   @media (max-width: 970px) {

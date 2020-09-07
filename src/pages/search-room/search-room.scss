@@ -13,15 +13,14 @@
 @import '@blocks/cards/room/room';
 @import '../../layouts/base';
 @import '@styles/mixins/titles';
+@import '@styles/mixins/container';
 
 .search-room {
+  @include container;
+
   flex: 1 0 auto;
   width: 100%;
-  min-width: 320px;
-  padding: 0 10rem;
-  margin: 0 auto;
   display: flex;
-  box-sizing: border-box;
 
   @media (max-width: 1439px) {
     & {

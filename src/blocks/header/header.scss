@@ -1,20 +1,17 @@
 @import '@blocks/button/button';
+@import '@styles/mixins/container';
 
 .header {
-  display: flex;
-  justify-content: center;
-  background-color: white;
   min-width: 320px;
-  max-width: 100%;
   min-height: 5rem;
   box-shadow: $subtle-shadow;
 
   &__container {
+    @include container;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
-    padding: 0 10rem;
   }
 
   @media (max-width: 1439px) {
