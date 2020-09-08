@@ -123,13 +123,8 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 1.6429rem 10rem;
-  }
-
-  @media (max-width: 1439px) {
-    &__bottom {
-      padding: 1.6429rem 2rem;
-    }
+    padding-top: 1.6429rem;
+    padding-bottom: 1.6429rem;
   }
 
   @media (max-width: 797px) {
