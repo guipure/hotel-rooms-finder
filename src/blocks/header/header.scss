@@ -5,6 +5,7 @@
   min-width: 320px;
   min-height: 5rem;
   box-shadow: $subtle-shadow;
+  background-color: #fff;
 
   &__container {
     @include container;

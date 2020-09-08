@@ -7,6 +7,7 @@
   font-size: 1rem;
   border-top: 0.0714rem solid $dark-shade-10;
   box-shadow: $subtle-shadow;
+  background-color: #fff;
 
   &__container {
     @include container;
