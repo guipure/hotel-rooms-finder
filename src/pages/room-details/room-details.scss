@@ -195,6 +195,11 @@
     max-width: 27.1429rem;
     flex-grow: 1;
     flex-shrink: 0;
-    padding: 0 0.6rem;
+  }
+
+  @media (max-width: 440px) {
+    &__booking {
+      padding: 0 0.6rem;
+    }
   }
 }
