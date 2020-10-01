@@ -27,10 +27,8 @@
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
     height: 100%;
-  }
 
-  @media (max-width: 400px) {
-    &__photos {
+    @media (max-width: 400px) {
       display: block;
     }
   }
@@ -45,20 +43,24 @@
     grid-row-start: 1;
     grid-row-end: 3;
     max-height: 100%;
-  }
 
-  &__photo:last-child {
-    grid-column-start: 2;
-  }
-
-  @media (max-width: 970px) {
-    &__photo:first-child {
+    @media (max-width: 970px) {
       grid-row-start: 1;
       grid-row-end: 2;
       grid-column-start: 1;
       grid-column-end: 3;
     }
+  }
 
+  &__photo:last-child {
+    grid-column-start: 2;
+  
+    @media (max-width: 400px) {
+      display: none;
+    }
+  }
+
+  @media (max-width: 970px) {
     &__photo:nth-child(2) {
       grid-column-start: 1;
       grid-column-end: 2;
@@ -66,7 +68,6 @@
   }
 
   @media (max-width: 400px) {
-    &__photo:last-child,
     &__photo:nth-child(2) {
       display: none;
     }
@@ -80,24 +81,18 @@
     display: flex;
     gap: 2rem;
     justify-content: space-between;
-  }
 
-  @media (max-width: 1439px) {
-    &__container {
+    @media (max-width: 1439px) {
       padding: 5rem 2rem 5.2857rem;
     }
-  }
-
-  @media (max-width: 1200px) {
-    &__container {
+  
+    @media (max-width: 1200px) {
       flex-direction: column;
       align-items: center;
       gap: 1.4286rem;
     }
-  }
-
-  @media (max-width: 970px) {
-    &__container {
+  
+    @media (max-width: 970px) {
       padding: 5rem 0;
     }
   }
@@ -108,18 +103,14 @@
     grid-row-gap: 2.4286rem;
     grid-column-gap: 0.7857rem;
     max-width: 50rem;
-  }
 
-  @media (min-width: 1700px) {
-    &__info {
+    @media (min-width: 1700px) {
       max-width: 80rem;
       column-gap: 5rem;
       grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     }
-  }
-
-  @media (max-width: 660px) {
-    &__info {
+  
+    @media (max-width: 660px) {
       grid-template-columns: auto;
       padding: 0 1.5rem;
     }
@@ -128,10 +119,8 @@
   &__comment-item {
     grid-column-start: 1;
     grid-column-end: 3;
-  }
   
-  @media (max-width: 660px) {
-    &__comment-item {
+    @media (max-width: 660px) {
       grid-column-start: 1;
       grid-column-end: 2;
     }
@@ -195,10 +184,8 @@
     max-width: 27.1429rem;
     flex-grow: 1;
     flex-shrink: 0;
-  }
 
-  @media (max-width: 440px) {
-    &__booking {
+    @media (max-width: 440px) {
       padding: 0 0.6rem;
     }
   }

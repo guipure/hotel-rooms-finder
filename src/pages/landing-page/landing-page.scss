@@ -19,9 +19,7 @@
   padding: 0;
 
   @media (min-width: 1700px) {
-    & {
-      background-size: 120rem;
-    }
+    background-size: 120rem;
   }
 
   &__container {
@@ -29,16 +27,12 @@
     display: flex;
     padding: 5rem 2rem 1.5rem;
     flex-direction: column;
-  }
 
-  @media (max-width: 970px) {
-    &__container {
+    @media (max-width: 970px) {
       align-items: center;
     }
-  }
 
-  @media (max-width: 440px) {
-    &__container {
+    @media (max-width: 440px) {
       padding: 5rem 0 1.5rem;
     }
   }
@@ -49,16 +43,12 @@
     max-width: 21.4286rem;
     align-self: flex-end;
     padding-top: 22.6429rem;
-  }
 
-  @media (min-width: 1700px) {
-    &__slogan {
+    @media (min-width: 1700px) {
       padding-top: 28rem;
     }
-  }
-
-  @media (max-width: 970px) {
-    &__slogan {
+  
+    @media (max-width: 970px) {
       text-align: center;
       align-self: center;
     }

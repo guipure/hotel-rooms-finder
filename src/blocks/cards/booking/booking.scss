@@ -15,9 +15,7 @@
   box-sizing: border-box;
 
   @media(max-width: 440px) {
-    & {
-      padding: 1.5rem;
-    }
+    padding: 1.5rem;
   }
 
   &__title {
@@ -85,10 +83,8 @@
     text-align: center;
     cursor: default;
     box-sizing: border-box;
-  }
 
-  @media (max-width: 380px) {
-    &__info {
+    @media (max-width: 380px) {
       display: none;
     }
   }

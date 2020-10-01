@@ -23,6 +23,10 @@
     width: 100%;
     box-sizing: border-box;
 
+    @media (max-width: 440px) {
+      font-size: 0.8571rem;
+    }
+
     &::placeholder {
       color: $dark-shade-75;
     }
@@ -33,19 +37,11 @@
     }
   }
 
-  @media (max-width: 440px) {
-    &__input {
-      font-size: 0.8571rem;
-    }
-  }
-
   &_oneField {
     .date-dropdown__calendar {
       min-width: 22.8571rem;
-    }
 
-    @media (max-width: 440px) {
-      .date-dropdown__calendar {
+      @media (max-width: 440px) {
         min-width: 18rem;
       }
     }
